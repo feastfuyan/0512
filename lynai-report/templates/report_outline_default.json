@@ -1,0 +1,168 @@
+{
+  "version": "1.0",
+  "description": "Default 12-section outline for LynAI institutional research reports. The Orchestrator composes from this + archetype rules. Section presence and target word counts are adjusted to the report archetype.",
+  "archetypes": {
+    "equity_research": {
+      "include_sections": ["s00_cover", "s01_summary", "s02_thesis", "s03_business", "s04_drivers", "s05_scenarios", "s06_valuation", "s07_risks", "s08_catalysts", "s09_appendix", "s10_references"],
+      "target_pages_default": 20
+    },
+    "commodity_deep_dive": {
+      "include_sections": ["s00_cover", "s01_summary", "s02_thesis", "s11_supply_demand", "s04_drivers", "s05_scenarios", "s12_cost_curve", "s07_risks", "s08_catalysts", "s09_appendix", "s10_references"],
+      "target_pages_default": 30
+    },
+    "ma_note": {
+      "include_sections": ["s00_cover", "s01_summary", "s02_thesis", "s13_deal_summary", "s14_synergies", "s06_valuation", "s07_risks", "s08_catalysts", "s09_appendix", "s10_references"],
+      "target_pages_default": 15
+    },
+    "esg_intel": {
+      "include_sections": ["s00_cover", "s01_summary", "s02_thesis", "s15_esg_landscape", "s04_drivers", "s07_risks", "s08_catalysts", "s09_appendix", "s10_references"],
+      "target_pages_default": 18
+    },
+    "geopolitical_risk": {
+      "include_sections": ["s00_cover", "s01_summary", "s02_thesis", "s16_country_matrix", "s04_drivers", "s05_scenarios", "s07_risks", "s08_catalysts", "s09_appendix", "s10_references"],
+      "target_pages_default": 22
+    },
+    "thematic": {
+      "include_sections": ["s00_cover", "s01_summary", "s02_thesis", "s04_drivers", "s05_scenarios", "s17_winners_losers", "s07_risks", "s08_catalysts", "s09_appendix", "s10_references"],
+      "target_pages_default": 25
+    }
+  },
+  "sections": {
+    "s00_cover": {
+      "title": "Cover Page",
+      "purpose": "Title + subtitle + author + date + ref ID + confidentiality",
+      "target_words": 80,
+      "target_charts": 0,
+      "target_tables": 0,
+      "no_header_footer": true
+    },
+    "s01_summary": {
+      "title": "Executive Summary",
+      "purpose": "Thesis + 5 bullets + key numbers in one page",
+      "target_words": 350,
+      "target_charts": 1,
+      "target_tables": 1,
+      "scoring_priority": ["R1", "R3"]
+    },
+    "s02_thesis": {
+      "title": "Thesis & Argument Map",
+      "purpose": "The falsifiable thesis with explicit driver-to-outcome chain",
+      "target_words": 800,
+      "target_charts": 1,
+      "target_tables": 0,
+      "scoring_priority": ["R1", "R2"]
+    },
+    "s03_business": {
+      "title": "Business Overview",
+      "purpose": "What the company does; segment mix; geographic mix",
+      "target_words": 1200,
+      "target_charts": 2,
+      "target_tables": 1
+    },
+    "s04_drivers": {
+      "title": "Key Drivers",
+      "purpose": "3-5 drivers, each with data point + mechanism + magnitude",
+      "target_words": 2000,
+      "target_charts": 3,
+      "target_tables": 1,
+      "scoring_priority": ["R2", "R3", "R9"]
+    },
+    "s05_scenarios": {
+      "title": "Scenarios — Base / Bull / Bear",
+      "purpose": "Three quantified scenarios with probabilities summing to 100%",
+      "target_words": 1200,
+      "target_charts": 1,
+      "target_tables": 1,
+      "scoring_priority": ["R2", "R4"]
+    },
+    "s06_valuation": {
+      "title": "Valuation",
+      "purpose": "DCF / multiples / SOTP with sensitivity",
+      "target_words": 1500,
+      "target_charts": 2,
+      "target_tables": 2,
+      "scoring_priority": ["R2", "R3", "R9"]
+    },
+    "s07_risks": {
+      "title": "Risk Register",
+      "purpose": "Each risk: probability / impact / mitigation",
+      "target_words": 900,
+      "target_charts": 0,
+      "target_tables": 1,
+      "scoring_priority": ["R4"]
+    },
+    "s08_catalysts": {
+      "title": "Catalysts & Monitorables",
+      "purpose": "Dated catalyst calendar + invalidation criteria",
+      "target_words": 600,
+      "target_charts": 0,
+      "target_tables": 1,
+      "scoring_priority": ["R4"]
+    },
+    "s09_appendix": {
+      "title": "Appendix — Methodology",
+      "purpose": "Data vintage, computation methodology, definitional notes",
+      "target_words": 500,
+      "target_charts": 0,
+      "target_tables": 0,
+      "scoring_priority": ["R3", "R10"]
+    },
+    "s10_references": {
+      "title": "References",
+      "purpose": "Every cited source with full bibliographic detail + access date",
+      "target_words": 300,
+      "target_charts": 0,
+      "target_tables": 0,
+      "scoring_priority": ["R10"]
+    },
+    "s11_supply_demand": {
+      "title": "Supply & Demand",
+      "purpose": "Commodity-only: supply curve, demand drivers, balance forecast",
+      "target_words": 1800,
+      "target_charts": 3,
+      "target_tables": 1
+    },
+    "s12_cost_curve": {
+      "title": "Marginal Cost Curve",
+      "purpose": "Commodity-only: production cost stack with break-evens",
+      "target_words": 900,
+      "target_charts": 2,
+      "target_tables": 1
+    },
+    "s13_deal_summary": {
+      "title": "Deal Summary",
+      "purpose": "M&A-only: structure, consideration, premium, conditions",
+      "target_words": 800,
+      "target_charts": 1,
+      "target_tables": 2
+    },
+    "s14_synergies": {
+      "title": "Synergies & Integration",
+      "purpose": "M&A-only: revenue + cost synergies with NPV and timing",
+      "target_words": 1000,
+      "target_charts": 1,
+      "target_tables": 1
+    },
+    "s15_esg_landscape": {
+      "title": "ESG Landscape",
+      "purpose": "ESG-only: regulatory + market + reputational dimensions",
+      "target_words": 1500,
+      "target_charts": 2,
+      "target_tables": 1
+    },
+    "s16_country_matrix": {
+      "title": "Country Risk Matrix",
+      "purpose": "Geopolitical-only: per-country political, fiscal, operational scores",
+      "target_words": 1400,
+      "target_charts": 1,
+      "target_tables": 1
+    },
+    "s17_winners_losers": {
+      "title": "Likely Winners & Losers",
+      "purpose": "Thematic-only: 3-5 winners + 3-5 losers with rationale",
+      "target_words": 1100,
+      "target_charts": 1,
+      "target_tables": 2
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lynai.mines/schemas/scorecard.schema.json",
+  "title": "LynAI Scorecard (v1.1)",
+  "description": "Aggregated scorecard produced by agent.aggregator at each cycle. The Aggregator MERGES critic outputs only; gate authority is delegated to agent.gatekeeper (see gate_token.schema.json). Hard gate: every dimension MUST be strictly greater than 9.5 (i.e. ≥ 9.6). See docs/00_DECISIONS.md §D-1.",
+  "type": "object",
+  "required": ["version", "draft_revision", "draft_content_hash", "dimensions", "min_dim", "min_dim_id", "aggregator_recommendation"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "const": "1.1" },
+    "draft_revision": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Cycle number this scorecard scores. v0 = initial draft; v1 = first revision; etc."
+    },
+    "draft_content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$",
+      "description": "SHA-256 of the draft markdown bytes at score time. Gate-Keeper binds tokens to this hash; any post-scoring edit invalidates the gate."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "gate_threshold": {
+      "type": "object",
+      "description": "Echoes the threshold rule applied. Operator must verify this matches the locked decision in 00_DECISIONS.md §D-1.",
+      "required": ["rule", "value"],
+      "properties": {
+        "rule":  { "const": "strict_greater_than" },
+        "value": { "const": 9.5 }
+      }
+    },
+    "dimensions": {
+      "type": "object",
+      "required": ["R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9", "R10"],
+      "additionalProperties": false,
+      "properties": {
+        "R1":  { "$ref": "#/$defs/dimension_entry" },
+        "R2":  { "$ref": "#/$defs/dimension_entry" },
+        "R3":  { "$ref": "#/$defs/dimension_entry" },
+        "R4":  { "$ref": "#/$defs/dimension_entry" },
+        "R5":  { "$ref": "#/$defs/dimension_entry" },
+        "R6":  { "$ref": "#/$defs/dimension_entry" },
+        "R7":  { "$ref": "#/$defs/dimension_entry" },
+        "R8":  { "$ref": "#/$defs/dimension_entry" },
+        "R9":  { "$ref": "#/$defs/dimension_entry" },
+        "R10": { "$ref": "#/$defs/dimension_entry" }
+      }
+    },
+    "weighted_average": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10,
+      "description": "Informational only. The gate is per-dimension, never weighted."
+    },
+    "min_dim": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10
+    },
+    "min_dim_id": {
+      "type": "string",
+      "pattern": "^R([1-9]|10)$"
+    },
+    "blocking_dimensions": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^R([1-9]|10)$" },
+      "description": "All dimensions with score <= 9.5 (failing the strict-greater-than rule)."
+    },
+    "aggregator_recommendation": {
+      "type": "string",
+      "enum": ["PROPOSE_PASS", "PROPOSE_REVISE", "PROPOSE_DELIVER_WITH_SHORTFALL"],
+      "description": "Aggregator NEVER decides — only proposes. Gate-Keeper signs the actual decision in gate_token.schema.json. PROPOSE_DELIVER_WITH_SHORTFALL only valid when cycle == cycle_cap."
+    },
+    "cycle_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["cycle", "min_dim", "min_dim_id"],
+        "properties": {
+          "cycle":      { "type": "integer", "minimum": 0 },
+          "min_dim":    { "type": "number" },
+          "min_dim_id": { "type": "string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "dimension_entry": {
+      "type": "object",
+      "required": ["score", "owner_critic", "anchor_rationale"],
+      "additionalProperties": false,
+      "properties": {
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10,
+          "multipleOf": 0.1
+        },
+        "owner_critic": {
+          "type": "string",
+          "enum": ["content", "layout", "charts"]
+        },
+        "anchor_rationale": {
+          "type": "string",
+          "minLength": 8,
+          "description": "Verbatim from the owning critic. Aggregator MUST NOT rewrite this. Audit trail."
+        },
+        "notes_ref": {
+          "type": "string",
+          "description": "Pointer back to the critic JSON line-anchored notes for the Reviser."
+        }
+      }
+    }
+  }
+}

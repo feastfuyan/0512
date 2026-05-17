@@ -1,0 +1,174 @@
+# LynAI / GeoVision Institutional Chart Style
+# matplotlib rcParams stylesheet
+# Apply via: plt.style.use('templates/chart_style.mplstyle')
+#
+# This stylesheet enforces Nature / Goldman Sachs publication-grade chart hygiene.
+# Modifications must be discussed with the visual brand owner.
+
+# ============================================================
+# Fonts
+# ============================================================
+font.family:        sans-serif
+font.sans-serif:    Arial, Helvetica, DejaVu Sans
+font.size:          9.0
+
+axes.titlesize:     10.0
+axes.titleweight:   bold
+axes.titlepad:      8.0
+axes.titlecolor:    "#0D1F3C"
+
+axes.labelsize:     9.0
+axes.labelweight:   normal
+axes.labelcolor:    "#555555"
+axes.labelpad:      4.0
+
+xtick.labelsize:    8.0
+ytick.labelsize:    8.0
+xtick.color:        "#555555"
+ytick.color:        "#555555"
+
+legend.fontsize:    8.0
+legend.title_fontsize: 9.0
+
+figure.titlesize:   10.0
+figure.titleweight: bold
+
+# ============================================================
+# Figure
+# ============================================================
+figure.figsize:     6.0, 3.7
+figure.dpi:         300
+figure.facecolor:   white
+figure.edgecolor:   white
+savefig.dpi:        300
+savefig.format:     png
+savefig.facecolor:  white
+savefig.edgecolor:  white
+savefig.bbox:       tight
+savefig.pad_inches: 0.05
+
+# ============================================================
+# Axes (the frame)
+# ============================================================
+axes.facecolor:     white
+axes.edgecolor:     "#555555"
+axes.linewidth:     0.8
+axes.grid:          False
+axes.spines.top:    False
+axes.spines.right:  False
+axes.spines.left:   True
+axes.spines.bottom: True
+
+axes.axisbelow:     True
+# Note: prop_cycle is set in code (render_chart.py) per-series via _color_for().
+# Defining it here triggers matplotlib's stylelib parser which has different
+# quoting rules than rcParams in code. Leaving it unset is fine.
+# axes.prop_cycle:  set in code, not here
+
+# ============================================================
+# Ticks
+# ============================================================
+xtick.direction:    out
+ytick.direction:    out
+xtick.major.size:   3.0
+ytick.major.size:   3.0
+xtick.major.width:  0.8
+ytick.major.width:  0.8
+xtick.major.pad:    3.0
+ytick.major.pad:    3.0
+xtick.minor.size:   0.0
+ytick.minor.size:   0.0
+
+# ============================================================
+# Grid (horizontal only, very faint)
+# ============================================================
+grid.color:         "#EEEEEE"
+grid.linestyle:     -
+grid.linewidth:     0.5
+grid.alpha:         1.0
+
+# ============================================================
+# Lines
+# ============================================================
+lines.linewidth:    1.8
+lines.markersize:   5.0
+lines.markeredgewidth: 0.0
+lines.solid_capstyle: round
+lines.dash_capstyle:  round
+
+# ============================================================
+# Legend (no box, top-right by default)
+# ============================================================
+legend.frameon:     False
+legend.loc:         best
+legend.handlelength: 1.5
+legend.handletextpad: 0.6
+legend.columnspacing: 1.5
+legend.borderpad:   0.0
+legend.borderaxespad: 0.5
+legend.labelcolor:  "#1A1A1A"
+
+# ============================================================
+# Patches (bars, areas, etc.)
+# ============================================================
+patch.linewidth:    0.0
+patch.facecolor:    "#0D1F3C"
+patch.edgecolor:    none
+patch.antialiased:  True
+
+# ============================================================
+# Hatching
+# ============================================================
+hatch.linewidth:    0.5
+hatch.color:        "#A89060"
+
+# ============================================================
+# Errorbars
+# ============================================================
+errorbar.capsize:   2.5
+
+# ============================================================
+# Boxplot
+# ============================================================
+boxplot.notch:           False
+boxplot.vertical:        True
+boxplot.whiskers:        1.5
+boxplot.bootstrap:       None
+boxplot.patchartist:     True
+
+boxplot.flierprops.color:           "#555555"
+boxplot.flierprops.markerfacecolor: "#555555"
+boxplot.flierprops.markeredgecolor: none
+boxplot.flierprops.markersize:      3.0
+
+boxplot.boxprops.color:      "#0D1F3C"
+boxplot.boxprops.linewidth:  0.8
+
+boxplot.whiskerprops.color:     "#555555"
+boxplot.whiskerprops.linewidth: 0.8
+boxplot.whiskerprops.linestyle: -
+
+boxplot.capprops.color:     "#555555"
+boxplot.capprops.linewidth: 0.8
+
+boxplot.medianprops.color:     "#C9A84C"
+boxplot.medianprops.linewidth: 1.4
+
+# ============================================================
+# Text rendering
+# ============================================================
+text.color:         "#1A1A1A"
+text.antialiased:   True
+text.hinting:       auto
+text.hinting_factor: 8
+
+# ============================================================
+# PDF/PS
+# ============================================================
+pdf.fonttype:       42
+ps.fonttype:        42
+
+# ============================================================
+# Animation (not used, but set for sanity)
+# ============================================================
+animation.html:     none

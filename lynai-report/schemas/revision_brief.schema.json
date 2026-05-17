@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lynai.mines/schemas/revision_brief.schema.json",
+  "title": "LynAI Revision Brief",
+  "description": "Structured form of the revision brief that the Aggregator hands to the Reviser. The agent also emits a markdown rendering for human readability; this is the machine form.",
+  "type": "object",
+  "required": ["version", "from_revision", "to_revision", "items"],
+  "properties": {
+    "version": { "const": "1.0" },
+    "from_revision": { "type": "integer", "minimum": 0 },
+    "to_revision":   { "type": "integer", "minimum": 1 },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["dimension", "score", "severity_class", "line_anchor", "action"],
+        "properties": {
+          "dimension":      { "type": "string", "pattern": "^R([1-9]|10)$" },
+          "score":          { "type": "number", "minimum": 0, "maximum": 10, "multipleOf": 0.1 },
+          "severity":       { "type": "number", "description": "9.5 - score, positive iff blocking" },
+          "severity_class": {
+            "type": "string",
+            "enum": ["CRITICAL", "MAJOR", "MINOR"]
+          },
+          "line_anchor":    { "type": "string" },
+          "action":         { "type": "string", "minLength": 10 },
+          "data_pointer":   { "type": "string" },
+          "originating_critic": {
+            "type": "string",
+            "enum": ["content", "layout", "charts"]
+          },
+          "chart_regenerate_request": {
+            "type": "object",
+            "description": "If the fix requires Chart-Smith to redo a chart",
+            "properties": {
+              "chart_id":     { "type": "string" },
+              "change_brief": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "convergence_estimate": {
+      "type": "object",
+      "description": "Aggregator's estimate of cycles remaining",
+      "properties": {
+        "remaining_cycles":     { "type": "integer", "minimum": 0, "maximum": 5 },
+        "min_dim_trajectory":   {
+          "type": "array",
+          "items": { "type": "number" },
+          "description": "min_dim across cycles so far"
+        },
+        "convergence_warning":  { "type": "string" }
+      }
+    }
+  }
+}

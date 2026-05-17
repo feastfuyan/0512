@@ -1,0 +1,23 @@
+{
+  "$schema": "https://lynai.mines/schemas/disclaimers.schema.json",
+  "version": "1.1",
+  "description": "Compliance footer text for institutional research reports. Locked per 00_DECISIONS.md §D-6. The Producer renders the standard block on the last page above the page number; per-report custom overlays append after the standard block.",
+  "standard_clauses": {
+    "not_advice": "This document is provided for institutional informational purposes only and does not constitute investment advice, an offer, or a solicitation to buy or sell any security or financial instrument.",
+    "not_solicitation": "Recipients should not construe the contents as legal, tax, accounting, or investment advice and should consult their own advisors. Past performance is not indicative of future results.",
+    "internal_review": "This report is the work of LynAI Mines / GeoVision AI Mining (ACN 687 204 799) and has been prepared in accordance with the firm's internal research integrity standards. Distribution outside the addressed audience requires written authorization."
+  },
+  "regulatory_overlays": {
+    "MIFID_II": "Under MiFID II classification, this material is non-independent research and constitutes a marketing communication. It has not been prepared in accordance with legal requirements designed to promote the independence of investment research.",
+    "ASIC": "This document is issued in Australia in accordance with ASIC Regulatory Guide 79. It is intended only for wholesale clients as defined in section 761G of the Corporations Act 2001 (Cth).",
+    "SEC": "This document is intended for institutional investors only and is not a research report subject to the requirements of SEC Regulation AC."
+  },
+  "rendering": {
+    "font": "Georgia",
+    "size_pt": 7,
+    "color": "555555",
+    "position": "last_page_above_page_number",
+    "line_height": 1.2
+  },
+  "custom_overlay_max_words": 80
+}

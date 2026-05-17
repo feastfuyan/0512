@@ -1,0 +1,42 @@
+{
+  "$schema": "https://lynai.mines/schemas/runtime_paths.schema.json",
+  "version": "1.0",
+  "description": "Runtime path bindings. All scripts MUST read paths from here, NOT hardcode. Override any default by setting the corresponding environment variable before invoking the skill.",
+  "paths": {
+    "docx_skill_root": {
+      "env": "DOCX_SKILL_ROOT",
+      "default": "/mnt/skills/public/docx",
+      "purpose": "Root of the public 'docx' skill. Houses validate.py, unpack.py, pack.py, soffice.py.",
+      "fallback_hint": "git clone the public docx skill and set DOCX_SKILL_ROOT to its absolute path."
+    },
+    "outputs_dir": {
+      "env": "LYNAI_OUTPUTS_DIR",
+      "default": "/mnt/user-data/outputs",
+      "purpose": "Where the final .docx is written and where present_files reads from."
+    },
+    "uploads_dir": {
+      "env": "LYNAI_UPLOADS_DIR",
+      "default": "/mnt/user-data/uploads",
+      "purpose": "Where user-supplied data files (CSV, JSON, PDF) are read from."
+    },
+    "workdir_root": {
+      "env": "LYNAI_WORKDIR_ROOT",
+      "default": "/tmp",
+      "purpose": "Parent for per-job workdirs. Each job uses <workdir_root>/<slug>/ to hold drafts, scorecards, charts, logs."
+    },
+    "validate_pdf_outdir": {
+      "env": "LYNAI_VALIDATE_OUTDIR",
+      "default": "/tmp/lynai_validate",
+      "purpose": "Where the Validator writes the open-render PDF for Check 2."
+    }
+  },
+  "binary_requirements": {
+    "node": { "min_version": "18.0.0", "purpose": "docx-js runtime" },
+    "python": { "min_version": "3.10", "purpose": "render_chart.py, gate_check.py, scan_redactions.py" },
+    "soffice": { "purpose": "LibreOffice headless for open-render validation" }
+  },
+  "npm_modules": {
+    "docx": "^8.5.0",
+    "image-size": "1.0.2"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lynai.mines/schemas/redaction_report.schema.json",
+  "title": "LynAI Redaction Report (v1.1)",
+  "description": "Output of agent.redactor after scanning the approved draft + asset metadata. Producer refuses to build unless overall_verdict = CLEAR or = REDACTED (with sanitized draft hash echoed back).",
+  "type": "object",
+  "required": ["version", "draft_revision", "draft_content_hash", "scan_timestamp", "patterns_checked", "findings", "overall_verdict"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "const": "1.1" },
+    "draft_revision": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "draft_content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "scan_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "patterns_checked": {
+      "type": "array",
+      "minItems": 6,
+      "items": {
+        "type": "string",
+        "enum": [
+          "aws_access_key",
+          "aws_secret_key",
+          "gcp_service_account",
+          "private_key_pem",
+          "ssn_us",
+          "email_non_whitelisted_domain",
+          "mnpi_marker",
+          "embargoed_ticker",
+          "credit_card_luhn",
+          "passport_number",
+          "internal_codename",
+          "client_named_nda_token"
+        ]
+      },
+      "description": "Patterns the scanner ran. Listed so the Producer can verify the scan covered the required minimum (6+)."
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["pattern", "line_anchor", "snippet_redacted", "severity", "disposition"],
+        "additionalProperties": false,
+        "properties": {
+          "pattern": { "type": "string" },
+          "line_anchor": {
+            "type": "string",
+            "description": "e.g. '§4 paragraph 2', 'chart_03.png caption', 'footnote 7'"
+          },
+          "snippet_redacted": {
+            "type": "string",
+            "description": "The matched text with the sensitive payload replaced by '«REDACTED»'. NEVER include the raw secret."
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["critical", "high", "medium", "low"]
+          },
+          "disposition": {
+            "type": "string",
+            "enum": ["redacted_inplace", "escalated_to_user", "false_positive_ignored", "blocked"]
+          },
+          "user_decision": {
+            "type": "string",
+            "description": "When disposition = escalated_to_user, this records the user's call."
+          }
+        }
+      }
+    },
+    "overall_verdict": {
+      "type": "string",
+      "enum": ["CLEAR", "REDACTED", "BLOCKED"],
+      "description": "CLEAR = nothing found. REDACTED = findings were sanitized in-place (sanitized_draft_hash MUST be set). BLOCKED = critical findings remain; Producer must NOT build."
+    },
+    "sanitized_draft_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$",
+      "description": "Required when overall_verdict = REDACTED. Hash of the draft AFTER redaction. Producer consumes this version; Gate-Keeper re-issues a fresh gate_token bound to this hash."
+    }
+  }
+}

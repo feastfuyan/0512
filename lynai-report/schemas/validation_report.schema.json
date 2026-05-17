@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lynai.mines/schemas/validation_report.schema.json",
+  "title": "LynAI Validation Report (v1.2)",
+  "description": "Output of the Validator. Drives the REPAIR vs DELIVERY branch. v1.2 adds pdf_file and pdf_integrity check per D-11 (dual docx+pdf delivery).",
+  "type": "object",
+  "required": ["version", "file", "checks", "overall_pass"],
+  "properties": {
+    "version": { "enum": ["1.0", "1.1", "1.2"] },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "file": {
+      "type": "string",
+      "description": "Absolute path to the .docx that was validated"
+    },
+    "pdf_file": {
+      "type": "string",
+      "description": "Absolute path to the delivered .pdf (v1.2+, paired with .docx per D-11)"
+    },
+    "checks": {
+      "type": "object",
+      "required": ["schema", "open_render", "asset_integrity"],
+      "properties": {
+        "schema": {
+          "type": "object",
+          "required": ["pass"],
+          "properties": {
+            "pass":     { "type": "boolean" },
+            "messages": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "open_render": {
+          "type": "object",
+          "required": ["pass"],
+          "properties": {
+            "pass":               { "type": "boolean" },
+            "pdf_size_kb":        { "type": "number" },
+            "pages":              { "type": "integer" },
+            "delivered_pdf_path": { "type": "string", "description": "v1.2: where the rendered PDF is delivered (LYNAI_OUTPUTS_DIR)" }
+          }
+        },
+        "asset_integrity": {
+          "type": "object",
+          "required": ["pass"],
+          "properties": {
+            "pass":        { "type": "boolean" },
+            "image_count": { "type": "integer" },
+            "bad_assets":  {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        },
+        "pdf_integrity": {
+          "type": "object",
+          "description": "v1.2: PDF deliverable integrity check (header / trailer / page count) per D-11",
+          "required": ["pass"],
+          "properties": {
+            "pass":         { "type": "boolean" },
+            "pages":        { "type": "integer" },
+            "pdf_version":  { "type": "string", "description": "e.g. '1.6'" },
+            "warnings":     { "type": "array", "items": { "type": "string" } }
+          }
+        }
+      }
+    },
+    "overall_pass": { "type": "boolean" },
+    "failures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["class", "description"],
+        "properties": {
+          "class": {
+            "type": "string",
+            "enum": ["F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9"],
+            "description": "F1-F8 per docs/04_FAILURE_PLAYBOOK.md §2. F9 = PDF integrity failure (v1.2)"
+          },
+          "description":   { "type": "string" },
+          "location":      { "type": "string" },
+          "suggested_fix": { "type": "string" }
+        }
+      }
+    },
+    "repair_cycle": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3,
+      "description": "How many repair cycles have run. 0 = initial validation."
+    }
+  }
+}

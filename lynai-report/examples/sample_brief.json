@@ -1,0 +1,45 @@
+{
+  "version": "1.0",
+  "description": "Example user brief that triggers the lynai-report skill. The Orchestrator would parse this and emit plan.json. Modelled on Xuan-Ce's prior PLS v2.0 work.",
+  "brief": {
+    "subject": "Pilbara Minerals (ASX: PLS)",
+    "archetype": "equity_research",
+    "audience": "IC",
+    "target_pages": 25,
+    "target_words": 8500,
+    "bilingual": "en_only",
+    "urgency": "standard",
+    "deadline": "2026-05-21",
+    "data_source": "uploaded_files",
+    "uploaded_files": [
+      "/mnt/user-data/uploads/PLS_FY25_annual_report.pdf",
+      "/mnt/user-data/uploads/PLS_3QFY26_quarterly.pdf",
+      "/mnt/user-data/uploads/lithium_prices_5y.csv",
+      "/mnt/user-data/uploads/global_spod_supply_curve_2026.csv",
+      "/mnt/user-data/uploads/ev_penetration_iea_2026.csv",
+      "/mnt/user-data/uploads/peer_set_lithium_producers.csv"
+    ],
+    "additional_context": "Focus on whether the recent price recovery is structural or cyclical. House view from prior research is that the supply curve has materially shifted — please test this against the latest cost data. We need a clear base/bull/bear with quantified scenarios. The IC will be most interested in invalidation criteria.",
+    "tone_overrides": [],
+    "outline_overrides": []
+  },
+  "expected_outputs": {
+    "primary": "/mnt/user-data/outputs/lynai_pls_20260514.docx",
+    "supporting": [
+      "/mnt/user-data/outputs/lynai_pls_20260514_scorecard.json",
+      "/mnt/user-data/outputs/lynai_pls_20260514_revision_log.md",
+      "/mnt/user-data/outputs/lynai_pls_20260514_assets/"
+    ]
+  },
+  "expected_pipeline_trace": {
+    "intake_state":     "Orchestrator confirms inputs above; no missing required fields → straight to PLANNING",
+    "plan_state":       "plan.json with 11 sections (cover + 10 body), 8 charts, 6 tables; data_gaps[]: none",
+    "drafting_state":   "draft_v0.md ~8.5k words; charts/*.png rendered at 300 DPI; tables.json populated",
+    "review_cycle_1":   "Likely failures: R4 (catalyst dates need quarter specificity), R9 (1-2 drift cases in cost curve)",
+    "revision_cycle_1": "Reviser addresses R4 + R9 notes; 2 minor R5 polish items left as MAJOR for next cycle",
+    "review_cycle_2":   "Expected: PASS (all dims ≥ 9.5)",
+    "production_state": "build_docx.js produces lynai_pls_20260514.docx (~3-5 MB)",
+    "validation_state": "validate_docx.sh: schema PASS + render PASS (25-page PDF, 1.2 MB) + assets PASS (8 images)",
+    "delivery_state":   "present_files with the .docx as primary"
+  }
+}

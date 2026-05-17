@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lynai.mines/schemas/plan.schema.json",
+  "title": "LynAI Report Plan",
+  "description": "Plan produced by the Orchestrator from a user brief. Drives the rest of the pipeline.",
+  "type": "object",
+  "required": ["version", "report_meta", "outline", "chart_inventory", "data_binding_map", "cycle_cap"],
+  "properties": {
+    "version": { "const": "1.0" },
+    "report_meta": {
+      "type": "object",
+      "required": ["title", "subject", "audience", "target_pages", "bilingual", "urgency", "slug"],
+      "properties": {
+        "title":         { "type": "string", "minLength": 4 },
+        "subtitle":      { "type": "string" },
+        "subject":       { "type": "string" },
+        "audience": {
+          "type": "string",
+          "enum": ["IC", "external", "investor", "internal_memo", "regulator", "board"]
+        },
+        "archetype": {
+          "type": "string",
+          "enum": ["equity_research", "commodity_deep_dive", "ma_note", "esg_intel", "geopolitical_risk", "thematic"]
+        },
+        "target_pages":  { "type": "integer", "minimum": 4,   "maximum": 120 },
+        "target_words":  { "type": "integer", "minimum": 1500, "maximum": 50000 },
+        "bilingual": {
+          "type": "string",
+          "enum": ["en_only", "cn_only", "en_cn_parallel"]
+        },
+        "urgency": {
+          "type": "string",
+          "enum": ["standard", "urgent", "rush"]
+        },
+        "slug":          { "type": "string", "pattern": "^[a-z0-9_-]+$" },
+        "ref_id":        { "type": "string" },
+        "date":          { "type": "string", "format": "date" },
+        "author":        { "type": "string" }
+      }
+    },
+    "outline": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "target_words"],
+        "properties": {
+          "id":             { "type": "string", "pattern": "^[a-z0-9_]+$" },
+          "title":          { "type": "string" },
+          "ordinal":        { "type": "integer", "minimum": 1 },
+          "target_words":   { "type": "integer", "minimum": 100 },
+          "target_charts":  { "type": "integer", "minimum": 0, "maximum": 8 },
+          "target_tables":  { "type": "integer", "minimum": 0, "maximum": 6 },
+          "source_data_refs": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "summary_finding": { "type": "string" }
+        }
+      }
+    },
+    "chart_inventory": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "type"],
+        "properties": {
+          "id":          { "type": "string", "pattern": "^chart_[0-9a-z_]+$" },
+          "title":       { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": ["line", "bar", "barh", "stacked_bar", "area", "scatter", "histogram", "boxplot", "waterfall", "dual_axis"]
+          },
+          "data_source": { "type": "string" },
+          "section_id":  { "type": "string" },
+          "single_finding": { "type": "string" }
+        }
+      }
+    },
+    "table_inventory": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title"],
+        "properties": {
+          "id":          { "type": "string", "pattern": "^table_[0-9a-z_]+$" },
+          "title":       { "type": "string" },
+          "data_source": { "type": "string" },
+          "section_id":  { "type": "string" }
+        }
+      }
+    },
+    "data_binding_map": {
+      "type": "object",
+      "description": "Maps section_id → array of raw data file paths",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+    "data_gaps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["section_id", "description"],
+        "properties": {
+          "section_id":   { "type": "string" },
+          "description":  { "type": "string" },
+          "severity": {
+            "type": "string",
+            "enum": ["blocker", "major", "minor"]
+          },
+          "remediation":  { "type": "string" }
+        }
+      }
+    },
+    "cycle_cap": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Max review-revise cycles. Default 5."
+    },
+    "critic_focus_overrides": {
+      "type": "object",
+      "description": "Optional per-dimension weight or threshold overrides. v1.0 advanced only.",
+      "additionalProperties": { "type": "number" }
+    }
+  }
+}

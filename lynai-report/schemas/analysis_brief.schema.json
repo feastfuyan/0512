@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lynai.mines/schemas/analysis_brief.schema.json",
+  "title": "LynAI Analysis Brief",
+  "description": "Structured output from the Research Analyst. While the Drafter consumes a markdown rendering of this, the underlying object should conform to this schema so downstream agents can audit.",
+  "type": "object",
+  "required": ["version", "thesis", "executive_summary", "key_drivers", "scenarios", "risks", "catalysts", "invalidation_criteria"],
+  "properties": {
+    "version": { "const": "1.0" },
+    "thesis": {
+      "type": "object",
+      "required": ["statement", "number_anchor", "timeframe", "falsifiable"],
+      "properties": {
+        "statement":       { "type": "string", "minLength": 20, "maxLength": 600 },
+        "number_anchor":   { "type": "string", "description": "The quantitative anchor that makes the thesis falsifiable" },
+        "timeframe":       { "type": "string" },
+        "falsifiable":     { "type": "boolean", "const": true }
+      }
+    },
+    "executive_summary": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 6,
+      "items": {
+        "type": "string",
+        "maxLength": 220,
+        "description": "≤ 30 words each"
+      }
+    },
+    "key_drivers": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["name", "data_point", "mechanism", "magnitude"],
+        "properties": {
+          "name":       { "type": "string" },
+          "data_point": { "type": "string", "description": "Specific datum supporting the driver" },
+          "mechanism":  { "type": "string", "description": "Causal explanation" },
+          "magnitude":  { "type": "string", "description": "Quantified impact" },
+          "source":     { "type": "string" }
+        }
+      }
+    },
+    "scenarios": {
+      "type": "object",
+      "required": ["base", "bull", "bear"],
+      "properties": {
+        "base": { "$ref": "#/$defs/scenario" },
+        "bull": { "$ref": "#/$defs/scenario" },
+        "bear": { "$ref": "#/$defs/scenario" }
+      },
+      "additionalProperties": false
+    },
+    "comparables": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name":        { "type": "string" },
+          "ticker":      { "type": "string" },
+          "key_metrics": {
+            "type": "object",
+            "additionalProperties": { "type": ["string", "number"] }
+          },
+          "rationale":   { "type": "string" }
+        }
+      }
+    },
+    "risks": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["name", "probability", "impact"],
+        "properties": {
+          "name":        { "type": "string" },
+          "probability": { "enum": ["L", "M", "H"] },
+          "impact":      { "enum": ["L", "M", "H"] },
+          "mitigation":  { "type": "string" }
+        }
+      }
+    },
+    "catalysts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["event", "expected_date"],
+        "properties": {
+          "event":         { "type": "string" },
+          "expected_date": { "type": "string", "description": "ISO date OR quarter (e.g. '2026-Q3')" },
+          "direction":     { "enum": ["positive", "negative", "neutral"] },
+          "monitorable":   { "type": "string" }
+        }
+      }
+    },
+    "invalidation_criteria": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["condition"],
+        "properties": {
+          "condition":          { "type": "string" },
+          "evidence_to_watch":  { "type": "string" }
+        }
+      }
+    },
+    "data_gaps_flagged": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "$defs": {
+    "scenario": {
+      "type": "object",
+      "required": ["probability", "narrative", "key_assumption", "outcome_metric"],
+      "properties": {
+        "probability":     { "type": "number", "minimum": 0, "maximum": 1 },
+        "narrative":       { "type": "string" },
+        "key_assumption":  { "type": "string" },
+        "outcome_metric":  { "type": "string", "description": "The headline number for this scenario" }
+      }
+    }
+  }
+}

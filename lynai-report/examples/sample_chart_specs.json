@@ -1,0 +1,83 @@
+[
+  {
+    "id": "chart_01",
+    "type": "line",
+    "title": "Lithium hydroxide prices stabilized 30% above marginal cost despite 2024 supply build",
+    "subtitle": "US$/t LiOH·H₂O, monthly average, with marginal cost band",
+    "x": {
+      "label": "Year",
+      "data": [2021, 2022, 2023, 2024, 2025, 2026],
+      "is_forecast_from": 2026
+    },
+    "y": {
+      "label": "Price (US$/t)",
+      "start_at_zero": true
+    },
+    "series": [
+      {
+        "name": "LiOH spot",
+        "data": [18000, 78000, 41000, 13000, 16500, 22000],
+        "color_role": "primary"
+      },
+      {
+        "name": "Marginal cost (90th pct)",
+        "data": [12000, 14000, 13500, 12500, 13000, 13500],
+        "color_role": "accent"
+      }
+    ],
+    "annotations": [
+      {"x": 2022, "y": 78000, "text": "China stimulus + EV peak", "direction": "up"},
+      {"x": 2024, "y": 13000, "text": "Marginal cost floor holds", "direction": "down"}
+    ],
+    "source_line": "Source: Benchmark Mineral Intelligence; LynAI Research analysis",
+    "width_in": 6.0,
+    "height_in": 3.4
+  },
+  {
+    "id": "chart_02",
+    "type": "stacked_bar",
+    "title": "Spodumene supply growth concentrated in Australia and Africa through 2028E",
+    "subtitle": "Production, kt LCE",
+    "x": {
+      "label": "Year",
+      "data": [2023, 2024, 2025, 2026, 2027, 2028]
+    },
+    "y": {
+      "label": "Supply (kt LCE)",
+      "start_at_zero": true
+    },
+    "series": [
+      {"name": "Australia",      "data": [420, 480, 540, 590, 640, 680], "color_role": "primary"},
+      {"name": "Africa",         "data": [30,  85,  140, 210, 280, 340], "color_role": "accent"},
+      {"name": "Latin America",  "data": [80,  95,  120, 140, 165, 190], "color_role": "support_steel"},
+      {"name": "Other",          "data": [40,  45,  50,  55,  60,  65],  "color_role": "support_slate"}
+    ],
+    "source_line": "Source: Company filings; USGS MCS 2026; LynAI Research analysis",
+    "width_in": 6.0,
+    "height_in": 3.4
+  },
+  {
+    "id": "chart_03",
+    "type": "barh",
+    "title": "PLS sits in the lowest cost quartile globally",
+    "subtitle": "All-in sustaining cost, US$/t LCE, 2025E",
+    "x": {
+      "label": "Producer",
+      "data": ["PLS (Pilgangoora)", "Greenbushes", "Mt Cattlin", "Wodgina", "Mt Marion", "Bald Hill"]
+    },
+    "y": {
+      "label": "AISC (US$/t LCE)",
+      "start_at_zero": true
+    },
+    "series": [
+      {
+        "name": "AISC",
+        "data": [7800, 6200, 11500, 9400, 10200, 13800],
+        "color_role": "primary"
+      }
+    ],
+    "source_line": "Source: Company quarterly reports; LynAI Research analysis",
+    "width_in": 6.0,
+    "height_in": 3.4
+  }
+]

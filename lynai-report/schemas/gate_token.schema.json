@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lynai.mines/schemas/gate_token.schema.json",
+  "title": "LynAI Gate Token (v1.1)",
+  "description": "Cryptographically-light signed verdict issued by agent.gatekeeper. Producer refuses to build any .docx without a valid token whose draft_content_hash matches the draft it's about to consume. This is the only way the gate decision can be honored; rejection of forged or unmatched tokens MUST be a hard error, not a warning.",
+  "type": "object",
+  "required": ["version", "token_id", "issued_at", "issuer", "draft_revision", "draft_content_hash", "scorecard_ref", "decision", "rule_applied", "min_dim_score", "signature"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "const": "1.1" },
+    "token_id": {
+      "type": "string",
+      "pattern": "^GT-[A-Z0-9]{8}-[0-9]{8}-[0-9]+$",
+      "description": "Unique token ID. Format: GT-<slug-hash>-<YYYYMMDD>-<draft_revision>"
+    },
+    "issued_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "issuer": {
+      "type": "object",
+      "required": ["agent_id", "agent_version"],
+      "properties": {
+        "agent_id":      { "const": "agent.gatekeeper" },
+        "agent_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" }
+      }
+    },
+    "draft_revision": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "draft_content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$",
+      "description": "MUST match scorecard.draft_content_hash AND the live draft markdown at Producer entry. Mismatch = hard reject."
+    },
+    "scorecard_ref": {
+      "type": "object",
+      "required": ["path", "hash"],
+      "properties": {
+        "path": { "type": "string" },
+        "hash": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+      }
+    },
+    "decision": {
+      "type": "string",
+      "enum": ["PASS", "REVISE", "DELIVER_WITH_SHORTFALL"],
+      "description": "PASS only if rule_applied = strict_greater_than AND every dim > 9.5. DELIVER_WITH_SHORTFALL only if cycle_cap reached without convergence."
+    },
+    "rule_applied": {
+      "type": "object",
+      "required": ["operator", "threshold", "scope"],
+      "properties": {
+        "operator":  { "const": ">" },
+        "threshold": { "const": 9.5 },
+        "scope":     { "const": "every_dimension" }
+      },
+      "description": "Echoes the locked rule from 00_DECISIONS.md §D-1. Producer verifies this matches its own constant."
+    },
+    "min_dim_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10
+    },
+    "min_dim_id": {
+      "type": "string",
+      "pattern": "^R([1-9]|10)$"
+    },
+    "shortfall_note": {
+      "type": "string",
+      "description": "Required when decision = DELIVER_WITH_SHORTFALL. Enumerates failing dimensions and remediation."
+    },
+    "signature": {
+      "type": "string",
+      "pattern": "^GK1\\.[a-f0-9]{64}$",
+      "description": "HMAC-SHA256(token_id || draft_content_hash || decision, secret=GK_TOKEN_SECRET env). Producer re-computes and compares."
+    },
+    "audit_chain": {
+      "type": "array",
+      "description": "Optional: prior cycle tokens. Lets investigators trace how non-convergence happened.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "cycle":     { "type": "integer" },
+          "decision":  { "type": "string" },
+          "min_dim":   { "type": "number" }
+        }
+      }
+    }
+  }
+}

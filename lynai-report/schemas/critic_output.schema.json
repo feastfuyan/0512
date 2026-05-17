@@ -1,0 +1,151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lynai.mines/schemas/critic_output.schema.json",
+  "title": "LynAI Critic Output (v1.1)",
+  "description": "Per-cycle output from any of the three critic agents (content / layout / charts). Hard gate per dimension: score > 9.5 (i.e. ≥ 9.6). Critics own NON-OVERLAPPING dimensions; the allOf rules below enforce that a critic CANNOT fill a dimension it does not own.",
+  "type": "object",
+  "required": ["version", "critic", "draft_revision", "draft_content_hash", "scores", "overall_recommendation", "blocking_count"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "const": "1.1" },
+    "critic": {
+      "type": "string",
+      "enum": ["content", "layout", "charts"]
+    },
+    "draft_revision": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "draft_content_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$",
+      "description": "SHA-256 of the draft markdown the critic scored. Aggregator rejects critic outputs whose hashes disagree (race condition guard)."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "scores": {
+      "type": "object",
+      "description": "Per-dimension scores. A critic only fills in its own dimensions (enforced by allOf).",
+      "patternProperties": {
+        "^R([1-9]|10)$": { "$ref": "#/$defs/dimension_score" }
+      },
+      "additionalProperties": false
+    },
+    "overall_recommendation": {
+      "type": "string",
+      "enum": ["PROPOSE_PASS", "PROPOSE_REVISE"],
+      "description": "Critic SUGGESTS only. The decision belongs to Gate-Keeper."
+    },
+    "blocking_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Count of this critic's owned dimensions with score <= 9.5 (i.e. failing the strict-greater-than gate)."
+    }
+  },
+  "allOf": [
+    {
+      "if":   { "properties": { "critic": { "const": "content" } } },
+      "then": {
+        "properties": {
+          "scores": {
+            "required": ["R1", "R2", "R3", "R4"],
+            "additionalProperties": false,
+            "properties": {
+              "R1": { "$ref": "#/$defs/dimension_score" },
+              "R2": { "$ref": "#/$defs/dimension_score" },
+              "R3": { "$ref": "#/$defs/dimension_score" },
+              "R4": { "$ref": "#/$defs/dimension_score" }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if":   { "properties": { "critic": { "const": "layout" } } },
+      "then": {
+        "properties": {
+          "scores": {
+            "required": ["R5", "R6", "R7"],
+            "additionalProperties": false,
+            "properties": {
+              "R5": { "$ref": "#/$defs/dimension_score" },
+              "R6": { "$ref": "#/$defs/dimension_score" },
+              "R7": { "$ref": "#/$defs/dimension_score" }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if":   { "properties": { "critic": { "const": "charts" } } },
+      "then": {
+        "properties": {
+          "scores": {
+            "required": ["R8", "R9", "R10"],
+            "additionalProperties": false,
+            "properties": {
+              "R8":  { "$ref": "#/$defs/dimension_score" },
+              "R9":  { "$ref": "#/$defs/dimension_score" },
+              "R10": { "$ref": "#/$defs/dimension_score" }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "dimension_score": {
+      "type": "object",
+      "required": ["score", "anchor_rationale", "notes"],
+      "additionalProperties": false,
+      "properties": {
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10,
+          "multipleOf": 0.1,
+          "description": "Score in 0.1 increments. Hard gate: > 9.5 (i.e. ≥ 9.6)."
+        },
+        "anchor_rationale": {
+          "type": "string",
+          "minLength": 10,
+          "description": "Cite the specific rubric anchor (e.g. 'R8 anchor 9.5: minor polish item only'). Aggregator copies this verbatim into the scorecard."
+        },
+        "notes": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/critic_note" }
+        }
+      }
+    },
+    "critic_note": {
+      "type": "object",
+      "required": ["line_anchor", "severity", "action"],
+      "additionalProperties": false,
+      "properties": {
+        "line_anchor": {
+          "type": "string",
+          "description": "e.g. '§3 paragraph 2', 'chart_04.png', 'Cover page'"
+        },
+        "severity": {
+          "type": "string",
+          "enum": ["blocking", "polish"],
+          "description": "blocking = score <= 9.5 (gate fail); polish = 9.6-9.9 with room to lift"
+        },
+        "action": {
+          "type": "string",
+          "minLength": 10,
+          "description": "Imperative verb + target + change. Must be actionable."
+        },
+        "data_pointer": { "type": "string" },
+        "type": {
+          "type": "string",
+          "enum": ["drift", "missing_citation", "style_violation", "logic_gap", "format_error", "other"]
+        },
+        "prose_says": { "type": "string" },
+        "chart_says": { "type": "string" }
+      }
+    }
+  }
+}
