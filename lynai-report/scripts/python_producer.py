@@ -689,10 +689,12 @@ def _render_pdf(docx_path: Path, outputs_dir: Path, log: dict) -> Path | None:
     soffice = shutil.which("soffice") or shutil.which("soffice.exe")
     if not soffice:
         # Try common Windows install locations
-        for candidate in [
+        env_path = os.environ.get("LIBREOFFICE_PATH")
+        candidates = [env_path] if env_path else [
             r"C:\Program Files\LibreOffice\program\soffice.exe",
             r"C:\Program Files (x86)\LibreOffice\program\soffice.exe",
-        ]:
+        ]
+        for candidate in candidates:
             if Path(candidate).exists():
                 soffice = candidate
                 break
