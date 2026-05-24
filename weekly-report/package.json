@@ -1,0 +1,25 @@
+{
+  "name": "weekly-report-generator",
+  "version": "1.0.0",
+  "description": "智能周报生成器，支持Git提交记录分析和AI优化",
+  "main": "git-weekly.js",
+  "scripts": {
+    "start": "node git-weekly.js",
+    "test": "node test.js"
+  },
+  "keywords": [
+    "weekly-report",
+    "git",
+    "report-generator",
+    "ai",
+    "productivity"
+  ],
+  "author": "MiningClawd AI",
+  "license": "MIT",
+  "dependencies": {
+    "markdown-pdf": "^11.0.0"
+  },
+  "bin": {
+    "git-weekly": "./git-weekly.js"
+  }
+}
