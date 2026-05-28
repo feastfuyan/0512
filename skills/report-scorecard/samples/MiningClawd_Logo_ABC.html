@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>MiningClawd Logo — A / B / C</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0b0f;color:#d1d5db;font-family:'Inter',sans-serif}
+
+/* Header */
+.page-header{text-align:center;padding:48px 24px 0}
+.page-header .eyebrow{font-size:11px;color:#14b8a6;letter-spacing:6px;font-weight:500;text-transform:uppercase;margin-bottom:12px}
+.page-header h1{font-size:32px;font-weight:700;font-family:'Space Grotesk',sans-serif;letter-spacing:-0.03em;color:#fff;font-style:italic}
+.page-header .sub{font-size:12px;color:#6b7280;letter-spacing:1px;margin-top:8px}
+.divider{width:60%;max-width:800px;height:1px;background:linear-gradient(90deg,transparent,rgba(20,184,166,0.3),transparent);margin:32px auto}
+
+/* Three columns */
+.columns{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;padding:0 16px 48px;max-width:1440px;margin:0 auto}
+.col{padding:0 16px;border-right:1px solid rgba(255,255,255,0.04)}
+.col:last-child{border-right:none}
+
+/* Column header */
+.col-header{text-align:center;padding:24px 0 20px}
+.label-circle{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(20,184,166,0.5);background:rgba(20,184,166,0.08);display:inline-flex;align-items:center;justify-content:center;font-family:'Georgia',serif;font-size:18px;font-weight:700;color:#14b8a6;margin-bottom:10px}
+.col-header h2{font-size:12px;font-weight:600;color:#fff;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px}
+.col-header p{font-size:10px;color:#6b7280;letter-spacing:0.5px}
+.rec-badge{display:inline-block;padding:3px 10px;border-radius:10px;background:#14b8a6;color:#0f1115;font-size:8px;font-weight:700;letter-spacing:0.5px;margin-top:6px}
+
+/* Section */
+.section{margin-bottom:20px}
+.section-title{font-size:9px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;padding:0 4px}
+
+/* Card */
+.card{background:#15171c;border-radius:10px;border:1px solid rgba(255,255,255,0.05)}
+
+/* Hero */
+.hero{background:radial-gradient(ellipse at 50% 30%,rgba(20,184,166,0.06) 0%,transparent 60%),#15171c;border-radius:10px;border:1px solid rgba(255,255,255,0.05);padding:36px 16px;text-align:center;margin-bottom:20px}
+.hero svg{margin-bottom:12px}
+.wm{font-family:'Space Grotesk',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.03em}
+.wm .m{color:#fff}.wm .cl{color:#14b8a6}
+.hero .tagline{font-size:8px;color:#6b7280;letter-spacing:2px;text-transform:uppercase;font-weight:500;margin-top:8px}
+
+/* Sizes */
+.sizes{padding:16px;display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.size-item{text-align:center}
+.size-label{font-size:8px;color:#6b7280;margin-top:4px;font-family:'Space Grotesk',monospace}
+
+/* Lockups */
+.lockups{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px}
+.lockup{padding:16px 12px}
+.lockup-label{font-size:8px;color:#6b7280;margin-bottom:8px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px}
+.lockup-row{display:flex;align-items:center;gap:8px}
+.lockup-col{display:flex;flex-direction:column;align-items:center;gap:6px}
+.sub-tag{font-size:7px;color:#14b8a6;letter-spacing:1px;text-transform:uppercase;font-weight:500;margin-top:1px}
+
+/* Sidebar */
+.sidebar-mock{background:#0f1115;border-radius:10px;border:1px solid rgba(255,255,255,0.05);padding:16px 12px}
+.sidebar-nav{margin-top:12px;border-top:1px solid rgba(255,255,255,0.05);padding-top:10px}
+.nav-item{font-size:8px;font-weight:700;letter-spacing:0.8px;padding:5px 8px;border-radius:3px 0 0 3px}
+.nav-item.on{color:#14b8a6;border-right:2px solid #14b8a6;background:rgba(20,184,166,0.05)}
+.nav-item.off{color:#6b7280;border-right:2px solid transparent}
+
+/* Colors */
+.colors{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:20px}
+.color-card{border-radius:6px;border:1px solid rgba(255,255,255,0.05);overflow:hidden;background:#15171c}
+.color-sw{height:28px;border-bottom:1px solid rgba(255,255,255,0.05)}
+.color-info{padding:6px 8px}
+.color-n{font-size:8px;font-weight:600;color:#d1d5db}
+.color-h{font-size:7px;color:#6b7280;font-family:'Space Grotesk',monospace}
+
+/* Concept */
+.concept{padding:16px}
+.concept h3{color:#14b8a6;font-size:9px;font-weight:700;letter-spacing:0.5px;margin-bottom:6px}
+.concept p{color:#6b7280;font-size:9px;line-height:1.7;margin:0}
+
+/* Tags */
+.tags{display:flex;gap:6px;padding:0 4px;margin-bottom:16px;flex-wrap:wrap}
+.tag{padding:3px 10px;border-radius:10px;background:rgba(20,184,166,0.06);border:0.5px solid rgba(20,184,166,0.2);font-size:8px;color:#14b8a6;font-weight:600}
+
+/* Footer */
+.footer{text-align:center;padding:24px;font-size:9px;color:#4b5563;border-top:1px solid rgba(255,255,255,0.03)}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="eyebrow">Brand Identity</div>
+  <h1>MiningClawd Logo Concepts</h1>
+  <div class="sub">AI Mining Intelligence Platform · A / B / C 三方案对比</div>
+</div>
+<div class="divider"></div>
+
+<div class="columns">
+
+<!-- ==================== COLUMN A ==================== -->
+<div class="col">
+  <div class="col-header">
+    <div class="label-circle">A</div>
+    <h2>Three-Prong Claw</h2>
+    <p>三叉爪形 · 多维探索</p>
+  </div>
+
+  <div class="hero">
+    <svg width="64" height="64" viewBox="0 0 48 48" fill="none"><defs><linearGradient id="tA" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#5eead4"/><stop offset="50%" stop-color="#14b8a6"/><stop offset="100%" stop-color="#0d9488"/></linearGradient><linearGradient id="dA" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#1a1d23"/><stop offset="100%" stop-color="#0f1115"/></linearGradient></defs><circle cx="24" cy="24" r="22" fill="url(#dA)" stroke="url(#tA)" stroke-width="1.5"/><path d="M24 10 L24 26 L22 28 L24 30 L26 28 L24 26" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M24 18 L16 26 L14 30 L17 29 L19 27" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M24 18 L32 26 L34 30 L31 29 L29 27" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M20 33 L24 38 L28 33 L24 31 Z" fill="#14b8a6" opacity="0.9"/><circle cx="17" cy="22" r="1" fill="#5eead4" opacity="0.6"/><circle cx="31" cy="22" r="1" fill="#5eead4" opacity="0.6"/><circle cx="24" cy="14" r="1.2" fill="#5eead4" opacity="0.8"/></svg>
+    <div><span class="wm" style="font-size:28px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div>
+    <div class="tagline">AI Mining Intelligence Platform</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Icon Sizes</div>
+    <div class="card sizes" id="sizesA"></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Logo Lockups</div>
+    <div class="lockups">
+      <div class="card lockup"><div class="lockup-label">Horizontal</div><div class="lockup-row"><svg width="32" height="32" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="url(#dA)" stroke="url(#tA)" stroke-width="1.5"/><path d="M24 10 L24 26 L22 28 L24 30 L26 28 L24 26" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M24 18 L16 26 L14 30 L17 29 L19 27" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M24 18 L32 26 L34 30 L31 29 L29 27" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M20 33 L24 38 L28 33 L24 31 Z" fill="#14b8a6" opacity="0.9"/><circle cx="17" cy="22" r="1" fill="#5eead4" opacity="0.6"/><circle cx="31" cy="22" r="1" fill="#5eead4" opacity="0.6"/><circle cx="24" cy="14" r="1.2" fill="#5eead4" opacity="0.8"/></svg><span class="wm" style="font-size:14px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div></div>
+      <div class="card lockup"><div class="lockup-label">With Tagline</div><div class="lockup-row"><svg width="32" height="32" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="url(#dA)" stroke="url(#tA)" stroke-width="1.5"/><path d="M24 10 L24 26 L22 28 L24 30 L26 28 L24 26" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M24 18 L16 26 L14 30 L17 29 L19 27" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M24 18 L32 26 L34 30 L31 29 L29 27" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M20 33 L24 38 L28 33 L24 31 Z" fill="#14b8a6" opacity="0.9"/><circle cx="17" cy="22" r="1" fill="#5eead4" opacity="0.6"/><circle cx="31" cy="22" r="1" fill="#5eead4" opacity="0.6"/><circle cx="24" cy="14" r="1.2" fill="#5eead4" opacity="0.8"/></svg><div><span class="wm" style="font-size:14px"><span class="m">Mining</span><span class="cl">Clawd</span></span><div class="sub-tag">Mining Intelligence</div></div></div></div>
+      <div class="card lockup" style="text-align:center"><div class="lockup-label">Stacked</div><div class="lockup-col"><svg width="40" height="40" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="url(#dA)" stroke="url(#tA)" stroke-width="1.5"/><path d="M24 10 L24 26 L22 28 L24 30 L26 28 L24 26" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M24 18 L16 26 L14 30 L17 29 L19 27" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M24 18 L32 26 L34 30 L31 29 L29 27" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M20 33 L24 38 L28 33 L24 31 Z" fill="#14b8a6" opacity="0.9"/><circle cx="17" cy="22" r="1" fill="#5eead4" opacity="0.6"/><circle cx="31" cy="22" r="1" fill="#5eead4" opacity="0.6"/><circle cx="24" cy="14" r="1.2" fill="#5eead4" opacity="0.8"/></svg><span class="wm" style="font-size:20px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div></div>
+      <div class="sidebar-mock"><div class="lockup-label">Sidebar</div><div class="lockup-row"><svg width="28" height="28" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="url(#dA)" stroke="url(#tA)" stroke-width="1.5"/><path d="M24 10 L24 26 L22 28 L24 30 L26 28 L24 26" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M24 18 L16 26 L14 30 L17 29 L19 27" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M24 18 L32 26 L34 30 L31 29 L29 27" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M20 33 L24 38 L28 33 L24 31 Z" fill="#14b8a6" opacity="0.9"/><circle cx="17" cy="22" r="1" fill="#5eead4" opacity="0.6"/><circle cx="31" cy="22" r="1" fill="#5eead4" opacity="0.6"/><circle cx="24" cy="14" r="1.2" fill="#5eead4" opacity="0.8"/></svg><span class="wm" style="font-size:11px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div><div class="sidebar-nav"><div class="nav-item on">HOME</div><div class="nav-item off">MINING COMPANIES</div><div class="nav-item off">REPORTS</div><div class="nav-item off">3D DRILLING</div></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Brand Colors</div>
+    <div class="colors">
+      <div class="color-card"><div class="color-sw" style="background:#14b8a6"></div><div class="color-info"><div class="color-n">Primary</div><div class="color-h">#14b8a6</div></div></div>
+      <div class="color-card"><div class="color-sw" style="background:#0f1115"></div><div class="color-info"><div class="color-n">Charcoal</div><div class="color-h">#0f1115</div></div></div>
+      <div class="color-card"><div class="color-sw" style="background:#181a1f"></div><div class="color-info"><div class="color-n">Card</div><div class="color-h">#181a1f</div></div></div>
+      <div class="color-card"><div class="color-sw" style="background:#22c55e"></div><div class="color-info"><div class="color-n">Strong Buy</div><div class="color-h">#22c55e</div></div></div>
+      <div class="color-card"><div class="color-sw" style="background:#ef4444"></div><div class="color-info"><div class="color-n">Strong Sell</div><div class="color-h">#ef4444</div></div></div>
+      <div class="color-card"><div class="color-sw" style="background:#d1d5db"></div><div class="color-info"><div class="color-n">Text</div><div class="color-h">#d1d5db</div></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">设计说明</div>
+    <div class="card concept">
+      <h3>LOGO 构思</h3>
+      <p>三叉爪形从中心向外延伸，象征矿业勘探的多方位探索。中央纵轴代表数据钻取深度，底部钻石形呼应矿产资源的核心价值。圆形容器传达完整性与专业感。</p>
+    </div>
+  </div>
+  <div class="tags"><span class="tag">探索感</span><span class="tag">锐利感</span><span class="tag">矿产符号</span></div>
+</div>
+
+<!-- ==================== COLUMN B ==================== -->
+<div class="col">
+  <div class="col-header">
+    <div class="label-circle" style="border-color:rgba(20,184,166,0.8);background:rgba(20,184,166,0.15)">B</div>
+    <h2>Pickaxe Claw</h2>
+    <p>镐爪融合 · AI 节点网络</p>
+    <div class="rec-badge">★ 推荐方案</div>
+  </div>
+
+  <div class="hero" style="border-color:rgba(20,184,166,0.15)">
+    <svg width="64" height="64" viewBox="0 0 48 48" fill="none"><defs><linearGradient id="tB" x1="10" y1="6" x2="38" y2="42" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#99f6e4"/><stop offset="40%" stop-color="#14b8a6"/><stop offset="100%" stop-color="#0f766e"/></linearGradient><radialGradient id="bgB" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#1a1d23"/><stop offset="100%" stop-color="#0f1115"/></radialGradient></defs><circle cx="24" cy="24" r="23" fill="url(#bgB)"/><circle cx="24" cy="24" r="22.5" fill="none" stroke="#14b8a6" stroke-width="1" opacity="0.6"/><line x1="24" y1="10" x2="24" y2="32" stroke="url(#tB)" stroke-width="2.2" stroke-linecap="round"/><path d="M14 16 Q18 12, 24 10 Q30 12, 34 16" stroke="url(#tB)" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M14 16 Q13 19, 15 21" stroke="url(#tB)" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M34 16 Q35 19, 33 21" stroke="url(#tB)" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M19 34 L24 40 L29 34 L26.5 32 L24 33.5 L21.5 32 Z" fill="#14b8a6" opacity="0.85"/><circle cx="24" cy="24" r="1.5" fill="#5eead4" opacity="0.9"/><circle cx="19" cy="27" r="1" fill="#5eead4" opacity="0.5"/><circle cx="29" cy="27" r="1" fill="#5eead4" opacity="0.5"/><line x1="24" y1="24" x2="19" y2="27" stroke="#5eead4" stroke-width="0.5" opacity="0.3"/><line x1="24" y1="24" x2="29" y2="27" stroke="#5eead4" stroke-width="0.5" opacity="0.3"/></svg>
+    <div><span class="wm" style="font-size:28px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div>
+    <div class="tagline">AI Mining Intelligence Platform</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Icon Sizes</div>
+    <div class="card sizes" id="sizesB"></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Logo Lockups</div>
+    <div class="lockups">
+      <div class="card lockup"><div class="lockup-label">Horizontal</div><div class="lockup-row"><svg width="32" height="32" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" fill="url(#bgB)"/><circle cx="24" cy="24" r="22.5" fill="none" stroke="#14b8a6" stroke-width="1" opacity="0.6"/><line x1="24" y1="10" x2="24" y2="32" stroke="url(#tB)" stroke-width="2.2" stroke-linecap="round"/><path d="M14 16 Q18 12, 24 10 Q30 12, 34 16" stroke="url(#tB)" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M14 16 Q13 19, 15 21" stroke="url(#tB)" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M34 16 Q35 19, 33 21" stroke="url(#tB)" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M19 34 L24 40 L29 34 L26.5 32 L24 33.5 L21.5 32 Z" fill="#14b8a6" opacity="0.85"/><circle cx="24" cy="24" r="1.5" fill="#5eead4" opacity="0.9"/><circle cx="19" cy="27" r="1" fill="#5eead4" opacity="0.5"/><circle cx="29" cy="27" r="1" fill="#5eead4" opacity="0.5"/></svg><span class="wm" style="font-size:14px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div></div>
+      <div class="card lockup"><div class="lockup-label">With Tagline</div><div class="lockup-row"><svg width="32" height="32" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" fill="url(#bgB)"/><circle cx="24" cy="24" r="22.5" fill="none" stroke="#14b8a6" stroke-width="1" opacity="0.6"/><line x1="24" y1="10" x2="24" y2="32" stroke="url(#tB)" stroke-width="2.2" stroke-linecap="round"/><path d="M14 16 Q18 12, 24 10 Q30 12, 34 16" stroke="url(#tB)" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M14 16 Q13 19, 15 21" stroke="url(#tB)" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M34 16 Q35 19, 33 21" stroke="url(#tB)" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M19 34 L24 40 L29 34 L26.5 32 L24 33.5 L21.5 32 Z" fill="#14b8a6" opacity="0.85"/><circle cx="24" cy="24" r="1.5" fill="#5eead4" opacity="0.9"/><circle cx="19" cy="27" r="1" fill="#5eead4" opacity="0.5"/><circle cx="29" cy="27" r="1" fill="#5eead4" opacity="0.5"/></svg><div><span class="wm" style="font-size:14px"><span class="m">Mining</span><span class="cl">Clawd</span></span><div class="sub-tag">Mining Intelligence</div></div></div></div>
+      <div class="card lockup" style="text-align:center"><div class="lockup-label">Stacked</div><div class="lockup-col"><svg width="40" height="40" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" fill="url(#bgB)"/><circle cx="24" cy="24" r="22.5" fill="none" stroke="#14b8a6" stroke-width="1" opacity="0.6"/><line x1="24" y1="10" x2="24" y2="32" stroke="url(#tB)" stroke-width="2.2" stroke-linecap="round"/><path d="M14 16 Q18 12, 24 10 Q30 12, 34 16" stroke="url(#tB)" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M14 16 Q13 19, 15 21" stroke="url(#tB)" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M34 16 Q35 19, 33 21" stroke="url(#tB)" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M19 34 L24 40 L29 34 L26.5 32 L24 33.5 L21.5 32 Z" fill="#14b8a6" opacity="0.85"/><circle cx="24" cy="24" r="1.5" fill="#5eead4" opacity="0.9"/><circle cx="19" cy="27" r="1" fill="#5eead4" opacity="0.5"/><circle cx="29" cy="27" r="1" fill="#5eead4" opacity="0.5"/></svg><span class="wm" style="font-size:20px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div></div>
+      <div class="sidebar-mock"><div class="lockup-label">Sidebar</div><div class="lockup-row"><svg width="28" height="28" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" fill="url(#bgB)"/><circle cx="24" cy="24" r="22.5" fill="none" stroke="#14b8a6" stroke-width="1" opacity="0.6"/><line x1="24" y1="10" x2="24" y2="32" stroke="url(#tB)" stroke-width="2.2" stroke-linecap="round"/><path d="M14 16 Q18 12, 24 10 Q30 12, 34 16" stroke="url(#tB)" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M14 16 Q13 19, 15 21" stroke="url(#tB)" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M34 16 Q35 19, 33 21" stroke="url(#tB)" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M19 34 L24 40 L29 34 L26.5 32 L24 33.5 L21.5 32 Z" fill="#14b8a6" opacity="0.85"/><circle cx="24" cy="24" r="1.5" fill="#5eead4" opacity="0.9"/></svg><span class="wm" style="font-size:11px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div><div class="sidebar-nav"><div class="nav-item on">HOME</div><div class="nav-item off">MINING COMPANIES</div><div class="nav-item off">REPORTS</div><div class="nav-item off">3D DRILLING</div></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Brand Colors</div>
+    <div class="colors">
+      <div class="color-card"><div class="color-sw" style="background:#14b8a6"></div><div class="color-info"><div class="color-n">Primary</div><div class="color-h">#14b8a6</div></div></div>
+      <div class="color-card"><div class="color-sw" style="background:#0f1115"></div><div class="color-info"><div class="color-n">Charcoal</div><div class="color-h">#0f1115</div></div></div>
+      <div class="color-card"><div class="color-sw" style="background:#181a1f"></div><div class="color-info"><div class="color-n">Card</div><div class="color-h">#181a1f</div></div></div>
+      <div class="color-card"><div class="color-sw" style="background:#22c55e"></div><div class="color-info"><div class="color-n">Strong Buy</div><div class="color-h">#22c55e</div></div></div>
+      <div class="color-card"><div class="color-sw" style="background:#ef4444"></div><div class="color-info"><div class="color-n">Strong Sell</div><div class="color-h">#ef4444</div></div></div>
+      <div class="color-card"><div class="color-sw" style="background:#d1d5db"></div><div class="color-info"><div class="color-n">Text</div><div class="color-h">#d1d5db</div></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">设计说明</div>
+    <div class="card concept">
+      <h3>LOGO 构思</h3>
+      <p>将矿业镐头与机械爪完美融合——弧形爪头向内弯曲，既是挖掘工具也是数据抓取的隐喻。中央三点网络代表 AI 智能分析节点，底部切面宝石象征从原始数据中提炼的洞察价值。</p>
+    </div>
+  </div>
+  <div class="tags"><span class="tag">AI + 矿业</span><span class="tag">渐变质感</span><span class="tag">数据节点</span></div>
+</div>
+
+<!-- ==================== COLUMN C ==================== -->
+<div class="col">
+  <div class="col-header">
+    <div class="label-circle">C</div>
+    <h2>Inverted Claw</h2>
+    <p>倒置爪形 · 圆角方形</p>
+  </div>
+
+  <div class="hero">
+    <svg width="64" height="64" viewBox="0 0 48 48" fill="none"><defs><linearGradient id="tC" x1="24" y1="8" x2="24" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#5eead4"/><stop offset="100%" stop-color="#0d9488"/></linearGradient></defs><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2" opacity="0.95"/><path d="M12 34 L12 20 L18 14" stroke="url(#tC)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="url(#tC)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="url(#tC)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="28" x2="32" y2="28" stroke="#14b8a6" stroke-width="1" opacity="0.4"/><path d="M22 37 L24 40 L26 37 L24 34 Z" fill="#14b8a6" opacity="0.85"/><line x1="19" y1="10" x2="21" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/><line x1="23" y1="10" x2="25" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/><line x1="27" y1="10" x2="29" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/></svg>
+    <div><span class="wm" style="font-size:28px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div>
+    <div class="tagline">AI Mining Intelligence Platform</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Icon Sizes</div>
+    <div class="card sizes" id="sizesC"></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Logo Lockups</div>
+    <div class="lockups">
+      <div class="card lockup"><div class="lockup-label">Horizontal</div><div class="lockup-row"><svg width="32" height="32" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2" opacity="0.95"/><path d="M12 34 L12 20 L18 14" stroke="url(#tC)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="url(#tC)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="url(#tC)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="28" x2="32" y2="28" stroke="#14b8a6" stroke-width="1" opacity="0.4"/><path d="M22 37 L24 40 L26 37 L24 34 Z" fill="#14b8a6" opacity="0.85"/><line x1="19" y1="10" x2="21" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/><line x1="23" y1="10" x2="25" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/><line x1="27" y1="10" x2="29" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/></svg><span class="wm" style="font-size:14px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div></div>
+      <div class="card lockup"><div class="lockup-label">With Tagline</div><div class="lockup-row"><svg width="32" height="32" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2" opacity="0.95"/><path d="M12 34 L12 20 L18 14" stroke="url(#tC)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="url(#tC)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="url(#tC)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="28" x2="32" y2="28" stroke="#14b8a6" stroke-width="1" opacity="0.4"/><path d="M22 37 L24 40 L26 37 L24 34 Z" fill="#14b8a6" opacity="0.85"/><line x1="19" y1="10" x2="21" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/><line x1="23" y1="10" x2="25" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/><line x1="27" y1="10" x2="29" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/></svg><div><span class="wm" style="font-size:14px"><span class="m">Mining</span><span class="cl">Clawd</span></span><div class="sub-tag">Mining Intelligence</div></div></div></div>
+      <div class="card lockup" style="text-align:center"><div class="lockup-label">Stacked</div><div class="lockup-col"><svg width="40" height="40" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2" opacity="0.95"/><path d="M12 34 L12 20 L18 14" stroke="url(#tC)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="url(#tC)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="url(#tC)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="28" x2="32" y2="28" stroke="#14b8a6" stroke-width="1" opacity="0.4"/><path d="M22 37 L24 40 L26 37 L24 34 Z" fill="#14b8a6" opacity="0.85"/><line x1="19" y1="10" x2="21" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/><line x1="23" y1="10" x2="25" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/><line x1="27" y1="10" x2="29" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/></svg><span class="wm" style="font-size:20px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div></div>
+      <div class="sidebar-mock"><div class="lockup-label">Sidebar</div><div class="lockup-row"><svg width="28" height="28" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2" opacity="0.95"/><path d="M12 34 L12 20 L18 14" stroke="url(#tC)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="url(#tC)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="url(#tC)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="28" x2="32" y2="28" stroke="#14b8a6" stroke-width="1" opacity="0.4"/><path d="M22 37 L24 40 L26 37 L24 34 Z" fill="#14b8a6" opacity="0.85"/><line x1="19" y1="10" x2="21" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/><line x1="23" y1="10" x2="25" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/><line x1="27" y1="10" x2="29" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/></svg><span class="wm" style="font-size:11px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div><div class="sidebar-nav"><div class="nav-item on">HOME</div><div class="nav-item off">MINING COMPANIES</div><div class="nav-item off">REPORTS</div><div class="nav-item off">3D DRILLING</div></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Brand Colors</div>
+    <div class="colors">
+      <div class="color-card"><div class="color-sw" style="background:#14b8a6"></div><div class="color-info"><div class="color-n">Primary</div><div class="color-h">#14b8a6</div></div></div>
+      <div class="color-card"><div class="color-sw" style="background:#0f1115"></div><div class="color-info"><div class="color-n">Charcoal</div><div class="color-h">#0f1115</div></div></div>
+      <div class="color-card"><div class="color-sw" style="background:#181a1f"></div><div class="color-info"><div class="color-n">Card</div><div class="color-h">#181a1f</div></div></div>
+      <div class="color-card"><div class="color-sw" style="background:#22c55e"></div><div class="color-info"><div class="color-n">Strong Buy</div><div class="color-h">#22c55e</div></div></div>
+      <div class="color-card"><div class="color-sw" style="background:#ef4444"></div><div class="color-info"><div class="color-n">Strong Sell</div><div class="color-h">#ef4444</div></div></div>
+      <div class="color-card"><div class="color-sw" style="background:#d1d5db"></div><div class="color-info"><div class="color-n">Text</div><div class="color-h">#d1d5db</div></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">设计说明</div>
+    <div class="card concept">
+      <h3>LOGO 构思</h3>
+      <p>将字母 "M" 旋转 180° 形成向下抓取的爪形姿态——两侧支撑柱从底部升起，中央倒 V 如机械爪精准下探，象征 AI 从海量数据中抓取核心洞察。底部宝石为矿产价值，顶部三道爪痕呼应 "Claw"。</p>
+    </div>
+  </div>
+  <div class="tags"><span class="tag">抓取隐喻</span><span class="tag">倒置 M</span><span class="tag">爪痕记忆</span></div>
+</div>
+
+</div>
+
+<div class="footer">MiningClawd AI Intelligence Systems © 2024 · Confidential</div>
+
+<script>
+// Generate icon sizes for each column
+function iconA(s){return `<svg width="${s}" height="${s}" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="url(#dA)" stroke="url(#tA)" stroke-width="1.5"/><path d="M24 10 L24 26 L22 28 L24 30 L26 28 L24 26" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M24 18 L16 26 L14 30 L17 29 L19 27" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M24 18 L32 26 L34 30 L31 29 L29 27" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M20 33 L24 38 L28 33 L24 31 Z" fill="#14b8a6" opacity="0.9"/><circle cx="17" cy="22" r="1" fill="#5eead4" opacity="0.6"/><circle cx="31" cy="22" r="1" fill="#5eead4" opacity="0.6"/><circle cx="24" cy="14" r="1.2" fill="#5eead4" opacity="0.8"/></svg>`}
+function iconB(s){return `<svg width="${s}" height="${s}" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" fill="url(#bgB)"/><circle cx="24" cy="24" r="22.5" fill="none" stroke="#14b8a6" stroke-width="1" opacity="0.6"/><line x1="24" y1="10" x2="24" y2="32" stroke="url(#tB)" stroke-width="2.2" stroke-linecap="round"/><path d="M14 16 Q18 12, 24 10 Q30 12, 34 16" stroke="url(#tB)" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M14 16 Q13 19, 15 21" stroke="url(#tB)" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M34 16 Q35 19, 33 21" stroke="url(#tB)" stroke-width="2.2" stroke-linecap="round" fill="none"/><path d="M19 34 L24 40 L29 34 L26.5 32 L24 33.5 L21.5 32 Z" fill="#14b8a6" opacity="0.85"/><circle cx="24" cy="24" r="1.5" fill="#5eead4" opacity="0.9"/><circle cx="19" cy="27" r="1" fill="#5eead4" opacity="0.5"/><circle cx="29" cy="27" r="1" fill="#5eead4" opacity="0.5"/></svg>`}
+function iconC(s){return `<svg width="${s}" height="${s}" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2" opacity="0.95"/><path d="M12 34 L12 20 L18 14" stroke="url(#tC)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="url(#tC)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="url(#tC)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="28" x2="32" y2="28" stroke="#14b8a6" stroke-width="1" opacity="0.4"/><path d="M22 37 L24 40 L26 37 L24 34 Z" fill="#14b8a6" opacity="0.85"/><line x1="19" y1="10" x2="21" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/><line x1="23" y1="10" x2="25" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/><line x1="27" y1="10" x2="29" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/></svg>`}
+
+const sizes=[16,24,32,48,64];
+[{id:'sizesA',fn:iconA},{id:'sizesB',fn:iconB},{id:'sizesC',fn:iconC}].forEach(({id,fn})=>{
+  const el=document.getElementById(id);
+  sizes.forEach(s=>{const d=document.createElement('div');d.className='size-item';d.innerHTML=fn(s)+`<div class="size-label">${s}px</div>`;el.appendChild(d)});
+});
+</script>
+</body>
+</html>

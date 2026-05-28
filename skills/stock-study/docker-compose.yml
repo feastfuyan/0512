@@ -1,0 +1,62 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: ss_postgres
+    environment:
+      POSTGRES_USER: lynai
+      POSTGRES_PASSWORD: lynai
+      POSTGRES_DB: stockstudy
+    ports: ["5432:5432"]
+    volumes:
+      - ss_pg_data:/var/lib/postgresql/data
+      - ./infra/db/schema.sql:/docker-entrypoint-initdb.d/00-schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lynai"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: ss_redis
+    ports: ["6379:6379"]
+    volumes:
+      - ss_redis_data:/data
+
+  jaeger:
+    image: jaegertracing/all-in-one:1.57
+    container_name: ss_jaeger
+    environment:
+      COLLECTOR_OTLP_ENABLED: "true"
+    ports:
+      - "16686:16686"   # UI
+      - "4317:4317"     # OTLP gRPC
+      - "4318:4318"     # OTLP HTTP
+
+  prometheus:
+    image: prom/prometheus:v2.53.0
+    container_name: ss_prom
+    ports: ["9090:9090"]
+    volumes:
+      - ./infra/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./infra/prometheus/rules:/etc/prometheus/rules:ro
+
+  grafana:
+    image: grafana/grafana:11.1.0
+    container_name: ss_grafana
+    ports: ["3000:3000"]
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+      GF_AUTH_ANONYMOUS_ORG_ROLE: Viewer
+    volumes:
+      - ss_grafana_data:/var/lib/grafana
+      - ./infra/grafana/dashboards:/var/lib/grafana/dashboards:ro
+      - ./infra/grafana/provisioning:/etc/grafana/provisioning:ro
+    depends_on: [prometheus]
+
+volumes:
+  ss_pg_data:
+  ss_redis_data:
+  ss_grafana_data:

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>MiningClawd Logo — B1 / B2 / B3</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0b0f;color:#d1d5db;font-family:'Inter',sans-serif}
+.page-header{text-align:center;padding:48px 24px 0}
+.page-header .eyebrow{font-size:11px;color:#14b8a6;letter-spacing:6px;font-weight:500;text-transform:uppercase;margin-bottom:12px}
+.page-header h1{font-size:32px;font-weight:700;font-family:'Space Grotesk',sans-serif;letter-spacing:-0.03em;color:#fff;font-style:italic}
+.page-header .sub{font-size:12px;color:#6b7280;letter-spacing:1px;margin-top:8px}
+.brief{max-width:880px;margin:28px auto 0;padding:20px 28px;background:rgba(20,184,166,0.04);border:1px solid rgba(20,184,166,0.12);border-radius:10px;font-size:11px;color:#9ca3af;line-height:1.8}
+.brief strong{color:#14b8a6;font-weight:600}
+.brief em{color:#d1d5db;font-style:normal;font-weight:500}
+.divider{width:60%;max-width:800px;height:1px;background:linear-gradient(90deg,transparent,rgba(20,184,166,0.3),transparent);margin:32px auto}
+.columns{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;padding:0 16px 48px;max-width:1440px;margin:0 auto}
+.col{padding:0 16px;border-right:1px solid rgba(255,255,255,0.04)}
+.col:last-child{border-right:none}
+.col-header{text-align:center;padding:24px 0 20px}
+.label-circle{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(20,184,166,0.5);background:rgba(20,184,166,0.08);display:inline-flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:700;color:#14b8a6;margin-bottom:10px}
+.col-header h2{font-size:12px;font-weight:600;color:#fff;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px}
+.col-header p{font-size:10px;color:#6b7280;letter-spacing:0.5px}
+.rec-badge{display:inline-block;padding:3px 10px;border-radius:10px;background:#14b8a6;color:#0f1115;font-size:8px;font-weight:700;letter-spacing:0.5px;margin-top:6px}
+.section{margin-bottom:20px}
+.section-title{font-size:9px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;padding:0 4px}
+.card{background:#15171c;border-radius:10px;border:1px solid rgba(255,255,255,0.05)}
+.hero{background:radial-gradient(ellipse at 50% 30%,rgba(20,184,166,0.06) 0%,transparent 60%),#15171c;border-radius:10px;border:1px solid rgba(255,255,255,0.05);padding:36px 16px;text-align:center;margin-bottom:20px}
+.wm{font-family:'Space Grotesk',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.03em}
+.wm .m{color:#fff}.wm .cl{color:#14b8a6}
+.hero .tagline{font-size:8px;color:#6b7280;letter-spacing:2px;text-transform:uppercase;font-weight:500;margin-top:8px}
+.sizes{padding:16px;display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.size-item{text-align:center}
+.size-label{font-size:8px;color:#6b7280;margin-top:4px;font-family:'Space Grotesk',monospace}
+.lockups{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px}
+.lockup{padding:16px 12px}
+.lockup-label{font-size:8px;color:#6b7280;margin-bottom:8px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px}
+.lockup-row{display:flex;align-items:center;gap:8px}
+.lockup-col{display:flex;flex-direction:column;align-items:center;gap:6px}
+.sub-tag{font-size:7px;color:#14b8a6;letter-spacing:1px;text-transform:uppercase;font-weight:500;margin-top:1px}
+.sidebar-mock{background:#0f1115;border-radius:10px;border:1px solid rgba(255,255,255,0.05);padding:16px 12px}
+.sidebar-nav{margin-top:12px;border-top:1px solid rgba(255,255,255,0.05);padding-top:10px}
+.nav-item{font-size:8px;font-weight:700;letter-spacing:0.8px;padding:5px 8px;border-radius:3px 0 0 3px}
+.nav-item.on{color:#14b8a6;border-right:2px solid #14b8a6;background:rgba(20,184,166,0.05)}
+.nav-item.off{color:#6b7280;border-right:2px solid transparent}
+.concept{padding:16px}
+.concept h3{color:#14b8a6;font-size:9px;font-weight:700;letter-spacing:0.5px;margin-bottom:6px}
+.concept p{color:#6b7280;font-size:9px;line-height:1.7;margin:0}
+.concept ul{color:#6b7280;font-size:9px;line-height:1.8;margin:8px 0 0 14px;padding:0}
+.concept ul li{margin-bottom:2px}
+.concept ul li strong{color:#d1d5db;font-weight:600}
+.tags{display:flex;gap:6px;padding:0 4px;margin-bottom:16px;flex-wrap:wrap}
+.tag{padding:3px 10px;border-radius:10px;background:rgba(20,184,166,0.06);border:0.5px solid rgba(20,184,166,0.2);font-size:8px;color:#14b8a6;font-weight:600}
+.score-row{display:flex;gap:6px;padding:0 4px;margin-bottom:16px;flex-wrap:wrap}
+.score{padding:4px 0;flex:1;text-align:center;border-radius:6px;background:#15171c;border:1px solid rgba(255,255,255,0.05)}
+.score .val{font-size:14px;font-weight:700;color:#14b8a6;font-family:'Space Grotesk',sans-serif}
+.score .lbl{font-size:7px;color:#6b7280;margin-top:2px;letter-spacing:0.3px}
+.footer{text-align:center;padding:24px;font-size:9px;color:#4b5563;border-top:1px solid rgba(255,255,255,0.03)}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="eyebrow">Brand Identity · Round 2</div>
+  <h1>MiningClawd Logo — B 方案迭代</h1>
+  <div class="sub">基于方案 B 重构 · 从"挖矿工具"→"AI 智能网络"</div>
+</div>
+
+<div class="brief">
+  <strong>P0 核心修正：</strong>品牌叙事从<em>"物理采掘工具"</em>转向<em>"AI 个性化助理 + 智能网络"</em>。三个方案均保留 B 的镐爪基因，但将三端点重构为<strong>感知 · 决策 · 执行</strong>三层 AI 节点，以虚线/弧线连接形成网络拓扑。整体向上动势对金融客户友好，弱化物理采掘、强化数据智能。
+</div>
+
+<div class="divider"></div>
+
+<div class="columns">
+
+<!-- ==================== B1: NEURAL TRIDENT ==================== -->
+<div class="col">
+  <div class="col-header">
+    <div class="label-circle">B1</div>
+    <h2>Neural Trident</h2>
+    <p>神经三叉 · 节点向上聚合</p>
+  </div>
+
+  <div class="hero">
+    <!-- B1: Three upward strokes converge at top node, two base nodes, dashed connections -->
+    <svg width="72" height="72" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="tB1" x1="10" y1="6" x2="38" y2="42" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#99f6e4"/>
+          <stop offset="40%" stop-color="#14b8a6"/>
+          <stop offset="100%" stop-color="#0f766e"/>
+        </linearGradient>
+        <radialGradient id="bgB1" cx="50%" cy="45%" r="55%">
+          <stop offset="0%" stop-color="#1a1d23"/>
+          <stop offset="100%" stop-color="#0f1115"/>
+        </radialGradient>
+      </defs>
+      <circle cx="24" cy="24" r="23" fill="url(#bgB1)"/>
+      <circle cx="24" cy="24" r="22.5" fill="none" stroke="#14b8a6" stroke-width="0.8" opacity="0.4"/>
+      <!-- M shape: two outer legs + center peak, upward momentum -->
+      <path d="M12 36 L12 18 L18 12" stroke="url(#tB1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M18 12 L24 22" stroke="url(#tB1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M24 22 L30 12" stroke="url(#tB1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M30 12 L36 18 L36 36" stroke="url(#tB1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <!-- Three AI nodes: Perceive (left-top), Decide (right-top), Execute (center-bottom) -->
+      <circle cx="18" cy="12" r="3" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2"/>
+      <circle cx="18" cy="12" r="1.2" fill="#5eead4"/>
+      <circle cx="30" cy="12" r="3" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2"/>
+      <circle cx="30" cy="12" r="1.2" fill="#5eead4"/>
+      <circle cx="24" cy="22" r="3.5" fill="#0f1115" stroke="#14b8a6" stroke-width="1.5"/>
+      <circle cx="24" cy="22" r="1.5" fill="#14b8a6"/>
+      <!-- Dashed network connections between nodes -->
+      <line x1="18" y1="12" x2="30" y2="12" stroke="#5eead4" stroke-width="0.6" stroke-dasharray="2 2" opacity="0.5"/>
+      <line x1="18" y1="12" x2="24" y2="22" stroke="#5eead4" stroke-width="0.6" stroke-dasharray="2 2" opacity="0.4"/>
+      <line x1="30" y1="12" x2="24" y2="22" stroke="#5eead4" stroke-width="0.6" stroke-dasharray="2 2" opacity="0.4"/>
+      <!-- Subtle data pulse rings -->
+      <circle cx="24" cy="22" r="6" fill="none" stroke="#14b8a6" stroke-width="0.4" opacity="0.15"/>
+    </svg>
+    <div style="margin-top:12px"><span class="wm" style="font-size:28px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div>
+    <div class="tagline">AI Mining Intelligence Platform</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Icon Sizes</div>
+    <div class="card sizes" id="sizesB1"></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Logo Lockups</div>
+    <div class="lockups">
+      <div class="card lockup"><div class="lockup-label">Horizontal</div><div class="lockup-row" id="lockH-B1"></div></div>
+      <div class="card lockup"><div class="lockup-label">With Tagline</div><div class="lockup-row" id="lockT-B1"></div></div>
+      <div class="card lockup" style="text-align:center"><div class="lockup-label">Stacked</div><div class="lockup-col" id="lockS-B1"></div></div>
+      <div class="sidebar-mock"><div class="lockup-label">Sidebar</div><div id="lockSB-B1"></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">设计说明</div>
+    <div class="card concept">
+      <h3>NEURAL TRIDENT · 神经三叉</h3>
+      <p>保留方案 B 的倒 M 镐爪骨架，但将三个锐利端点替换为<strong style="color:#14b8a6">空心圆节点</strong>，用虚线三角连接形成 AI 网络拓扑。</p>
+      <ul>
+        <li><strong>顶部双节点</strong> — 感知层（Perceive），如同 AI 的双眼扫描数据</li>
+        <li><strong>中央大节点</strong> — 决策层（Decide），核心 AI 引擎，强调脉冲环</li>
+        <li><strong>底部 M 支撑</strong> — 执行层（Execute），稳定的基础架构支撑</li>
+      </ul>
+      <p style="margin-top:8px">整体向上收拢的三角构图传递<strong style="color:#14b8a6">聚合向上</strong>的品牌势能，对金融客户传达增长信心。</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">评分维度</div>
+    <div class="score-row">
+      <div class="score"><div class="val">8</div><div class="lbl">战略一致性</div></div>
+      <div class="score"><div class="val">7</div><div class="lbl">品牌识别度</div></div>
+      <div class="score"><div class="val">9</div><div class="lbl">技术表达力</div></div>
+      <div class="score"><div class="val">8</div><div class="lbl">国际化</div></div>
+    </div>
+  </div>
+  <div class="tags"><span class="tag">网络拓扑</span><span class="tag">向上聚合</span><span class="tag">三层架构</span></div>
+</div>
+
+<!-- ==================== B2: CONSTELLATION M ==================== -->
+<div class="col">
+  <div class="col-header">
+    <div class="label-circle" style="border-color:rgba(20,184,166,0.8);background:rgba(20,184,166,0.15)">B2</div>
+    <h2>Constellation M</h2>
+    <p>星座 M · 弧线网络 · 呼吸节点</p>
+    <div class="rec-badge">★ 推荐方案</div>
+  </div>
+
+  <div class="hero" style="border-color:rgba(20,184,166,0.15)">
+    <!-- B2: Refined M with curved connections, breathing nodes, elegant arcs -->
+    <svg width="72" height="72" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="tB2" x1="8" y1="6" x2="40" y2="42" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#99f6e4"/>
+          <stop offset="35%" stop-color="#14b8a6"/>
+          <stop offset="100%" stop-color="#0f766e"/>
+        </linearGradient>
+        <radialGradient id="bgB2" cx="50%" cy="42%" r="55%">
+          <stop offset="0%" stop-color="#1a1d23"/>
+          <stop offset="100%" stop-color="#0f1115"/>
+        </radialGradient>
+        <filter id="nodeGlow">
+          <feGaussianBlur stdDeviation="1.5" result="b"/>
+          <feComposite in="SourceGraphic" in2="b" operator="over"/>
+        </filter>
+      </defs>
+      <circle cx="24" cy="24" r="23" fill="url(#bgB2)"/>
+      <circle cx="24" cy="24" r="22.5" fill="none" stroke="#14b8a6" stroke-width="0.8" opacity="0.35"/>
+
+      <!-- M skeleton with gentle curves -->
+      <path d="M11 35 L11 17 Q11 14, 14 12 L17 10" stroke="url(#tB2)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M17 10 Q20 16, 24 20" stroke="url(#tB2)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+      <path d="M24 20 Q28 16, 31 10" stroke="url(#tB2)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+      <path d="M31 10 L34 12 Q37 14, 37 17 L37 35" stroke="url(#tB2)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+      <!-- Curved network arcs between nodes (elegant, not straight) -->
+      <path d="M17 10 Q24 6, 31 10" stroke="#5eead4" stroke-width="0.7" stroke-dasharray="2.5 2" opacity="0.45" fill="none"/>
+      <path d="M17 10 Q18 17, 24 20" stroke="#5eead4" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3" fill="none"/>
+      <path d="M31 10 Q30 17, 24 20" stroke="#5eead4" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3" fill="none"/>
+
+      <!-- Node: Perceive (left) -->
+      <g filter="url(#nodeGlow)">
+        <circle cx="17" cy="10" r="3.2" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2"/>
+        <circle cx="17" cy="10" r="1.3" fill="#5eead4"/>
+      </g>
+      <!-- Node: Perceive (right) -->
+      <g filter="url(#nodeGlow)">
+        <circle cx="31" cy="10" r="3.2" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2"/>
+        <circle cx="31" cy="10" r="1.3" fill="#5eead4"/>
+      </g>
+      <!-- Node: Decide (center, larger, emphasized) -->
+      <g filter="url(#nodeGlow)">
+        <circle cx="24" cy="20" r="4" fill="#0f1115" stroke="#14b8a6" stroke-width="1.5"/>
+        <circle cx="24" cy="20" r="1.8" fill="#14b8a6"/>
+      </g>
+      <!-- Outer pulse ring on center node -->
+      <circle cx="24" cy="20" r="7" fill="none" stroke="#14b8a6" stroke-width="0.35" opacity="0.12"/>
+      <circle cx="24" cy="20" r="10" fill="none" stroke="#14b8a6" stroke-width="0.25" opacity="0.06"/>
+
+      <!-- Subtle base data flow dots -->
+      <circle cx="14" cy="30" r="0.7" fill="#5eead4" opacity="0.25"/>
+      <circle cx="34" cy="30" r="0.7" fill="#5eead4" opacity="0.25"/>
+      <circle cx="24" cy="34" r="0.7" fill="#5eead4" opacity="0.2"/>
+    </svg>
+    <div style="margin-top:12px"><span class="wm" style="font-size:28px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div>
+    <div class="tagline">AI Mining Intelligence Platform</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Icon Sizes</div>
+    <div class="card sizes" id="sizesB2"></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Logo Lockups</div>
+    <div class="lockups">
+      <div class="card lockup"><div class="lockup-label">Horizontal</div><div class="lockup-row" id="lockH-B2"></div></div>
+      <div class="card lockup"><div class="lockup-label">With Tagline</div><div class="lockup-row" id="lockT-B2"></div></div>
+      <div class="card lockup" style="text-align:center"><div class="lockup-label">Stacked</div><div class="lockup-col" id="lockS-B2"></div></div>
+      <div class="sidebar-mock"><div class="lockup-label">Sidebar</div><div id="lockSB-B2"></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">设计说明</div>
+    <div class="card concept">
+      <h3>CONSTELLATION M · 星座 M</h3>
+      <p>在 B1 基础上进一步优化——将直线连接替换为<strong style="color:#14b8a6">优雅弧线</strong>，节点带光晕呼吸效果，M 骨架加入圆角过渡，整体更具金融科技气质。</p>
+      <ul>
+        <li><strong>弧线网络</strong> — 节点间用弧线虚线连接，像星座连线，避免生硬的三角</li>
+        <li><strong>呼吸脉冲环</strong> — 中央决策节点带双层扩散环，暗示 AI 持续运算</li>
+        <li><strong>圆角 M 骨架</strong> — 拐角处 Q 曲线过渡，金融级精致感</li>
+        <li><strong>底部数据尘</strong> — 三个微光点暗示执行层的数据流动</li>
+      </ul>
+      <p style="margin-top:8px">最好地平衡了<strong style="color:#14b8a6">矿业基因（M 骨架）</strong>与<strong style="color:#14b8a6">AI 叙事（星座网络）</strong>。</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">评分维度</div>
+    <div class="score-row">
+      <div class="score"><div class="val">9</div><div class="lbl">战略一致性</div></div>
+      <div class="score"><div class="val">9</div><div class="lbl">品牌识别度</div></div>
+      <div class="score"><div class="val">9</div><div class="lbl">技术表达力</div></div>
+      <div class="score"><div class="val">9</div><div class="lbl">国际化</div></div>
+    </div>
+  </div>
+  <div class="tags"><span class="tag">星座弧线</span><span class="tag">呼吸节点</span><span class="tag">金融级精致</span><span class="tag">感知·决策·执行</span></div>
+</div>
+
+<!-- ==================== B3: NEXUS SHIELD ==================== -->
+<div class="col">
+  <div class="col-header">
+    <div class="label-circle">B3</div>
+    <h2>Nexus Shield</h2>
+    <p>枢纽盾形 · 六边形容器</p>
+  </div>
+
+  <div class="hero">
+    <!-- B3: Hexagon container with M-network inside, more institutional feel -->
+    <svg width="72" height="72" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="tB3" x1="8" y1="4" x2="40" y2="44" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#99f6e4"/>
+          <stop offset="40%" stop-color="#14b8a6"/>
+          <stop offset="100%" stop-color="#0f766e"/>
+        </linearGradient>
+        <radialGradient id="bgB3" cx="50%" cy="45%" r="55%">
+          <stop offset="0%" stop-color="#1a1d23"/>
+          <stop offset="100%" stop-color="#0f1115"/>
+        </radialGradient>
+      </defs>
+      <!-- Hexagon container (shield / molecular shape) -->
+      <path d="M24 2 L42 13 L42 35 L24 46 L6 35 L6 13 Z" fill="url(#bgB3)" stroke="url(#tB3)" stroke-width="1" opacity="0.95"/>
+
+      <!-- M structure inside hex -->
+      <path d="M13 34 L13 18 L18 12" stroke="url(#tB3)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M18 12 L24 20" stroke="url(#tB3)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+      <path d="M24 20 L30 12" stroke="url(#tB3)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+      <path d="M30 12 L35 18 L35 34" stroke="url(#tB3)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+      <!-- Network connections -->
+      <line x1="18" y1="12" x2="30" y2="12" stroke="#5eead4" stroke-width="0.6" stroke-dasharray="2 2" opacity="0.45"/>
+      <line x1="18" y1="12" x2="24" y2="20" stroke="#5eead4" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/>
+      <line x1="30" y1="12" x2="24" y2="20" stroke="#5eead4" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/>
+      <!-- Extended network to base anchors -->
+      <line x1="13" y1="34" x2="24" y2="20" stroke="#5eead4" stroke-width="0.4" stroke-dasharray="1.5 2.5" opacity="0.15"/>
+      <line x1="35" y1="34" x2="24" y2="20" stroke="#5eead4" stroke-width="0.4" stroke-dasharray="1.5 2.5" opacity="0.15"/>
+
+      <!-- Three primary nodes -->
+      <circle cx="18" cy="12" r="2.8" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2"/>
+      <circle cx="18" cy="12" r="1.2" fill="#5eead4"/>
+      <circle cx="30" cy="12" r="2.8" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2"/>
+      <circle cx="30" cy="12" r="1.2" fill="#5eead4"/>
+      <circle cx="24" cy="20" r="3.5" fill="#0f1115" stroke="#14b8a6" stroke-width="1.4"/>
+      <circle cx="24" cy="20" r="1.5" fill="#14b8a6"/>
+
+      <!-- Base anchor nodes (smaller, execute layer) -->
+      <circle cx="13" cy="34" r="1.5" fill="#0f1115" stroke="#14b8a6" stroke-width="0.8" opacity="0.6"/>
+      <circle cx="13" cy="34" r="0.6" fill="#5eead4" opacity="0.5"/>
+      <circle cx="35" cy="34" r="1.5" fill="#0f1115" stroke="#14b8a6" stroke-width="0.8" opacity="0.6"/>
+      <circle cx="35" cy="34" r="0.6" fill="#5eead4" opacity="0.5"/>
+
+      <!-- Center pulse -->
+      <circle cx="24" cy="20" r="6.5" fill="none" stroke="#14b8a6" stroke-width="0.3" opacity="0.1"/>
+    </svg>
+    <div style="margin-top:12px"><span class="wm" style="font-size:28px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div>
+    <div class="tagline">AI Mining Intelligence Platform</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Icon Sizes</div>
+    <div class="card sizes" id="sizesB3"></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Logo Lockups</div>
+    <div class="lockups">
+      <div class="card lockup"><div class="lockup-label">Horizontal</div><div class="lockup-row" id="lockH-B3"></div></div>
+      <div class="card lockup"><div class="lockup-label">With Tagline</div><div class="lockup-row" id="lockT-B3"></div></div>
+      <div class="card lockup" style="text-align:center"><div class="lockup-label">Stacked</div><div class="lockup-col" id="lockS-B3"></div></div>
+      <div class="sidebar-mock"><div class="lockup-label">Sidebar</div><div id="lockSB-B3"></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">设计说明</div>
+    <div class="card concept">
+      <h3>NEXUS SHIELD · 枢纽盾形</h3>
+      <p>将圆形容器替换为<strong style="color:#14b8a6">六边形（蜂巢/分子结构）</strong>，内部 M 网络结构与 B1 一致，但增加五节点网络（3 主 + 2 锚点），更具机构感。</p>
+      <ul>
+        <li><strong>六边形容器</strong> — 分子/蜂巢隐喻，暗示数据结构与网络拓扑</li>
+        <li><strong>五节点网络</strong> — 3 主节点 + 2 底部锚点，形成完整的感知·决策·执行链路</li>
+        <li><strong>盾形轮廓</strong> — 向上尖顶传递"保护·安全"的金融信赖感</li>
+        <li><strong>多层虚线</strong> — 主网络 + 深层连接，暗示多层 AI 推理</li>
+      </ul>
+      <p style="margin-top:8px">最具<strong style="color:#14b8a6">机构级权威感</strong>，但六边形可能在极小尺寸下损失辨识度。</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">评分维度</div>
+    <div class="score-row">
+      <div class="score"><div class="val">9</div><div class="lbl">战略一致性</div></div>
+      <div class="score"><div class="val">7</div><div class="lbl">品牌识别度</div></div>
+      <div class="score"><div class="val">8</div><div class="lbl">技术表达力</div></div>
+      <div class="score"><div class="val">9</div><div class="lbl">国际化</div></div>
+    </div>
+  </div>
+  <div class="tags"><span class="tag">六边形</span><span class="tag">五节点网络</span><span class="tag">机构权威</span><span class="tag">盾形信赖</span></div>
+</div>
+
+</div>
+
+<div class="footer">MiningClawd AI Intelligence Systems © 2024 · Confidential · Round 2 Iteration on Variant B</div>
+
+<script>
+// SVG icon generators
+function b1(s){return `<svg width="${s}" height="${s}" viewBox="0 0 48 48" fill="none"><defs><linearGradient id="tB1${s}" x1="10" y1="6" x2="38" y2="42" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#99f6e4"/><stop offset="40%" stop-color="#14b8a6"/><stop offset="100%" stop-color="#0f766e"/></linearGradient><radialGradient id="bgB1${s}" cx="50%" cy="45%" r="55%"><stop offset="0%" stop-color="#1a1d23"/><stop offset="100%" stop-color="#0f1115"/></radialGradient></defs><circle cx="24" cy="24" r="23" fill="url(#bgB1${s})"/><circle cx="24" cy="24" r="22.5" fill="none" stroke="#14b8a6" stroke-width="0.8" opacity="0.4"/><path d="M12 36 L12 18 L18 12" stroke="url(#tB1${s})" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 12 L24 22" stroke="url(#tB1${s})" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M24 22 L30 12" stroke="url(#tB1${s})" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M30 12 L36 18 L36 36" stroke="url(#tB1${s})" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="18" cy="12" r="3" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2"/><circle cx="18" cy="12" r="1.2" fill="#5eead4"/><circle cx="30" cy="12" r="3" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2"/><circle cx="30" cy="12" r="1.2" fill="#5eead4"/><circle cx="24" cy="22" r="3.5" fill="#0f1115" stroke="#14b8a6" stroke-width="1.5"/><circle cx="24" cy="22" r="1.5" fill="#14b8a6"/><line x1="18" y1="12" x2="30" y2="12" stroke="#5eead4" stroke-width="0.6" stroke-dasharray="2 2" opacity="0.5"/><line x1="18" y1="12" x2="24" y2="22" stroke="#5eead4" stroke-width="0.6" stroke-dasharray="2 2" opacity="0.4"/><line x1="30" y1="12" x2="24" y2="22" stroke="#5eead4" stroke-width="0.6" stroke-dasharray="2 2" opacity="0.4"/><circle cx="24" cy="22" r="6" fill="none" stroke="#14b8a6" stroke-width="0.4" opacity="0.15"/></svg>`}
+
+function b2(s){return `<svg width="${s}" height="${s}" viewBox="0 0 48 48" fill="none"><defs><linearGradient id="tB2${s}" x1="8" y1="6" x2="40" y2="42" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#99f6e4"/><stop offset="35%" stop-color="#14b8a6"/><stop offset="100%" stop-color="#0f766e"/></linearGradient><radialGradient id="bgB2${s}" cx="50%" cy="42%" r="55%"><stop offset="0%" stop-color="#1a1d23"/><stop offset="100%" stop-color="#0f1115"/></radialGradient></defs><circle cx="24" cy="24" r="23" fill="url(#bgB2${s})"/><circle cx="24" cy="24" r="22.5" fill="none" stroke="#14b8a6" stroke-width="0.8" opacity="0.35"/><path d="M11 35 L11 17 Q11 14, 14 12 L17 10" stroke="url(#tB2${s})" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M17 10 Q20 16, 24 20" stroke="url(#tB2${s})" stroke-width="1.8" stroke-linecap="round" fill="none"/><path d="M24 20 Q28 16, 31 10" stroke="url(#tB2${s})" stroke-width="1.8" stroke-linecap="round" fill="none"/><path d="M31 10 L34 12 Q37 14, 37 17 L37 35" stroke="url(#tB2${s})" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M17 10 Q24 6, 31 10" stroke="#5eead4" stroke-width="0.7" stroke-dasharray="2.5 2" opacity="0.45" fill="none"/><path d="M17 10 Q18 17, 24 20" stroke="#5eead4" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3" fill="none"/><path d="M31 10 Q30 17, 24 20" stroke="#5eead4" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3" fill="none"/><circle cx="17" cy="10" r="3.2" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2"/><circle cx="17" cy="10" r="1.3" fill="#5eead4"/><circle cx="31" cy="10" r="3.2" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2"/><circle cx="31" cy="10" r="1.3" fill="#5eead4"/><circle cx="24" cy="20" r="4" fill="#0f1115" stroke="#14b8a6" stroke-width="1.5"/><circle cx="24" cy="20" r="1.8" fill="#14b8a6"/><circle cx="24" cy="20" r="7" fill="none" stroke="#14b8a6" stroke-width="0.35" opacity="0.12"/><circle cx="24" cy="20" r="10" fill="none" stroke="#14b8a6" stroke-width="0.25" opacity="0.06"/><circle cx="14" cy="30" r="0.7" fill="#5eead4" opacity="0.25"/><circle cx="34" cy="30" r="0.7" fill="#5eead4" opacity="0.25"/><circle cx="24" cy="34" r="0.7" fill="#5eead4" opacity="0.2"/></svg>`}
+
+function b3(s){return `<svg width="${s}" height="${s}" viewBox="0 0 48 48" fill="none"><defs><linearGradient id="tB3${s}" x1="8" y1="4" x2="40" y2="44" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#99f6e4"/><stop offset="40%" stop-color="#14b8a6"/><stop offset="100%" stop-color="#0f766e"/></linearGradient><radialGradient id="bgB3${s}" cx="50%" cy="45%" r="55%"><stop offset="0%" stop-color="#1a1d23"/><stop offset="100%" stop-color="#0f1115"/></radialGradient></defs><path d="M24 2 L42 13 L42 35 L24 46 L6 35 L6 13 Z" fill="url(#bgB3${s})" stroke="url(#tB3${s})" stroke-width="1" opacity="0.95"/><path d="M13 34 L13 18 L18 12" stroke="url(#tB3${s})" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 12 L24 20" stroke="url(#tB3${s})" stroke-width="1.8" stroke-linecap="round" fill="none"/><path d="M24 20 L30 12" stroke="url(#tB3${s})" stroke-width="1.8" stroke-linecap="round" fill="none"/><path d="M30 12 L35 18 L35 34" stroke="url(#tB3${s})" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="18" y1="12" x2="30" y2="12" stroke="#5eead4" stroke-width="0.6" stroke-dasharray="2 2" opacity="0.45"/><line x1="18" y1="12" x2="24" y2="20" stroke="#5eead4" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><line x1="30" y1="12" x2="24" y2="20" stroke="#5eead4" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.3"/><line x1="13" y1="34" x2="24" y2="20" stroke="#5eead4" stroke-width="0.4" stroke-dasharray="1.5 2.5" opacity="0.15"/><line x1="35" y1="34" x2="24" y2="20" stroke="#5eead4" stroke-width="0.4" stroke-dasharray="1.5 2.5" opacity="0.15"/><circle cx="18" cy="12" r="2.8" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2"/><circle cx="18" cy="12" r="1.2" fill="#5eead4"/><circle cx="30" cy="12" r="2.8" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2"/><circle cx="30" cy="12" r="1.2" fill="#5eead4"/><circle cx="24" cy="20" r="3.5" fill="#0f1115" stroke="#14b8a6" stroke-width="1.4"/><circle cx="24" cy="20" r="1.5" fill="#14b8a6"/><circle cx="13" cy="34" r="1.5" fill="#0f1115" stroke="#14b8a6" stroke-width="0.8" opacity="0.6"/><circle cx="13" cy="34" r="0.6" fill="#5eead4" opacity="0.5"/><circle cx="35" cy="34" r="1.5" fill="#0f1115" stroke="#14b8a6" stroke-width="0.8" opacity="0.6"/><circle cx="35" cy="34" r="0.6" fill="#5eead4" opacity="0.5"/><circle cx="24" cy="20" r="6.5" fill="none" stroke="#14b8a6" stroke-width="0.3" opacity="0.1"/></svg>`}
+
+// Populate sizes
+const sizes=[16,24,32,48,64];
+[{id:'sizesB1',fn:b1},{id:'sizesB2',fn:b2},{id:'sizesB3',fn:b3}].forEach(({id,fn})=>{
+  const el=document.getElementById(id);
+  sizes.forEach(s=>{const d=document.createElement('div');d.className='size-item';d.innerHTML=fn(s)+`<div class="size-label">${s}px</div>`;el.appendChild(d)});
+});
+
+// Populate lockups
+const navHTML=`<div class="sidebar-nav"><div class="nav-item on">HOME</div><div class="nav-item off">MINING COMPANIES</div><div class="nav-item off">REPORTS</div><div class="nav-item off">3D DRILLING</div></div>`;
+
+[{k:'B1',fn:b1},{k:'B2',fn:b2},{k:'B3',fn:b3}].forEach(({k,fn})=>{
+  // Horizontal
+  document.getElementById('lockH-'+k).innerHTML=fn(32)+`<span class="wm" style="font-size:14px"><span class="m">Mining</span><span class="cl">Clawd</span></span>`;
+  // With tagline
+  document.getElementById('lockT-'+k).innerHTML=fn(32)+`<div><span class="wm" style="font-size:14px"><span class="m">Mining</span><span class="cl">Clawd</span></span><div class="sub-tag">Mining Intelligence</div></div>`;
+  // Stacked
+  document.getElementById('lockS-'+k).innerHTML=fn(40)+`<span class="wm" style="font-size:20px"><span class="m">Mining</span><span class="cl">Clawd</span></span>`;
+  // Sidebar
+  document.getElementById('lockSB-'+k).innerHTML=`<div class="lockup-row" style="margin-bottom:4px">${fn(28)}<span class="wm" style="font-size:11px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div>${navHTML}`;
+});
+</script>
+</body>
+</html>

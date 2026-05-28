@@ -1,0 +1,1688 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>MiningClawd Expert Panel Report 专家团月度分析报告 — 2026年Q1</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+@page{size:A4;margin:0}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans SC','Inter',sans-serif;color:#1f2937;font-size:12px;line-height:1.7;background:#fff}
+.page{width:210mm;min-height:297mm;padding:0;position:relative;page-break-after:always;overflow:hidden}
+
+:root{
+  --pri:#14b8a6;--priD:#0d9488;--priL:#5eead4;
+  --char:#0f1115;--card:#181a1f;
+  --txt:#1f2937;--txtL:#6b7280;--txtLL:#9ca3af;--bdr:#e5e7eb;--bgL:#f8fafb;
+  --sBuy:#22c55e;--buy:#86efac;--hold:#94a3b8;--sell:#f87171;--sSell:#ef4444;
+  --cu:#e07b39;--cu-bg:rgba(224,123,57,0.08);
+  --al:#94a3b8;--al-bg:rgba(148,163,184,0.08);
+  --fe:#dc2626;--fe-bg:rgba(220,38,38,0.08);
+  --zn:#0891b2;--zn-bg:rgba(8,145,178,0.08);
+  --ni:#64748b;--ni-bg:rgba(100,116,139,0.08);
+  --au:#f59e0b;--au-bg:rgba(245,158,11,0.08);
+  --ag:#cbd5e1;--ag-bg:rgba(203,213,225,0.08);
+  --li:#8b5cf6;--li-bg:rgba(139,92,246,0.08);
+  --co:#2563eb;--co-bg:rgba(37,99,235,0.08);
+  --ree:#10b981;--ree-bg:rgba(16,185,129,0.08);
+  --oil:#92400e;--oil-bg:rgba(146,64,14,0.08);
+}
+.wm{font-family:'Space Grotesk',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.03em}
+.mono{font-family:'Space Grotesk',monospace}
+
+/* Commodity badges */
+.comm{display:inline-flex;align-items:center;gap:4px;font-weight:600}
+.comm::before{content:'';width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.comm-cu{color:var(--cu)}.comm-cu::before{background:var(--cu)}
+.comm-fe{color:var(--fe)}.comm-fe::before{background:var(--fe)}
+.comm-au{color:var(--au)}.comm-au::before{background:var(--au)}
+.comm-li{color:var(--li)}.comm-li::before{background:var(--li)}
+.comm-ni{color:var(--ni)}.comm-ni::before{background:var(--ni)}
+.comm-co{color:var(--co)}.comm-co::before{background:var(--co)}
+.comm-ree{color:var(--ree)}.comm-ree::before{background:var(--ree)}
+.comm-pill{padding:1px 6px;border-radius:10px;font-size:9px;font-weight:700;letter-spacing:0.3px;display:inline-block}
+.pill-cu{background:var(--cu-bg);color:var(--cu);border:1px solid rgba(224,123,57,0.25)}
+.pill-fe{background:var(--fe-bg);color:var(--fe);border:1px solid rgba(220,38,38,0.25)}
+.pill-au{background:var(--au-bg);color:var(--au);border:1px solid rgba(245,158,11,0.25)}
+.pill-li{background:var(--li-bg);color:var(--li);border:1px solid rgba(139,92,246,0.25)}
+.pill-ni{background:var(--ni-bg);color:var(--ni);border:1px solid rgba(100,116,139,0.25)}
+.pill-co{background:var(--co-bg);color:var(--co);border:1px solid rgba(37,99,235,0.25)}
+.pill-ree{background:var(--ree-bg);color:var(--ree);border:1px solid rgba(16,185,129,0.25)}
+
+/* COVER */
+.cover{background:var(--char);color:#fff;display:flex;flex-direction:column;min-height:297mm;position:relative;overflow:hidden}
+.glow1{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(20,184,166,0.12) 0%,rgba(20,184,166,0.03) 40%,transparent 70%);right:-120px;top:18%;pointer-events:none}
+.glow2{position:absolute;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(94,234,212,0.08) 0%,transparent 60%);left:-80px;bottom:15%;pointer-events:none}
+.glow3{position:absolute;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(20,184,166,0.15) 0%,transparent 70%);right:25%;top:35%;pointer-events:none;filter:blur(30px)}
+.streak{position:absolute;width:600px;height:1px;background:linear-gradient(90deg,transparent,rgba(20,184,166,0.25),rgba(94,234,212,0.1),transparent);top:42%;left:-50px;transform:rotate(-8deg);pointer-events:none}
+.streak2{position:absolute;width:400px;height:1px;background:linear-gradient(90deg,transparent,rgba(20,184,166,0.15),transparent);top:55%;right:-30px;transform:rotate(5deg);pointer-events:none}
+.cover-header{padding:22mm 28mm 0;display:flex;justify-content:space-between;align-items:flex-start;position:relative;z-index:1}
+.cover-logo{display:flex;align-items:center;gap:10px}
+.cover-logo .tag-sub{font-size:9px;color:var(--pri);letter-spacing:1.2px;text-transform:uppercase;font-weight:500;margin-top:1px}
+.cover-type{text-align:right}
+.cover-type .label{font-size:11px;color:var(--txtLL);letter-spacing:2px;text-transform:uppercase}
+.cover-type .cat{font-size:16px;font-weight:600;color:var(--pri);margin-top:2px}
+.cover-body{flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 28mm;position:relative;z-index:1}
+.cover-body .eyebrow{font-size:12px;color:var(--pri);letter-spacing:3px;text-transform:uppercase;font-weight:500;margin-bottom:14px}
+.cover-body h1{font-size:36px;font-weight:700;line-height:1.35;margin-bottom:18px}
+.cover-body .subtitle{font-size:13.5px;color:#9ca3af;line-height:1.7;max-width:72%}
+.cover-meta{padding:0 28mm 22mm;display:flex;justify-content:space-between;align-items:flex-end;position:relative;z-index:1}
+.cover-meta .date-block{border-left:3px solid var(--pri);padding-left:14px}
+.cover-meta .date-block .label{font-size:10px;color:#6b7280;letter-spacing:1.5px;text-transform:uppercase}
+.cover-meta .date-block .value{font-size:16px;color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:600;margin-top:2px}
+.cover-meta .analyst{text-align:right;font-size:11px;color:#9ca3af;line-height:1.7}
+.cover-meta .analyst strong{color:#fff;font-weight:600}
+.cover-footer{border-top:1px solid rgba(255,255,255,0.06);padding:12px 28mm;display:flex;justify-content:space-between;font-size:9px;color:#4b5563;position:relative;z-index:1}
+.cover-footer .conf{padding:2px 8px;border-radius:4px;background:rgba(20,184,166,0.1);border:1px solid rgba(20,184,166,0.2);color:var(--pri);font-weight:600;letter-spacing:0.5px}
+
+/* Expert panel grid on cover */
+.expert-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:22px;max-width:80%}
+.expert-card{background:rgba(255,255,255,0.04);border:1px solid rgba(20,184,166,0.15);border-radius:8px;padding:10px 12px}
+.expert-card .name{font-size:10.5px;font-weight:700;color:#fff;margin-bottom:2px}
+.expert-card .role{font-size:8.5px;color:var(--pri);letter-spacing:0.3px}
+.expert-card .org{font-size:8px;color:#6b7280;margin-top:1px}
+
+/* CONTENT PAGES */
+.content-page{display:flex;min-height:297mm}
+.sidebar-col{width:25%;background:var(--bgL);border-right:1px solid var(--bdr);padding:18mm 14px 20mm 18px;position:relative}
+.main-col{width:75%;padding:18mm 24px 20mm 24px}
+.sb-logo{display:flex;align-items:center;gap:5px;margin-bottom:16px}
+.sb-section{margin-bottom:18px}
+.sb-title{font-size:9px;font-weight:700;color:var(--priD);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--bdr)}
+.sb-item{font-size:10px;color:var(--txtL);line-height:1.6;padding:3px 0}
+.sb-item strong{color:var(--txt);font-weight:600}
+.sb-highlight{font-size:10.5px;color:var(--priD);font-weight:600;line-height:1.6;padding:8px 10px;background:rgba(20,184,166,0.06);border-radius:6px;border-left:2px solid var(--pri);margin:8px 0}
+.sb-pagenum{position:absolute;bottom:14mm;left:18px;font-size:9px;color:var(--txtLL);font-family:'Space Grotesk',monospace}
+.page-bar{display:flex;justify-content:space-between;align-items:center;padding-bottom:8px;border-bottom:2px solid var(--pri);margin-bottom:14px}
+.page-bar .left{display:flex;align-items:center;gap:6px}
+.page-bar .right{font-size:10px;color:var(--txtL)}
+h2{font-size:17px;font-weight:700;color:var(--char);margin:16px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--bdr)}
+h2 .num{color:var(--pri);margin-right:5px;font-family:'Space Grotesk',sans-serif}
+h3{font-size:13.5px;font-weight:600;color:var(--char);margin:12px 0 7px}
+h4{font-size:11.5px;font-weight:600;color:var(--char);margin:10px 0 5px}
+p{font-size:11px;line-height:1.75;color:var(--txt);margin-bottom:7px}
+.highlight{background:rgba(20,184,166,0.05);border-left:3px solid var(--pri);padding:9px 12px;margin:10px 0;border-radius:0 6px 6px 0;font-size:11px;line-height:1.7}
+.key-points{background:var(--bgL);border:1px solid var(--bdr);border-radius:8px;padding:14px 16px;margin:12px 0}
+.key-points .title{font-size:12px;font-weight:700;color:var(--char);margin-bottom:7px;display:flex;align-items:center;gap:5px}
+.key-points .title::before{content:'';width:14px;height:14px;border-radius:3px;background:var(--pri);display:inline-block}
+.key-points ul{list-style:none;padding:0}
+.key-points ul li{font-size:11px;line-height:1.7;padding:3px 0 3px 16px;position:relative}
+.key-points ul li::before{content:'▸';color:var(--pri);position:absolute;left:3px;font-size:11px}
+.data-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:10.5px}
+.data-table th{background:var(--char);color:#fff;padding:6px 8px;text-align:left;font-weight:600;font-size:9.5px;letter-spacing:0.5px;text-transform:uppercase}
+.data-table td{padding:5px 8px;border-bottom:1px solid var(--bdr)}
+.data-table tr:nth-child(even){background:var(--bgL)}
+.up{color:var(--sBuy);font-weight:600}
+.down{color:var(--sSell);font-weight:600}
+.neutral{color:var(--hold);font-weight:600}
+.ai-badge{display:inline-flex;align-items:center;gap:3px;padding:1px 7px;border-radius:8px;background:rgba(20,184,166,0.08);border:1px solid rgba(20,184,166,0.2);font-size:8px;color:var(--pri);font-weight:600;letter-spacing:0.3px}
+.risk-box{background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:12px 16px;margin:12px 0}
+.risk-box .rtitle{font-size:11.5px;font-weight:700;color:#ef4444;margin-bottom:5px}
+.risk-box ul{list-style:none;padding:0}
+.risk-box ul li{font-size:10.5px;line-height:1.7;padding:2px 0 2px 14px;position:relative;color:#374151}
+.risk-box ul li::before{content:'⚠';position:absolute;left:0;font-size:8.5px}
+.disclaimer{font-size:9px;color:var(--txtLL);line-height:1.6;border-top:1px solid var(--bdr);padding-top:10px;margin-top:16px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:10px 0}
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:10px 0}
+
+/* Scorecard */
+.scorecard{background:var(--bgL);border:1px solid var(--bdr);border-radius:10px;padding:14px;margin:12px 0}
+.scorecard-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--bdr)}
+.scorecard-title{font-size:13px;font-weight:700;color:var(--char)}
+.rating-badge{padding:3px 10px;border-radius:12px;font-size:10px;font-weight:700;letter-spacing:0.5px}
+.rating-bull{background:rgba(34,197,94,0.12);color:#16a34a;border:1px solid rgba(34,197,94,0.3)}
+.rating-neutral{background:rgba(148,163,184,0.15);color:#475569;border:1px solid rgba(148,163,184,0.3)}
+.rating-bear{background:rgba(239,68,68,0.1);color:#dc2626;border:1px solid rgba(239,68,68,0.25)}
+.scorecard-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.sc-item{text-align:center;padding:6px 4px}
+.sc-label{font-size:8.5px;color:var(--txtL);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px}
+.sc-value{font-size:13px;font-weight:700;color:var(--char)}
+.sc-sub{font-size:8px;color:var(--txtLL);margin-top:1px}
+
+/* MCI Index */
+.mci-box{background:var(--char);color:#fff;border-radius:10px;padding:14px 16px;margin:12px 0}
+.mci-title{font-size:10px;color:var(--pri);text-transform:uppercase;letter-spacing:1.5px;font-weight:600;margin-bottom:8px}
+.mci-score{font-size:36px;font-weight:700;font-family:'Space Grotesk',sans-serif;color:var(--pri);line-height:1}
+.mci-label{font-size:10px;color:#9ca3af;margin-top:4px}
+.mci-bars{margin-top:12px}
+.mci-bar-row{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.mci-bar-label{font-size:9px;color:#9ca3af;width:80px;flex-shrink:0}
+.mci-bar-track{flex:1;height:5px;background:rgba(255,255,255,0.08);border-radius:3px;overflow:hidden}
+.mci-bar-fill{height:100%;border-radius:3px;background:var(--pri)}
+.mci-bar-val{font-size:9px;color:#d1d5db;width:28px;text-align:right;flex-shrink:0}
+
+/* Conviction list */
+.conviction-item{display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border:1px solid var(--bdr);border-radius:8px;margin-bottom:8px;background:#fff}
+.conviction-item:hover{border-color:var(--pri)}
+.conv-ticker{font-size:12px;font-weight:700;color:var(--char);min-width:40px}
+.conv-body{flex:1}
+.conv-name{font-size:10px;color:var(--txtL);margin-bottom:2px}
+.conv-thesis{font-size:10px;color:var(--txt);line-height:1.5}
+.conv-meta{display:flex;gap:6px;margin-top:4px;flex-wrap:wrap}
+.conv-tag{font-size:8px;padding:1px 5px;border-radius:4px;background:var(--bgL);color:var(--txtL);border:1px solid var(--bdr)}
+.conv-rating{text-align:right;min-width:70px}
+.conv-price{font-size:11px;font-weight:700;color:var(--char)}
+.conv-target{font-size:9px;color:var(--txtL)}
+
+/* Scenario box */
+.scenario-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:10px 0}
+.scenario-card{border-radius:8px;padding:12px;border:1px solid}
+.scenario-bull{background:rgba(34,197,94,0.05);border-color:rgba(34,197,94,0.25)}
+.scenario-base{background:rgba(20,184,166,0.05);border-color:rgba(20,184,166,0.25)}
+.scenario-bear{background:rgba(239,68,68,0.05);border-color:rgba(239,68,68,0.2)}
+.scenario-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.scenario-bull .scenario-label{color:#16a34a}
+.scenario-base .scenario-label{color:var(--priD)}
+.scenario-bear .scenario-label{color:#dc2626}
+.scenario-prob{font-size:20px;font-weight:700;font-family:'Space Grotesk',sans-serif}
+.scenario-bull .scenario-prob{color:#16a34a}
+.scenario-base .scenario-prob{color:var(--priD)}
+.scenario-bear .scenario-prob{color:#dc2626}
+.scenario-desc{font-size:9.5px;color:var(--txt);line-height:1.6;margin-top:5px}
+
+/* Expert quote */
+.expert-quote{background:rgba(20,184,166,0.04);border:1px solid rgba(20,184,166,0.15);border-radius:8px;padding:12px 14px;margin:10px 0}
+.eq-text{font-size:11px;color:var(--txt);line-height:1.7;font-style:italic;margin-bottom:6px}
+.eq-author{display:flex;align-items:center;gap:8px}
+.eq-avatar{width:24px;height:24px;border-radius:50%;background:var(--pri);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;flex-shrink:0}
+.eq-name{font-size:10px;font-weight:600;color:var(--char)}
+.eq-role{font-size:8.5px;color:var(--txtL)}
+
+/* Region cards */
+.region-card{border:1px solid var(--bdr);border-radius:8px;padding:10px 12px;margin-bottom:8px}
+.region-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.region-name{font-size:11.5px;font-weight:700;color:var(--char)}
+.region-risk{font-size:9px;padding:2px 7px;border-radius:8px;font-weight:600}
+.risk-low{background:rgba(34,197,94,0.1);color:#16a34a}
+.risk-med{background:rgba(245,158,11,0.1);color:#d97706}
+.risk-high{background:rgba(239,68,68,0.1);color:#dc2626}
+
+/* Calendar table */
+.cal-table{width:100%;border-collapse:collapse;font-size:10px;margin:8px 0}
+.cal-table th{background:var(--bgL);padding:5px 8px;text-align:left;font-weight:600;font-size:9px;color:var(--txtL);text-transform:uppercase;border-bottom:2px solid var(--bdr)}
+.cal-table td{padding:5px 8px;border-bottom:1px solid var(--bdr);vertical-align:top}
+.cal-table tr:last-child td{border-bottom:none}
+
+/* Back cover */
+.back-cover{background:var(--char);color:#fff;display:flex;flex-direction:column;min-height:297mm;position:relative;overflow:hidden;page-break-after:auto}
+.bc-top{padding:20mm 28mm 0;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
+.bc-center{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;z-index:1;padding:0 28mm;text-align:center}
+.bc-divider{width:160px;height:1px;background:linear-gradient(90deg,transparent,var(--pri),var(--priL),var(--pri),transparent);margin:18px auto}
+.bc-info{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;margin-top:28px;width:100%;max-width:500px;text-align:left}
+.bc-col-title{font-size:8px;color:var(--pri);letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid rgba(20,184,166,0.18)}
+.bc-col-body{font-size:9.5px;color:#9ca3af;line-height:1.9}
+.bc-col-body strong{color:#d1d5db;font-weight:500}
+.bc-footer{border-top:1px solid rgba(255,255,255,0.06);padding:14px 28mm 18mm;position:relative;z-index:1}
+.bc-disclaimer{font-size:7.5px;color:#4b5563;line-height:1.7;text-align:center;max-width:75%;margin:0 auto 10px}
+.bc-copyright{display:flex;justify-content:space-between;align-items:center;font-size:8px}
+
+/* Forecast table */
+.forecast-box{background:var(--char);color:#fff;border-radius:8px;padding:12px 14px;margin:10px 0}
+.forecast-title{font-size:9px;color:var(--pri);text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:8px}
+.forecast-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.forecast-cell{text-align:center;padding:6px 4px;background:rgba(255,255,255,0.04);border-radius:6px}
+.forecast-period{font-size:8px;color:#9ca3af;margin-bottom:3px}
+.forecast-price{font-size:13px;font-weight:700;font-family:'Space Grotesk',sans-serif;color:#fff}
+.forecast-change{font-size:8.5px;margin-top:2px}
+
+/* Policy impact */
+.policy-item{display:flex;gap:10px;padding:8px 10px;border:1px solid var(--bdr);border-radius:6px;margin-bottom:6px}
+.policy-flag{width:28px;height:28px;border-radius:50%;background:var(--bgL);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.policy-body{flex:1}
+.policy-title{font-size:10.5px;font-weight:600;color:var(--char);margin-bottom:2px}
+.policy-desc{font-size:9.5px;color:var(--txtL);line-height:1.5}
+.policy-impact{font-size:9px;font-weight:600;padding:1px 6px;border-radius:4px;display:inline-block;margin-top:3px}
+.impact-neg{background:rgba(239,68,68,0.1);color:#dc2626}
+.impact-pos{background:rgba(34,197,94,0.1);color:#16a34a}
+.impact-neu{background:rgba(148,163,184,0.1);color:#475569}
+
+/* Allocation table */
+.alloc-row{display:flex;align-items:center;gap:10px;padding:7px 10px;border-bottom:1px solid var(--bdr)}
+.alloc-row:last-child{border-bottom:none}
+.alloc-comm{flex:1;font-size:11px;font-weight:600;color:var(--char)}
+.alloc-bar-wrap{flex:2;height:8px;background:var(--bgL);border-radius:4px;overflow:hidden;position:relative}
+.alloc-bar{height:100%;border-radius:4px;background:var(--pri)}
+.alloc-label{font-size:9px;font-weight:600;min-width:50px;text-align:right}
+.overweight{color:#16a34a}
+.underweight{color:#dc2626}
+.marketweight{color:#475569}
+
+/* Inline chart bars (SVG-free) */
+.mini-chart{display:flex;align-items:flex-end;gap:3px;height:40px;margin:8px 0}
+.bar-item{display:flex;flex-direction:column;align-items:center;gap:2px;flex:1}
+.bar-fill{width:100%;border-radius:2px 2px 0 0;background:var(--pri);opacity:0.8}
+.bar-label{font-size:7.5px;color:var(--txtL);text-align:center}
+.bar-val{font-size:7.5px;color:var(--txt);font-weight:600;text-align:center}
+
+/* Full-width page */
+.full-page{padding:18mm 24mm 20mm;min-height:297mm;position:relative}
+</style>
+</head>
+<body>
+
+<!-- ======================== PAGE 1: COVER ======================== -->
+<div class="page cover">
+  <div class="glow1"></div>
+  <div class="glow2"></div>
+  <div class="glow3"></div>
+  <div class="streak"></div>
+  <div class="streak2"></div>
+
+  <div class="cover-header">
+    <div class="cover-logo">
+      <svg width="36" height="36" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="28" x2="32" y2="28" stroke="#14b8a6" stroke-width="1" opacity="0.4"/><path d="M22 37 L24 40 L26 37 L24 34 Z" fill="#14b8a6" opacity="0.85"/></svg>
+      <div>
+        <span class="wm" style="font-size:16px"><span style="color:#fff">Mining</span><span style="color:#14b8a6">Clawd</span></span>
+        <div class="tag-sub">Mining Intelligence</div>
+      </div>
+    </div>
+    <div class="cover-type">
+      <div class="label">Expert Panel Report</div>
+      <div class="cat">专家团月度分析报告</div>
+    </div>
+  </div>
+
+  <div class="cover-body">
+    <div class="eyebrow">— Mining Expert Panel Intelligence —</div>
+    <h1>Monthly Mining Expert Panel<br>Analysis Report<br><span style="font-size:24px;font-weight:500;color:#9ca3af">月度矿业专家团分析报告</span></h1>
+    <div class="subtitle">Institutional-grade mining intelligence synthesized from six expert domains: commodity strategy, geopolitical risk, ESG, quantitative modeling, capital markets, and regulatory compliance.<br><span style="font-size:12px;color:#6b7280">机构级矿业智能分析，融合大宗商品策略、地缘政治风险、ESG、量化模型、资本市场与合规六大专家领域。</span></div>
+
+    <div class="expert-grid">
+      <div class="expert-card">
+        <div class="name">Dr. James Whitfield</div>
+        <div class="role">首席大宗商品策略师</div>
+        <div class="org">Commodity Strategy Lead</div>
+      </div>
+      <div class="expert-card">
+        <div class="name">Prof. Li Mingzhi</div>
+        <div class="role">地缘政治风险分析师</div>
+        <div class="org">Geopolitical Risk Analyst</div>
+      </div>
+      <div class="expert-card">
+        <div class="name">Sarah Chen, CFA</div>
+        <div class="role">量化模型师</div>
+        <div class="org">Quantitative Strategist</div>
+      </div>
+      <div class="expert-card">
+        <div class="name">Dr. Amara Diallo</div>
+        <div class="role">ESG 专家</div>
+        <div class="org">ESG & Sustainability Lead</div>
+      </div>
+      <div class="expert-card">
+        <div class="name">Michael Torres</div>
+        <div class="role">资本市场分析师</div>
+        <div class="org">Capital Markets Analyst</div>
+      </div>
+      <div class="expert-card">
+        <div class="name">Dr. Helen Park</div>
+        <div class="role">合规顾问</div>
+        <div class="org">Regulatory Compliance</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cover-meta">
+    <div class="date-block">
+      <div class="label">Report Date 报告日期</div>
+      <div class="value">2026.04.03</div>
+      <div style="font-size:10px;color:#6b7280;margin-top:4px">Coverage 报告期：2026年Q1 (2026.01 — 2026.03)</div>
+    </div>
+    <div class="analyst">
+      <strong>凌云智矿研究部 | LynAI Mines Research</strong><br>
+      info@lynaimining.com<br>
+      <span style="font-size:9px;color:#6b7280">Framework V2.0 — 机构级审核版</span>
+    </div>
+  </div>
+
+  <div class="cover-footer">
+    <span class="conf">CONFIDENTIAL — For Institutional Investors Only 仅供机构投资者使用</span>
+    <span>MiningClawd AI Intelligence Systems © 2026</span>
+  </div>
+</div>
+
+<!-- ======================== PAGE 2: DISCLAIMER & METHODOLOGY ======================== -->
+<div class="page">
+  <div class="full-page">
+    <div class="page-bar">
+      <div class="left">
+        <svg width="16" height="16" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.5"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span class="wm" style="font-size:9px"><span style="color:#0f1115">Mining</span><span style="color:#0d9488">Clawd</span></span>
+        <span style="font-size:8px;color:#6b7280;margin-left:4px">专家团报告 | Expert Panel Report</span>
+      </div>
+      <div class="right">2026年Q1 | April 2026</div>
+    </div>
+
+    <h2><span class="num">前置</span>免责声明与合规披露 Disclaimer & Compliance Disclosure</h2>
+
+    <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:12px 16px;margin:10px 0">
+      <p style="font-size:10.5px;color:#92400e;font-weight:600;margin-bottom:5px">⚠ 重要声明 | IMPORTANT NOTICE</p>
+      <p style="font-size:10px;color:#78350f;line-height:1.6">本报告由凌云智矿研究部（LynAI Mines Research）编制，仅供凌云智矿授权机构投资者及专业投资者使用。本报告不构成投资建议，亦不构成买卖任何证券或金融工具的邀约或要约。<br><span style="color:#92400e">This report is prepared by LynAI Mines Research for authorized institutional and professional investors only. It does not constitute investment advice or an offer to buy or sell any securities or financial instruments.</span></p>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h3>利益冲突披露 | Conflict of Interest</h3>
+        <p style="font-size:10px">凌云智矿及其关联方可能持有本报告所涉及矿种、公司或相关金融工具的头寸。所有持仓信息已按照ASIC/CSRC相关规定进行披露。专家团成员均签署独立性声明，确保分析客观性。</p>
+        <p style="font-size:10px">LynAI Mines and its affiliates may hold positions in commodities, companies, or financial instruments referenced herein. All positions are disclosed per ASIC/CSRC regulations. Panel members have signed independence declarations.</p>
+      </div>
+      <div>
+        <h3>适用法域 | Applicable Jurisdictions</h3>
+        <p style="font-size:10px">本报告适用于以下法域的机构投资者：澳大利亚（ASIC监管）、中国大陆（CSRC监管）、香港（SFC监管）。前瞻性陈述仅代表专家团在报告日期的判断，不对未来结果作出保证。</p>
+        <p style="font-size:10px">Applicable to institutional investors in: Australia (ASIC), Mainland China (CSRC), Hong Kong (SFC). Forward-looking statements represent expert panel judgments as of the report date only.</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top:14px"><span class="num">方法论</span>透明度声明 Methodology Transparency</h2>
+
+    <h3>数据来源矩阵 | Data Source Matrix</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>数据类别 Category</th><th>主要来源 Primary Sources</th><th>更新频率 Frequency</th><th>覆盖范围 Coverage</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>价格数据 Price Data</td><td>Bloomberg, Refinitiv, LME, SHFE, COMEX</td><td>日度 Daily</td><td>全球主要交易所</td></tr>
+        <tr><td>供需数据 S&D Data</td><td>Wood Mackenzie, S&P Global, USGS</td><td>月度 Monthly</td><td>全球主要矿种</td></tr>
+        <tr><td>库存数据 Inventory</td><td>LME仓库, SHFE, 中国港口数据</td><td>周度 Weekly</td><td>LME/SHFE/COMEX</td></tr>
+        <tr><td>政策数据 Policy</td><td>各国政府公告, MOFCOM, USGS</td><td>实时 Real-time</td><td>主要矿业国</td></tr>
+        <tr><td>公司数据 Corporate</td><td>Bloomberg, 公司年报, SEC/ASX公告</td><td>季度 Quarterly</td><td>Top 50矿企</td></tr>
+        <tr><td>ESG数据 ESG</td><td>MSCI ESG, Sustainalytics, 公司披露</td><td>季度 Quarterly</td><td>主要上市矿企</td></tr>
+        <tr><td>宏观数据 Macro</td><td>IMF, 世界银行, 各国央行, 国家统计局</td><td>月度 Monthly</td><td>G20经济体</td></tr>
+      </tbody>
+    </table>
+
+    <h3>MCI指数构建方法 | MCI Index Construction</h3>
+    <p style="font-size:10.5px">MiningClawd市场情绪指数（MCI）为专有综合指标，满分100分，由五个维度加权合成：</p>
+    <table class="data-table">
+      <thead>
+        <tr><th>维度 Dimension</th><th>权重 Weight</th><th>计算方法 Methodology</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>价格动量 Price Momentum</td><td>30%</td><td>关键矿种价格1M/3M/12M动量加权平均</td></tr>
+        <tr><td>库存周期 Inventory Cycle</td><td>20%</td><td>LME/SHFE/COMEX库存天数vs历史均值Z-score</td></tr>
+        <tr><td>资金流向 Capital Flow</td><td>20%</td><td>CFTC/LME净多头持仓变化，ETF资金流</td></tr>
+        <tr><td>地缘风险 Geopolitical Risk</td><td>15%</td><td>专家团地缘风险评分（10分制）加权</td></tr>
+        <tr><td>ESG事件 ESG Events</td><td>15%</td><td>重大ESG事件频率与影响程度评分</td></tr>
+      </tbody>
+    </table>
+
+    <div style="position:absolute;bottom:14mm;left:0;right:0;text-align:center;font-size:9px;color:var(--txtLL)">Page 2 / 14 &nbsp;|&nbsp; MiningClawd Expert Panel Report 2026 Q1</div>
+  </div>
+</div>
+
+<!-- ======================== PAGE 3: TABLE OF CONTENTS + KEY TAKEAWAYS ======================== -->
+<div class="page">
+  <div class="full-page">
+    <div class="page-bar">
+      <div class="left">
+        <svg width="16" height="16" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.5"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span class="wm" style="font-size:9px"><span style="color:#0f1115">Mining</span><span style="color:#0d9488">Clawd</span></span>
+      </div>
+      <div class="right">2026年Q1 Expert Panel Report</div>
+    </div>
+
+    <div class="key-points">
+      <div class="title">核心要点 Key Takeaways 2026 Q1 <span class="ai-badge">AI GENERATED</span></div>
+      <ul>
+        <li><strong>铜价创历史新高 Copper Record High：</strong>LME铜价Q1 2026突破$12,000/mt，受Grasberg矿不可抗力、供应中断及AI数据中心用铜需求驱动，J.P. Morgan预测Q2峰值$12,500/mt。<br><span style="color:#9ca3af;font-size:10px">LME copper breached $12,000/mt in Q1 2026, driven by Grasberg force majeure, supply disruptions, and AI data center demand. JPM forecasts Q2 peak of $12,500/mt.</span></li>
+        <li><strong>黄金突破$4,600/oz Gold Surpasses $4,600：</strong>2025年全年创53个历史新高，央行净购金863吨，ETF净流入801吨（历史第二强），当前金价约$4,676/oz，J.P. Morgan长期目标$6,000/oz。<br><span style="color:#9ca3af;font-size:10px">Gold set 53 all-time highs in 2025. Central bank buying 863t, ETF inflows 801t. Current price ~$4,676/oz; JPM long-term target $6,000/oz.</span></li>
+        <li><strong>铁矿石承压 Iron Ore Under Pressure：</strong>中国港口库存接近历史高位177.5百万吨，中国钢铁需求2026年预计再降1%，Deutsche Bank预测全年均价$102/t。<br><span style="color:#9ca3af;font-size:10px">China port inventories near record 177.5Mt. Steel demand to fall another 1% in 2026. Deutsche Bank forecasts $102/t average for 2026.</span></li>
+        <li><strong>锂矿复苏 Lithium Recovery：</strong>碳酸锂2025年底价格回升，Codelco-SQM合资Nova Andino Litio正式成立，DLE技术商业化加速，市场从过剩向平衡转变。<br><span style="color:#9ca3af;font-size:10px">Lithium carbonate prices rebounded late 2025. Codelco-SQM JV Nova Andino Litio formed. DLE commercialization accelerating; market shifting from surplus to balance.</span></li>
+        <li><strong>Rio-Glencore合并告吹 Mega-Merger Abandoned：</strong>$260亿Rio Tinto-Glencore合并谈判2026年2月宣告失败，但关键矿产M&A浪潮预计持续，铜资源争夺加剧。<br><span style="color:#9ca3af;font-size:10px">$260bn Rio-Glencore merger talks collapsed Feb 2026. Critical minerals M&A wave expected to continue; copper resource competition intensifying.</span></li>
+        <li><strong>中国稀土出口管制升级 China REE Controls：</strong>2025年10月中国实施最严稀土永磁体出口管制，供应链集中度风险从潜在变为现实，美欧日澳加速关键矿产战略布局。<br><span style="color:#9ca3af;font-size:10px">China's strictest-ever rare earth magnet export controls took effect Oct 2025. Supply chain concentration risk became reality; US/EU/Japan/Australia accelerating critical minerals strategies.</span></li>
+      </ul>
+    </div>
+
+    <h2><span class="num">目录</span>Table of Contents</h2>
+    <div style="font-size:10.5px;line-height:2.3;padding:4px 0">
+      <div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:2px 0"><span><strong style="color:var(--pri)">I.</strong> 执行摘要与上月回顾 Executive Summary & Prior Quarter Review</span><span class="mono">04</span></div>
+      <div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:2px 0"><span><strong style="color:var(--pri)">II.</strong> 全球矿业宏观环境 Global Mining Macro Environment</span><span class="mono">05</span></div>
+      <div style="display:flex;justify-content:space-between;padding:2px 0 2px 16px;color:#6b7280"><span>2.1 大宗商品价格与曲线结构 Prices & Curve Structure</span><span class="mono">05</span></div>
+      <div style="display:flex;justify-content:space-between;padding:2px 0 2px 16px;color:#6b7280"><span>2.2 供需平衡与库存周期 Supply-Demand & Inventory Cycles</span><span class="mono">05</span></div>
+      <div style="display:flex;justify-content:space-between;padding:2px 0 2px 16px;color:#6b7280"><span>2.3 地缘政治风险评估 Geopolitical Risk Assessment</span><span class="mono">06</span></div>
+      <div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:2px 0"><span><strong style="color:var(--pri)">III.</strong> 分矿种深度分析 Commodity Deep Dives</span><span class="mono">07</span></div>
+      <div style="display:flex;justify-content:space-between;padding:2px 0 2px 16px;color:#6b7280"><span>3.1 铜矿 Copper | 3.2 铁矿石 Iron Ore</span><span class="mono">07</span></div>
+      <div style="display:flex;justify-content:space-between;padding:2px 0 2px 16px;color:#6b7280"><span>3.3 锂矿 Lithium | 3.4 金矿 Gold</span><span class="mono">08</span></div>
+      <div style="display:flex;justify-content:space-between;padding:2px 0 2px 16px;color:#6b7280"><span>3.5 镍矿 Nickel | 3.6 关键矿产与稀土 Critical Minerals & REE</span><span class="mono">09</span></div>
+      <div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:2px 0"><span><strong style="color:var(--pri)">IV.</strong> 区域市场分析 Regional Market Analysis</span><span class="mono">10</span></div>
+      <div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:2px 0"><span><strong style="color:var(--pri)">V.</strong> 上市公司与资本市场 Listed Companies & Capital Markets</span><span class="mono">11</span></div>
+      <div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:2px 0"><span><strong style="color:var(--pri)">VI.</strong> 政策、监管与ESG Policy, Regulation & ESG</span><span class="mono">12</span></div>
+      <div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:2px 0"><span><strong style="color:var(--pri)">VII.</strong> 技术与创新 Technology & Innovation</span><span class="mono">12</span></div>
+      <div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:2px 0"><span><strong style="color:var(--pri)">VIII.</strong> 投资机会与风险 Investment Opportunities & Risks</span><span class="mono">13</span></div>
+      <div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:2px 0"><span><strong style="color:var(--pri)">IX.</strong> 下季展望与关键日历 Outlook & Key Calendar</span><span class="mono">13</span></div>
+      <div style="display:flex;justify-content:space-between;padding:2px 0"><span><strong style="color:var(--pri)">X.</strong> 附录 Appendices</span><span class="mono">14</span></div>
+    </div>
+
+    <div style="position:absolute;bottom:14mm;left:0;right:0;text-align:center;font-size:9px;color:var(--txtLL)">Page 3 / 14 &nbsp;|&nbsp; MiningClawd Expert Panel Report 2026 Q1</div>
+  </div>
+</div>
+
+<!-- ======================== PAGE 4: EXECUTIVE SUMMARY & MCI ======================== -->
+<div class="page">
+  <div class="content-page">
+    <div class="sidebar-col">
+      <div class="sb-logo">
+        <svg width="14" height="14" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="2"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span style="font-size:7px;color:var(--txtL)">MiningClawd</span>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">章节 Section I</div>
+        <div class="sb-item">执行摘要<br>Executive Summary</div>
+        <div class="sb-item">上季回顾<br>Prior Quarter Review</div>
+        <div class="sb-item">MCI 指数<br>Market Sentiment Index</div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">本季核心论点</div>
+        <div class="sb-highlight">铜：供应危机推动价格突破历史高位，做多信念高</div>
+        <div class="sb-highlight">金：央行购金+ETF双轮驱动，价格重心上移</div>
+        <div class="sb-highlight">铁矿：中国需求疲软+库存高企，谨慎看空</div>
+        <div class="sb-highlight">锂：底部已过，复苏进行时，中期看多</div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">信念等级 Conviction</div>
+        <div class="sb-item"><span style="color:var(--sBuy);font-weight:700">HIGH</span> — 铜、黄金</div>
+        <div class="sb-item"><span style="color:#f59e0b;font-weight:700">MEDIUM</span> — 锂、稀土</div>
+        <div class="sb-item"><span style="color:var(--sSell);font-weight:700">LOW</span> — 铁矿石、镍</div>
+      </div>
+      <div class="sb-pagenum">P.04 / 14</div>
+    </div>
+
+    <div class="main-col">
+      <div class="page-bar">
+        <div class="left">
+          <span style="font-size:9px;color:var(--pri);font-weight:700;text-transform:uppercase;letter-spacing:1px">Section I</span>
+        </div>
+        <div class="right">执行摘要 | Executive Summary</div>
+      </div>
+
+      <h2><span class="num">I.</span>执行摘要与上季回顾 Executive Summary & Prior Quarter Review</h2>
+
+      <h3>1.1 上季预测验证 | Q4 2025 Forecast Scorecard</h3>
+      <table class="data-table">
+        <thead>
+          <tr><th>预测项目 Forecast Item</th><th>上季预测 Q4 Forecast</th><th>实际结果 Actual</th><th>命中 Hit?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="comm comm-cu">铜价 Copper</span></td><td>$10,500–11,000/mt</td><td>$10,875/mt</td><td class="up">✓ 命中</td></tr>
+          <tr><td><span class="comm comm-au">金价 Gold</span></td><td>$3,800–4,200/oz</td><td>$4,135/oz (Q4均)</td><td class="up">✓ 命中</td></tr>
+          <tr><td><span class="comm comm-fe">铁矿石 Iron Ore</span></td><td>$95–110/t</td><td>~$106/t</td><td class="up">✓ 命中</td></tr>
+          <tr><td><span class="comm comm-li">锂价 Lithium</span></td><td>碳酸锂底部反弹</td><td>+25.73% YTD至11月</td><td class="up">✓ 命中</td></tr>
+          <tr><td><span class="comm comm-ni">镍价 Nickel</span></td><td>持续过剩压制价格</td><td>印尼限产推动小幅反弹</td><td class="neutral">△ 部分</td></tr>
+          <tr><td>Rio-Glencore M&A</td><td>谈判重启可能性高</td><td>谈判重启后2月宣告失败</td><td class="neutral">△ 部分</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:9.5px;color:var(--txtL)">Q4 2025预测命中率：<strong style="color:var(--sBuy)">83%</strong>（5/6命中，1部分命中）| 滚动12月准确率：78%</p>
+
+      <h3>1.2 本季核心论点 | Q1 2026 Monthly Thesis</h3>
+
+      <div class="mci-box">
+        <div class="mci-title">MiningClawd Market Sentiment Index (MCI) — Q1 2026 <span class="ai-badge" style="background:rgba(255,255,255,0.08);border-color:rgba(20,184,166,0.3)">PROPRIETARY</span></div>
+        <div style="display:flex;align-items:flex-end;gap:16px">
+          <div>
+            <div class="mci-score">72</div>
+            <div class="mci-label">/ 100 — 温和看多 Moderately Bullish</div>
+          </div>
+          <div style="flex:1">
+            <div class="mci-bars">
+              <div class="mci-bar-row"><span class="mci-bar-label">价格动量 (30%)</span><div class="mci-bar-track"><div class="mci-bar-fill" style="width:80%"></div></div><span class="mci-bar-val">24/30</span></div>
+              <div class="mci-bar-row"><span class="mci-bar-label">库存周期 (20%)</span><div class="mci-bar-track"><div class="mci-bar-fill" style="width:55%;background:#f59e0b"></div></div><span class="mci-bar-val">11/20</span></div>
+              <div class="mci-bar-row"><span class="mci-bar-label">资金流向 (20%)</span><div class="mci-bar-track"><div class="mci-bar-fill" style="width:75%"></div></div><span class="mci-bar-val">15/20</span></div>
+              <div class="mci-bar-row"><span class="mci-bar-label">地缘风险 (15%)</span><div class="mci-bar-track"><div class="mci-bar-fill" style="width:47%;background:#ef4444"></div></div><span class="mci-bar-val">7/15</span></div>
+              <div class="mci-bar-row"><span class="mci-bar-label">ESG事件 (15%)</span><div class="mci-bar-track"><div class="mci-bar-fill" style="width:67%"></div></div><span class="mci-bar-val">10/15</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>本季行动指南 | Q1 2026 Action Guide</h3>
+      <table class="data-table">
+        <thead>
+          <tr><th>矿种 Commodity</th><th>行动 Action</th><th>信念 Conviction</th><th>时间窗口 Horizon</th><th>核心逻辑 Rationale</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="comm comm-cu">铜 Copper</span></td><td><strong class="up">做多 LONG</strong></td><td><span style="color:var(--sBuy)">HIGH</span></td><td>3–12M</td><td>供应危机+AI需求+赤字330kmt</td></tr>
+          <tr><td><span class="comm comm-au">黄金 Gold</span></td><td><strong class="up">做多 LONG</strong></td><td><span style="color:var(--sBuy)">HIGH</span></td><td>6–18M</td><td>央行购金+ETF流入+地缘溢价</td></tr>
+          <tr><td><span class="comm comm-li">锂 Lithium</span></td><td><strong class="up">建仓 ACCUMULATE</strong></td><td><span style="color:#f59e0b">MEDIUM</span></td><td>6–12M</td><td>底部反转+DLE技术+EV需求</td></tr>
+          <tr><td><span class="comm comm-ree">稀土 REE</span></td><td><strong class="up">做多 LONG</strong></td><td><span style="color:#f59e0b">MEDIUM</span></td><td>3–6M</td><td>中国出口管制+供应链重构</td></tr>
+          <tr><td><span class="comm comm-fe">铁矿石 Iron Ore</span></td><td><strong class="down">低配 UNDERWEIGHT</strong></td><td><span style="color:var(--sSell)">LOW</span></td><td>3–6M</td><td>中国需求疲软+库存高企</td></tr>
+          <tr><td><span class="comm comm-ni">镍 Nickel</span></td><td><strong class="neutral">观望 NEUTRAL</strong></td><td><span style="color:var(--hold)">LOW</span></td><td>3M</td><td>印尼限产vs LFP替代，方向不明</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== PAGE 5: MACRO ENVIRONMENT ======================== -->
+<div class="page">
+  <div class="content-page">
+    <div class="sidebar-col">
+      <div class="sb-logo">
+        <svg width="14" height="14" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="2"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span style="font-size:7px;color:var(--txtL)">MiningClawd</span>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">章节 Section II</div>
+        <div class="sb-item">宏观环境<br>Macro Environment</div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">关键宏观指标</div>
+        <div class="sb-item"><strong>美联储利率</strong><br>4.25%–4.50%</div>
+        <div class="sb-item"><strong>美元指数 DXY</strong><br>~102（走弱）</div>
+        <div class="sb-item"><strong>中国PMI</strong><br>制造业50.2（扩张）</div>
+        <div class="sb-item"><strong>全球GDP增速</strong><br>IMF预测3.1%</div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">地缘风险评分</div>
+        <div class="sb-item"><strong>中东</strong> <span style="color:var(--sSell)">8/10</span></div>
+        <div class="sb-item"><strong>中美贸易</strong> <span style="color:var(--sSell)">7/10</span></div>
+        <div class="sb-item"><strong>俄乌冲突</strong> <span style="color:#f59e0b">6/10</span></div>
+        <div class="sb-item"><strong>非洲政治</strong> <span style="color:#f59e0b">6/10</span></div>
+        <div class="sb-item"><strong>印尼政策</strong> <span style="color:#f59e0b">5/10</span></div>
+      </div>
+      <div class="sb-pagenum">P.05 / 14</div>
+    </div>
+
+    <div class="main-col">
+      <div class="page-bar">
+        <div class="left"><span style="font-size:9px;color:var(--pri);font-weight:700;text-transform:uppercase;letter-spacing:1px">Section II</span></div>
+        <div class="right">全球矿业宏观环境 | Global Mining Macro</div>
+      </div>
+
+      <h2><span class="num">II.</span>全球矿业宏观环境 Global Mining Macro Environment</h2>
+
+      <h3>2.1 大宗商品价格与曲线结构 | Prices & Curve Structure</h3>
+      <table class="data-table">
+        <thead>
+          <tr><th>矿种 Commodity</th><th>Q1 2026均价</th><th>Q4 2025均价</th><th>季度变化</th><th>曲线结构</th><th>AI评级</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="comm comm-cu">铜 Copper</span></td><td>$12,000/mt</td><td>$10,875/mt</td><td class="up">+10.3%</td><td>Backwardation</td><td><strong class="up">Strong Buy</strong></td></tr>
+          <tr><td><span class="comm comm-au">黄金 Gold</span></td><td>~$4,676/oz</td><td>$4,135/oz</td><td class="up">+13.1%</td><td>Contango</td><td><strong class="up">Strong Buy</strong></td></tr>
+          <tr><td><span class="comm comm-fe">铁矿石 Iron Ore</span></td><td>$106/t</td><td>~$108/t</td><td class="down">-1.9%</td><td>Contango</td><td><strong class="down">Underweight</strong></td></tr>
+          <tr><td><span class="comm comm-li">锂 Lithium (碳酸锂)</span></td><td>~17.1万元/吨</td><td>~13.6万元/吨</td><td class="up">+25.7%</td><td>Flat</td><td><strong style="color:#f59e0b">Accumulate</strong></td></tr>
+          <tr><td><span class="comm comm-ni">镍 Nickel</span></td><td>~$16,500/mt</td><td>~$15,800/mt</td><td class="up">+4.4%</td><td>Contango</td><td><strong class="neutral">Neutral</strong></td></tr>
+          <tr><td><span class="comm comm-co">钴 Cobalt</span></td><td>~$25,000/mt</td><td>~$24,200/mt</td><td class="up">+3.3%</td><td>Flat</td><td><strong class="neutral">Neutral</strong></td></tr>
+        </tbody>
+      </table>
+
+      <div class="highlight">
+        <strong>曲线结构解读：</strong>铜市场呈现Backwardation（近高远低），反映当前供应紧张的现货溢价，是看涨信号。黄金Contango结构正常，反映持有成本。铁矿石Contango结构叠加高库存，预示价格下行压力。
+      </div>
+
+      <h3>2.2 供需平衡与库存周期 | Supply-Demand & Inventory Cycles</h3>
+      <table class="data-table">
+        <thead>
+          <tr><th>矿种</th><th>2025年供需</th><th>2026E供需</th><th>LME库存趋势</th><th>库存信号</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="comm comm-cu">铜</span></td><td>小幅过剩</td><td>赤字~330kmt</td><td>持续下降</td><td><span style="color:var(--sBuy);font-weight:700">绿灯 GREEN</span></td></tr>
+          <tr><td><span class="comm comm-au">黄金</span></td><td>需求5,002t</td><td>预计维持强劲</td><td>ETF持续流入</td><td><span style="color:var(--sBuy);font-weight:700">绿灯 GREEN</span></td></tr>
+          <tr><td><span class="comm comm-fe">铁矿石</span></td><td>供需基本平衡</td><td>H2偏过剩</td><td>中国港口177.5Mt↑</td><td><span style="color:var(--sSell);font-weight:700">红灯 RED</span></td></tr>
+          <tr><td><span class="comm comm-li">锂</span></td><td>过剩141kmt LCE</td><td>过剩收窄</td><td>库存下降中</td><td><span style="color:#f59e0b;font-weight:700">黄灯 AMBER</span></td></tr>
+          <tr><td><span class="comm comm-ni">镍</span></td><td>过剩严重</td><td>过剩156kt</td><td>LME库存高位</td><td><span style="color:var(--sSell);font-weight:700">红灯 RED</span></td></tr>
+        </tbody>
+      </table>
+
+      <h3>2.3 地缘政治风险评估 | Geopolitical Risk Assessment</h3>
+      <p>2026年Q1地缘政治风险维持高位，主要风险源包括：中东冲突持续升级（ASX 200材料板块3月跌幅-15.3%与伊朗冲突直接相关）、中美贸易摩擦（232条款铜关税威胁）、中国稀土出口管制升级。</p>
+
+      <div class="expert-quote">
+        <div class="eq-text">"中国稀土出口管制从'潜在风险'变为'现实冲击'，这是2025年最重要的供应链事件。美欧日澳的关键矿产战略布局将在未来3-5年显著改变全球矿业格局。The transition of China's rare earth export controls from 'potential risk' to 'actual disruption' is the most significant supply chain event of 2025."</div>
+        <div class="eq-author">
+          <div class="eq-avatar">LM</div>
+          <div><div class="eq-name">Prof. Li Mingzhi</div><div class="eq-role">地缘政治风险分析师 | Geopolitical Risk Analyst</div></div>
+        </div>
+      </div>
+
+      <table class="data-table" style="margin-top:8px">
+        <thead>
+          <tr><th>风险事件 Risk Event</th><th>影响矿种</th><th>风险评分 (1-10)</th><th>影响方向</th><th>对冲建议</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>中国稀土出口管制</td><td><span class="pill-ree comm-pill">稀土</span></td><td><span style="color:var(--sSell);font-weight:700">9/10</span></td><td class="up">价格上涨</td><td>做多稀土ETF/矿企</td></tr>
+          <tr><td>美国232条款铜关税</td><td><span class="pill-cu comm-pill">铜</span></td><td><span style="color:#f59e0b;font-weight:700">7/10</span></td><td class="up">COMEX溢价扩大</td><td>COMEX vs LME价差交易</td></tr>
+          <tr><td>中东冲突升级</td><td><span class="pill-au comm-pill">黄金</span></td><td><span style="color:var(--sSell);font-weight:700">8/10</span></td><td class="up">避险需求增加</td><td>持有黄金多头</td></tr>
+          <tr><td>印尼镍配额限制</td><td><span class="pill-ni comm-pill">镍</span></td><td><span style="color:#f59e0b;font-weight:700">6/10</span></td><td class="up">价格支撑</td><td>关注配额政策变化</td></tr>
+          <tr><td>中国房地产持续疲软</td><td><span class="pill-fe comm-pill">铁矿</span></td><td><span style="color:#f59e0b;font-weight:700">7/10</span></td><td class="down">需求下滑</td><td>做空铁矿石期货</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== PAGE 6: COMMODITY DEEP DIVES - COPPER & IRON ======================== -->
+<div class="page">
+  <div class="content-page">
+    <div class="sidebar-col">
+      <div class="sb-logo">
+        <svg width="14" height="14" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="2"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span style="font-size:7px;color:var(--txtL)">MiningClawd</span>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">章节 Section III</div>
+        <div class="sb-item">分矿种深度分析<br>Commodity Deep Dives</div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">铜矿记分卡</div>
+        <div class="sb-item"><strong>供需评分</strong> 8.5/10</div>
+        <div class="sb-item"><strong>成本曲线</strong> 第75分位</div>
+        <div class="sb-item"><strong>库存信号</strong> <span style="color:var(--sBuy)">绿灯</span></div>
+        <div class="sb-item"><strong>资金流</strong> 净多头↑</div>
+        <div class="sb-item"><strong>政策风险</strong> 6/10</div>
+        <div class="sb-item"><strong>综合评级</strong> <span style="color:var(--sBuy);font-weight:700">看多</span></div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">铁矿记分卡</div>
+        <div class="sb-item"><strong>供需评分</strong> 4.0/10</div>
+        <div class="sb-item"><strong>成本曲线</strong> 第40分位</div>
+        <div class="sb-item"><strong>库存信号</strong> <span style="color:var(--sSell)">红灯</span></div>
+        <div class="sb-item"><strong>资金流</strong> 净空头↑</div>
+        <div class="sb-item"><strong>政策风险</strong> 7/10</div>
+        <div class="sb-item"><strong>综合评级</strong> <span style="color:var(--sSell);font-weight:700">看空</span></div>
+      </div>
+      <div class="sb-pagenum">P.06 / 14</div>
+    </div>
+
+    <div class="main-col">
+      <div class="page-bar">
+        <div class="left"><span style="font-size:9px;color:var(--pri);font-weight:700;text-transform:uppercase;letter-spacing:1px">Section III</span></div>
+        <div class="right">分矿种深度分析 | Commodity Deep Dives</div>
+      </div>
+
+      <h2><span class="num">III.</span>分矿种深度分析 Commodity Deep Dives</h2>
+
+      <!-- COPPER SCORECARD -->
+      <div class="scorecard">
+        <div class="scorecard-header">
+          <div class="scorecard-title"><span class="comm comm-cu">3.1 铜矿 Copper</span></div>
+          <div class="rating-badge rating-bull">看多 BULLISH</div>
+        </div>
+        <div class="scorecard-grid">
+          <div class="sc-item"><div class="sc-label">供需评分</div><div class="sc-value" style="color:var(--sBuy)">8.5</div><div class="sc-sub">/10 赤字330kmt</div></div>
+          <div class="sc-item"><div class="sc-label">成本曲线</div><div class="sc-value">P75</div><div class="sc-sub">高于边际成本</div></div>
+          <div class="sc-item"><div class="sc-label">库存信号</div><div class="sc-value" style="color:var(--sBuy)">绿灯</div><div class="sc-sub">LME持续下降</div></div>
+          <div class="sc-item"><div class="sc-label">资金流</div><div class="sc-value" style="color:var(--sBuy)">净多</div><div class="sc-sub">COMEX历史高位</div></div>
+          <div class="sc-item"><div class="sc-label">政策风险</div><div class="sc-value" style="color:#f59e0b">6/10</div><div class="sc-sub">232条款风险</div></div>
+          <div class="sc-item"><div class="sc-label">ESG事件</div><div class="sc-value">2</div><div class="sc-sub">Grasberg泥石流</div></div>
+        </div>
+      </div>
+
+      <p><strong>供给端：</strong>2025年铜矿供应遭受严重冲击。印尼Grasberg矿（全球第二大铜矿，Freeport-McMoRan运营）于2025年9月因致命泥石流触发不可抗力，Grasberg Block Cave（占预测产量70%）预计关闭至2026年Q2。智利Quebrada Blanca铜矿因运营挑战下调产量指导。J.P. Morgan预计2026年矿山供应增速仅+1.4%，较年初预测低约500 kmt。</p>
+      <p><strong>需求端：</strong>AI数据中心用铜2026年预计达475 kmt（同比+110 kmt），电网投资、新能源车持续贡献增量需求。美国因232条款关税威胁大量前置进口，COMEX铜价持续对LME保持溢价。</p>
+
+      <div class="forecast-box">
+        <div class="forecast-title">铜价预测区间 Copper Price Forecast (US$/mt) — J.P. Morgan</div>
+        <div class="forecast-grid">
+          <div class="forecast-cell"><div class="forecast-period">Q1 2026 (实际)</div><div class="forecast-price">12,000</div><div class="forecast-change up">+10.3% QoQ</div></div>
+          <div class="forecast-cell"><div class="forecast-period">Q2 2026</div><div class="forecast-price">12,500</div><div class="forecast-change up">+4.2% QoQ</div></div>
+          <div class="forecast-cell"><div class="forecast-period">Q3 2026</div><div class="forecast-price">12,000</div><div class="forecast-change down">-4.0% QoQ</div></div>
+          <div class="forecast-cell"><div class="forecast-period">Q4 2026</div><div class="forecast-price">11,800</div><div class="forecast-change down">-1.7% QoQ</div></div>
+        </div>
+      </div>
+
+      <!-- IRON ORE SCORECARD -->
+      <div class="scorecard" style="margin-top:10px">
+        <div class="scorecard-header">
+          <div class="scorecard-title"><span class="comm comm-fe">3.2 铁矿石 Iron Ore</span></div>
+          <div class="rating-badge rating-bear">看空 BEARISH</div>
+        </div>
+        <div class="scorecard-grid">
+          <div class="sc-item"><div class="sc-label">供需评分</div><div class="sc-value" style="color:var(--sSell)">4.0</div><div class="sc-sub">/10 H2偏过剩</div></div>
+          <div class="sc-item"><div class="sc-label">成本曲线</div><div class="sc-value">P40</div><div class="sc-sub">价格接近边际</div></div>
+          <div class="sc-item"><div class="sc-label">库存信号</div><div class="sc-value" style="color:var(--sSell)">红灯</div><div class="sc-sub">177.5Mt历史高位</div></div>
+          <div class="sc-item"><div class="sc-label">资金流</div><div class="sc-value" style="color:var(--sSell)">净空</div><td><div class="sc-sub">SHFE空头增加</div></div>
+          <div class="sc-item"><div class="sc-label">政策风险</div><div class="sc-value" style="color:var(--sSell)">7/10</div><div class="sc-sub">中国钢铁限产</div></div>
+          <div class="sc-item"><div class="sc-label">ESG事件</div><div class="sc-value">1</div><div class="sc-sub">Simandou环评</div></div>
+        </div>
+      </div>
+
+      <p><strong>需求端：</strong>中国钢铁需求持续承压。2025年中国粗钢产量为7年低点，2026年预计再降1%（继2025年-5.4%后）。房地产新开工面积持续萎缩，基建投资提供部分对冲但力度有限。中国47港铁矿石库存（2026年4月初）达177.5百万吨，接近历史高位。</p>
+      <p><strong>供给端：</strong>淡水河谷2025年铁矿石产量3.36亿吨（时隔7年重夺全球第一）。几内亚Simandou项目新增供应压力在2026年逐步显现，进一步压制价格。Deutsche Bank预测2026年全年均价$102/t。</p>
+
+      <div class="expert-quote">
+        <div class="eq-text">"铁矿石市场面临'双重压力'——需求端中国房地产持续疲软，供给端Simandou新增产能即将释放。我们维持2026年均价$102/t预测，H2存在进一步下行风险。Iron ore faces a 'double squeeze' — weak Chinese property demand and Simandou supply additions. We maintain our $102/t 2026 average forecast with H2 downside risk."</div>
+        <div class="eq-author">
+          <div class="eq-avatar">JW</div>
+          <div><div class="eq-name">Dr. James Whitfield</div><div class="eq-role">首席大宗商品策略师 | Chief Commodity Strategist</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== PAGE 7: LITHIUM & GOLD ======================== -->
+<div class="page">
+  <div class="content-page">
+    <div class="sidebar-col">
+      <div class="sb-logo">
+        <svg width="14" height="14" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="2"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span style="font-size:7px;color:var(--txtL)">MiningClawd</span>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">锂矿记分卡</div>
+        <div class="sb-item"><strong>供需评分</strong> 6.0/10</div>
+        <div class="sb-item"><strong>成本曲线</strong> 第55分位</div>
+        <div class="sb-item"><strong>库存信号</strong> <span style="color:#f59e0b">黄灯</span></div>
+        <div class="sb-item"><strong>资金流</strong> 净多头↑</div>
+        <div class="sb-item"><strong>政策风险</strong> 5/10</div>
+        <div class="sb-item"><strong>综合评级</strong> <span style="color:#f59e0b;font-weight:700">建仓</span></div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">黄金记分卡</div>
+        <div class="sb-item"><strong>供需评分</strong> 9.0/10</div>
+        <div class="sb-item"><strong>成本曲线</strong> 第85分位</div>
+        <div class="sb-item"><strong>库存信号</strong> <span style="color:var(--sBuy)">绿灯</span></div>
+        <div class="sb-item"><strong>资金流</strong> ETF净流入↑</div>
+        <div class="sb-item"><strong>政策风险</strong> 3/10</div>
+        <div class="sb-item"><strong>综合评级</strong> <span style="color:var(--sBuy);font-weight:700">强烈看多</span></div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">黄金关键数据</div>
+        <div class="sb-item"><strong>2025年央行购金</strong><br>863吨（历史高位）</div>
+        <div class="sb-item"><strong>2025年ETF流入</strong><br>801吨（历史第二）</div>
+        <div class="sb-item"><strong>2025年均价</strong><br>$3,431/oz (+44%)</div>
+        <div class="sb-item"><strong>当前价格</strong><br>~$4,676/oz</div>
+      </div>
+      <div class="sb-pagenum">P.07 / 14</div>
+    </div>
+
+    <div class="main-col">
+      <div class="page-bar">
+        <div class="left"><span style="font-size:9px;color:var(--pri);font-weight:700;text-transform:uppercase;letter-spacing:1px">Section III (cont.)</span></div>
+        <div class="right">锂矿 & 黄金 | Lithium & Gold</div>
+      </div>
+
+      <!-- LITHIUM SCORECARD -->
+      <div class="scorecard">
+        <div class="scorecard-header">
+          <div class="scorecard-title"><span class="comm comm-li">3.3 锂矿 Lithium</span></div>
+          <div class="rating-badge rating-bull">建仓 ACCUMULATE</div>
+        </div>
+        <div class="scorecard-grid">
+          <div class="sc-item"><div class="sc-label">供需评分</div><div class="sc-value" style="color:#f59e0b">6.0</div><div class="sc-sub">/10 过剩收窄</div></div>
+          <div class="sc-item"><div class="sc-label">成本曲线</div><div class="sc-value">P55</div><div class="sc-sub">部分产能亏损</div></div>
+          <div class="sc-item"><div class="sc-label">库存信号</div><div class="sc-value" style="color:#f59e0b">黄灯</div><div class="sc-sub">库存持续下降</div></div>
+          <div class="sc-item"><div class="sc-label">资金流</div><div class="sc-value" style="color:var(--sBuy)">净多</div><div class="sc-sub">资金回流</div></div>
+          <div class="sc-item"><div class="sc-label">政策风险</div><div class="sc-value" style="color:#f59e0b">5/10</div><div class="sc-sub">智利国有化</div></div>
+          <div class="sc-item"><div class="sc-label">ESG事件</div><div class="sc-value">1</div><div class="sc-sub">盐湖水资源</div></div>
+        </div>
+      </div>
+
+      <p><strong>需求驱动：</strong>全球EV销量持续增长，储能装机规模扩大，推动锂需求稳步上升。2025年碳酸锂价格年初至今（至11月底）涨幅达+25.73%，市场从深度过剩逐步走向平衡。S&P Global预测2025年供应过剩收窄至141,000吨LCE，2026年有望进一步收窄。</p>
+      <p><strong>供给端重构：</strong>智利Codelco-SQM合资公司Nova Andino Litio于2026年1月正式成立，2025-2030年计划额外生产300,000吨LCE，智利国家获运营利润70%。澳大利亚锂辉石、南美锂三角、非洲新项目并行推进，但部分高成本产能在低价期已关停。</p>
+      <p><strong>技术路线风险：</strong>DLE（直接锂提取）技术商业化加速，市场规模2026年预计达$16亿，CAGR 13.5%（至2036年）。固态电池技术进展可能在中长期改变锂需求结构，需持续监测。</p>
+
+      <div class="forecast-box">
+        <div class="forecast-title">锂价预测区间 Lithium Price Forecast (碳酸锂 万元/吨)</div>
+        <div class="forecast-grid">
+          <div class="forecast-cell"><div class="forecast-period">Q1 2026</div><div class="forecast-price">17.1</div><div class="forecast-change up">+25.7% vs Q3'25</div></div>
+          <div class="forecast-cell"><div class="forecast-period">Q2 2026E</div><div class="forecast-price">18-20</div><div class="forecast-change up">持续复苏</div></div>
+          <div class="forecast-cell"><div class="forecast-period">Q3 2026E</div><div class="forecast-price">20-23</div><div class="forecast-change up">供需趋平</div></div>
+          <div class="forecast-cell"><div class="forecast-period">Q4 2026E</div><div class="forecast-price">22-26</div><div class="forecast-change up">赤字预期</div></div>
+        </div>
+      </div>
+
+      <!-- GOLD SCORECARD -->
+      <div class="scorecard" style="margin-top:10px">
+        <div class="scorecard-header">
+          <div class="scorecard-title"><span class="comm comm-au">3.4 金矿 Gold</span></div>
+          <div class="rating-badge rating-bull">强烈看多 STRONG BUY</div>
+        </div>
+        <div class="scorecard-grid">
+          <div class="sc-item"><div class="sc-label">供需评分</div><div class="sc-value" style="color:var(--sBuy)">9.0</div><div class="sc-sub">/10 需求创纪录</div></div>
+          <div class="sc-item"><div class="sc-label">成本曲线</div><div class="sc-value">P85</div><div class="sc-sub">远高于AISC</div></div>
+          <div class="sc-item"><div class="sc-label">库存信号</div><div class="sc-value" style="color:var(--sBuy)">绿灯</div><div class="sc-sub">ETF持续流入</div></div>
+          <div class="sc-item"><div class="sc-label">资金流</div><div class="sc-value" style="color:var(--sBuy)">净多</div><div class="sc-sub">ETF+801t</div></div>
+          <div class="sc-item"><div class="sc-label">政策风险</div><div class="sc-value" style="color:var(--sBuy)">3/10</div><div class="sc-sub">低政策风险</div></div>
+          <div class="sc-item"><div class="sc-label">ESG事件</div><div class="sc-value">0</div><div class="sc-sub">无重大事件</div></div>
+        </div>
+      </div>
+
+      <p><strong>宏观驱动：</strong>2025年黄金创历史性突破，全年设立53个历史新高，年均价$3,431/oz（同比+44%），Q4均价$4,135/oz（同比+55%）。当前金价约$4,676/oz。美元走弱、实际利率下行、地缘政治风险溢价共同支撑金价。</p>
+      <p><strong>央行购金：</strong>2025年全球央行净购金863吨，达历史高位区间上沿。购金行为地理上广泛分布，中国、印度、土耳其、波兰等央行均为主要买家。这一趋势预计在2026年持续，为金价提供强力底部支撑。</p>
+      <p><strong>ETF与投资需求：</strong>2025年全球黄金ETF净流入801吨（历史第二强），金条金币需求达1,374吨（12年高位）。J.P. Morgan预测2026年Q4金价推向$5,000/oz，Deutsche Bank在弱美元情境下预测可能达$6,000/oz。</p>
+
+      <div class="expert-quote">
+        <div class="eq-text">"黄金的价格底部已从$2,000/oz重置至$3,000/oz，这是结构性转变而非周期性波动。央行购金的地理多元化和ETF资金的持续流入，共同构建了金价的新支撑体系。Gold's price floor has reset from $2,000/oz to $3,000/oz — this is structural, not cyclical."</div>
+        <div class="eq-author">
+          <div class="eq-avatar">SC</div>
+          <div><div class="eq-name">Sarah Chen, CFA</div><div class="eq-role">量化模型师 | Quantitative Strategist</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== PAGE 8: NICKEL & CRITICAL MINERALS ======================== -->
+<div class="page">
+  <div class="content-page">
+    <div class="sidebar-col">
+      <div class="sb-logo">
+        <svg width="14" height="14" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="2"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span style="font-size:7px;color:var(--txtL)">MiningClawd</span>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">镍矿记分卡</div>
+        <div class="sb-item"><strong>供需评分</strong> 4.5/10</div>
+        <div class="sb-item"><strong>成本曲线</strong> 第35分位</div>
+        <div class="sb-item"><strong>库存信号</strong> <span style="color:var(--sSell)">红灯</span></div>
+        <div class="sb-item"><strong>资金流</strong> 中性</div>
+        <div class="sb-item"><strong>政策风险</strong> 6/10</div>
+        <div class="sb-item"><strong>综合评级</strong> <span style="color:var(--hold);font-weight:700">中性</span></div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">稀土供应集中度</div>
+        <div class="sb-item"><strong>中国占全球</strong><br>稀土开采 ~60%<br>稀土加工 ~85%<br>永磁体生产 ~90%</div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">关键矿产记分卡</div>
+        <div class="sb-item"><strong>供需评分</strong> 7.5/10</div>
+        <div class="sb-item"><strong>政策风险</strong> 9/10</div>
+        <div class="sb-item"><strong>综合评级</strong> <span style="color:#f59e0b;font-weight:700">看多</span></div>
+      </div>
+      <div class="sb-pagenum">P.08 / 14</div>
+    </div>
+
+    <div class="main-col">
+      <div class="page-bar">
+        <div class="left"><span style="font-size:9px;color:var(--pri);font-weight:700;text-transform:uppercase;letter-spacing:1px">Section III (cont.)</span></div>
+        <div class="right">镍矿 & 关键矿产 | Nickel & Critical Minerals</div>
+      </div>
+
+      <!-- NICKEL SCORECARD -->
+      <div class="scorecard">
+        <div class="scorecard-header">
+          <div class="scorecard-title"><span class="comm comm-ni">3.5 镍矿 Nickel</span></div>
+          <div class="rating-badge rating-neutral">中性 NEUTRAL</div>
+        </div>
+        <div class="scorecard-grid">
+          <div class="sc-item"><div class="sc-label">供需评分</div><div class="sc-value" style="color:var(--sSell)">4.5</div><div class="sc-sub">/10 仍过剩</div></div>
+          <div class="sc-item"><div class="sc-label">成本曲线</div><div class="sc-value">P35</div><div class="sc-sub">低于均值</div></div>
+          <div class="sc-item"><div class="sc-label">库存信号</div><div class="sc-value" style="color:var(--sSell)">红灯</div><div class="sc-sub">LME库存高位</div></div>
+          <div class="sc-item"><div class="sc-label">资金流</div><div class="sc-value" style="color:var(--hold)">中性</div><div class="sc-sub">多空拉锯</div></div>
+          <div class="sc-item"><div class="sc-label">政策风险</div><div class="sc-value" style="color:#f59e0b">6/10</div><div class="sc-sub">印尼配额</div></div>
+          <div class="sc-item"><div class="sc-label">ESG事件</div><div class="sc-value">2</div><div class="sc-sub">HPAL废水</div></div>
+        </div>
+      </div>
+
+      <p><strong>印尼供给格局：</strong>印尼控制全球60%以上镍供应。2026年镍矿RKAB配额设定为260-270百万吨，低于冶炼需求估算的340-350百万吨，形成供应缺口。然而，HPAL产能扩张持续，精炼镍产量仍在增长。S&P Global预测2026年仍有156,000吨过剩（即便印尼宣布限产）。</p>
+      <p><strong>需求结构分化：</strong>印尼EV市场超过90%的EV使用LFP电池（非镍基），这一趋势在全球范围内蔓延，对电池级镍需求构成长期压制。不锈钢需求相对稳定，但无法弥补电池需求增速放缓的缺口。</p>
+      <p><strong>价格展望：</strong>Crux Investor预测镍价有望向$20,000/mt方向运行，但需要印尼配额政策持续收紧和LFP替代趋势逆转两个条件同时满足，概率有限。维持中性评级。</p>
+
+      <!-- CRITICAL MINERALS -->
+      <h3 style="margin-top:14px"><span class="comm comm-ree">3.6 关键矿产与稀土 Critical Minerals & Rare Earths</span></h3>
+
+      <div class="highlight">
+        <strong>2025年10月重大事件：</strong>中国商务部发布第61号令，实施迄今最严格的稀土及永磁体出口管制，2025年11月8日生效。这是全球关键矿产供应链的历史性转折点，供应链集中度风险从"潜在"变为"现实"。
+      </div>
+
+      <table class="data-table">
+        <thead>
+          <tr><th>元素/矿种</th><th>主要用途</th><th>中国占比</th><th>出口管制状态</th><th>替代进展</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>钕铁硼 NdFeB</td><td>永磁体/电机/风电</td><td>~90%</td><td><span style="color:var(--sSell);font-weight:700">严格管制</span></td><td>慢，5-10年</td></tr>
+          <tr><td>镝 Dysprosium</td><td>高温永磁体</td><td>~99%</td><td><span style="color:var(--sSell);font-weight:700">严格管制</span></td><td>极慢</td></tr>
+          <tr><td>钨 Tungsten</td><td>硬质合金/工具</td><td>~85%</td><td><span style="color:#f59e0b;font-weight:700">已管制(2025)</span></td><td>慢</td></tr>
+          <tr><td>铟 Indium</td><td>半导体/LCD</td><td>~60%</td><td><span style="color:#f59e0b;font-weight:700">已管制(2025)</span></td><td>中等</td></tr>
+          <tr><td>铂族金属 PGM</td><td>催化剂/氢能</td><td>南非主导</td><td>无直接管制</td><td>氢能推动需求</td></tr>
+        </tbody>
+      </table>
+
+      <p><strong>地缘博弈：</strong>美国《通胀削减法案》（IRA）持续推动北美关键矿产供应链建设，25%中国关键矿产关税自2025年起实施。欧盟《关键原材料法案》（CRMA）要求2030年前实现关键矿产开采、加工、回收各10%/40%/15%的本土化目标。澳大利亚、加拿大、日本加速与美国的关键矿产伙伴关系。</p>
+
+      <div class="expert-quote">
+        <div class="eq-text">"中国稀土管制的战略意图非常清晰——这是对美国技术出口管制的精准反制。未来3-5年，全球将形成两套平行的关键矿产供应链体系，这将深刻重塑矿业投资格局。China's rare earth controls are a precise countermeasure to US tech export restrictions. Two parallel critical mineral supply chains will emerge globally over the next 3-5 years."</div>
+        <div class="eq-author">
+          <div class="eq-avatar">LM</div>
+          <div><div class="eq-name">Prof. Li Mingzhi</div><div class="eq-role">地缘政治风险分析师 | Geopolitical Risk Analyst</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== PAGE 9: REGIONAL ANALYSIS ======================== -->
+<div class="page">
+  <div class="content-page">
+    <div class="sidebar-col">
+      <div class="sb-logo">
+        <svg width="14" height="14" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="2"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span style="font-size:7px;color:var(--txtL)">MiningClawd</span>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">章节 Section IV</div>
+        <div class="sb-item">区域市场分析<br>Regional Analysis</div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">区域风险评分</div>
+        <div class="sb-item">🇦🇺 澳大利亚 <span style="color:var(--sBuy)">3/10</span></div>
+        <div class="sb-item">🇨🇳 中国 <span style="color:#f59e0b">5/10</span></div>
+        <div class="sb-item">🌍 非洲 <span style="color:var(--sSell)">7/10</span></div>
+        <div class="sb-item">🌎 南美 <span style="color:#f59e0b">6/10</span></div>
+        <div class="sb-item">🇺🇸 北美 <span style="color:#f59e0b">5/10</span></div>
+        <div class="sb-item">🌏 东南亚 <span style="color:#f59e0b">6/10</span></div>
+      </div>
+      <div class="sb-pagenum">P.09 / 14</div>
+    </div>
+
+    <div class="main-col">
+      <div class="page-bar">
+        <div class="left"><span style="font-size:9px;color:var(--pri);font-weight:700;text-transform:uppercase;letter-spacing:1px">Section IV</span></div>
+        <div class="right">区域市场分析 | Regional Market Analysis</div>
+      </div>
+
+      <h2><span class="num">IV.</span>区域市场分析 Regional Market Analysis</h2>
+
+      <div class="region-card">
+        <div class="region-header">
+          <div class="region-name">🇦🇺 4.1 澳大利亚 Australia</div>
+          <div class="region-risk risk-low">低风险 LOW RISK 3/10</div>
+        </div>
+        <p style="font-size:10.5px">ASX 200材料板块2026年Q1经历剧烈波动，3月因中东冲突升级下跌-15.3%，但全年IPO融资额$63亿（同比+54%）显示资本市场活跃度持续提升。铁矿石出口维持高位，但价格压力制约矿企盈利。锂矿企业受益于锂价复苏，Pilbara Minerals、Liontown等股价回升。联邦政府持续推进关键矿产战略，与美国、日本、韩国签署供应链协议。</p>
+      </div>
+
+      <div class="region-card">
+        <div class="region-header">
+          <div class="region-name">🇨🇳 4.2 中国 China</div>
+          <div class="region-risk risk-med">中等风险 MEDIUM 5/10</div>
+        </div>
+        <p style="font-size:10.5px">中国经济呈现"新旧动能切换"特征：房地产持续疲软（直接拖累铁矿石、钢铁需求），但新能源车、可再生能源、AI基础设施投资提供新增长极。制造业PMI维持50.2（扩张区间）。2025年铁矿石进口创历史新高，但钢铁产量为7年低点，反映进口铁矿石更多用于库存而非生产。国务院/发改委持续出台刺激政策，但房地产去库存周期预计延续至2027年。</p>
+      </div>
+
+      <div class="region-card">
+        <div class="region-header">
+          <div class="region-name">🌍 4.3 非洲 Africa</div>
+          <div class="region-risk risk-high">高风险 HIGH RISK 7/10</div>
+        </div>
+        <p style="font-size:10.5px">刚果（DRC）铜钴矿开采持续扩张，紫金矿业Kolwezi铜矿为DRC最大铜矿之一。DRC钴矿出口配额管理趋严，2025年Q4未完成配额须在2026年4月30日前使用。赞比亚铜矿受益于铜价上涨，但基础设施瓶颈制约产能释放。南非铂族金属（PGM）市场受氢能需求预期支撑，但电力供应不稳定（负荷削减）持续影响生产。中资矿企在非洲的影响力持续扩大，引发西方国家关注。</p>
+      </div>
+
+      <div class="region-card">
+        <div class="region-header">
+          <div class="region-name">🌎 4.4 南美 South America</div>
+          <div class="region-risk risk-med">中等风险 MEDIUM 6/10</div>
+        </div>
+        <p style="font-size:10.5px">智利Codelco-SQM合资Nova Andino Litio正式成立，标志着智利锂矿国有化战略进入实施阶段，国家将获运营利润70%。铜矿方面，智利Escondida（BHP运营）维持稳定产量，但水资源约束和社区关系问题持续存在。秘鲁铜矿受社区冲突影响，部分项目进度延迟。巴西淡水河谷2025年铁矿石产量3.36亿吨，重夺全球第一，Samarco复产进展顺利。</p>
+      </div>
+
+      <div class="two-col">
+        <div class="region-card" style="margin-bottom:0">
+          <div class="region-header">
+            <div class="region-name">🇺🇸 4.5 北美 North America</div>
+            <div class="region-risk risk-med">中等 5/10</div>
+          </div>
+          <p style="font-size:10px">IRA法案持续推动关键矿产本土化，但232条款铜关税威胁引发市场扭曲（COMEX vs LME溢价扩大）。加拿大关键矿产战略与美国深度协调，许可审批时间线仍是主要瓶颈（平均15-20年）。美国稀土项目（MP Materials等）加速推进，但短期内难以打破中国主导格局。</p>
+        </div>
+        <div class="region-card" style="margin-bottom:0">
+          <div class="region-header">
+            <div class="region-name">🌏 4.6 中亚与东南亚</div>
+            <div class="region-risk risk-med">中等 6/10</div>
+          </div>
+          <p style="font-size:10px">印尼镍矿配额限制（260-270Mt vs 需求340-350Mt）推动价格支撑，但HPAL产能扩张持续。菲律宾镍矿出口维持稳定，成为印尼供应收紧的部分替代。蒙古Oyu Tolgoi铜金矿（Rio Tinto运营）地下矿山产量提升，2026年产量指导上调。缅甸稀土开采受政治局势影响，供应不稳定。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== PAGE 10: LISTED COMPANIES & CAPITAL MARKETS ======================== -->
+<div class="page">
+  <div class="content-page">
+    <div class="sidebar-col">
+      <div class="sb-logo">
+        <svg width="14" height="14" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="2"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span style="font-size:7px;color:var(--txtL
+">MiningClawd</span>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">章节 Section V</div>
+        <div class="sb-item">上市公司分析<br>Listed Companies</div>
+        <div class="sb-item">信念清单<br>Conviction List</div>
+        <div class="sb-item">M&A追踪<br>M&A Tracker</div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">M&A 亮点</div>
+        <div class="sb-highlight">Rio-Glencore $260亿合并谈判告吹（2026年2月），铜资源争夺战升级</div>
+        <div class="sb-highlight">ASX 2025年IPO融资$63亿，同比+54%</div>
+      </div>
+      <div class="sb-pagenum">P.10 / 14</div>
+    </div>
+
+    <div class="main-col">
+      <div class="page-bar">
+        <div class="left"><span style="font-size:9px;color:var(--pri);font-weight:700;text-transform:uppercase;letter-spacing:1px">Section V</span></div>
+        <div class="right">上市公司与资本市场 | Listed Companies & Capital Markets</div>
+      </div>
+
+      <h2><span class="num">V.</span>上市公司与资本市场 Listed Companies & Capital Markets</h2>
+
+      <h3>5.1 MiningClawd 信念清单 | Conviction List <span class="ai-badge">PROPRIETARY</span></h3>
+
+      <div class="conviction-item">
+        <div class="conv-ticker" style="color:var(--cu)">BHP</div>
+        <div class="conv-body">
+          <div class="conv-name">BHP Group Limited — ASX: BHP</div>
+          <div class="conv-thesis">铜产量201.4万吨（2025年），同比+2.9%；Escondida稳定运营；净经营现金流$187亿；股息率约6.2%。铜价上涨直接受益，钾肥业务提供多元化。</div>
+          <div class="conv-meta">
+            <span class="conv-tag"><span class="comm comm-cu">铜</span></span>
+            <span class="conv-tag">高信念 HIGH</span>
+            <span class="conv-tag">12M目标</span>
+          </div>
+        </div>
+        <div class="conv-rating">
+          <div class="rating-badge rating-bull" style="font-size:9px">Strong Buy</div>
+          <div class="conv-price" style="margin-top:4px">目标 +25%</div>
+          <div class="conv-target">铜价上行直接受益</div>
+        </div>
+      </div>
+
+      <div class="conviction-item">
+        <div class="conv-ticker" style="color:var(--au)">NEM</div>
+        <div class="conv-body">
+          <div class="conv-name">Newmont Corporation — NYSE: NEM</div>
+          <div class="conv-thesis">全球最大黄金矿企，AISC约$1,450/oz，当前金价$4,676/oz提供巨额利润空间。2025年完成Newcrest整合，产量规模效应显现。股息政策稳健。</div>
+          <div class="conv-meta">
+            <span class="conv-tag"><span class="comm comm-au">黄金</span></span>
+            <span class="conv-tag">高信念 HIGH</span>
+            <span class="conv-tag">6-12M目标</span>
+          </div>
+        </div>
+        <div class="conv-rating">
+          <div class="rating-badge rating-bull" style="font-size:9px">Strong Buy</div>
+          <div class="conv-price" style="margin-top:4px">目标 +30%</div>
+          <div class="conv-target">金价上行杠杆</div>
+        </div>
+      </div>
+
+      <div class="conviction-item">
+        <div class="conv-ticker" style="color:var(--ree)">MP</div>
+        <div class="conv-body">
+          <div class="conv-name">MP Materials — NYSE: MP</div>
+          <div class="conv-thesis">美国唯一规模化稀土矿山（Mountain Pass），中国出口管制直接受益者。美国国防部合同保障收入，稀土价格上涨提供额外上行空间。</div>
+          <div class="conv-meta">
+            <span class="conv-tag"><span class="comm comm-ree">稀土</span></span>
+            <span class="conv-tag">中信念 MEDIUM</span>
+            <span class="conv-tag">3-6M目标</span>
+          </div>
+        </div>
+        <div class="conv-rating">
+          <div class="rating-badge rating-bull" style="font-size:9px">Buy</div>
+          <div class="conv-price" style="margin-top:4px">目标 +40%</div>
+          <div class="conv-target">管制受益标的</div>
+        </div>
+      </div>
+
+      <div class="conviction-item">
+        <div class="conv-ticker" style="color:var(--li)">PLS</div>
+        <div class="conv-body">
+          <div class="conv-name">Pilbara Minerals — ASX: PLS</div>
+          <div class="conv-thesis">澳大利亚最大独立锂矿商，Pilgangoora矿山成本曲线位于第一分位。锂价复苏直接受益，现金储备充裕，无债务压力。</div>
+          <div class="conv-meta">
+            <span class="conv-tag"><span class="comm comm-li">锂</span></span>
+            <span class="conv-tag">中信念 MEDIUM</span>
+            <span class="conv-tag">6-12M目标</span>
+          </div>
+        </div>
+        <div class="conv-rating">
+          <div class="rating-badge rating-bull" style="font-size:9px">Accumulate</div>
+          <div class="conv-price" style="margin-top:4px">目标 +35%</div>
+          <div class="conv-target">锂价复苏受益</div>
+        </div>
+      </div>
+
+      <div class="conviction-item">
+        <div class="conv-ticker" style="color:var(--fe)">VALE</div>
+        <div class="conv-body">
+          <div class="conv-name">Vale S.A. — NYSE: VALE</div>
+          <div class="conv-thesis">2025年铁矿石产量3.36亿吨重夺全球第一，Samarco复产顺利，但铁矿石价格下行压力制约估值。高股息率提供安全边际。</div>
+          <div class="conv-meta">
+            <span class="conv-tag"><span class="comm comm-fe">铁矿石</span></span>
+            <span class="conv-tag">低信念 LOW</span>
+            <span class="conv-tag">3M观察</span>
+          </div>
+        </div>
+        <div class="conv-rating">
+          <div class="rating-badge rating-neutral" style="font-size:9px">Hold</div>
+          <div class="conv-price" style="margin-top:4px">目标 ±5%</div>
+          <div class="conv-target">铁矿石价格压力</div>
+        </div>
+      </div>
+
+      <h3 style="margin-top:12px">5.2 M&A 活动追踪 | M&A Tracker</h3>
+      <table class="data-table">
+        <thead>
+          <tr><th>交易 Deal</th><th>交易规模</th><th>矿种</th><th>状态</th><th>战略逻辑</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Rio Tinto + Glencore</td><td>~$260亿</td><td><span class="pill-cu comm-pill">铜</span><span class="pill-co comm-pill">钴</span></td><td><span style="color:var(--sSell);font-weight:600">告吹 2026/02</span></td><td>创全球最大矿企，铜资源整合</td></tr>
+          <tr><td>Codelco + SQM (Nova Andino)</td><td>战略合作</td><td><span class="pill-li comm-pill">锂</span></td><td><span style="color:var(--sBuy);font-weight:600">完成 2026/01</span></td><td>智利锂矿国有化战略落地</td></tr>
+          <tr><td>Rio Tinto + Arcadium (完成)</td><td>~$67亿</td><td><span class="pill-li comm-pill">锂</span></td><td><span style="color:var(--sBuy);font-weight:600">完成 2025/03</span></td><td>布局锂矿，多元化资产组合</td></tr>
+          <tr><td>BHP + 铜资源收购</td><td>持续评估</td><td><span class="pill-cu comm-pill">铜</span></td><td><span style="color:#f59e0b;font-weight:600">进行中</span></td><td>铜产量战略扩张，应对Rio压力</td></tr>
+        </tbody>
+      </table>
+
+      <div class="expert-quote">
+        <div class="eq-text">"Rio-Glencore合并虽然告吹，但它揭示了一个深刻趋势：铜资源的战略价值已超越财务逻辑，成为大国竞争的筹码。未来5年，我们预计将看到更多铜矿并购，且交易规模将持续扩大。The failed Rio-Glencore merger reveals copper's strategic value now transcends financial logic — it's a geopolitical asset."</div>
+        <div class="eq-author">
+          <div class="eq-avatar">MT</div>
+          <div><div class="eq-name">Michael Torres</div><div class="eq-role">资本市场分析师 | Capital Markets Analyst</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== PAGE 11: POLICY, ESG & TECHNOLOGY ======================== -->
+<div class="page">
+  <div class="content-page">
+    <div class="sidebar-col">
+      <div class="sb-logo">
+        <svg width="14" height="14" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="2"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span style="font-size:7px;color:var(--txtL)">MiningClawd</span>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">章节 VI & VII</div>
+        <div class="sb-item">政策与ESG<br>Policy & ESG</div>
+        <div class="sb-item">技术与创新<br>Technology</div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">ESG 重大事件</div>
+        <div class="sb-item" style="color:var(--sSell)">⚠ 赞比亚尾矿坝溃坝（2025年2月）</div>
+        <div class="sb-item" style="color:#f59e0b">△ 印尼HPAL废水争议</div>
+        <div class="sb-item" style="color:#f59e0b">△ 智利盐湖水资源争端</div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">技术亮点</div>
+        <div class="sb-item"><strong>自动驾驶矿卡</strong><br>全球3,832辆运营中</div>
+        <div class="sb-item"><strong>DLE市场</strong><br>2026年$16亿规模</div>
+        <div class="sb-item"><strong>AI地质建模</strong><br>采收率提升5-15%</div>
+      </div>
+      <div class="sb-pagenum">P.11 / 14</div>
+    </div>
+
+    <div class="main-col">
+      <div class="page-bar">
+        <div class="left"><span style="font-size:9px;color:var(--pri);font-weight:700;text-transform:uppercase;letter-spacing:1px">Section VI & VII</span></div>
+        <div class="right">政策、ESG与技术 | Policy, ESG & Technology</div>
+      </div>
+
+      <h2><span class="num">VI.</span>政策、监管与ESG Policy, Regulation & ESG</h2>
+
+      <h3>6.1 政策影响量化评估 | Policy Impact Assessment</h3>
+
+      <div class="policy-item">
+        <div class="policy-flag">🇨🇳</div>
+        <div class="policy-body">
+          <div class="policy-title">中国稀土出口管制第61号令 China REE Export Controls Order 61</div>
+          <div class="policy-desc">2025年10月9日发布，11月8日生效。涵盖稀土矿石、精矿、分离产品、永磁体及相关技术。为迄今最严格管制措施。</div>
+          <span class="policy-impact impact-neg">全球稀土供应减少估计15-25%</span>
+          <span class="policy-impact impact-pos">非中国稀土矿企受益</span>
+        </div>
+      </div>
+
+      <div class="policy-item">
+        <div class="policy-flag">🇺🇸</div>
+        <div class="policy-body">
+          <div class="policy-title">美国232条款精炼铜关税威胁 US Section 232 Copper Tariff Threat</div>
+          <div class="policy-desc">精炼铜可能被纳入232条款关税范围，导致美国大量前置进口，COMEX vs LME溢价持续扩大，全球铜贸易流扭曲。</div>
+          <span class="policy-impact impact-neg">COMEX溢价扩大$500-800/mt</span>
+          <span class="policy-impact impact-neu">全球铜贸易流重组</span>
+        </div>
+      </div>
+
+      <div class="policy-item">
+        <div class="policy-flag">🇮🇩</div>
+        <div class="policy-body">
+          <div class="policy-title">印尼镍矿RKAB配额限制 Indonesia Nickel RKAB Quota Restriction</div>
+          <div class="policy-desc">2026年镍矿配额设定260-270百万吨，低于冶炼需求340-350百万吨，形成约80百万吨缺口，推动镍价支撑。</div>
+          <span class="policy-impact impact-pos">镍价支撑+10-15%</span>
+          <span class="policy-impact impact-neg">HPAL产能利用率下降</span>
+        </div>
+      </div>
+
+      <div class="policy-item">
+        <div class="policy-flag">🇨🇱</div>
+        <div class="policy-body">
+          <div class="policy-title">智利锂矿国有化 Chile Lithium Nationalization (Nova Andino Litio)</div>
+          <div class="policy-desc">Codelco-SQM合资公司正式成立，国家获运营利润70%（2025-2030年），2030年后比例进一步提升。</div>
+          <span class="policy-impact impact-neu">短期中性，长期增加供应</span>
+          <span class="policy-impact impact-neg">外资参与度降低</span>
+        </div>
+      </div>
+
+      <h3>6.2 ESG 专题分析 | ESG Deep Dive</h3>
+
+      <div class="risk-box">
+        <div class="rtitle">本季重大ESG事件 Q1 2026 Major ESG Events</div>
+        <ul>
+          <li><strong>赞比亚尾矿坝溃坝（2025年2月）：</strong>中国金属浸出赞比亚公司尾矿坝溃坝，5000万升有毒废水泄入Kafue河，影响下游数十万居民用水安全。事件引发国际社会对中资矿企在非洲ESG标准的强烈关注。</li>
+          <li><strong>印尼HPAL废水争议：</strong>高压酸浸（HPAL）工艺产生大量酸性废水，印尼环保组织持续施压，部分项目面临环评重审风险。</li>
+          <li><strong>智利盐湖水资源争端：</strong>Atacama盐湖锂矿开采对当地水资源影响持续受到原住民社区和环保组织质疑，部分项目许可证审批延迟。</li>
+          <li><strong>矿企ESG评级变动：</strong>Glencore因DRC铜矿社区关系问题被MSCI ESG下调评级；BHP因澳大利亚原住民土地权问题面临投资者压力。</li>
+        </ul>
+      </div>
+
+      <div class="expert-quote">
+        <div class="eq-text">"赞比亚尾矿坝事件是一个警示：ESG不是'软指标'，而是真实的运营风险和财务风险。机构投资者正在将ESG事件纳入估值模型，这将深刻改变矿业融资成本。The Zambia tailings dam collapse is a warning: ESG is not a 'soft metric' but a real operational and financial risk."</div>
+        <div class="eq-author">
+          <div class="eq-avatar">AD</div>
+          <div><div class="eq-name">Dr. Amara Diallo</div><div class="eq-role">ESG专家 | ESG & Sustainability Lead</div></div>
+        </div>
+      </div>
+
+      <h2 style="margin-top:14px"><span class="num">VII.</span>技术与创新 Technology & Innovation</h2>
+
+      <div class="two-col">
+        <div>
+          <h3>7.1 自动化与AI应用</h3>
+          <p style="font-size:10.5px">截至2025年7月，全球地表矿山运营自动驾驶矿卡<strong>3,832辆</strong>，较2024年增长约35%。中国在自动驾驶矿卡技术领先（5G+AI驱动），Caterpillar、Komatsu等国际巨头持续扩大市场份额。市场规模2024年$14.72亿，预计2032年达$51.85亿（CAGR 17.2%）。</p>
+          <p style="font-size:10.5px">AI地质建模技术在勘探阶段的应用显著提升靶区精度，采收率提升5-15%。预测性维护系统降低设备停机时间约20-30%，直接改善矿山运营效率。</p>
+        </div>
+        <div>
+          <h3>7.2 DLE技术对锂供应的影响</h3>
+          <p style="font-size:10.5px">直接锂提取（DLE）技术正从实验室走向商业化。全球DLE市场2026年规模约$16亿，CAGR 13.5%（至2036年）。离子交换、溶剂萃取、膜分离三大技术路线并行发展，各有优劣。</p>
+          <p style="font-size:10.5px">DLE相比传统蒸发池工艺，锂回收率从40-60%提升至80-90%，生产周期从18-24个月缩短至数小时，水资源消耗大幅降低。预计2028-2030年DLE将贡献全球锂供应的10-15%。</p>
+        </div>
+      </div>
+
+      <h3>7.3 技术对供给的量化影响 | Technology Impact on Supply</h3>
+      <table class="data-table">
+        <thead>
+          <tr><th>技术 Technology</th><th>矿种</th><th>影响维度</th><th>量化影响</th><th>时间线</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>DLE直接锂提取</td><td><span class="pill-li comm-pill">锂</span></td><td>供应增加</td><td>+10-15%（2030年）</td><td>2026-2030</td></tr>
+          <tr><td>自动驾驶矿卡</td><td>全矿种</td><td>成本降低</td><td>运营成本-8-12%</td><td>2025-2028</td></tr>
+          <tr><td>AI地质建模</td><td>全矿种</td><td>勘探效率</td><td>发现成本-20-30%</td><td>2025-2027</td></tr>
+          <tr><td>深海采矿</td><td><span class="pill-co comm-pill">钴</span><span class="pill-ni comm-pill">镍</span></td><td>潜在新供应</td><td>2030+才有实质影响</td><td>2030+</td></tr>
+          <tr><td>固态电池</td><td><span class="pill-li comm-pill">锂</span></td><td>需求结构变化</td><td>锂需求量可能+20%</td><td>2028-2035</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== PAGE 12: INVESTMENT OPPORTUNITIES & RISKS ======================== -->
+<div class="page">
+  <div class="content-page">
+    <div class="sidebar-col">
+      <div class="sb-logo">
+        <svg width="14" height="14" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="2"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span style="font-size:7px;color:var(--txtL)">MiningClawd</span>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">章节 VIII</div>
+        <div class="sb-item">投资机会与风险<br>Investment Opportunities</div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">配置建议</div>
+        <div class="sb-item"><strong class="up">超配 OW</strong><br>铜、黄金、稀土</div>
+        <div class="sb-item"><strong class="neutral">标配 MW</strong><br>锂、铂族金属</div>
+        <div class="sb-item"><strong class="down">低配 UW</strong><br>铁矿石、镍</div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">情景概率</div>
+        <div class="sb-item"><span style="color:var(--sBuy)">Bull</span> 25%</div>
+        <div class="sb-item"><span style="color:var(--priD)">Base</span> 55%</div>
+        <div class="sb-item"><span style="color:var(--sSell)">Bear</span> 20%</div>
+      </div>
+      <div class="sb-pagenum">P.12 / 14</div>
+    </div>
+
+    <div class="main-col">
+      <div class="page-bar">
+        <div class="left"><span style="font-size:9px;color:var(--pri);font-weight:700;text-transform:uppercase;letter-spacing:1px">Section VIII</span></div>
+        <div class="right">投资机会与风险 | Investment Opportunities & Risks</div>
+      </div>
+
+      <h2><span class="num">VIII.</span>投资机会与风险 Investment Opportunities & Risks</h2>
+
+      <h3>8.1 核心投资主题 | Investment Themes</h3>
+
+      <div class="highlight">
+        <strong>主题一：铜的"完美风暴"</strong> — 供应危机（Grasberg不可抗力）+ AI数据中心需求爆发 + 能源转型用铜 + 全球精炼铜赤字330kmt。时间窗口：3-18个月。资产载体：铜期货（LME/COMEX）、BHP、Freeport-McMoRan、铜矿ETF（COPX）。
+      </div>
+
+      <div class="highlight">
+        <strong>主题二：黄金的"结构性牛市"</strong> — 央行购金去美元化 + ETF资金持续流入 + 地缘政治溢价 + 美元走弱。价格底部已从$2,000重置至$3,000，目标$5,000-6,000/oz。时间窗口：6-24个月。资产载体：黄金期货、GLD/IAU ETF、Newmont、Barrick。
+      </div>
+
+      <div class="highlight">
+        <strong>主题三：关键矿产供应链重构</strong> — 中国稀土管制 + 美欧日澳关键矿产战略 + 供应链去中国化。受益标的：MP Materials（稀土）、Lynas（稀土）、Energy Fuels（铀/稀土）。时间窗口：3-6个月（短期受益）。
+      </div>
+
+      <h3>8.2 情景分析 | Scenario Analysis (铜价 Copper Price)</h3>
+      <div class="scenario-grid">
+        <div class="scenario-card scenario-bull">
+          <div class="scenario-label">🐂 Bull 看涨情景</div>
+          <div class="scenario-prob">25%</div>
+          <div class="scenario-desc">触发条件：Grasberg延迟复产至Q3 2026 + 中国铜需求超预期反弹 + AI数据中心用铜加速。<br><strong>铜价目标：$13,500/mt</strong><br>黄金目标：$5,500/oz<br>锂价目标：25万元/吨</div>
+        </div>
+        <div class="scenario-card scenario-base">
+          <div class="scenario-label">📊 Base 基准情景</div>
+          <div class="scenario-prob">55%</div>
+          <div class="scenario-desc">核心假设：Grasberg Q2复产，铜赤字330kmt，中国需求温和，美联储降息2次。<br><strong>铜价目标：$12,000-12,500/mt</strong><br>黄金目标：$4,800-5,200/oz<br>锂价目标：18-22万元/吨</div>
+        </div>
+        <div class="scenario-card scenario-bear">
+          <div class="scenario-label">🐻 Bear 看跌情景</div>
+          <div class="scenario-prob">20%</div>
+          <div class="scenario-desc">风险因素：中国经济硬着陆 + 美联储鹰派转向 + 地缘冲突升级导致需求崩溃。<br><strong>铜价目标：$9,500/mt</strong><br>黄金目标：$3,800/oz<br>锂价目标：12-14万元/吨</div>
+        </div>
+      </div>
+
+      <h3>8.3 配置建议 | Allocation Recommendations</h3>
+      <div style="background:var(--bgL);border:1px solid var(--bdr);border-radius:8px;padding:12px 14px;margin:8px 0">
+        <div class="alloc-row">
+          <div class="alloc-comm"><span class="comm comm-cu">铜 Copper</span></div>
+          <div class="alloc-bar-wrap"><div class="alloc-bar" style="width:85%"></div></div>
+          <div class="alloc-label overweight">超配 +OW</div>
+        </div>
+        <div class="alloc-row">
+          <div class="alloc-comm"><span class="comm comm-au">黄金 Gold</span></div>
+          <div class="alloc-bar-wrap"><div class="alloc-bar" style="width:90%"></div></div>
+          <div class="alloc-label overweight">超配 +OW</div>
+        </div>
+        <div class="alloc-row">
+          <div class="alloc-comm"><span class="comm comm-ree">稀土 REE</span></div>
+          <div class="alloc-bar-wrap"><div class="alloc-bar" style="width:75%"></div></div>
+          <div class="alloc-label overweight">超配 +OW</div>
+        </div>
+        <div class="alloc-row">
+          <div class="alloc-comm"><span class="comm comm-li">锂 Lithium</span></div>
+          <div class="alloc-bar-wrap"><div class="alloc-bar" style="width:55%"></div></div>
+          <div class="alloc-label marketweight">标配 MW</div>
+        </div>
+        <div class="alloc-row">
+          <div class="alloc-comm"><span class="comm comm-ni">镍 Nickel</span></div>
+          <div class="alloc-bar-wrap"><div class="alloc-bar" style="width:30%;background:#f59e0b"></div></div>
+          <div class="alloc-label underweight">低配 -UW</div>
+        </div>
+        <div class="alloc-row">
+          <div class="alloc-comm"><span class="comm comm-fe">铁矿石 Iron Ore</span></div>
+          <div class="alloc-bar-wrap"><div class="alloc-bar" style="width:20%;background:#ef4444"></div></div>
+          <div class="alloc-label underweight">低配 -UW</div>
+        </div>
+      </div>
+
+      <div class="risk-box">
+        <div class="rtitle">主要风险提示 Key Risk Alerts</div>
+        <ul>
+          <li><strong>中国经济硬着陆：</strong>房地产危机深化 → 铁矿石、铜、锂需求全面下滑，概率20%</li>
+          <li><strong>美联储鹰派转向：</strong>通胀反弹迫使加息 → 美元走强，贵金属和大宗商品承压</li>
+          <li><strong>地缘冲突升级：</strong>中东或台海局势恶化 → 能源价格飙升，矿业运营成本上升</li>
+          <li><strong>印尼政策逆转：</strong>镍矿配额大幅放开 → 镍价暴跌，电池供应链重组</li>
+          <li><strong>技术颠覆：</strong>固态电池提前商业化 → 锂需求结构改变，部分矿企估值重置</li>
+          <li><strong>AI模型偏差：</strong>MCI指数基于历史数据训练，在极端市场条件下可能失效</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== PAGE 13: OUTLOOK & CALENDAR ======================== -->
+<div class="page">
+  <div class="content-page">
+    <div class="sidebar-col">
+      <div class="sb-logo">
+        <svg width="14" height="14" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="2"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span style="font-size:7px;color:var(--txtL)">MiningClawd</span>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">章节 IX</div>
+        <div class="sb-item">下季展望<br>Q2 2026 Outlook</div>
+        <div class="sb-item">关键日历<br>Key Calendar</div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">情景触发点</div>
+        <div class="sb-item">🐂 Bull触发：<br>Grasberg延迟复产</div>
+        <div class="sb-item">🐻 Bear触发：<br>中国刺激政策不及预期</div>
+      </div>
+      <div class="sb-pagenum">P.13 / 14</div>
+    </div>
+
+    <div class="main-col">
+      <div class="page-bar">
+        <div class="left"><span style="font-size:9px;color:var(--pri);font-weight:700;text-transform:uppercase;letter-spacing:1px">Section IX</span></div>
+        <div class="right">下季展望与关键日历 | Outlook & Key Calendar</div>
+      </div>
+
+      <h2><span class="num">IX.</span>下季展望与关键日历 Q2 2026 Outlook & Key Calendar</h2>
+
+      <h3>Q2 2026 核心展望 | Key Outlook</h3>
+      <p>2026年Q2是矿业市场的关键验证窗口。铜价能否维持$12,000/mt以上，取决于Grasberg矿复产时间线（预计Q2，若延迟则价格进一步上冲）和中国铜需求能否从Q3 2025的低迷中回升。黄金方面，美联储降息路径和地缘政治风险溢价将是主要驱动变量，J.P. Morgan预测Q4 2026金价推向$5,000/oz。</p>
+      <p>铁矿石Q2面临Simandou新增供应压力和中国钢铁需求季节性回升的双向拉锯，预计价格在$95-110/t区间震荡。锂矿Q2有望延续复苏趋势，碳酸锂价格目标18-20万元/吨，关键催化剂为中国新能源车销量数据。</p>
+
+      <h3>Q2 2026 关键日历 | Key Calendar</h3>
+      <table class="cal-table">
+        <thead>
+          <tr><th>日期 Date</th><th>地区 Region</th><th>事件 Event</th><th>矿业影响</th><th>重要性</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>4月初</td><td>🇨🇳 中国</td><td>3月PMI数据发布</td><td><span class="pill-fe comm-pill">铁矿</span><span class="pill-cu comm-pill">铜</span></td><td style="color:var(--sSell);font-weight:700">★★★</td></tr>
+          <tr><td>4月中旬</td><td>🇺🇸 美国</td><td>美联储FOMC会议纪要</td><td><span class="pill-au comm-pill">黄金</span>全矿种</td><td style="color:var(--sSell);font-weight:700">★★★</td></tr>
+          <tr><td>4月下旬</td><td>🌍 全球</td><td>BHP/Rio Tinto Q1产量报告</td><td><span class="pill-cu comm-pill">铜</span><span class="pill-fe comm-pill">铁矿</span></td><td style="font-weight:700">★★☆</td></tr>
+          <tr><td>4月30日</td><td>🌍 DRC</td><td>钴矿出口配额截止日</td><td><span class="pill-co comm-pill">钴</span></td><td style="font-weight:700">★★☆</td></tr>
+          <tr><td>5月初</td><td>🇨🇳 中国</td><td>新能源车4月销量数据</td><td><span class="pill-li comm-pill">锂</span><span class="pill-co comm-pill">钴</span></td><td style="color:var(--sSell);font-weight:700">★★★</td></tr>
+          <tr><td>5月中旬</td><td>🇺🇸 美国</td><td>美国CPI数据（影响降息预期）</td><td><span class="pill-au comm-pill">黄金</span>全矿种</td><td style="color:var(--sSell);font-weight:700">★★★</td></tr>
+          <tr><td>5月下旬</td><td>🇮🇩 印尼</td><td>镍矿RKAB配额中期审查</td><td><span class="pill-ni comm-pill">镍</span></td><td style="font-weight:700">★★☆</td></tr>
+          <tr><td>6月初</td><td>🌍 全球</td><td>Glencore/Vale Q1财报</td><td><span class="pill-cu comm-pill">铜</span><span class="pill-co comm-pill">钴</span><span class="pill-fe comm-pill">铁矿</span></td><td style="font-weight:700">★★☆</td></tr>
+          <tr><td>6月中旬</td><td>🇺🇸 美国</td><td>美联储FOMC利率决议</td><td><span class="pill-au comm-pill">黄金</span>全矿种</td><td style="color:var(--sSell);font-weight:700">★★★</td></tr>
+          <tr><td>6月下旬</td><td>🌍 全球</td><td>LME Week Asia 2026（新加坡）</td><td>全矿种</td><td style="color:var(--sSell);font-weight:700">★★★</td></tr>
+        </tbody>
+      </table>
+
+      <h3 style="margin-top:12px">关键监测指标 | Key Monitoring Indicators</h3>
+      <div class="three-col">
+        <div style="background:var(--bgL);border:1px solid var(--bdr);border-radius:8px;padding:10px 12px">
+          <div style="font-size:9px;font-weight:700;color:var(--priD);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px">铜 Copper Watch</div>
+          <div style="font-size:10px;line-height:1.7;color:var(--txt)">
+            Grasberg复产时间线<br>
+            COMEX vs LME溢价<br>
+            中国精炼铜进口量<br>
+            LME库存周度变化<br>
+            AI数据中心建设速度
+          </div>
+        </div>
+        <div style="background:var(--bgL);border:1px solid var(--bdr);border-radius:8px;padding:10px 12px">
+          <div style="font-size:9px;font-weight:700;color:var(--priD);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px">黄金 Gold Watch</div>
+          <div style="font-size:10px;line-height:1.7;color:var(--txt)">
+            美联储降息路径<br>
+            美元指数DXY<br>
+            央行购金月度数据<br>
+            GLD/IAU ETF持仓<br>
+            地缘政治风险指数
+          </div>
+        </div>
+        <div style="background:var(--bgL);border:1px solid var(--bdr);border-radius:8px;padding:10px 12px">
+          <div style="font-size:9px;font-weight:700;color:var(--priD);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px">铁矿/锂 Watch</div>
+          <div style="font-size:10px;line-height:1.7;color:var(--txt)">
+            中国47港铁矿库存<br>
+            中国高炉利用率<br>
+            碳酸锂现货价格<br>
+            中国EV月度销量<br>
+            Simandou装船量
+          </div>
+        </div>
+      </div>
+
+      <div class="expert-quote" style="margin-top:12px">
+        <div class="eq-text">"Q2 2026是全年最关键的验证窗口。铜价能否站稳$12,000/mt、黄金能否突破$5,000/oz、锂价能否延续复苏——这三个问题的答案将决定全年矿业投资的整体格局。Q2 2026 is the most critical validation window of the year for mining investment."</div>
+        <div class="eq-author">
+          <div class="eq-avatar">SC</div>
+          <div><div class="eq-name">Sarah Chen, CFA</div><div class="eq-role">量化模型师 | Quantitative Strategist</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================== PAGE 14: APPENDIX ======================== -->
+<div class="page">
+  <div class="full-page">
+    <div class="page-bar">
+      <div class="left">
+        <svg width="16" height="16" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.5"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span class="wm" style="font-size:9px"><span style="color:#0f1115">Mining</span><span style="color:#0d9488">Clawd</span></span>
+        <span style="font-size:8px;color:#6b7280;margin-left:4px">附录 Appendix</span>
+      </div>
+      <div class="right">2026年Q1 Expert Panel Report</div>
+    </div>
+
+    <h2><span class="num">X.</span>附录 Appendices</h2>
+
+    <h3>A. 数据附录 | Data Appendix — 主要矿种价格走势</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>矿种 Commodity</th><th>Q1 2025</th><th>Q2 2025</th><th>Q3 2025</th><th>Q4 2025</th><th>Q1 2026</th><th>2026E全年</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="comm comm-cu">铜 ($/mt)</span></td><td>9,200</td><td>9,650</td><td>10,100</td><td>10,875</td><td class="up">12,000</td><td>12,125</td></tr>
+        <tr><td><span class="comm comm-au">黄金 ($/oz)</span></td><td>2,850</td><td>3,200</td><td>3,600</td><td>4,135</td><td class="up">4,676</td><td>4,800-5,200</td></tr>
+        <tr><td><span class="comm comm-fe">铁矿石 ($/t)</span></td><td>115</td><td>110</td><td>108</td><td>106</td><td class="down">100-106</td><td>102</td></tr>
+        <tr><td><span class="comm comm-li">锂 (万元/吨)</span></td><td>10.5</td><td>11.2</td><td>12.8</td><td>13.6</td><td class="up">17.1</td><td>18-22</td></tr>
+        <tr><td><span class="comm comm-ni">镍 ($/mt)</span></td><td>15,200</td><td>15,500</td><td>15,600</td><td>15,800</td><td class="up">16,500</td><td>16,000-18,000</td></tr>
+      </tbody>
+    </table>
+
+    <h3>B. 主要矿企财务指标 | Major Mining Companies Financial Metrics</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>公司 Company</th><th>市值 Market Cap</th><th>2025净利润</th><th>股息率</th><th>主要矿种</th><th>MCI评级</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>BHP Group</strong></td><td>~$1,500亿</td><td>$134亿</td><td>6.2%</td><td><span class="pill-cu comm-pill">铜</span><span class="pill-fe comm-pill">铁矿</span></td><td class="up">Strong Buy</td></tr>
+        <tr><td><strong>Rio Tinto</strong></td><td>~$1,100亿</td><td>$110亿</td><td>5.8%</td><td><span class="pill-cu comm-pill">铜</span><span class="pill-fe comm-pill">铁矿</span><span class="pill-li comm-pill">锂</span></td><td class="up">Buy</td></tr>
+        <tr><td><strong>Glencore</strong></td><td>~$650亿</td><td>$85亿</td><td>4.5%</td><td><span class="pill-cu comm-pill">铜</span><span class="pill-co comm-pill">钴</span></td><td class="up">Buy</td></tr>
+        <tr><td><strong>Vale</strong></td><td>~$450亿</td><td>$95亿</td><td>7.2%</td><td><span class="pill-fe comm-pill">铁矿</span><span class="pill-ni comm-pill">镍</span></td><td class="neutral">Hold</td></tr>
+        <tr><td><strong>Newmont</strong></td><td>~$550亿</td><td>$45亿</td><td>2.8%</td><td><span class="pill-au comm-pill">黄金</span></td><td class="up">Strong Buy</td></tr>
+        <tr><td><strong>Zijin Mining</strong></td><td>~$450亿</td><td>$38亿</td><td>3.5%</td><td><span class="pill-cu comm-pill">铜</span><span class="pill-au comm-pill">黄金</span></td><td class="up">Buy</td></tr>
+      </tbody>
+    </table>
+
+    <h3>C. 术语表 | Glossary</h3>
+    <div class="two-col">
+      <table class="data-table" style="font-size:9.5px">
+        <thead><tr><th>术语 Term</th><th>释义 Definition</th></tr></thead>
+        <tbody>
+          <tr><td>AISC</td><td>All-In Sustaining Cost 全维持成本</td></tr>
+          <tr><td>Backwardation</td><td>近高远低期货曲线结构（现货溢价）</td></tr>
+          <tr><td>Contango</td><td>近低远高期货曲线结构（远期溢价）</td></tr>
+          <tr><td>DLE</td><td>Direct Lithium Extraction 直接锂提取</td></tr>
+          <tr><td>HPAL</td><td>High Pressure Acid Leach 高压酸浸</td></tr>
+          <tr><td>LCE</td><td>Lithium Carbonate Equivalent 碳酸锂当量</td></tr>
+          <tr><td>MCI</td><td>MiningClawd Market Sentiment Index 市场情绪指数</td></tr>
+        </tbody>
+      </table>
+      <table class="data-table" style="font-size:9.5px">
+        <thead><tr><th>术语 Term</th><th>释义 Definition</th></tr></thead>
+        <tbody>
+          <tr><td>RKAB</td><td>印尼采矿工作计划与预算（配额许可）</td></tr>
+          <tr><td>TC/RC</td><td>Treatment Charge/Refining Charge 冶炼/精炼费</td></tr>
+          <tr><td>IRA</td><td>Inflation Reduction Act 通胀削减法案</td></tr>
+          <tr><td>CRMA</td><td>Critical Raw Materials Act 关键原材料法案</td></tr>
+          <tr><td>PGM</td><td>Platinum Group Metals 铂族金属</td></tr>
+          <tr><td>REE</td><td>Rare Earth Elements 稀土元素</td></tr>
+          <tr><td>S/D</td><td>Supply/Demand 供需平衡</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>D. 参考资源 | References</h3>
+    <div style="font-size:9px;color:var(--txtL);line-height:1.8;columns:2;column-gap:20px">
+      <div>J.P. Morgan Global Research — Copper Market Outlook (Nov 2025)</div>
+      <div>World Gold Council — Gold Demand Trends Full Year 2025 (Jan 2026)</div>
+      <div>Deutsche Bank Research — Commodities Outlook 2026 (Feb 2026)</div>
+      <div>S&P Global Market Intelligence — Mine Cost Outlook 2026 (Jan 2026)</div>
+      <div>IEA — Global Critical Minerals Outlook 2025 (May 2025)</div>
+      <div>IEA — Copper Prices Commentary (Mar 2026)</div>
+      <div>CSIS — China's New Rare Earth Restrictions (Oct 2025)</div>
+      <div>Reuters — China Steel Exports, Iron Ore Imports Record (Jan 2026)</div>
+      <div>Argus Media — The Coming Lithium Cycle (Dec 2025)</div>
+      <div>Crux Investor — Nickel Headed to $20,000 (Feb 2026)</div>
+      <div>S&P Global — Rio-Glencore Merger Analysis (Feb 2026)</div>
+      <div>ASX — Capital Markets 2025 Year in Review (Feb 2026)</div>
+      <div>IDTechEx — Direct Lithium Extraction Technologies (2026)</div>
+      <div>Mining Intelligence Center — Autonomous Haul Trucks (Sep 2025)</div>
+      <div>Breakwave Advisors — Iron Ore Outlook 2026 (Jan 2026)</div>
+      <div>StoneX — Quarterly Base Metal Outlook Q1 2026</div>
+    </div>
+
+    <div class="disclaimer">
+      <p><strong style="color:var(--txt)">Disclaimer 免责声明</strong></p>
+      <p>本报告由凌云智矿研究部（LynAI Mines Research）专家团编制，仅供凌云智矿授权机构投资者及专业投资者参考，不构成投资建议，亦不构成买卖任何证券或金融工具的邀约或要约。报告中的信息来源于公开渠道及自有AI系统，不对完整性和准确性作保证。<br><span style="color:#b0b0b0">This report is prepared by LynAI Mines Research Expert Panel for authorized institutional and professional investors only. It does not constitute investment advice. Information sourced from public channels and proprietary AI systems; no guarantee of completeness or accuracy.</span></p>
+      <p>投资者应独立评估报告内容并自行承担所有投资风险。凌云智矿及专家团成员不对任何直接或间接损失承担责任。前瞻性陈述仅代表专家团在报告日期的判断，实际结果可能与预测存在重大差异。<br><span style="color:#b0b0b0">Investors should independently evaluate content and bear all risks. LynAI Mines and panel members accept no liability for any losses. Forward-looking statements represent judgments as of the report date only.</span></p>
+      <p>AI声明：MCI指数及部分分析结论由AI多因子模型生成（已标注"AI GENERATED"），基于历史数据训练，仅供参考，在极端市场条件下可能失效。<br><span style="color:#b0b0b0">AI Disclosure: MCI Index and certain conclusions are auto-generated by AI multi-factor models (marked "AI GENERATED"), trained on historical data, for reference only.</span></p>
+      <p style="margin-top:6px;color:var(--priD);font-weight:600">MiningClawd AI Intelligence Systems © 2026 | 凌云智矿研究部 LynAI Mines Research | info@lynaimining.com | 机密 CONFIDENTIAL</p>
+    </div>
+
+    <div style="position:absolute;bottom:14mm;left:0;right:0;text-align:center;font-size:9px;color:var(--txtLL)">Page 14 / 14 &nbsp;|&nbsp; MiningClawd Expert Panel Report 2026 Q1 &nbsp;|&nbsp; 机密 CONFIDENTIAL</div>
+  </div>
+</div>
+
+<!-- ======================== BACK COVER ======================== -->
+<div class="page back-cover">
+  <div class="glow1"></div>
+  <div class="glow2"></div>
+  <div class="streak"></div>
+
+  <div class="bc-top">
+    <div style="display:flex;align-items:center;gap:8px">
+      <svg width="24" height="24" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      <span class="wm" style="font-size:14px"><span style="color:#fff">Mining</span><span style="color:#14b8a6">Clawd</span></span>
+    </div>
+    <div style="font-size:10px;color:#6b7280">Expert Panel Report 2026 Q1 &nbsp;|&nbsp; 机密 CONFIDENTIAL</div>
+  </div>
+
+  <div class="bc-center">
+    <div style="font-size:11px;color:var(--pri);letter-spacing:3px;text-transform:uppercase;font-weight:500">Mining Intelligence</div>
+    <div class="bc-divider"></div>
+    <div style="font-size:28px;font-weight:700;color:#fff;line-height:1.3">月度矿业专家团<br>分析报告</div>
+    <div style="font-size:16px;color:#9ca3af;margin-top:8px">Monthly Mining Expert Panel Analysis Report</div>
+    <div class="bc-divider"></div>
+    <div style="font-size:12px;color:#6b7280;margin-top:4px">2026年Q1 | April 2026</div>
+    <div style="font-size:11px;color:#4b5563;margin-top:16px;max-width:400px;line-height:1.7">Thesis → Evidence → Conviction → Action<br>决策驱动型机构级矿业研究</div>
+
+    <div class="bc-info">
+      <div>
+        <div class="bc-col-title">专家团 Expert Panel</div>
+        <div class="bc-col-body">
+          <strong>Dr. James Whitfield</strong><br>首席大宗商品策略师<br><br>
+          <strong>Prof. Li Mingzhi</strong><br>地缘政治风险分析师<br><br>
+          <strong>Sarah Chen, CFA</strong><br>量化模型师
+        </div>
+      </div>
+      <div>
+        <div class="bc-col-title">联系方式 Contact</div>
+        <div class="bc-col-body">
+          <strong>凌云智矿研究部</strong><br>LynAI Mines Research<br><br>
+          info@lynaimining.com<br><br>
+          Framework V2.0<br>机构级审核版
+        </div>
+      </div>
+      <div>
+        <div class="bc-col-title">适用法域 Jurisdiction</div>
+        <div class="bc-col-body">
+          🇦🇺 澳大利亚 ASIC<br>
+          🇨🇳 中国大陆 CSRC<br>
+          🇭🇰 香港 SFC<br><br>
+          <strong>仅供机构投资者</strong><br>Institutional Only
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bc-footer">
+    <div class="bc-disclaimer">
+      本报告机密，仅供凌云智矿授权机构投资者使用。未经书面许可不得转发、复制或引用。本报告不构成投资建议。<br>
+      This report is confidential and for authorized institutional investors of LynAI Mines only. Not for redistribution without written permission. Not investment advice.
+    </div>
+    <div class="bc-copyright" style="color:#4b5563">
+      <span>MiningClawd AI Intelligence Systems © 2026</span>
+      <span style="color:var(--pri);font-weight:600">CONFIDENTIAL 机密</span>
+      <span>凌云智矿研究部 LynAI Mines Research</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

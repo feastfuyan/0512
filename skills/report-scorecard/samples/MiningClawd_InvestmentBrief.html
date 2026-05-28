@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MiningClawd · 项目投资简报</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --teal:#14b8a6;--teal-d:#0d9488;--teal-f:rgba(20,184,166,.08);--teal-b:rgba(20,184,166,.2);
+  --dark:#0f172a;--bg:#f8fafc;--white:#ffffff;
+  --bd:#e2e8f0;--muted:#64748b;--text:#1e293b;--light:#f1f5f9;
+  --gold:#f59e0b;--red:#ef4444;--green:#22c55e;
+}
+body{font-family:'Noto Sans SC','PingFang SC',sans-serif;color:var(--text);background:var(--bg);font-size:14px;line-height:1.7}
+
+/* PRINT */
+@media print{
+  .page-break{page-break-before:always}
+  body{background:#fff}
+  .cover{min-height:auto;padding:40px}
+}
+
+/* COVER */
+.cover{
+  background:var(--dark);color:#fff;
+  min-height:100vh;padding:60px 80px;
+  display:flex;flex-direction:column;
+  position:relative;overflow:hidden;
+}
+.cover::before{
+  content:'';position:absolute;width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle,rgba(20,184,166,.12),transparent 65%);
+  right:-150px;top:-100px;pointer-events:none;
+}
+.cover::after{
+  content:'';position:absolute;width:400px;height:400px;border-radius:50%;
+  background:radial-gradient(circle,rgba(20,184,166,.07),transparent 65%);
+  left:-80px;bottom:-80px;pointer-events:none;
+}
+.cover-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:80px;position:relative;z-index:1}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-wm{font-family:'Space Grotesk',sans-serif;font-weight:700;font-style:italic;font-size:20px;letter-spacing:-.02em}
+.brand-wm .w{color:#fff}.brand-wm .c{color:var(--teal)}
+.doc-type{text-align:right;font-size:10px;color:#64748b;letter-spacing:.1em;text-transform:uppercase;line-height:1.8}
+.cover-body{flex:1;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1}
+.cover-eyebrow{font-size:11px;color:var(--teal);letter-spacing:.2em;text-transform:uppercase;font-weight:600;margin-bottom:16px}
+.cover-title{font-family:'Space Grotesk',sans-serif;font-size:48px;font-weight:700;line-height:1.15;margin-bottom:12px;letter-spacing:-.02em}
+.cover-sub{font-size:18px;color:#94a3b8;margin-bottom:40px;font-weight:300}
+.cover-desc{font-size:13px;color:#64748b;max-width:520px;line-height:1.9}
+.cover-strip{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border-top:1px solid rgba(255,255,255,.07);
+  border-bottom:1px solid rgba(255,255,255,.07);
+  margin:40px 0;position:relative;z-index:1;
+}
+.cstat{padding:20px 0;border-right:1px solid rgba(255,255,255,.07)}
+.cstat:last-child{border-right:none}
+.cstat-n{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;color:var(--teal);line-height:1}
+.cstat-l{font-size:9px;color:#475569;margin-top:5px;letter-spacing:.05em}
+.cover-footer{display:flex;justify-content:space-between;align-items:flex-end;position:relative;z-index:1;font-size:10px;color:#334155;border-top:1px solid rgba(255,255,255,.06);padding-top:16px}
+.conf-tag{background:rgba(20,184,166,.1);border:1px solid rgba(20,184,166,.2);color:var(--teal);padding:3px 10px;border-radius:4px;font-weight:600;letter-spacing:.08em;font-size:9px}
+
+/* INNER PAGES */
+.page{max-width:960px;margin:0 auto;padding:60px 80px}
+
+/* Section */
+.section-tag{display:inline-flex;align-items:center;gap:6px;font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+.section-tag::before{content:'';width:16px;height:2px;background:var(--teal)}
+h2{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;color:var(--dark);margin-bottom:6px;letter-spacing:-.02em}
+h3{font-size:15px;font-weight:700;color:var(--dark);margin:24px 0 10px;padding-left:10px;border-left:3px solid var(--teal)}
+p{font-size:13.5px;color:var(--muted);line-height:1.85;margin-bottom:10px}
+.divider{border:none;border-top:1px solid var(--bd);margin:48px 0}
+
+/* Highlight box */
+.hl-box{background:var(--teal-f);border:1px solid var(--teal-b);border-radius:8px;padding:14px 18px;margin:16px 0;font-size:13px;color:var(--text);line-height:1.8}
+.hl-box strong{color:var(--teal-d)}
+
+/* KV grid */
+.kv-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+.kv-card{background:var(--white);border:1px solid var(--bd);border-radius:8px;padding:14px 16px}
+.kv-label{font-size:9.5px;font-weight:700;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.kv-val{font-size:15px;font-weight:700;color:var(--dark);font-family:'Space Grotesk',sans-serif}
+.kv-sub{font-size:11px;color:var(--muted);margin-top:2px}
+
+/* Table */
+.tbl{width:100%;border-collapse:collapse;font-size:12.5px;margin:14px 0}
+.tbl th{background:var(--dark);color:#e2e8f0;padding:8px 12px;text-align:left;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+.tbl td{padding:8px 12px;border-bottom:1px solid var(--bd);color:var(--text);vertical-align:top}
+.tbl tr:nth-child(even) td{background:var(--light)}
+.tbl .num{font-family:'Space Grotesk',sans-serif;font-weight:600}
+.up{color:var(--green);font-weight:600}
+.teal{color:var(--teal);font-weight:600}
+.gold{color:var(--gold);font-weight:600}
+
+/* Bullet list */
+.blist{list-style:none;padding:0;margin:10px 0}
+.blist li{font-size:13px;color:var(--muted);padding:4px 0 4px 18px;position:relative;line-height:1.75}
+.blist li::before{content:'▸';color:var(--teal);position:absolute;left:2px;font-size:11px;top:5px}
+.blist li strong{color:var(--text)}
+
+/* Three col */
+.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:16px 0}
+.col-card{background:var(--white);border:1px solid var(--bd);border-radius:10px;padding:18px}
+.col-card-title{font-size:11px;font-weight:700;color:var(--teal);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid var(--bd)}
+.col-card p{font-size:12px;margin-bottom:6px}
+
+/* Revenue model */
+.rev-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--bd)}
+.rev-row:last-child{border-bottom:none}
+.rev-label{flex:1;font-size:13px;color:var(--text)}
+.rev-sub{font-size:11px;color:var(--muted)}
+.rev-val{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;color:var(--dark);white-space:nowrap}
+.rev-bar{width:120px;height:8px;background:var(--bd);border-radius:4px;overflow:hidden}
+.rev-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--teal-d),var(--teal))}
+
+/* Stage cards */
+.stage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);border-radius:10px;overflow:hidden;margin:16px 0}
+.stage{background:var(--white);padding:20px}
+.stage.active{background:linear-gradient(135deg,rgba(20,184,166,.06),rgba(20,184,166,.02))}
+.stage-n{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.stage-title{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;color:var(--dark);margin-bottom:6px}
+.stage-arr{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:var(--teal);margin-bottom:8px}
+.stage-desc{font-size:11.5px;color:var(--muted);line-height:1.7}
+
+/* Risk table */
+.risk-item{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--bd);align-items:flex-start}
+.risk-badge{flex-shrink:0;width:44px;height:20px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:8.5px;font-weight:700;letter-spacing:.06em}
+.rb-h{background:#fef2f2;color:#dc2626;border:1px solid #fecaca}
+.rb-m{background:#fffbeb;color:#d97706;border:1px solid #fde68a}
+.rb-l{background:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0}
+.risk-body{flex:1}
+.risk-title{font-size:12.5px;font-weight:600;color:var(--dark);margin-bottom:2px}
+.risk-desc{font-size:11.5px;color:var(--muted);line-height:1.65}
+
+/* Contact footer */
+.contact-footer{background:var(--dark);color:#fff;padding:40px 80px;margin-top:0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;max-width:960px;margin:0 auto}
+.contact-label{font-size:9px;font-weight:700;color:var(--teal);letter-spacing:.15em;text-transform:uppercase;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid rgba(20,184,166,.18)}
+.contact-body{font-size:11.5px;color:#94a3b8;line-height:1.9}
+.contact-body strong{color:#e2e8f0;font-weight:500}
+.disclaimer{font-size:9.5px;color:#334155;text-align:center;padding-top:24px;max-width:960px;margin:20px auto 0;border-top:1px solid rgba(255,255,255,.05);line-height:1.7}
+</style>
+</head>
+<body>
+
+<!-- ══════════ COVER ══════════ -->
+<div class="cover">
+  <div class="cover-header">
+    <div class="brand">
+      <svg width="32" height="32" viewBox="0 0 48 48" fill="none">
+        <rect x="2" y="2" width="44" height="44" rx="11" fill="#0f1115" stroke="#14b8a6" stroke-width="1.5"/>
+        <path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M22 37 L24 40 L26 37 L24 34 Z" fill="#14b8a6" opacity=".85"/>
+      </svg>
+      <div>
+        <div class="brand-wm"><span class="w">Mining</span><span class="c">Clawd</span></div>
+        <div style="font-size:9px;color:#14b8a6;letter-spacing:.12em;text-transform:uppercase;margin-top:1px">Mining Intelligence</div>
+      </div>
+    </div>
+    <div class="doc-type">
+      <div>项目投资简报</div>
+      <div>Investment Brief</div>
+      <div style="margin-top:4px;color:#334155">2026年 4月</div>
+    </div>
+  </div>
+
+  <div class="cover-body">
+    <div class="cover-eyebrow">— AI-Native Mining Intelligence Platform —</div>
+    <div class="cover-title">MiningClawd<br>项目投资简报</div>
+    <div class="cover-sub">澳洲首个 AI 原生矿业情报平台</div>
+    <div class="cover-desc">
+      Geovision AI Mining Pty Ltd 旗下平台产品，整合 350TB 自有地质数据、四大 AI Agent 与实时市场行情，为矿业机构投资者和专业从业人员提供机构级研究服务。以真实矿权验证 AI 能力，形成不可复制的数据飞轮壁垒。
+    </div>
+  </div>
+
+  <div class="cover-strip">
+    <div class="cstat">
+      <div class="cstat-n">350TB+</div>
+      <div class="cstat-l">自有地质数据资产</div>
+    </div>
+    <div class="cstat" style="padding-left:24px">
+      <div class="cstat-n">700+</div>
+      <div class="cstat-l">覆盖上市矿企</div>
+    </div>
+    <div class="cstat" style="padding-left:24px">
+      <div class="cstat-n">A$0.8亿</div>
+      <div class="cstat-l">5年SAM（澳+加）</div>
+    </div>
+    <div class="cstat" style="padding-left:24px">
+      <div class="cstat-n">23g/t</div>
+      <div class="cstat-l">Malcolm金矿AI验证品位</div>
+    </div>
+  </div>
+
+  <div class="cover-footer">
+    <span class="conf-tag">CONFIDENTIAL · 机密文件</span>
+    <span>Geovision AI Mining Pty Ltd &nbsp;·&nbsp; ABN 00 000 000 000 &nbsp;·&nbsp; info@lynaimining.com</span>
+  </div>
+</div>
+
+<!-- ══════════ 一、项目介绍 ══════════ -->
+<div class="page">
+  <div class="section-tag">Section 01</div>
+  <h2>项目介绍</h2>
+  <p>MiningClawd 是澳大利亚首个 AI 原生矿业情报平台，由 Geovision AI Mining Pty Ltd 开发运营。平台核心差异在于：不是纯软件工具，而是通过持有真实矿权（Malcolm 金矿）来持续验证和迭代 AI 模型，形成"数据采集→预测→实地验证→模型迭代"的闭环飞轮。</p>
+
+  <div class="hl-box">
+    <strong>核心验证案例：</strong>Malcolm 金矿，AI 预测矿化靶区位置，探槽实际发现明金，历史回收品位 <strong>23g/t</strong>（经济品位的 10–20 倍）。这是平台技术可信度的物理证明，也是与纯数据平台的本质区别。
+  </div>
+
+  <div class="kv-grid">
+    <div class="kv-card">
+      <div class="kv-label">公司主体</div>
+      <div class="kv-val" style="font-size:14px">Geovision AI Mining Pty Ltd</div>
+      <div class="kv-sub">ABN 00 000 000 000 · 澳大利亚注册</div>
+    </div>
+    <div class="kv-card">
+      <div class="kv-label">品牌产品</div>
+      <div class="kv-val" style="font-size:14px">MiningClawd · LynAI Mines</div>
+      <div class="kv-sub">AI矿业情报平台 / 矿业资产管理品牌</div>
+    </div>
+    <div class="kv-card">
+      <div class="kv-label">核心团队</div>
+      <div class="kv-val" style="font-size:13px">王选策 Xuance Wang</div>
+      <div class="kv-sub">CEO & Co-Founder · 商务总监</div>
+    </div>
+    <div class="kv-card">
+      <div class="kv-label">联系方式</div>
+      <div class="kv-val" style="font-size:13px">info@lynaimining.com</div>
+      <div class="kv-sub">www.lynaimining.com · +61 420 921 816</div>
+    </div>
+  </div>
+
+  <h3>产品核心功能</h3>
+  <div class="three-col">
+    <div class="col-card">
+      <div class="col-card-title">情报层</div>
+      <ul class="blist">
+        <li>14类 AI 报告自动生成</li>
+        <li>钻探结果分钟级速析</li>
+        <li>恐慌贪婪指数监测</li>
+        <li>KOL 情绪追踪（40–50位大V）</li>
+        <li>机构 vs 散户资金背离信号</li>
+      </ul>
+    </div>
+    <div class="col-card">
+      <div class="col-card-title">数据层</div>
+      <ul class="blist">
+        <li>350TB 自有地质数据库</li>
+        <li>700+ 矿企全覆盖（ASX/NYSE/TSX/LSE）</li>
+        <li>3D 钻探数据可视化</li>
+        <li>MPM 成矿潜力评估</li>
+        <li>实时多交易所行情接入</li>
+      </ul>
+    </div>
+    <div class="col-card">
+      <div class="col-card-title">预测层（核心壁垒）</div>
+      <ul class="blist">
+        <li>AI 矿化靶区预测（Malcolm实证）</li>
+        <li>勘探成功率：行业 0.5% → 平台 20–50%</li>
+        <li>四大 AI Agent 24/7 运行</li>
+        <li>矿种情绪周期定位</li>
+        <li>初级矿企项目优先管线</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>四大 AI Agent</h3>
+  <table class="tbl">
+    <thead><tr><th>Agent</th><th>专责领域</th><th>对投资者的核心价值</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Rita</strong></td><td>实时行情 & ASX公告监控</td><td>公告发布后秒级推送摘要，含情绪标注，替代人工监盘</td></tr>
+      <tr><td><strong>Gail</strong></td><td>地质数据分析 & 钻探解读</td><td>调用 350TB 数据库，量化资源潜力，替代传统地质建模 60–70%工作量</td></tr>
+      <tr><td><strong>Faye</strong></td><td>宏观经济 & 商品价格</td><td>多因子模型输出矿种价格区间预测及敏感性分析</td></tr>
+      <tr><td><strong>Mia</strong></td><td>矿业政策 & 法规合规</td><td>全球主要矿业国政策变更追踪与风险评分，规避合规风险</td></tr>
+    </tbody>
+  </table>
+
+  <hr class="divider">
+
+  <!-- ══════════ 二、目标用户与定价 ══════════ -->
+  <div class="section-tag">Section 02</div>
+  <h2>目标用户与定价</h2>
+
+  <h3>目标用户（优先级排序）</h3>
+  <table class="tbl">
+    <thead><tr><th>#</th><th>用户群体</th><th>规模估算</th><th>核心诉求</th><th>付费能力</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="teal">①</td>
+        <td><strong>矿业买方机构</strong><br><span style="font-size:11px;color:var(--muted)">资源股基金、矿业PE、家办</span></td>
+        <td>ASX资源板块活跃机构 ~3,200家</td>
+        <td>早于市场的项目管线、钻探速析、资金背离信号</td>
+        <td class="gold">★★★★★</td>
+      </tr>
+      <tr>
+        <td class="teal">②</td>
+        <td><strong>精品经纪商 / 券商研究部</strong><br><span style="font-size:11px;color:var(--muted)">悉尼/珀斯ASX资源板块覆盖</span></td>
+        <td>目标合作 Top 50 家</td>
+        <td>白标联署报告、品牌化Agent、批量客户触达</td>
+        <td class="gold">★★★★</td>
+      </tr>
+      <tr>
+        <td class="teal">③</td>
+        <td><strong>独立地质师 / 咨询顾问</strong><br><span style="font-size:11px;color:var(--muted)">澳洲活跃持牌地质师</span></td>
+        <td>~14,000人</td>
+        <td>350TB数据库查询、MPM评估、3D可视化</td>
+        <td class="gold">★★★</td>
+      </tr>
+      <tr>
+        <td>④</td>
+        <td><strong>矿业公司IR / 战略部门</strong><br><span style="font-size:11px;color:var(--muted)">跟踪竞品资产动向</span></td>
+        <td>增量场景</td>
+        <td>竞品监控、ESG评级、公告影响分析</td>
+        <td class="gold">★★</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>产品定价</h3>
+  <table class="tbl">
+    <thead><tr><th>档位</th><th>定价</th><th>核心功能</th><th>目标用户</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>个人版</strong></td>
+        <td class="teal num">A$29 / 月</td>
+        <td>4个AI Agent + 基础14类报告 + 实时行情<br><span style="font-size:11px;color:var(--muted)">含30天免费试用</span></td>
+        <td>独立地质师、个人投资者、初级分析师</td>
+      </tr>
+      <tr>
+        <td><strong>机构版</strong></td>
+        <td class="gold num">A$299 / 月（预估）</td>
+        <td>全功能 + MPM成矿评估 + 3D钻探可视化<br>+ API接入 + 白标报告发布</td>
+        <td>资源股基金、精品经纪商、矿业咨询机构</td>
+      </tr>
+      <tr>
+        <td><strong>经纪商联署版</strong></td>
+        <td class="num">定制报价</td>
+        <td>联合署名报告发布 + 品牌化Agent<br>+ 客户批量触达支持</td>
+        <td>精品经纪商（B2B批量获客）</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="hl-box">
+    <strong>机构版定价逻辑：</strong>Wood Mackenzie / S&P Global Commodity Insights 对标功能定价 A$500–800/月。A$299 对机构用户低于内部预算审批门槛，决策链短，且白标报告功能本身对经纪商而言是营收工具而非成本。
+  </div>
+</div>
+
+<!-- ══════════ 三、市场规模 ══════════ -->
+<div class="page page-break">
+  <div class="section-tag">Section 03</div>
+  <h2>市场规模分析</h2>
+
+  <table class="tbl">
+    <thead><tr><th>市场层级</th><th>规模</th><th>范围</th><th>计算逻辑</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>TAM</strong><br><span style="font-size:11px;color:var(--muted)">全球可寻址市场</span></td>
+        <td class="num">约 A$42亿/年</td>
+        <td>全球</td>
+        <td style="font-size:12px">矿业专业研究服务（A$28亿）+ 机构研究（A$8亿）+ 地质软件（A$6亿）</td>
+      </tr>
+      <tr>
+        <td><strong>SAM</strong><br><span style="font-size:11px;color:var(--muted)">5年可服务市场</span></td>
+        <td class="num teal">约 A$0.8亿/年</td>
+        <td>澳洲 + 加拿大</td>
+        <td style="font-size:12px">ASX活跃机构 3,200家 + 持牌地质师 14,000人 + 精品经纪商 Top 50</td>
+      </tr>
+      <tr>
+        <td><strong>SOM（第一阶段）</strong><br><span style="font-size:11px;color:var(--muted)">近期可获取份额</span></td>
+        <td class="num up">约 A$70万 ARR</td>
+        <td>澳洲</td>
+        <td style="font-size:12px">1,000精准投资者（个人版）+ 100家机构（机构版）</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>第一阶段收入模型（1,000精准用户）</h3>
+  <div style="background:var(--white);border:1px solid var(--bd);border-radius:10px;padding:20px;margin:14px 0">
+    <div class="rev-row">
+      <div class="rev-label">
+        <div style="font-weight:600;color:var(--text)">个人版订阅</div>
+        <div class="rev-sub">1,000人 × A$29/月 × 12个月</div>
+      </div>
+      <div class="rev-bar"><div class="rev-fill" style="width:49%"></div></div>
+      <div class="rev-val teal">A$348,000</div>
+    </div>
+    <div class="rev-row">
+      <div class="rev-label">
+        <div style="font-weight:600;color:var(--text)">机构版订阅</div>
+        <div class="rev-sub">100家机构 × A$299/月 × 12个月</div>
+      </div>
+      <div class="rev-bar"><div class="rev-fill" style="width:51%"></div></div>
+      <div class="rev-val teal">A$358,800</div>
+    </div>
+    <div class="rev-row" style="border-bottom:none">
+      <div class="rev-label">
+        <div style="font-weight:700;color:var(--dark);font-size:14px">第一阶段目标 ARR</div>
+        <div class="rev-sub">个人版 + 机构版合计</div>
+      </div>
+      <div class="rev-bar"><div class="rev-fill" style="width:100%"></div></div>
+      <div class="rev-val" style="font-size:18px;color:var(--dark)">≈ A$70万</div>
+    </div>
+  </div>
+
+  <h3>用户增长路径</h3>
+  <div class="stage-grid">
+    <div class="stage active">
+      <div class="stage-n">Phase 1 · 当前</div>
+      <div class="stage-title">种子专家测试</div>
+      <div class="stage-arr">20+ 人</div>
+      <div class="stage-desc">独立地质专家 + 精品经纪商 + 矿业投资人深度体验，验证功能痛点与付费转化阻力</div>
+    </div>
+    <div class="stage">
+      <div class="stage-n">Phase 2 · 6–12个月</div>
+      <div class="stage-title">精准用户突破</div>
+      <div class="stage-arr">A$70万 ARR</div>
+      <div class="stage-desc">1,000精准投资者 + 100家机构。经纪商联署模式批量获客，每家带入 50–200 HNW用户</div>
+    </div>
+    <div class="stage">
+      <div class="stage-n">Phase 3 · 3–5年</div>
+      <div class="stage-title">市场份额扩张</div>
+      <div class="stage-arr">A$0.8亿 SAM</div>
+      <div class="stage-desc">澳洲+加拿大全覆盖，精准投资者导流矿业基金产品，平台商业化乘数效应</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 四、成本结构 ══════════ -->
+<div class="page">
+  <div class="section-tag">Section 04</div>
+  <h2>预计成本结构</h2>
+  <p>平台当前处于产品完善与种子用户测试阶段，主要成本集中于技术研发和数据维护。以下为年度成本估算框架：</p>
+
+  <table class="tbl">
+    <thead><tr><th>成本项目</th><th>类型</th><th>年度估算（A$）</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>AI模型训练与维护</strong></td>
+        <td>技术固定成本</td>
+        <td class="num">15–25万</td>
+        <td style="font-size:12px">GPU算力、模型迭代、四大Agent运维</td>
+      </tr>
+      <tr>
+        <td><strong>数据库维护与扩充</strong></td>
+        <td>数据固定成本</td>
+        <td class="num">10–18万</td>
+        <td style="font-size:12px">350TB+数据存储、实时行情接入费、数据清洗</td>
+      </tr>
+      <tr>
+        <td><strong>产品研发（人力）</strong></td>
+        <td>人力成本</td>
+        <td class="num">30–50万</td>
+        <td style="font-size:12px">技术团队（2–3人）、产品经理、地质顾问</td>
+      </tr>
+      <tr>
+        <td><strong>市场与获客</strong></td>
+        <td>营销可变成本</td>
+        <td class="num">10–15万</td>
+        <td style="font-size:12px">经纪商联署内容制作、行业活动、Malcolm案例传播</td>
+      </tr>
+      <tr>
+        <td><strong>矿权运营（Malcolm）</strong></td>
+        <td>资产运营成本</td>
+        <td class="num">8–12万</td>
+        <td style="font-size:12px">勘探维权、现场作业、钻探验证项目</td>
+      </tr>
+      <tr>
+        <td><strong>行政与合规</strong></td>
+        <td>固定运营</td>
+        <td class="num">5–8万</td>
+        <td style="font-size:12px">法律合规、财务审计、办公室（悉尼/北京）</td>
+      </tr>
+      <tr style="background:var(--light)">
+        <td><strong>合计年度运营成本（估算）</strong></td>
+        <td>—</td>
+        <td class="num" style="color:var(--dark);font-size:14px"><strong>A$78–128万/年</strong></td>
+        <td style="font-size:12px">早期阶段精简团队运营，随收入规模同步扩张</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="hl-box">
+    <strong>成本优势：</strong>AI自动生成报告的核心逻辑是边际成本极低——用户数量增长不带来对应的人力分析师成本增长。每新增1名付费用户，边际成本主要为计算资源（API调用），而非固定人力投入。规模化后毛利率理论值 &gt;70%。
+  </div>
+</div>
+
+<!-- ══════════ 五、经营分析与回报预测 ══════════ -->
+<div class="page page-break">
+  <div class="section-tag">Section 05</div>
+  <h2>经营分析与回报预测</h2>
+
+  <h3>盈亏平衡分析</h3>
+  <table class="tbl">
+    <thead><tr><th>阶段</th><th>时间线</th><th>付费用户</th><th>ARR（估算）</th><th>运营成本</th><th>盈亏状态</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>种子测试</td>
+        <td>当前 – 6个月</td>
+        <td>0（内测）</td>
+        <td class="num">—</td>
+        <td class="num">A$20–30万</td>
+        <td style="color:var(--red)">投入期</td>
+      </tr>
+      <tr>
+        <td>早期商业化</td>
+        <td>6–12个月</td>
+        <td>200–500人</td>
+        <td class="num teal">A$10–18万</td>
+        <td class="num">A$40–60万</td>
+        <td style="color:var(--gold)">爬坡期</td>
+      </tr>
+      <tr>
+        <td>盈亏平衡</td>
+        <td>12–24个月</td>
+        <td>~300个人 + 30机构</td>
+        <td class="num teal">A$40–50万</td>
+        <td class="num">A$60–80万</td>
+        <td style="color:var(--gold)">接近平衡</td>
+      </tr>
+      <tr>
+        <td>第一阶段目标</td>
+        <td>18–30个月</td>
+        <td>1,000个人 + 100机构</td>
+        <td class="num up">A$70万+</td>
+        <td class="num">A$80–100万</td>
+        <td style="color:var(--green)">转正</td>
+      </tr>
+      <tr>
+        <td>规模化</td>
+        <td>3–5年</td>
+        <td>5,000+ 个人 + 500+ 机构</td>
+        <td class="num up">A$350万–500万</td>
+        <td class="num">A$150–200万</td>
+        <td style="color:var(--green)">稳定盈利</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>收入乘数效应：经纪商联署模式</h3>
+  <div style="background:var(--white);border:1px solid var(--bd);border-radius:10px;padding:20px;margin:14px 0">
+    <div style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;gap:8px;align-items:center;font-size:12px;text-align:center">
+      <div style="background:var(--light);border-radius:6px;padding:10px;border:1px solid var(--bd)">
+        <div style="font-weight:700;color:var(--dark);font-size:13px">合作经纪商</div>
+        <div class="teal" style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700">50家</div>
+        <div style="color:var(--muted)">悉尼+珀斯</div>
+      </div>
+      <div style="color:var(--teal);font-size:18px">→</div>
+      <div style="background:var(--light);border-radius:6px;padding:10px;border:1px solid var(--bd)">
+        <div style="font-weight:700;color:var(--dark);font-size:13px">每家带入</div>
+        <div class="teal" style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700">100人</div>
+        <div style="color:var(--muted)">HNW投资者</div>
+      </div>
+      <div style="color:var(--teal);font-size:18px">→</div>
+      <div style="background:var(--light);border-radius:6px;padding:10px;border:1px solid var(--bd)">
+        <div style="font-weight:700;color:var(--dark);font-size:13px">触达用户</div>
+        <div class="gold" style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700">5,000人</div>
+        <div style="color:var(--muted)">精准覆盖</div>
+      </div>
+      <div style="color:var(--teal);font-size:18px">→</div>
+      <div style="background:rgba(20,184,166,.06);border-radius:6px;padding:10px;border:1px solid var(--teal-b)">
+        <div style="font-weight:700;color:var(--dark);font-size:13px">转化收入</div>
+        <div class="teal" style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700">A$174万</div>
+        <div style="color:var(--muted)">个人版ARR</div>
+      </div>
+    </div>
+    <p style="margin-top:12px;font-size:12px">上述测算基于：50家合作经纪商 × 均值100名HNW投资者 × 个人版 A$348/年，转化率按100%计（实际保守估算20–30%转化，对应A$35–52万增量ARR）。</p>
+  </div>
+
+  <h3>核心竞争壁垒与护城河</h3>
+  <table class="tbl">
+    <thead><tr><th>壁垒维度</th><th>具体内容</th><th>竞争对手复制难度</th></tr></thead>
+    <tbody>
+      <tr><td><strong>数据飞轮</strong></td><td>350TB 自有地质数据，持续积累，竞争对手估算复制成本 A$180M+、耗时 5–7年</td><td style="color:var(--red);font-weight:600">极高</td></tr>
+      <tr><td><strong>矿权实证</strong></td><td>Malcolm 金矿 AI 预测 → 实地见矿，物理证明技术有效性，无法伪造</td><td style="color:var(--red);font-weight:600">不可复制</td></tr>
+      <tr><td><strong>用户网络</strong></td><td>地质师、经纪商、机构投资者三类专业用户形成互相引荐的闭环网络</td><td style="color:var(--gold);font-weight:600">较高</td></tr>
+      <tr><td><strong>行业定制AI</strong></td><td>四大 Agent 深度定制矿业场景，通用AI工具无法直接替代专业度</td><td style="color:var(--gold);font-weight:600">较高</td></tr>
+    </tbody>
+  </table>
+
+  <h3>风险提示</h3>
+  <div class="risk-item">
+    <div class="risk-badge rb-h">高</div>
+    <div class="risk-body">
+      <div class="risk-title">用户获取速度风险</div>
+      <div class="risk-desc">矿业专业用户决策周期长，对新工具验证需求高，转化周期可能超出预期。缓解措施：30天免费试用 + Malcolm实证案例降低信任门槛。</div>
+    </div>
+  </div>
+  <div class="risk-item">
+    <div class="risk-badge rb-h">高</div>
+    <div class="risk-body">
+      <div class="risk-title">定价验证风险</div>
+      <div class="risk-desc">机构版定价 A$299 尚未经过市场验证，种子用户测试将直接输出付费意愿数据，定价结构将在测试后调整。</div>
+    </div>
+  </div>
+  <div class="risk-item">
+    <div class="risk-badge rb-m">中</div>
+    <div class="risk-body">
+      <div class="risk-title">大型数据终端竞争</div>
+      <div class="risk-desc">Wood Mackenzie / S&P Global 等老牌机构若推出矿业AI产品，将形成直接竞争。差异化路径：专注 ASX 中小矿企，覆盖颗粒度更细，价格更亲民。</div>
+    </div>
+  </div>
+  <div class="risk-item">
+    <div class="risk-badge rb-m">中</div>
+    <div class="risk-body">
+      <div class="risk-title">AI预测准确性依赖</div>
+      <div class="risk-desc">Malcolm 实证是核心信任锚，后续需持续产出验证案例。若 AI 预测出现重大失误将损害品牌，需在产品内明确标注"辅助工具"定位。</div>
+    </div>
+  </div>
+  <div class="risk-item" style="border-bottom:none">
+    <div class="risk-badge rb-l">低</div>
+    <div class="risk-body">
+      <div class="risk-title">矿业周期影响</div>
+      <div class="risk-desc">矿业熊市期间机构研究预算收缩，但情绪监测、风险预警等功能在下行市场需求反而上升。产品设计涵盖全周期场景。</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 六、投资亮点 ══════════ -->
+<div class="page">
+  <div class="section-tag">Section 06</div>
+  <h2>投资亮点总结</h2>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0">
+    <div style="background:var(--white);border:1px solid var(--bd);border-radius:10px;padding:18px;border-top:3px solid var(--teal)">
+      <div style="font-size:11px;font-weight:700;color:var(--teal);letter-spacing:.08em;margin-bottom:8px">真实验证，非PPT产品</div>
+      <p style="font-size:12.5px;margin:0">Malcolm 金矿 AI 预测见矿（23g/t），物理证明技术有效性，是矿业AI赛道中极少数有实地验证案例的项目。</p>
+    </div>
+    <div style="background:var(--white);border:1px solid var(--bd);border-radius:10px;padding:18px;border-top:3px solid var(--gold)">
+      <div style="font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.08em;margin-bottom:8px">数据壁垒，350TB自有资产</div>
+      <p style="font-size:12.5px;margin:0">竞争对手复制成本 A$180M+，耗时 5–7年，数据飞轮随用户增长持续强化，形成时间不可逆的先发优势。</p>
+    </div>
+    <div style="background:var(--white);border:1px solid var(--bd);border-radius:10px;padding:18px;border-top:3px solid #8b5cf6">
+      <div style="font-size:11px;font-weight:700;color:#8b5cf6;letter-spacing:.08em;margin-bottom:8px">B2B联署模式，获客成本极低</div>
+      <p style="font-size:12.5px;margin:0">经纪商联署模式以1家带100–200名HNW投资者，规模化获客无需大量广告投入，通过合作网络实现低成本扩张。</p>
+    </div>
+    <div style="background:var(--white);border:1px solid var(--bd);border-radius:10px;padding:18px;border-top:3px solid var(--green)">
+      <div style="font-size:11px;font-weight:700;color:var(--green);letter-spacing:.08em;margin-bottom:8px">SaaS订阅模式，边际成本极低</div>
+      <p style="font-size:12.5px;margin:0">AI自动生成报告，新增用户的边际成本主要为计算资源（API调用），规模化后理论毛利率&gt;70%，与传统研究机构本质不同。</p>
+    </div>
+  </div>
+
+  <div class="hl-box" style="margin-top:24px">
+    <strong>一句话定位：</strong>MiningClawd 不是矿业版Bloomberg终端，而是第一个把 AI 预测与真实地下验证绑在一起的矿业情报平台——这个闭环是定价权、用户信任和市场壁垒的共同来源。
+  </div>
+</div>
+
+<!-- ══════════ CONTACT FOOTER ══════════ -->
+<div class="contact-footer">
+  <div class="contact-grid">
+    <div>
+      <div class="contact-label">核心联系人</div>
+      <div class="contact-body">
+        <strong>王选策 Xuance Wang</strong><br>
+        CEO & Co-Founder · 商务总监<br>
+        +86 135 5823 4202<br>
+        +61 420 921 816（WhatsApp）<br>
+        xuance.wang@lynaimining.com
+      </div>
+    </div>
+    <div>
+      <div class="contact-label">商务联系</div>
+      <div class="contact-body">
+        <strong>傅艳 Feast</strong><br>
+        商务总监 · Business Director<br>
+        +86 186 1109 6873<br>
+        yan.fu@lynaimining.com<br>
+        info@lynaimining.com
+      </div>
+    </div>
+    <div>
+      <div class="contact-label">办公地址</div>
+      <div class="contact-body">
+        <strong>Australia</strong><br>
+        Unit 5, 110 Hay Street<br>
+        Subiaco WA 6008 · Perth<br><br>
+        <strong>China</strong><br>
+        朝阳区霄云路40号<br>
+        航空世纪大厦3层 · 北京
+      </div>
+    </div>
+  </div>
+  <div class="disclaimer">
+    本文件为机密资料，仅供指定收件人参阅，不构成任何投资要约或建议。文件中的财务预测及市场规模数据为内部估算，存在不确定性。© 2026 Geovision AI Mining Pty Ltd. All rights reserved.
+  </div>
+</div>
+
+</body>
+</html>

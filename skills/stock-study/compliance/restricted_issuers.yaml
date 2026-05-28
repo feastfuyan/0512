@@ -1,0 +1,17 @@
+# Restricted Issuer List
+# Tickers that are HARD-BLOCKED from publication. Reviewed monthly by 杜慧仪.
+# Reasons: regulatory restriction, related-party, embargo, current corporate
+# action where commentary is prohibited.
+#
+# Format:
+#   tickers: list of ASX codes (e.g. "ASX:XXX")
+#
+# When adding: open PR with reason in description; require sign-off from 杜慧仪
+# AND 王选策.
+
+tickers:
+  # Example placeholders — replace with real entries before going live
+  - ASX:XXX
+  - ASX:YYY
+
+# History of changes is tracked in Git only. Do not edit in place — always PR.

@@ -1,0 +1,136 @@
+# LynAI Mines · Prompt Injection Pattern Library
+# Severity: critical > high > medium > low
+# critical → safe=False, redact + incident
+# high     → safe=False, redact + log
+# medium   → safe=True (allowed through), tool_guard still blocks for external sources
+# low      → safe=True
+
+critical:
+  # Classic PI
+  - id: PI-C-001
+    pattern: '忽略.{0,12}(上述|前面|之前|系统|所有).{0,4}(指令|规则|提示|要求|命令)'
+    desc: '中文 ignore previous'
+  - id: PI-C-002
+    pattern: '你现在(扮演|是|变成|成为|不再是|忘记)'
+    desc: '中文角色重置'
+  - id: PI-C-005
+    pattern: '(ignore|forget|disregard)\s+(all\s+|the\s+|any\s+)?(previous|prior|above|earlier)\s+(instructions?|prompts?|rules?|guidelines?|messages?)'
+    desc: 'ignore previous instructions'
+  - id: PI-C-005b
+    pattern: '(forget|nullify)\s+(all\s+)?(prior|previous)\s+rules'
+    desc: 'forget prior rules'
+  - id: PI-C-006
+    pattern: '\b(DAN|do\s+anything\s+now|developer\s+mode|sudo\s+mode)\b'
+    desc: 'jailbreak personas'
+  - id: PI-C-006b
+    pattern: '(假装|扮演|pretend)\s+(?:你\s*是|you\s+are)\s+(?:[\w\s]{0,30})?(?:unrestricted|无限制|没有限制|new\s+AI|新的\s*AI|DAN|没有任何\s*restriction|没有任何限制)'
+    desc: 'pretend unrestricted AI'
+  - id: PI-C-006c
+    pattern: '你不再是.{0,40}(?:你是|now\s+you|你现在)'
+    desc: 'identity replacement'
+  - id: PI-C-006d
+    pattern: '(?:Switch|switch)\s+to\s+(?:developer|admin|sudo|god|unrestricted)\s+mode'
+    desc: 'switch mode'
+
+  # Pseudo system / template tokens
+  - id: PI-C-003
+    pattern: '\[\s*(?:SYSTEM|系统)[^\]]*\]'
+    desc: '[SYSTEM ...] bracket'
+  - id: PI-C-003b
+    pattern: '<\s*\|?\s*(?:im_start|system|endoftext|user|assistant)\s*\|?\s*>'
+    desc: 'chat template token'
+  - id: PI-C-003c
+    pattern: '(?:###|##)\s*(?:指令|Instruction|Hey\s+Claude|For\s+any\s+AI|AI\s+assistant)'
+    desc: 'pseudo header injection'
+  - id: PI-C-003d
+    pattern: '【\s*AI[^】]{0,20}】|\[\s*HIDDEN\s*\]|\[\s*For\s+any\s+AI[^\]]*\]'
+    desc: 'AI-targeted bracket aside'
+  - id: PI-C-003e
+    pattern: '(?:Hey|嘿)\s*Claude|AI\s+assistant\s*[:：]|Note\s+to\s+(?:the\s+)?AI'
+    desc: 'direct model-name addressing'
+  - id: PI-C-003f
+    pattern: 'AI\s+助手|给\s*AI\s*(?:看的|的)?\s*(?:指令|消息|提示)'
+    desc: '中文 AI 助手 aside'
+
+  # Bypass safety/compliance
+  - id: PI-C-004
+    pattern: '(跳过|绕过|关闭|禁用|取消|忽略).{0,10}(合规|安全|审核|检查|过滤|风险\s*提示)'
+    desc: 'bypass compliance Chinese'
+  - id: PI-C-007
+    pattern: '(disregard|override|forget|nullify|ignore|bypass|skip)\s+(?:[\w\s]{0,20})?(?:safety|rules?|policy|guidelines?|filters?|compliance|checks?|restrictions?)'
+    desc: 'bypass English'
+  - id: PI-C-007b
+    pattern: '\b(?:override|skip|跳过|绕过)\s+(?:合规|safety|compliance|safety[-\s]?check|检查)'
+    desc: 'mixed-language override'
+  - id: PI-C-007c
+    pattern: '\boverride\s+(?:合规|compliance|safety|safety[-\s]?check)'
+    desc: 'english+chinese override compliance'
+
+  # Reveal prompts / creds
+  - id: PI-C-010
+    pattern: '(reveal|print|show|display|dump|leak|tell)\s+(?:me\s+)?(?:[\w\s]{0,12})?(?:your\s+)?(?:system\s+)?(prompt|instructions?|rules?|persona)'
+    desc: 'reveal system prompt EN'
+  - id: PI-C-010b
+    pattern: '(打印|输出|展示|告诉我|展示一下).{0,8}(系统提示|系统指令|你的指令|你的提示|prompt|系统消息)'
+    desc: 'reveal system prompt ZH'
+  - id: PI-C-010c
+    pattern: '(?:请\s*)?(?:展示|看看|给我看)\s*(?:你的\s*)?(?:system[\s_]?prompt|系统提示|指令)'
+    desc: 'reveal CN variant'
+  - id: PI-C-011
+    pattern: '\b(API[\s_-]?KEY|access[_\s]?token|secret[_\s]?key|password|凭证)\b'
+    desc: 'credential sensitive terms'
+  - id: PI-C-011b
+    pattern: '(?:print|reveal|show|dump|tell|告诉我)\s+.{0,12}(?:API[\s_-]?KEY|password|token|secret)'
+    desc: 'extract credentials'
+
+  # Forced trading label / promises
+  - id: PI-C-100
+    pattern: '(force|强制|必须|一定).{0,15}(label|输出|标记|评为|rating|grade).{0,12}(↑|↓|多头|空头|long|short|buy|sell|BUY|SELL)'
+    desc: 'forced trading label'
+  - id: PI-C-100b
+    pattern: '\bforce[_\s]?label\s*[=:]\s*(?:↑|↓|多头|空头|long|short|BUY|SELL|guaranteed_buy|↑多头|↓空头)'
+    desc: 'force_label= assignment'
+  - id: PI-C-101
+    pattern: '(guaranteed[_\s-]?(?:buy|return|profit|gain)|保证收益|必涨|必跌|稳赚|包赚|无风险|risk[_\s-]?free|稳赢)'
+    desc: 'performance promise'
+  - id: PI-C-102
+    pattern: '(?:把|set|change|update|强制|force).{0,20}(target_price|target|目标价|risk_score)\s*[=:为]\s*[0-9.]+'
+    desc: 'forcibly set numeric field'
+  - id: PI-C-103
+    pattern: '(?:rate|标记|强制)\s+(?:everything|all|每[只个]|全部|所有)\s+(?:as\s+)?(?:bullish|buy|↑多头|guaranteed)'
+    desc: 'rate all bullish'
+
+high:
+  - id: PI-H-003
+    pattern: '(?:no\s+matter\s+what|regardless\s+of)\s*[,，]?\s*(output|return|rate|set|label|force|emit)'
+    desc: 'unconditional output EN'
+  - id: PI-H-003b
+    pattern: '(?:不管|不论|无论如何).{0,12}(输出|给出|发布|评|标)'
+    desc: 'unconditional output ZH'
+
+medium:
+  - id: PI-M-001
+    pattern: '(reveal|print|show|tell)\s+(?:me\s+)?(?:your\s+)?(name|version|model)'
+    desc: 'introspection'
+  - id: PI-M-003
+    pattern: '(pretend|假装|假设)\s+(you|你)\s+(are|is|是)\b'
+    desc: 'generic role-play'
+
+# Unicode anomalies — scanned before NFKC
+unicode_red_flags:
+  - id: U-001
+    pattern: '[\u200b-\u200f\ufeff]'
+    desc: 'zero-width chars'
+    severity: critical
+  - id: U-002
+    pattern: '[\u202a-\u202e]'
+    desc: 'BiDi control chars'
+    severity: critical
+  - id: U-003
+    pattern: '[\U000E0020-\U000E007E]'
+    desc: 'Unicode tag chars'
+    severity: critical
+  - id: U-004
+    pattern: '[\uFF01-\uFF5E]{15,}'
+    desc: 'long fullwidth ASCII run'
+    severity: high

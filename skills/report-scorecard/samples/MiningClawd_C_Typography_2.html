@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>MiningClawd — C 方案 · 字体方案对比</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0b0f;color:#d1d5db;font-family:'Inter',sans-serif}
+.page-header{text-align:center;padding:48px 24px 0}
+.page-header .eyebrow{font-size:11px;color:#14b8a6;letter-spacing:6px;font-weight:500;text-transform:uppercase;margin-bottom:12px}
+.page-header h1{font-size:32px;font-weight:700;font-family:'Space Grotesk',sans-serif;letter-spacing:-0.03em;color:#fff;font-style:italic}
+.page-header .sub{font-size:12px;color:#6b7280;letter-spacing:1px;margin-top:8px}
+.divider{width:60%;max-width:800px;height:1px;background:linear-gradient(90deg,transparent,rgba(20,184,166,0.3),transparent);margin:32px auto}
+.columns{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:0 16px 48px;max-width:1100px;margin:0 auto}
+.col{padding:0 16px;border-right:1px solid rgba(255,255,255,0.04)}
+.col:last-child{border-right:none}
+.col-header{text-align:center;padding:24px 0 20px}
+.label-circle{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(20,184,166,0.5);background:rgba(20,184,166,0.08);display:inline-flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#14b8a6;margin-bottom:10px}
+.col-header h2{font-size:12px;font-weight:600;color:#fff;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px}
+.col-header p{font-size:10px;color:#6b7280;letter-spacing:0.5px}
+.rec-badge{display:inline-block;padding:3px 10px;border-radius:10px;background:#14b8a6;color:#0f1115;font-size:8px;font-weight:700;letter-spacing:0.5px;margin-top:6px}
+.section{margin-bottom:20px}
+.section-title{font-size:9px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;padding:0 4px}
+.card{background:#15171c;border-radius:10px;border:1px solid rgba(255,255,255,0.05)}
+
+/* Hero */
+.hero{background:radial-gradient(ellipse at 50% 30%,rgba(20,184,166,0.06) 0%,transparent 60%),#15171c;border-radius:10px;border:1px solid rgba(255,255,255,0.05);padding:40px 16px;text-align:center;margin-bottom:20px}
+.hero .tagline{font-size:8px;color:#6b7280;letter-spacing:2px;text-transform:uppercase;font-weight:500;margin-top:10px}
+
+/* Font specimens */
+.specimen{padding:20px 16px;margin-bottom:8px}
+.spec-label{font-size:8px;color:#6b7280;margin-bottom:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.8px}
+.spec-row{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.spec-stack{display:flex;flex-direction:column;align-items:center;gap:8px;margin-bottom:16px}
+
+/* Lockups */
+.lockups{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px}
+.lockup{padding:16px 12px}
+.lockup-label{font-size:8px;color:#6b7280;margin-bottom:8px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px}
+.lockup-row{display:flex;align-items:center;gap:8px}
+.lockup-col{display:flex;flex-direction:column;align-items:center;gap:6px}
+.sub-tag{font-size:7px;color:#14b8a6;letter-spacing:1px;text-transform:uppercase;font-weight:500;margin-top:1px}
+.sidebar-mock{background:#0f1115;border-radius:10px;border:1px solid rgba(255,255,255,0.05);padding:16px 12px}
+.sidebar-nav{margin-top:12px;border-top:1px solid rgba(255,255,255,0.05);padding-top:10px}
+.nav-item{font-size:8px;font-weight:700;letter-spacing:0.8px;padding:5px 8px;border-radius:3px 0 0 3px}
+.nav-item.on{color:#14b8a6;border-right:2px solid #14b8a6;background:rgba(20,184,166,0.05)}
+.nav-item.off{color:#6b7280;border-right:2px solid transparent}
+
+/* Concept */
+.concept{padding:16px}
+.concept h3{color:#14b8a6;font-size:9px;font-weight:700;letter-spacing:0.5px;margin-bottom:6px}
+.concept p{color:#6b7280;font-size:9px;line-height:1.7;margin:0 0 6px}
+.concept p strong{color:#d1d5db;font-weight:600}
+
+/* Font detail table */
+.font-detail{width:100%;font-size:8px;color:#6b7280;border-collapse:collapse;margin-top:10px}
+.font-detail td{padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.03)}
+.font-detail td:first-child{color:#9ca3af;font-weight:600;width:35%}
+.font-detail td:last-child{color:#d1d5db;font-family:'Space Grotesk',monospace}
+
+.tags{display:flex;gap:6px;padding:0 4px;margin-bottom:16px;flex-wrap:wrap}
+.tag{padding:3px 10px;border-radius:10px;background:rgba(20,184,166,0.06);border:0.5px solid rgba(20,184,166,0.2);font-size:8px;color:#14b8a6;font-weight:600}
+
+/* Wordmark styles */
+.wm-t1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.03em}
+.wm-t2{font-family:'Outfit',sans-serif;font-weight:800;font-style:normal;letter-spacing:-0.04em}
+.wm-t3{font-family:'DM Sans',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.01em}
+.m{color:#fff}
+.cl{color:#14b8a6}
+
+.footer{text-align:center;padding:24px;font-size:9px;color:#4b5563;border-top:1px solid rgba(255,255,255,0.03)}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="eyebrow">Brand Identity · Typography</div>
+  <h1>MiningClawd — 字体方案对比</h1>
+  <div class="sub">固定方案 C 图标 · 两种字体风格 · T1 / T2</div>
+</div>
+<div class="divider"></div>
+
+<div class="columns">
+
+<!-- ==================== T1: Space Grotesk Bold Italic ==================== -->
+<div class="col">
+  <div class="col-header">
+    <div class="label-circle">T1</div>
+    <h2>Space Grotesk</h2>
+    <p>Bold Italic · 原始方案</p>
+  </div>
+
+  <div class="hero">
+    <svg width="64" height="64" viewBox="0 0 48 48" fill="none"><defs><linearGradient id="tc" x1="24" y1="8" x2="24" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#5eead4"/><stop offset="100%" stop-color="#0d9488"/></linearGradient></defs><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2" opacity="0.95"/><path d="M12 34 L12 20 L18 14" stroke="url(#tc)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="url(#tc)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="url(#tc)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="28" x2="32" y2="28" stroke="#14b8a6" stroke-width="1" opacity="0.4"/><path d="M22 37 L24 40 L26 37 L24 34 Z" fill="#14b8a6" opacity="0.85"/><line x1="19" y1="10" x2="21" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/><line x1="23" y1="10" x2="25" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/><line x1="27" y1="10" x2="29" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/></svg>
+    <div style="margin-top:14px"><span class="wm-t1" style="font-size:32px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div>
+    <div class="tagline">AI Mining Intelligence Platform</div>
+  </div>
+
+  <!-- Font Specimens -->
+  <div class="section">
+    <div class="section-title">Font Specimen</div>
+    <div class="card specimen">
+      <div class="spec-label">Display · 48px</div>
+      <div style="text-align:center;margin-bottom:16px"><span class="wm-t1" style="font-size:42px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div>
+      <div class="spec-label">Body · 20px</div>
+      <div style="text-align:center;margin-bottom:16px"><span class="wm-t1" style="font-size:20px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div>
+      <div class="spec-label">Small · 14px</div>
+      <div style="text-align:center;margin-bottom:16px"><span class="wm-t1" style="font-size:14px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div>
+      <div class="spec-label">Micro · 11px</div>
+      <div style="text-align:center"><span class="wm-t1" style="font-size:11px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div>
+    </div>
+  </div>
+
+  <!-- Lockups -->
+  <div class="section">
+    <div class="section-title">Logo Lockups</div>
+    <div class="lockups">
+      <div class="card lockup"><div class="lockup-label">Horizontal</div><div class="lockup-row" id="lockH-T1"></div></div>
+      <div class="card lockup"><div class="lockup-label">With Tagline</div><div class="lockup-row" id="lockT-T1"></div></div>
+      <div class="card lockup" style="text-align:center"><div class="lockup-label">Stacked</div><div class="lockup-col" id="lockS-T1"></div></div>
+      <div class="sidebar-mock"><div class="lockup-label">Sidebar</div><div id="lockSB-T1"></div></div>
+    </div>
+  </div>
+
+  <!-- Concept -->
+  <div class="section">
+    <div class="section-title">字体说明</div>
+    <div class="card concept">
+      <h3>SPACE GROTESK · Bold Italic</h3>
+      <p>几何无衬线体，带有微妙的等宽基因。<strong>斜体</strong>赋予数据流动感，<strong>紧凑字距</strong>传达技术精密。</p>
+      <p>PRD 文档中原始指定字体，与平台 UI 数字/代码字体统一。</p>
+      <table class="font-detail">
+        <tr><td>字体</td><td>Space Grotesk</td></tr>
+        <tr><td>字重</td><td>700 (Bold)</td></tr>
+        <tr><td>风格</td><td>Italic</td></tr>
+        <tr><td>字距</td><td>-0.03em (tight)</td></tr>
+        <tr><td>气质</td><td>科技 · 精密 · 代码感</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="tags"><span class="tag">PRD 原始</span><span class="tag">等宽基因</span><span class="tag">代码感</span></div>
+</div>
+
+<!-- ==================== T2: Outfit ExtraBold ==================== -->
+<div class="col">
+  <div class="col-header">
+    <div class="label-circle" style="border-color:rgba(20,184,166,0.8);background:rgba(20,184,166,0.15)">T2</div>
+    <h2>Outfit</h2>
+    <p>ExtraBold · 几何圆润 · 现代感</p>
+  </div>
+
+  <div class="hero" style="border-color:rgba(20,184,166,0.12)">
+    <svg width="64" height="64" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.8" opacity="0.95"/><path d="M12 34 L12 20 L18 14" stroke="url(#tc)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="url(#tc)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="url(#tc)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="28" x2="32" y2="28" stroke="#14b8a6" stroke-width="1.4" opacity="0.45"/><path d="M21.5 36.5 L24 40 L26.5 36.5 L24 33.5 Z" fill="#14b8a6" opacity="0.9"/><line x1="18.5" y1="9.5" x2="21" y2="12" stroke="#5eead4" stroke-width="1.3" stroke-linecap="round" opacity="0.55"/><line x1="22.5" y1="9.5" x2="25" y2="12" stroke="#5eead4" stroke-width="1.3" stroke-linecap="round" opacity="0.55"/><line x1="26.5" y1="9.5" x2="29" y2="12" stroke="#5eead4" stroke-width="1.3" stroke-linecap="round" opacity="0.55"/></svg>
+    <div style="margin-top:14px"><span class="wm-t2" style="font-size:32px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div>
+    <div class="tagline">AI Mining Intelligence Platform</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Font Specimen</div>
+    <div class="card specimen">
+      <div class="spec-label">Display · 48px</div>
+      <div style="text-align:center;margin-bottom:16px"><span class="wm-t2" style="font-size:42px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div>
+      <div class="spec-label">Body · 20px</div>
+      <div style="text-align:center;margin-bottom:16px"><span class="wm-t2" style="font-size:20px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div>
+      <div class="spec-label">Small · 14px</div>
+      <div style="text-align:center;margin-bottom:16px"><span class="wm-t2" style="font-size:14px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div>
+      <div class="spec-label">Micro · 11px</div>
+      <div style="text-align:center"><span class="wm-t2" style="font-size:11px"><span class="m">Mining</span><span class="cl">Clawd</span></span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Logo Lockups</div>
+    <div class="lockups">
+      <div class="card lockup"><div class="lockup-label">Horizontal</div><div class="lockup-row" id="lockH-T2"></div></div>
+      <div class="card lockup"><div class="lockup-label">With Tagline</div><div class="lockup-row" id="lockT-T2"></div></div>
+      <div class="card lockup" style="text-align:center"><div class="lockup-label">Stacked</div><div class="lockup-col" id="lockS-T2"></div></div>
+      <div class="sidebar-mock"><div class="lockup-label">Sidebar</div><div id="lockSB-T2"></div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">字体说明</div>
+    <div class="card concept">
+      <h3>OUTFIT · ExtraBold + 加粗图标</h3>
+      <p>几何无衬线体，字形圆润饱满，<strong>不使用斜体</strong>——用极粗字重 (800) 和超紧字距 (-0.04em) 制造视觉冲击力。</p>
+      <p>图标线条同步加粗（2.5→3.2pt），容器描边加厚（1.2→1.8pt），爪痕/横线等细节元素等比增粗，与 Outfit ExtraBold 的<strong>粗壮形态统一视觉重量</strong>。圆润的字母端点与圆角方形容器几何一致性最强。</p>
+      <table class="font-detail">
+        <tr><td>字体</td><td>Outfit</td></tr>
+        <tr><td>字重</td><td>800 (ExtraBold)</td></tr>
+        <tr><td>风格</td><td>Normal (正体)</td></tr>
+        <tr><td>字距</td><td>-0.04em (very tight)</td></tr>
+        <tr><td>图标线宽</td><td>3.2pt (加粗)</td></tr>
+        <tr><td>容器描边</td><td>1.8pt (加粗)</td></tr>
+        <tr><td>气质</td><td>厚重 · 圆润 · 稳健</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="tags"><span class="tag">几何圆润</span><span class="tag">正体稳健</span><span class="tag">加粗图标</span><span class="tag">视觉等重</span><span class="tag">金融友好</span></div>
+</div>
+
+</div>
+
+<!-- ==================== LIGHT / INVERTED SECTION ==================== -->
+<div class="divider"></div>
+<div style="text-align:center;padding:32px 24px 0">
+  <div style="font-size:9px;color:#14b8a6;letter-spacing:4px;font-weight:500;text-transform:uppercase;margin-bottom:10px">Light Background</div>
+  <h2 style="font-size:22px;font-weight:700;font-family:'Space Grotesk',sans-serif;letter-spacing:-0.02em;color:#fff">反白场景应用</h2>
+  <p style="font-size:11px;color:#6b7280;margin-top:6px">浅色背景下的 Logo 适配 · 印刷 / 文档 / 邮件签名 / PPT</p>
+</div>
+
+<!-- Light cards grid -->
+<div style="max-width:1100px;margin:32px auto 0;padding:0 16px;display:grid;grid-template-columns:1fr 1fr;gap:16px">
+
+  <!-- T1 Light Hero -->
+  <div style="background:#ffffff;border-radius:12px;padding:48px 24px;text-align:center;border:1px solid #e5e7eb">
+    <div style="font-size:8px;color:#9ca3af;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:20px">T1 · White Background</div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:14px">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><defs><linearGradient id="tcLt1" x1="24" y1="8" x2="24" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#0d9488"/><stop offset="100%" stop-color="#0f766e"/></linearGradient></defs><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2"/><path d="M12 34 L12 20 L18 14" stroke="url(#tcLt1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="url(#tcLt1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="url(#tcLt1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="28" x2="32" y2="28" stroke="#14b8a6" stroke-width="1" opacity="0.4"/><path d="M22 37 L24 40 L26 37 L24 34 Z" fill="#14b8a6" opacity="0.85"/><line x1="19" y1="10" x2="21" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/><line x1="23" y1="10" x2="25" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/><line x1="27" y1="10" x2="29" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/></svg>
+      <span class="wm-t1" style="font-size:28px"><span style="color:#111827">Mining</span><span style="color:#0d9488">Clawd</span></span>
+    </div>
+    <div style="font-size:8px;color:#9ca3af;letter-spacing:2px;text-transform:uppercase;font-weight:500;margin-top:10px">AI Mining Intelligence Platform</div>
+  </div>
+
+  <!-- T2 Light Hero -->
+  <div style="background:#ffffff;border-radius:12px;padding:48px 24px;text-align:center;border:1px solid #e5e7eb">
+    <div style="font-size:8px;color:#9ca3af;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:20px">T2 · White Background</div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:14px">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><defs><linearGradient id="tcLt2" x1="24" y1="8" x2="24" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#0d9488"/><stop offset="100%" stop-color="#0f766e"/></linearGradient></defs><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.8"/><path d="M12 34 L12 20 L18 14" stroke="url(#tcLt2)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="url(#tcLt2)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="url(#tcLt2)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="28" x2="32" y2="28" stroke="#14b8a6" stroke-width="1.4" opacity="0.45"/><path d="M21.5 36.5 L24 40 L26.5 36.5 L24 33.5 Z" fill="#14b8a6" opacity="0.9"/><line x1="18.5" y1="9.5" x2="21" y2="12" stroke="#5eead4" stroke-width="1.3" stroke-linecap="round" opacity="0.55"/><line x1="22.5" y1="9.5" x2="25" y2="12" stroke="#5eead4" stroke-width="1.3" stroke-linecap="round" opacity="0.55"/><line x1="26.5" y1="9.5" x2="29" y2="12" stroke="#5eead4" stroke-width="1.3" stroke-linecap="round" opacity="0.55"/></svg>
+      <span class="wm-t2" style="font-size:28px"><span style="color:#111827">Mining</span><span style="color:#0d9488">Clawd</span></span>
+    </div>
+    <div style="font-size:8px;color:#9ca3af;letter-spacing:2px;text-transform:uppercase;font-weight:500;margin-top:10px">AI Mining Intelligence Platform</div>
+  </div>
+
+  <!-- T1 Light Gray -->
+  <div style="background:#f3f4f6;border-radius:12px;padding:40px 24px;text-align:center">
+    <div style="font-size:8px;color:#9ca3af;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px">T1 · Light Gray</div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:12px">
+      <svg width="40" height="40" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="28" x2="32" y2="28" stroke="#14b8a6" stroke-width="1" opacity="0.4"/><path d="M22 37 L24 40 L26 37 L24 34 Z" fill="#14b8a6" opacity="0.85"/><line x1="19" y1="10" x2="21" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/><line x1="23" y1="10" x2="25" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/><line x1="27" y1="10" x2="29" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/></svg>
+      <span class="wm-t1" style="font-size:22px"><span style="color:#111827">Mining</span><span style="color:#0d9488">Clawd</span></span>
+    </div>
+  </div>
+
+  <!-- T2 Light Gray -->
+  <div style="background:#f3f4f6;border-radius:12px;padding:40px 24px;text-align:center">
+    <div style="font-size:8px;color:#9ca3af;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px">T2 · Light Gray</div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:12px">
+      <svg width="40" height="40" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.8"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="28" x2="32" y2="28" stroke="#14b8a6" stroke-width="1.4" opacity="0.45"/><path d="M21.5 36.5 L24 40 L26.5 36.5 L24 33.5 Z" fill="#14b8a6" opacity="0.9"/><line x1="18.5" y1="9.5" x2="21" y2="12" stroke="#5eead4" stroke-width="1.3" stroke-linecap="round" opacity="0.55"/><line x1="22.5" y1="9.5" x2="25" y2="12" stroke="#5eead4" stroke-width="1.3" stroke-linecap="round" opacity="0.55"/><line x1="26.5" y1="9.5" x2="29" y2="12" stroke="#5eead4" stroke-width="1.3" stroke-linecap="round" opacity="0.55"/></svg>
+      <span class="wm-t2" style="font-size:22px"><span style="color:#111827">Mining</span><span style="color:#0d9488">Clawd</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- Full-width light application mockups -->
+<div style="max-width:1100px;margin:16px auto 0;padding:0 16px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
+
+  <!-- Business Card style -->
+  <div style="background:#ffffff;border-radius:12px;padding:32px 24px;border:1px solid #e5e7eb;display:flex;flex-direction:column;justify-content:space-between;min-height:180px">
+    <div>
+      <div style="font-size:8px;color:#9ca3af;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:20px">名片 · Business Card</div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px">
+        <svg width="28" height="28" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.8"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="28" x2="32" y2="28" stroke="#14b8a6" stroke-width="1.4" opacity="0.45"/><path d="M21.5 36.5 L24 40 L26.5 36.5 L24 33.5 Z" fill="#14b8a6" opacity="0.9"/></svg>
+        <span class="wm-t2" style="font-size:13px"><span style="color:#111827">Mining</span><span style="color:#0d9488">Clawd</span></span>
+      </div>
+      <div style="font-size:11px;color:#374151;font-weight:600">张三 · Senior Analyst</div>
+      <div style="font-size:9px;color:#9ca3af;margin-top:3px;line-height:1.6">zhang@miningclawd.com<br>+61 400 000 000</div>
+    </div>
+    <div style="border-top:1px solid #e5e7eb;padding-top:10px;margin-top:14px">
+      <div style="font-size:7px;color:#0d9488;letter-spacing:1.5px;text-transform:uppercase;font-weight:500">AI Mining Intelligence Platform</div>
+    </div>
+  </div>
+
+  <!-- Email Signature style -->
+  <div style="background:#ffffff;border-radius:12px;padding:32px 24px;border:1px solid #e5e7eb">
+    <div style="font-size:8px;color:#9ca3af;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:20px">邮件签名 · Email Signature</div>
+    <div style="font-size:11px;color:#374151;line-height:1.6;margin-bottom:14px">Best regards,<br><strong>James Chen</strong></div>
+    <div style="border-top:2px solid #14b8a6;padding-top:12px;display:flex;align-items:flex-start;gap:10px">
+      <svg width="32" height="32" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.8"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="28" x2="32" y2="28" stroke="#14b8a6" stroke-width="1.4" opacity="0.45"/><path d="M21.5 36.5 L24 40 L26.5 36.5 L24 33.5 Z" fill="#14b8a6" opacity="0.9"/></svg>
+      <div>
+        <span class="wm-t2" style="font-size:12px"><span style="color:#111827">Mining</span><span style="color:#0d9488">Clawd</span></span>
+        <div style="font-size:8px;color:#9ca3af;margin-top:2px;line-height:1.5">Head of Research<br>james@miningclawd.com</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PPT / Document Header -->
+  <div style="background:#ffffff;border-radius:12px;padding:0;border:1px solid #e5e7eb;overflow:hidden">
+    <div style="font-size:8px;color:#9ca3af;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;padding:16px 24px 0">文档页眉 · Document Header</div>
+    <div style="padding:20px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e5e7eb">
+      <div style="display:flex;align-items:center;gap:8px">
+        <svg width="24" height="24" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.8"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="28" x2="32" y2="28" stroke="#14b8a6" stroke-width="1.4" opacity="0.45"/><path d="M21.5 36.5 L24 40 L26.5 36.5 L24 33.5 Z" fill="#14b8a6" opacity="0.9"/></svg>
+        <span class="wm-t2" style="font-size:10px"><span style="color:#111827">Mining</span><span style="color:#0d9488">Clawd</span></span>
+      </div>
+      <div style="font-size:7px;color:#9ca3af;letter-spacing:0.5px">Q4 2024 Intelligence Report</div>
+    </div>
+    <div style="padding:16px 24px">
+      <div style="font-size:13px;color:#111827;font-weight:700;font-family:'Outfit',sans-serif;margin-bottom:6px">Iron Ore Market Analysis</div>
+      <div style="font-size:8px;color:#9ca3af;line-height:1.6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</div>
+    </div>
+    <div style="padding:8px 24px 12px;display:flex;gap:6px">
+      <span style="font-size:7px;padding:2px 8px;border-radius:8px;background:#f0fdfa;color:#0d9488;font-weight:600">IRON ORE</span>
+      <span style="font-size:7px;padding:2px 8px;border-radius:8px;background:#f0fdfa;color:#0d9488;font-weight:600">BHP</span>
+      <span style="font-size:7px;padding:2px 8px;border-radius:8px;background:#f0fdfa;color:#0d9488;font-weight:600">RIO</span>
+    </div>
+  </div>
+</div>
+
+<!-- Teal tinted row -->
+<div style="max-width:1100px;margin:16px auto 0;padding:0 16px;display:grid;grid-template-columns:2fr 1fr;gap:16px">
+  <!-- Teal gradient banner -->
+  <div style="background:linear-gradient(135deg,#0d9488 0%,#14b8a6 50%,#5eead4 100%);border-radius:12px;padding:40px 32px;display:flex;align-items:center;gap:16px">
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#ffffff" stroke="none"/><path d="M12 34 L12 20 L18 14" stroke="#0d9488" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#0d9488" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#0d9488" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="28" x2="32" y2="28" stroke="#0d9488" stroke-width="1.4" opacity="0.3"/><path d="M21.5 36.5 L24 40 L26.5 36.5 L24 33.5 Z" fill="#0d9488" opacity="0.7"/><line x1="18.5" y1="9.5" x2="21" y2="12" stroke="#0d9488" stroke-width="1.3" stroke-linecap="round" opacity="0.4"/><line x1="22.5" y1="9.5" x2="25" y2="12" stroke="#0d9488" stroke-width="1.3" stroke-linecap="round" opacity="0.4"/><line x1="26.5" y1="9.5" x2="29" y2="12" stroke="#0d9488" stroke-width="1.3" stroke-linecap="round" opacity="0.4"/></svg>
+    <div>
+      <span class="wm-t2" style="font-size:28px"><span style="color:#ffffff">Mining</span><span style="color:rgba(255,255,255,0.7)">Clawd</span></span>
+      <div style="font-size:8px;color:rgba(255,255,255,0.6);letter-spacing:2px;text-transform:uppercase;font-weight:500;margin-top:4px">AI Mining Intelligence Platform</div>
+    </div>
+  </div>
+
+  <!-- Monochrome / single color -->
+  <div style="background:#ffffff;border-radius:12px;padding:32px 24px;text-align:center;border:1px solid #e5e7eb">
+    <div style="font-size:8px;color:#9ca3af;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px">单色 · Monochrome</div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:12px">
+      <svg width="36" height="36" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#111827" stroke="#111827" stroke-width="1.8"/><path d="M12 34 L12 20 L18 14" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="28" x2="32" y2="28" stroke="#ffffff" stroke-width="1.4" opacity="0.3"/><path d="M21.5 36.5 L24 40 L26.5 36.5 L24 33.5 Z" fill="#ffffff" opacity="0.7"/></svg>
+      <span class="wm-t2" style="font-size:18px"><span style="color:#111827">Mining</span><span style="color:#111827">Clawd</span></span>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:10px">
+      <svg width="36" height="36" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="none" stroke="#111827" stroke-width="1.8"/><path d="M12 34 L12 20 L18 14" stroke="#111827" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#111827" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#111827" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="28" x2="32" y2="28" stroke="#111827" stroke-width="1.4" opacity="0.3"/><path d="M21.5 36.5 L24 40 L26.5 36.5 L24 33.5 Z" fill="#111827" opacity="0.7"/></svg>
+      <span class="wm-t2" style="font-size:18px"><span style="color:#6b7280">Mining</span><span style="color:#6b7280">Clawd</span></span>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1100px;margin:24px auto 0;padding:0 16px 0">
+  <div style="font-size:8px;color:#6b7280;line-height:1.7;padding:12px 16px;background:#15171c;border-radius:8px;border:1px solid rgba(255,255,255,0.05)">
+    <strong style="color:#14b8a6">反白规范：</strong>浅色背景下 "Mining" 文字色改为 <span style="color:#d1d5db;font-family:'Space Grotesk',monospace">#111827</span>，"Clawd" 改为 <span style="color:#d1d5db;font-family:'Space Grotesk',monospace">#0d9488</span>（深青绿，确保 WCAG AA 对比度）。图标深底保持不变，作为浅色场景中的视觉锚点。品牌色渐变背景中可使用白底图标反转版。单色场景提供实心/线框两种变体。
+  </div>
+</div>
+
+<div class="footer">MiningClawd AI Intelligence Systems © 2024 · Confidential · Typography Exploration</div>
+
+<script>
+// C icon SVG - standard weight
+function ic(s){return `<svg width="${s}" height="${s}" viewBox="0 0 48 48" fill="none"><defs><linearGradient id="tcI${s}" x1="24" y1="8" x2="24" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#5eead4"/><stop offset="100%" stop-color="#0d9488"/></linearGradient></defs><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2" opacity="0.95"/><path d="M12 34 L12 20 L18 14" stroke="url(#tcI${s})" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="url(#tcI${s})" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="url(#tcI${s})" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="28" x2="32" y2="28" stroke="#14b8a6" stroke-width="1" opacity="0.4"/><path d="M22 37 L24 40 L26 37 L24 34 Z" fill="#14b8a6" opacity="0.85"/><line x1="19" y1="10" x2="21" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/><line x1="23" y1="10" x2="25" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/><line x1="27" y1="10" x2="29" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/></svg>`}
+
+// C icon SVG - BOLD weight for T2 (heavier strokes to match Outfit ExtraBold)
+function icBold(s){return `<svg width="${s}" height="${s}" viewBox="0 0 48 48" fill="none"><defs><linearGradient id="tcB${s}" x1="24" y1="8" x2="24" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#5eead4"/><stop offset="100%" stop-color="#0d9488"/></linearGradient></defs><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.8" opacity="0.95"/><path d="M12 34 L12 20 L18 14" stroke="url(#tcB${s})" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="url(#tcB${s})" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="url(#tcB${s})" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="28" x2="32" y2="28" stroke="#14b8a6" stroke-width="1.4" opacity="0.45"/><path d="M21.5 36.5 L24 40 L26.5 36.5 L24 33.5 Z" fill="#14b8a6" opacity="0.9"/><line x1="18.5" y1="9.5" x2="21" y2="12" stroke="#5eead4" stroke-width="1.3" stroke-linecap="round" opacity="0.55"/><line x1="22.5" y1="9.5" x2="25" y2="12" stroke="#5eead4" stroke-width="1.3" stroke-linecap="round" opacity="0.55"/><line x1="26.5" y1="9.5" x2="29" y2="12" stroke="#5eead4" stroke-width="1.3" stroke-linecap="round" opacity="0.55"/></svg>`}
+
+const navHTML=`<div class="sidebar-nav"><div class="nav-item on">HOME</div><div class="nav-item off">MINING COMPANIES</div><div class="nav-item off">REPORTS</div><div class="nav-item off">3D DRILLING</div></div>`;
+
+const wmClasses=['wm-t1','wm-t2'];
+const keys=['T1','T2'];
+
+keys.forEach((k,i)=>{
+  const cls=wmClasses[i];
+  const iconFn = (k === 'T2') ? icBold : ic;
+  const wm=(sz)=>`<span class="${cls}" style="font-size:${sz}px"><span class="m">Mining</span><span class="cl">Clawd</span></span>`;
+  const wmTag=(sz)=>`<div>${wm(sz)}<div class="sub-tag">Mining Intelligence</div></div>`;
+
+  document.getElementById('lockH-'+k).innerHTML=iconFn(32)+wm(14);
+  document.getElementById('lockT-'+k).innerHTML=iconFn(32)+wmTag(14);
+  document.getElementById('lockS-'+k).innerHTML=iconFn(40)+wm(20);
+  document.getElementById('lockSB-'+k).innerHTML=`<div class="lockup-row" style="margin-bottom:4px">${iconFn(28)}${wm(11)}</div>${navHTML}`;
+});
+</script>
+</body>
+</html>

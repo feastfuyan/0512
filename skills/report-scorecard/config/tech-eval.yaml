@@ -1,0 +1,108 @@
+name: 技术评估报告评分
+version: "2.0.0"
+description: 技术评估/可行性分析报告专用模板，含技术可行性和方案对比维度
+
+dimensions:
+  - id: thesis_clarity
+    name: 评估结论清晰度
+    name_en: Conclusion Clarity
+    weight: 1.0
+    description: 技术评估结论是否明确？是否给出了明确的采纳/否决建议？
+    example_question: "决策者能否直接根据报告做出技术选型决策？"
+
+  - id: data_anchoring
+    name: 数据支撑度
+    name_en: Data Anchoring
+    weight: 1.2
+    description: 技术指标是否有测试数据支撑？性能基准是否客观？
+    example_question: "性能数据是否来自实际测试而非厂商宣传？"
+
+  - id: logical_rigor
+    name: 逻辑严密性
+    name_en: Logical Rigor
+    weight: 1.0
+    description: 技术评估方法论是否合理？评估标准是否一致？
+    example_question: "各技术方案是否使用了统一的评估标准？"
+
+  - id: technical_feasibility
+    name: 技术可行性分析
+    name_en: Technical Feasibility
+    weight: 1.3
+    description: 是否充分分析了技术实现的可行性？是否识别了技术难点？
+    example_question: "报告是否列出了技术实现的关键难点和解决路径？"
+
+  - id: solution_comparison
+    name: 方案对比充分性
+    name_en: Solution Comparison
+    weight: 1.1
+    description: 是否对比了多个技术方案？对比维度是否全面？
+    example_question: "技术选型是否基于至少2-3个方案的系统对比？"
+
+  - id: depth_insight
+    name: 深度与洞察
+    name_en: Depth & Insight
+    weight: 1.0
+    description: 是否提供了深入的技术分析而非表面描述？
+    example_question: "报告是否揭示了技术选型中容易被忽视的风险？"
+
+  - id: structural_integrity
+    name: 结构完整性
+    name_en: Structural Integrity
+    weight: 1.0
+    description: 报告是否按技术评估惯例组织（背景-需求-方案-对比-结论）？
+    example_question: "报告是否从需求分析自然过渡到方案评估？"
+
+  - id: performance_metrics
+    name: 性能指标完整性
+    name_en: Performance Metrics
+    weight: 1.0
+    description: 是否包含完整的性能指标（延迟/吞吐/资源消耗/扩展性）？
+    example_question: "是否覆盖了功能、性能、安全、可维护性四个维度？"
+
+  - id: security_assessment
+    name: 安全评估
+    name_en: Security Assessment
+    weight: 1.0
+    description: 是否评估了安全风险？是否考虑了合规要求？
+    example_question: "是否分析了数据安全、访问控制和审计日志需求？"
+
+  - id: citation_compliance
+    name: 引用与合规
+    name_en: Citation & Compliance
+    weight: 0.9
+    description: 技术参考来源是否标注？测试环境是否说明？
+    example_question: "引用的开源项目/技术文档是否标注了版本号？"
+
+  - id: concision
+    name: 表达精炼度
+    name_en: Concision
+    weight: 0.7
+    description: 技术描述是否准确简洁？是否避免了过度技术化的表述？
+    example_question: "非技术决策者能否理解报告的核心结论？"
+
+  - id: chart_quality
+    name: 图表质量
+    name_en: Chart Quality
+    weight: 0.8
+    description: 架构图/流程图/对比表是否清晰？技术图表是否标注了关键参数？
+    example_question: "架构图是否清晰展示了各组件间的关系？"
+
+grade_scale:
+  - min_score: 9.6
+    grade: "A+"
+    label: CTO级评估，可直接用于技术决策
+  - min_score: 9.0
+    grade: "A"
+    label: 专业水准，技术分析全面深入
+  - min_score: 8.0
+    grade: "B+"
+    label: 良好，需要适度补充技术细节
+  - min_score: 7.0
+    grade: "B"
+    label: 及格，技术对比不够全面
+  - min_score: 6.0
+    grade: "C"
+    label: 需大幅修改，技术分析存在盲区
+  - min_score: 0
+    grade: "F"
+    label: 不合格，评估方法论有缺陷

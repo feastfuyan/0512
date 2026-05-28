@@ -1,0 +1,56 @@
+# Golden Dataset · 5 known historical regimes
+# Owner: 陈夏童
+#
+# Each entry: a historical window + expected regime classification + expected outputs.
+# The eval harness replays these and asserts the system identifies the right regime.
+
+regimes:
+  - id: lithium_boom_2020
+    window: {start: "2020-09-01", end: "2021-09-30"}
+    expected_regime: Bull
+    description: |
+      Lithium supercycle ignition. PLS up ~8×, retail euphoria,
+      commodity beta dominant factor.
+    asserts:
+      - {field: regime, op: "==", value: "Bull"}
+      - {field: top10_lithium_count, op: ">=", value: 3}
+      - {field: ic_4w, op: ">=", value: 0.05}
+
+  - id: lithium_crash_2022
+    window: {start: "2022-11-01", end: "2023-06-30"}
+    expected_regime: Bear
+    description: |
+      Lithium price -60% in 8 months. PLS, MIN, LTR all hard hit.
+      Commodity beta reverses; momentum factor drives short signals.
+    asserts:
+      - {field: regime, op: "==", value: "Bear"}
+      - {field: short_alerts_count, op: ">=", value: 5}
+
+  - id: gold_rally_2020
+    window: {start: "2020-03-15", end: "2020-08-31"}
+    expected_regime: Bull
+    description: |
+      COVID safe-haven gold rally. NCM, NST, EVN +30-50%.
+    asserts:
+      - {field: regime, op: "==", value: "Bull"}
+      - {field: top10_gold_count, op: ">=", value: 3}
+
+  - id: copper_sideways_2023
+    window: {start: "2023-01-01", end: "2023-12-31"}
+    expected_regime: Neutral
+    description: |
+      BHP, RIO, FMG sideways. Low-IC environment. Tests system
+      tolerance to noise (must not over-call directionality).
+    asserts:
+      - {field: regime, op: "==", value: "Neutral"}
+      - {field: long_short_balance, op: "near", value: 0.5, tolerance: 0.15}
+
+  - id: gfc_crash_2008
+    window: {start: "2008-09-01", end: "2009-03-31"}
+    expected_regime: Crash
+    description: |
+      Global financial crisis. Mining sector -50%. Liquidity vanishes.
+      System should refuse to issue ↑多头 in this regime.
+    asserts:
+      - {field: regime, op: "==", value: "Crash"}
+      - {field: long_count, op: "==", value: 0}

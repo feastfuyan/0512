@@ -1,0 +1,166 @@
+name: score-report
+version: "3.0"
+description: |
+  报告质量评分 Harness v3.0
+  覆盖：解析 → 并行多模型评分 → 汇总 → 门禁 → 导出
+
+inputs:
+  file_path:
+    type: string
+    required: true
+    description: 报告文件路径（PDF/Word/MD/HTML）
+  template:
+    type: string
+    required: false
+    default: default
+    description: 评分模板（default/mining/legal/tech-eval）
+  models:
+    type: string
+    required: false
+    default: "deepseek-v4-pro,deepseek-v4-flash,claude-sonnet-4-6"
+    description: 逗号分隔的模型列表
+
+artifacts_dir: "./output/{{ run_id }}"
+
+nodes:
+  # ── Phase 1: 解析 ──
+  - id: parse
+    type: script
+    runtime: python
+    depends_on: []
+    timeout: 60
+    command: |
+      import sys, json
+      sys.path.insert(0, 'scripts')
+      from report_parser import parse_report
+      result = parse_report("{{ inputs.file_path }}")
+      if result["error"]:
+          print(f"ERROR: {result['error']}", file=sys.stderr)
+          sys.exit(1)
+      with open("{{ artifacts_dir }}/report.json", "w") as f:
+          json.dump(result, f, ensure_ascii=False, indent=2)
+      print(f"Parsed: {result['format']}, {result['char_count']} chars")
+
+  # ── Phase 2: 并行多模型评分（Fanout）──
+  - id: score_deepseek_pro
+    type: agent
+    model: deepseek-v4-pro
+    provider: deepseek
+    context_mode: fresh
+    depends_on: [parse]
+    timeout: 180
+    inputs:
+      report_text: report.json
+      template: "{{ inputs.template }}"
+    prompt: |
+      你是报告质量评分专家。请对以下报告进行严格评分。
+      评分模板: {{ inputs.template }}
+      请从 config/{{ inputs.template }}.yaml 加载维度定义。
+      严格按照 JSON 格式输出评分结果。
+
+      报告内容：
+      {{ report_text }}
+    outputs:
+      score_json: deepseek_pro_score.json
+
+  - id: score_deepseek_flash
+    type: agent
+    model: deepseek-v4-flash
+    provider: deepseek
+    context_mode: fresh
+    depends_on: [parse]
+    timeout: 120
+    inputs:
+      report_text: report.json
+      template: "{{ inputs.template }}"
+    prompt: |
+      你是报告质量评分专家。请对以下报告进行快速评分。
+      评分模板: {{ inputs.template }}
+      严格按照 JSON 格式输出。
+
+      报告内容：
+      {{ report_text }}
+    outputs:
+      score_json: deepseek_flash_score.json
+
+  - id: score_claude
+    type: agent
+    model: claude-sonnet-4-6
+    provider: api147
+    context_mode: fresh
+    depends_on: [parse]
+    timeout: 180
+    inputs:
+      report_text: report.json
+      template: "{{ inputs.template }}"
+    prompt: |
+      你是报告质量评分专家。请对以下报告进行严格评分。
+      评分模板: {{ inputs.template }}
+      严格按照 JSON 格式输出。
+
+      报告内容：
+      {{ report_text }}
+    outputs:
+      score_json: claude_score.json
+
+  # ── Phase 3: 汇总 + 数据源评估 ──
+  - id: synthesize
+    type: agent
+    model: deepseek-v4-pro
+    provider: deepseek
+    context_mode: fresh
+    depends_on: [score_deepseek_pro, score_deepseek_flash, score_claude]
+    timeout: 180
+    inputs:
+      ds_pro_score: deepseek_pro_score.json
+      ds_flash_score: deepseek_flash_score.json
+      claude_score: claude_score.json
+      report_text: report.json
+    prompt: |
+      你是评分汇总专家。三个模型独立评审了同一份报告，请汇总结果。
+
+      以下是三个模型的评分结果：
+
+      === DeepSeek V4 Pro ===
+      {{ ds_pro_score }}
+
+      === DeepSeek V4 Flash ===
+      {{ ds_flash_score }}
+
+      === Claude Sonnet 4.6 ===
+      {{ claude_score }}
+
+      汇总规则：
+      1. 对每个维度计算加权平均（Pro ×1.5, Flash ×0.8, Claude ×1.2）
+      2. 标注"共识问题"（至少2个模型发现的）和"单一模型问题"
+      3. 数据来源质量评估（从以下报告文本提取）：
+      {{ report_text }}
+      4. 生成优化建议（critical/high/medium）
+      5. 输出完整的 JSON 评分结果
+    outputs:
+      final_json: final_score.json
+
+  # ── Phase 4: 确定性门禁 ──
+  - id: gate_quality
+    type: script
+    runtime: bash
+    depends_on: [synthesize]
+    timeout: 10
+    command: |
+      python3 scripts/gate_checker.py "{{ artifacts_dir }}/final_score.json" > "{{ artifacts_dir }}/gate_result.json"
+      cat "{{ artifacts_dir }}/gate_result.json"
+
+  # ── Phase 5: 导出 ──
+  - id: export
+    type: script
+    runtime: python
+    depends_on: [gate_quality]
+    timeout: 30
+    command: |
+      import json, subprocess, sys
+      with open("{{ artifacts_dir }}/gate_result.json") as f:
+          gate = json.load(f)
+      print(f"Gate: {gate['status']} — {gate['message']}")
+      subprocess.run(["python3", "scripts/excel_export.py", "{{ artifacts_dir }}/final_score.json"], check=True)
+      subprocess.run(["python3", "scripts/html_export.py", "{{ artifacts_dir }}/final_score.json"], check=True)
+      print("Export complete")

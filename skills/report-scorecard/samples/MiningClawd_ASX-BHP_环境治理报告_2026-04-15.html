@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>MiningClawd Environmental Governance Report 环境治理研究报告</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+@page{size:A4;margin:0}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans SC','Inter',sans-serif;color:#1f2937;font-size:12px;line-height:1.7;background:#fff}
+.page{width:210mm;min-height:297mm;padding:0;position:relative;page-break-after:always;overflow:hidden}
+.key-points,.data-table,.risk-box,.highlight,.disclaimer,.sidebar-col,.sb-section{break-inside:avoid;page-break-inside:avoid}
+
+:root{
+  --pri:#14b8a6;--priD:#0d9488;--priL:#5eead4;
+  --char:#0f1115;--card:#181a1f;
+  --txt:#1f2937;--txtL:#6b7280;--txtLL:#9ca3af;--bdr:#e5e7eb;--bgL:#f8fafb;
+  --sBuy:#22c55e;--buy:#86efac;--hold:#94a3b8;--sell:#f87171;--sSell:#ef4444;
+
+  /* ── COMMODITY COLOR SYSTEM 大宗商品颜色规范 ──────────────────────────── */
+  /* Base Metals 基本金属 */
+  --cu:#e07b39;    --cu-bg:rgba(224,123,57,0.08);   /* Copper 铜        warm copper-orange  */
+  --al:#94a3b8;    --al-bg:rgba(148,163,184,0.08);  /* Aluminum 铝      silver-grey         */
+  --fe:#dc2626;    --fe-bg:rgba(220,38,38,0.08);    /* Iron Ore 铁矿石  rust red            */
+  --zn:#0891b2;    --zn-bg:rgba(8,145,178,0.08);    /* Zinc 锌          steel cyan-blue     */
+  --ni:#64748b;    --ni-bg:rgba(100,116,139,0.08);  /* Nickel 镍        pewter              */
+  --pb:#52525b;    --pb-bg:rgba(82,82,91,0.08);     /* Lead 铅          lead grey           */
+  /* Precious Metals 贵金属 */
+  --au:#f59e0b;    --au-bg:rgba(245,158,11,0.08);   /* Gold 黄金        bright gold         */
+  --ag:#cbd5e1;    --ag-bg:rgba(203,213,225,0.08);  /* Silver 白银      silver              */
+  --pt:#67e8f9;    --pt-bg:rgba(103,232,249,0.08);  /* Platinum 铂金    ice blue            */
+  --pd:#a78bfa;    --pd-bg:rgba(167,139,250,0.08);  /* Palladium 钯金   lavender            */
+  /* New Energy Minerals 新能源矿产 */
+  --li:#8b5cf6;    --li-bg:rgba(139,92,246,0.08);   /* Lithium 锂       violet              */
+  --co:#2563eb;    --co-bg:rgba(37,99,235,0.08);    /* Cobalt 钴        cobalt blue         */
+  --mn:#c026d3;    --mn-bg:rgba(192,38,211,0.08);   /* Manganese 锰     magenta             */
+  --ree:#10b981;   --ree-bg:rgba(16,185,129,0.08);  /* Rare Earth 稀土  emerald             */
+  /* Energy Commodities 能源 */
+  --oil:#92400e;   --oil-bg:rgba(146,64,14,0.08);   /* Crude Oil 原油   dark amber          */
+  --gas:#38bdf8;   --gas-bg:rgba(56,189,248,0.08);  /* Natural Gas 天然气sky blue           */
+  --coal:#6b7280;  --coal-bg:rgba(107,114,128,0.08);/* Coal 煤炭        slate grey          */
+  /* Agricultural 农产品 */
+  --wht:#d97706;   --wht-bg:rgba(217,119,6,0.08);   /* Wheat 小麦       amber               */
+  --corn:#84cc16;  --corn-bg:rgba(132,204,22,0.08); /* Corn 玉米        lime yellow         */
+  --soy:#22c55e;   --soy-bg:rgba(34,197,94,0.08);   /* Soybean 大豆     green               */
+}
+.wm{font-family:'Space Grotesk',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.03em}
+.mono{font-family:'Space Grotesk',monospace}
+
+/* ── Commodity dot / badge utilities 商品色点与标签 ─────────────────────── */
+.comm{display:inline-flex;align-items:center;gap:4px;font-weight:600}
+.comm::before{content:'';width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.comm-cu{color:var(--cu)}.comm-cu::before{background:var(--cu)}
+.comm-al{color:var(--al)}.comm-al::before{background:var(--al)}
+.comm-fe{color:var(--fe)}.comm-fe::before{background:var(--fe)}
+.comm-zn{color:var(--zn)}.comm-zn::before{background:var(--zn)}
+.comm-ni{color:var(--ni)}.comm-ni::before{background:var(--ni)}
+.comm-pb{color:var(--pb)}.comm-pb::before{background:var(--pb)}
+.comm-au{color:var(--au)}.comm-au::before{background:var(--au)}
+.comm-ag{color:var(--ag)}.comm-ag::before{background:var(--ag)}
+.comm-pt{color:var(--pt)}.comm-pt::before{background:var(--pt)}
+.comm-pd{color:var(--pd)}.comm-pd::before{background:var(--pd)}
+.comm-li{color:var(--li)}.comm-li::before{background:var(--li)}
+.comm-co{color:var(--co)}.comm-co::before{background:var(--co)}
+.comm-mn{color:var(--mn)}.comm-mn::before{background:var(--mn)}
+.comm-ree{color:var(--ree)}.comm-ree::before{background:var(--ree)}
+.comm-oil{color:var(--oil)}.comm-oil::before{background:var(--oil)}
+.comm-gas{color:var(--gas)}.comm-gas::before{background:var(--gas)}
+.comm-coal{color:var(--coal)}.comm-coal::before{background:var(--coal)}
+.comm-wht{color:var(--wht)}.comm-wht::before{background:var(--wht)}
+.comm-corn{color:var(--corn)}.comm-corn::before{background:var(--corn)}
+.comm-soy{color:var(--soy)}.comm-soy::before{background:var(--soy)}
+/* pill badge variant */
+.comm-pill{padding:1px 6px;border-radius:10px;font-size:9px;font-weight:700;letter-spacing:0.3px;display:inline-block}
+.pill-cu{background:var(--cu-bg);color:var(--cu);border:1px solid rgba(224,123,57,0.25)}
+.pill-al{background:var(--al-bg);color:var(--al);border:1px solid rgba(148,163,184,0.25)}
+.pill-fe{background:var(--fe-bg);color:var(--fe);border:1px solid rgba(220,38,38,0.25)}
+.pill-zn{background:var(--zn-bg);color:var(--zn);border:1px solid rgba(8,145,178,0.25)}
+.pill-ni{background:var(--ni-bg);color:var(--ni);border:1px solid rgba(100,116,139,0.25)}
+.pill-pb{background:var(--pb-bg);color:var(--pb);border:1px solid rgba(82,82,91,0.25)}
+.pill-au{background:var(--au-bg);color:var(--au);border:1px solid rgba(245,158,11,0.25)}
+.pill-ag{background:var(--ag-bg);color:var(--ag);border:1px solid rgba(203,213,225,0.25)}
+.pill-pt{background:var(--pt-bg);color:var(--pt);border:1px solid rgba(103,232,249,0.25)}
+.pill-pd{background:var(--pd-bg);color:var(--pd);border:1px solid rgba(167,139,250,0.25)}
+.pill-li{background:var(--li-bg);color:var(--li);border:1px solid rgba(139,92,246,0.25)}
+.pill-co{background:var(--co-bg);color:var(--co);border:1px solid rgba(37,99,235,0.25)}
+.pill-mn{background:var(--mn-bg);color:var(--mn);border:1px solid rgba(192,38,211,0.25)}
+.pill-ree{background:var(--ree-bg);color:var(--ree);border:1px solid rgba(16,185,129,0.25)}
+.pill-oil{background:var(--oil-bg);color:var(--oil);border:1px solid rgba(146,64,14,0.25)}
+.pill-gas{background:var(--gas-bg);color:var(--gas);border:1px solid rgba(56,189,248,0.25)}
+.pill-coal{background:var(--coal-bg);color:var(--coal);border:1px solid rgba(107,114,128,0.25)}
+.pill-wht{background:var(--wht-bg);color:var(--wht);border:1px solid rgba(217,119,6,0.25)}
+.pill-corn{background:var(--corn-bg);color:var(--corn);border:1px solid rgba(132,204,22,0.25)}
+.pill-soy{background:var(--soy-bg);color:var(--soy);border:1px solid rgba(34,197,94,0.25)}
+
+/* ========== COVER ========== */
+.cover{background:var(--char);color:#fff;display:flex;flex-direction:column;min-height:297mm;position:relative;overflow:hidden}
+/* Glow orbs */
+.glow1{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(20,184,166,0.12) 0%,rgba(20,184,166,0.03) 40%,transparent 70%);right:-120px;top:18%;pointer-events:none}
+.glow2{position:absolute;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(94,234,212,0.08) 0%,transparent 60%);left:-80px;bottom:15%;pointer-events:none}
+.glow3{position:absolute;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(20,184,166,0.15) 0%,transparent 70%);right:25%;top:35%;pointer-events:none;filter:blur(30px)}
+/* Light streak */
+.streak{position:absolute;width:600px;height:1px;background:linear-gradient(90deg,transparent,rgba(20,184,166,0.25),rgba(94,234,212,0.1),transparent);top:42%;left:-50px;transform:rotate(-8deg);pointer-events:none}
+.streak2{position:absolute;width:400px;height:1px;background:linear-gradient(90deg,transparent,rgba(20,184,166,0.15),transparent);top:55%;right:-30px;transform:rotate(5deg);pointer-events:none}
+
+.cover-header{padding:22mm 28mm 0;display:flex;justify-content:space-between;align-items:flex-start;position:relative;z-index:1}
+.cover-logo{display:flex;align-items:center;gap:10px}
+.cover-logo .tag-sub{font-size:9px;color:var(--pri);letter-spacing:1.2px;text-transform:uppercase;font-weight:500;margin-top:1px}
+.cover-type{text-align:right}
+.cover-type .label{font-size:11px;color:var(--txtLL);letter-spacing:2px;text-transform:uppercase}
+.cover-type .cat{font-size:16px;font-weight:600;color:var(--pri);margin-top:2px}
+
+.cover-body{flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 28mm;position:relative;z-index:1}
+.cover-body .eyebrow{font-size:12px;color:var(--pri);letter-spacing:3px;text-transform:uppercase;font-weight:500;margin-bottom:14px}
+.cover-body h1{font-size:38px;font-weight:700;line-height:1.35;margin-bottom:18px}
+.cover-body .subtitle{font-size:13px;color:#9ca3af;line-height:1.75;max-width:92%;margin-top:4px}
+.cover-issuer-strip{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:16px}
+.cover-geo-pill{font-size:9px;font-weight:700;letter-spacing:2px;color:var(--pri);border:1px solid rgba(20,184,166,0.45);background:rgba(20,184,166,0.14);padding:5px 12px;border-radius:4px;text-transform:uppercase}
+.cover-market-line{font-size:11px;color:#9ca3af;line-height:1.5;max-width:95%}
+.cover-company-name{font-size:34px;font-weight:700;line-height:1.2;color:#fff;margin:0 0 12px 0;max-width:95%;font-family:'Space Grotesk','Noto Sans SC',sans-serif}
+.cover-company-name .sym{color:var(--pri);font-weight:700}
+.cover-esg-headline{font-size:16px;font-weight:600;color:#e5e7eb;line-height:1.45;margin-bottom:6px;letter-spacing:0.15px}
+.cover-esg-headline-zh{font-size:22px;font-weight:500;color:#9ca3af;line-height:1.35;margin-bottom:14px}
+
+.cover-meta{padding:0 28mm 22mm;display:flex;justify-content:space-between;align-items:flex-end;position:relative;z-index:1}
+.cover-meta .date-block{border-left:3px solid var(--pri);padding-left:14px}
+.cover-meta .date-block .label{font-size:10px;color:#6b7280;letter-spacing:1.5px;text-transform:uppercase}
+.cover-meta .date-block .value{font-size:16px;color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:600;margin-top:2px}
+.cover-meta .analyst{text-align:right;font-size:11px;color:#9ca3af;line-height:1.7}
+.cover-meta .analyst strong{color:#fff;font-weight:600}
+
+.cover-footer{border-top:1px solid rgba(255,255,255,0.06);padding:12px 28mm;display:flex;justify-content:space-between;font-size:9px;color:#4b5563;position:relative;z-index:1}
+.cover-footer .conf{padding:2px 8px;border-radius:4px;background:rgba(20,184,166,0.1);border:1px solid rgba(20,184,166,0.2);color:var(--pri);font-weight:600;letter-spacing:0.5px}
+
+/* ========== CONTENT PAGES (20/80 layout) ========== */
+.content-page{display:flex;min-height:297mm}
+.sidebar-col{width:25%;background:var(--bgL);border-right:1px solid var(--bdr);padding:18mm 14px 20mm 18px;position:relative}
+.main-col{width:75%;padding:18mm 24px 20mm 24px}
+
+/* Sidebar content */
+.sb-logo{display:flex;align-items:center;gap:5px;margin-bottom:16px}
+.sb-section{margin-bottom:18px}
+.sb-title{font-size:9px;font-weight:700;color:var(--priD);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--bdr)}
+.sb-item{font-size:10px;color:var(--txtL);line-height:1.6;padding:3px 0}
+.sb-item strong{color:var(--txt);font-weight:600}
+.sb-highlight{font-size:10.5px;color:var(--priD);font-weight:600;line-height:1.6;padding:8px 10px;background:rgba(20,184,166,0.06);border-radius:6px;border-left:2px solid var(--pri);margin:8px 0}
+.sb-pagenum{position:absolute;bottom:14mm;left:18px;font-size:9px;color:var(--txtLL);font-family:'Space Grotesk',monospace}
+
+/* Main col styling */
+.page-bar{display:flex;justify-content:space-between;align-items:center;padding-bottom:8px;border-bottom:2px solid var(--pri);margin-bottom:14px}
+.page-bar .left{display:flex;align-items:center;gap:6px}
+.page-bar .right{font-size:10px;color:var(--txtL)}
+
+h2{font-size:17px;font-weight:700;color:var(--char);margin:16px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--bdr)}
+h2 .num{color:var(--pri);margin-right:5px;font-family:'Space Grotesk',sans-serif}
+h3{font-size:13.5px;font-weight:600;color:var(--char);margin:12px 0 7px;padding-left:9px;border-left:3px solid var(--pri)}
+p{font-size:11.5px;line-height:1.8;margin-bottom:7px;text-align:justify}
+.highlight{background:rgba(20,184,166,0.05);border-left:3px solid var(--pri);padding:9px 12px;margin:10px 0;border-radius:0 6px 6px 0;font-size:11px;line-height:1.7}
+
+/* Key points */
+.key-points{background:var(--bgL);border:1px solid var(--bdr);border-radius:8px;padding:14px 16px;margin:12px 0}
+.key-points .title{font-size:12px;font-weight:700;color:var(--char);margin-bottom:7px;display:flex;align-items:center;gap:5px}
+.key-points .title::before{content:'';width:14px;height:14px;border-radius:3px;background:var(--pri);display:inline-block}
+.key-points ul{list-style:none;padding:0}
+.key-points ul li{font-size:11px;line-height:1.7;padding:3px 0 3px 16px;position:relative}
+.key-points ul li::before{content:'▸';color:var(--pri);position:absolute;left:3px;font-size:11px}
+
+/* Data table */
+.data-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:10.5px}
+.data-table th{background:var(--char);color:#fff;padding:6px 8px;text-align:left;font-weight:600;font-size:9.5px;letter-spacing:0.5px;text-transform:uppercase}
+.data-table td{padding:5px 8px;border-bottom:1px solid var(--bdr)}
+.data-table tr:nth-child(even){background:var(--bgL)}
+.up{color:var(--sBuy);font-weight:600}
+.down{color:var(--sSell);font-weight:600}
+
+.ai-badge{display:inline-flex;align-items:center;gap:3px;padding:1px 7px;border-radius:8px;background:rgba(20,184,166,0.08);border:1px solid rgba(20,184,166,0.2);font-size:8px;color:var(--pri);font-weight:600;letter-spacing:0.3px}
+
+/* Risk box */
+.risk-box{background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:12px 16px;margin:12px 0}
+.risk-box .rtitle{font-size:11.5px;font-weight:700;color:#ef4444;margin-bottom:5px}
+.risk-box ul{list-style:none;padding:0}
+.risk-box ul li{font-size:10.5px;line-height:1.7;padding:2px 0 2px 14px;position:relative;color:#374151}
+.risk-box ul li::before{content:'⚠';position:absolute;left:0;font-size:8.5px}
+
+.disclaimer{font-size:9px;color:var(--txtLL);line-height:1.6;border-top:1px solid var(--bdr);padding-top:10px;margin-top:16px}
+
+.chart-img{width:100%;max-height:200px;object-fit:contain;border-radius:4px;margin:8px 0}
+.two-chart{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0;align-items:start}
+
+/* ========== BACK COVER 封底 ========== */
+.back-cover{background:var(--char);color:#fff;display:flex;flex-direction:column;min-height:297mm;position:relative;overflow:hidden;page-break-after:auto}
+.bc-top{padding:20mm 28mm 0;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
+.bc-center{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;z-index:1;padding:0 28mm;text-align:center}
+.bc-divider{width:160px;height:1px;background:linear-gradient(90deg,transparent,var(--pri),var(--priL),var(--pri),transparent);margin:18px auto}
+.bc-info{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;margin-top:28px;width:100%;max-width:500px;text-align:left}
+.bc-col-title{font-size:8px;color:var(--pri);letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid rgba(20,184,166,0.18)}
+.bc-col-body{font-size:9.5px;color:#9ca3af;line-height:1.9}
+.bc-col-body strong{color:#d1d5db;font-weight:500}
+.bc-footer{border-top:1px solid rgba(255,255,255,0.06);padding:14px 28mm 18mm;position:relative;z-index:1}
+.bc-disclaimer{font-size:7.5px;color:#4b5563;line-height:1.7;text-align:center;max-width:75%;margin:0 auto 10px}
+.bc-copyright{display:flex;justify-content:space-between;align-items:center;font-size:8px}
+</style>
+</head>
+<body>
+
+<!-- 版式与 templates/MiningClawd_MacroReport_Bilingual.html 同源（同一套 CSS 与组件类名） -->
+
+<!-- ======================== PAGE 1: COVER ======================== -->
+<div class="page cover">
+  <div class="glow1"></div>
+  <div class="glow2"></div>
+  <div class="glow3"></div>
+  <div class="streak"></div>
+  <div class="streak2"></div>
+
+  <div class="cover-header">
+    <div class="cover-logo">
+      <svg width="36" height="36" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="28" x2="32" y2="28" stroke="#14b8a6" stroke-width="1" opacity="0.4"/><path d="M22 37 L24 40 L26 37 L24 34 Z" fill="#14b8a6" opacity="0.85"/><line x1="19" y1="10" x2="21" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/><line x1="23" y1="10" x2="25" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/><line x1="27" y1="10" x2="29" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/></svg>
+      <div>
+        <span class="wm" style="font-size:16px"><span style="color:#fff">Mining</span><span style="color:#14b8a6">Clawd</span></span>
+        <div class="tag-sub">Mining Intelligence</div>
+      </div>
+    </div>
+    <div class="cover-type">
+      <div class="label">Intelligence Report</div>
+      <div class="cat">ESG — Environmental (E) · 环境治理</div>
+    </div>
+  </div>
+
+  <div class="cover-body">
+    <div class="eyebrow">— Australian ESG · Environment (E) · 澳洲环境治理 ESG —</div>
+    <div class="cover-issuer-strip">
+      <span class="cover-geo-pill">AUSTRALIA 澳大利亚</span>
+      <div class="cover-market-line">Primary listing 上市地：<strong style="color:#e5e7eb">ASX:BHP</strong> · Evidence: NGER / CER · State EPA registers · ASX</div>
+    </div>
+    
+    <div class="cover-company-name">BHP Group Limited<span class="sym"> · ASX:BHP</span></div>
+    <div class="cover-esg-headline">Environmental Governance ESG Report — BHP Group (Australia)</div>
+    <div class="cover-esg-headline-zh">澳洲 BHP 公司环境治理 ESG 专题报告</div>
+    <div class="subtitle">Environmental (E) dimension of ESG for this Australian-listed issuer: emissions, water, pollution, enforcement and governance fields.<br><span style="font-size:12.5px;color:#6b7280">环境（E）专题：基于所提供 JSON 与证据包的碳排放、水、污染、执法与治理字段梳理。</span></div>
+  </div>
+
+  <div class="cover-meta">
+    <div class="date-block">
+      <div class="label">Report Date</div>
+      <div class="value">2026.04.15</div>
+      <div style="font-size:10px;color:#6b7280;margin-top:5px;line-height:1.5">Jurisdiction 法域：Australia 澳大利亚 · Commonwealth &amp; States / Territories 联邦与州领地监管</div>
+      <div style="font-size:10px;color:#6b7280;margin-top:4px">Coverage 覆盖对象：BHP Group Limited（ASX:BHP · ABN 49004028077）</div>
+    </div>
+    <div class="analyst">
+      <strong>MiningClawd</strong><br>
+      info@lynaimining.com
+    </div>
+  </div>
+
+  <div class="cover-footer">
+    <span class="conf">CONFIDENTIAL — For Institutional Investors Only 仅供机构投资者使用</span>
+    <span>MiningClawd AI Intelligence Systems © 2026</span>
+  </div>
+</div>
+
+<!-- ======================== PAGE 2: KEY POINTS + TOC ======================== -->
+<div class="page">
+  <div style="padding:18mm 24mm 20mm;position:relative">
+    <div class="page-bar">
+      <div class="left">
+        <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.5"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span class="wm" style="font-size:11px"><span style="color:#0f1115">Mining</span><span style="color:#0d9488">Clawd</span></span>
+        <span style="font-size:9px;color:#6b7280;margin-left:6px">Environmental Governance 环境治理</span>
+      </div>
+      <div class="right">April 15, 2026</div>
+    </div>
+
+    <div class="key-points">
+      <div class="title">Key Takeaways 报告要点 <span class="ai-badge">EVIDENCE-BASED</span></div>
+      <ul>
+        <li><strong>Carbon 碳排放：</strong>NGER 最新可得年度 Scope 1 约 3,698,759 tCO₂e。<br><span style="color:#9ca3af;font-size:10px">校验状态：ok；缺失项 0 条。</span></li>
+<li><strong>Safeguard 安全阀机制：</strong>设施级记录 10 条，其中超标设施 7 个。</li>
+<li><strong>Enforcement 执法：</strong>收录执法/处罚记录 7 条。</li>
+<li><strong>Water 水资源：</strong>监测/取水类记录 18 条；NPI 污染物记录 0 条。</li>
+      </ul>
+    </div>
+
+    <h2><span class="num">Contents</span>目录 Table of Contents</h2>
+    <div style="font-size:10.5px;line-height:2.4;padding:6px 0">
+      <div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:2px 0"><span><strong style="color:var(--pri)">I.</strong>碳排放与减排合规 Carbon &amp; Safeguard</span><span class="mono">03</span></div>
+<div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:2px 0"><span><strong style="color:var(--pri)">II.</strong>水资源与污染排放 Water &amp; NPI</span><span class="mono">04</span></div>
+<div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:2px 0"><span><strong style="color:var(--pri)">III.</strong>环境执法与处罚 Enforcement</span><span class="mono">05</span></div>
+<div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:2px 0"><span><strong style="color:var(--pri)">IV.</strong>治理与外部约束 Governance</span><span class="mono">06</span></div>
+<div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:2px 0"><span><strong style="color:var(--pri)">V.</strong>ESG 综合评分卡 Scorecard</span><span class="mono">07</span></div>
+<div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:2px 0"><span><strong style="color:var(--pri)">VI.</strong>数据完整性与局限 Limitations</span><span class="mono">08</span></div>
+    </div>
+
+    <div style="background:var(--bgL);border:1px solid var(--bdr);border-radius:8px;padding:12px 16px;margin-top:14px">
+      <div style="font-size:8.5px;font-weight:700;color:var(--char);margin-bottom:7px;padding-bottom:5px;border-bottom:1px solid var(--bdr)">Primary Sources 主要数据源</div>
+      <div style="font-size:8px;color:var(--txtL);line-height:1.6">NGER/CER · DWER/BOM · NSW_EPA/DWER/QLD · ICMM · ASX</div>
+    </div>
+
+    <div style="position:absolute;bottom:14mm;left:0;right:0;text-align:center;font-size:9px;color:var(--txtLL)">Page 2 / 9</div>
+  </div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page">
+  <div class="content-page">
+    <div class="sidebar-col">
+      <div class="sb-logo">
+        <svg width="14" height="14" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="2"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span style="font-size:7px;color:var(--txtL);font-weight:600">Env Compliance 环境合规</span>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">Summary 本章摘要</div>
+        <div class="sb-highlight">最新 Scope 1 约 <strong>3,698,759</strong> tCO₂e；Safeguard 超标设施 <strong>7</strong> 个。</div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">Key Data 关键数据</div>
+        <div class="sb-item"><strong>Scope 1 (latest)</strong> 3,698,759</div><div class="sb-item"><strong>NGER rows</strong> 4</div><div class="sb-item"><strong>Safeguard facilities</strong> 10</div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">Signals 信号</div>
+        <div class="sb-item" style="color:var(--hold)">● 以政府登记数据为准</div>
+      </div>
+      <div class="sb-pagenum">Page 3 / 9</div>
+    </div>
+    <div class="main-col">
+      <div class="page-bar">
+      <div class="left">
+        <svg width="16" height="16" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.5"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span class="wm" style="font-size:8.5px"><span style="color:#0f1115">Mining</span><span style="color:#0d9488">Clawd</span></span>
+        <span style="font-size:7px;color:#6b7280;margin-left:4px">Environmental Governance 环境治理</span>
+      </div>
+      <div class="right">April 15, 2026</div>
+    </div>
+      <h2><span class="num">I.</span>碳排放与减排合规 Carbon &amp; Safeguard</h2>
+      
+    <h3>(1) NGER — Scope 1 &amp; 2</h3>
+    <table class="data-table"><thead><tr><th>Year 年</th><th>Entity 申报主体</th><th>ABN</th><th>Scope 1 (tCO₂e)</th><th>Scope 2 (tCO₂e)</th></tr></thead><tbody><tr><td>2024</td><td>BHP GROUP LIMITED</td><td class="mono">49004028077</td><td class="mono">3,698,759</td><td class="mono">1,314,290</td></tr><tr><td>2023</td><td>BHP GROUP LIMITED</td><td class="mono">49004028077</td><td class="mono">3,554,997</td><td class="mono">1,272,088</td></tr><tr><td>2022</td><td>BHP GROUP LIMITED</td><td class="mono">49004028077</td><td class="mono">2,815,191</td><td class="mono">1,131,506</td></tr><tr><td>2022</td><td>BHP ENERGY COAL AUSTRALIA PTY LTD</td><td class="mono">79057364315</td><td class="mono">503,405</td><td class="mono">79,627</td></tr></tbody></table>
+    <div class="highlight"><strong>说明：</strong>数值来自输入 JSON 中的 <code>nger_history</code>。</div>
+    <h3>(2) Safeguard — 设施级合规</h3>
+    <table class="data-table"><thead><tr><th>Facility 设施</th><th>Emissions 排放</th><th>Baseline 基线</th><th>Exceeded 超标</th><th>ACCUs</th></tr></thead><tbody><tr><td>ARC01 Mining Area C - MNG Facility_BHP IRON O</td><td class="mono">512,387</td><td class="mono">694,935</td><td class="up">No</td><td class="mono">0</td></tr><tr><td>Jimblebar Mine_BHP IRON O</td><td class="mono">310,615</td><td class="mono">302,155</td><td class="down">Yes</td><td class="mono">8,460</td></tr><tr><td>Newman Operations_BHP IRON O</td><td class="mono">316,238</td><td class="mono">304,376</td><td class="down">Yes</td><td class="mono">11,862</td></tr><tr><td>NKS01 Nickel West Kalgoorlie Facility_BHP NICKEL</td><td class="mono">105,583</td><td class="mono">123,249</td><td class="up">No</td><td class="mono">0</td></tr><tr><td>NKW01 Nickel West Kwinana Facility_BHP NICKEL</td><td class="mono">169,074</td><td class="mono">122,189</td><td class="down">Yes</td><td class="mono">62,720</td></tr><tr><td>NMK01 Nickel West Mt Keith Facility_BHP NICKEL</td><td class="mono">200,895</td><td class="mono">100,000</td><td class="down">Yes</td><td class="mono">100,895</td></tr><tr><td>ODS01 Olympic Dam – UOD Facility_BHP OLYMPI</td><td class="mono">244,321</td><td class="mono">246,875</td><td class="up">No</td><td class="mono">0</td></tr><tr><td>PRL03 Rail - IOR Facility_BHP IRON O</td><td class="mono">559,502</td><td class="mono">526,254</td><td class="down">Yes</td><td class="mono">33,248</td></tr><tr><td>YAN01 Yandi/Marillana Creek Mine - MNG F_BHP IRO</td><td class="mono">107,160</td><td class="mono">100,000</td><td class="down">Yes</td><td class="mono">7,160</td></tr><tr><td>Yarnima Power Station_BHP IRON O</td><td class="mono">347,643</td><td class="mono">328,998</td><td class="down">Yes</td><td class="mono">18,645</td></tr></tbody></table>
+  
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- PAGE 4 -->
+<div class="page">
+  <div class="content-page">
+    <div class="sidebar-col">
+      <div class="sb-logo">
+        <svg width="14" height="14" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="2"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span style="font-size:7px;color:var(--txtL);font-weight:600">Water &amp; NPI</span>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">Summary 本章摘要</div>
+        <div class="sb-highlight">本节依赖 <code>water_resources</code> 与 <code>pollution_emissions_npi</code> 字段。</div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">Counts 条数</div>
+        <div class="sb-item"><strong>Water records</strong> 18</div><div class="sb-item"><strong>NPI records</strong> 0</div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">Signals 信号</div>
+        <div class="sb-item" style="color:var(--hold)">● 无数据则不得推断</div>
+      </div>
+      <div class="sb-pagenum">Page 4 / 9</div>
+    </div>
+    <div class="main-col">
+      <div class="page-bar">
+      <div class="left">
+        <svg width="16" height="16" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.5"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span class="wm" style="font-size:8.5px"><span style="color:#0f1115">Mining</span><span style="color:#0d9488">Clawd</span></span>
+        <span style="font-size:7px;color:#6b7280;margin-left:4px">Environmental Governance 环境治理</span>
+      </div>
+      <div class="right">April 15, 2026</div>
+    </div>
+      <h2><span class="num">II.</span>水资源与污染排放 Water &amp; NPI</h2>
+      <h3>(1) Water-related records</h3><p>监测点样本数：18；NPI：0。</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- PAGE 5 -->
+<div class="page">
+  <div class="content-page">
+    <div class="sidebar-col">
+      <div class="sb-logo">
+        <svg width="14" height="14" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="2"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span style="font-size:7px;color:var(--txtL);font-weight:600">Enforcement 执法</span>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">Summary 本章摘要</div>
+        <div class="sb-highlight">共 <strong>7</strong> 条记录。</div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">Summary 摘要</div>
+        <div class="sb-item"><strong>Total rows</strong> 7</div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">Signals 信号</div>
+        <div class="sb-item" style="color:var(--hold)">● 历史案件不代表当前运营状态</div>
+      </div>
+      <div class="sb-pagenum">Page 5 / 9</div>
+    </div>
+    <div class="main-col">
+      <div class="page-bar">
+      <div class="left">
+        <svg width="16" height="16" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.5"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span class="wm" style="font-size:8.5px"><span style="color:#0f1115">Mining</span><span style="color:#0d9488">Clawd</span></span>
+        <span style="font-size:7px;color:#6b7280;margin-left:4px">Environmental Governance 环境治理</span>
+      </div>
+      <div class="right">April 15, 2026</div>
+    </div>
+      <h2><span class="num">III.</span>环境执法与处罚 Enforcement</h2>
+      <h3>(1) Violations register</h3><table class="data-table"><thead><tr><th>ID</th><th>Date 日期</th><th>Entity</th><th>Type 类型</th><th>Penalty AUD</th></tr></thead><tbody><tr><td class="mono">STAT-E-100008311</td><td>2020-06-04</td><td>BHP Coal Pty Ltd</td><td>Environmental Evaluation (Investigation Notice)</td><td class="mono">—</td></tr><tr><td class="mono">STAT1324</td><td>2018-11-23</td><td>BHP Coal Pty Ltd</td><td>Environmental Evaluation (Investigation Notice)</td><td class="mono">—</td></tr><tr><td class="mono">STAT1231</td><td>2017-10-18</td><td>BHP Billiton Mitsui Coal Pty Ltd</td><td>Environmental Protection Order (EPO)</td><td class="mono">—</td></tr><tr><td class="mono">STAT1208</td><td>2017-09-08</td><td>BHP Coal Pty Ltd</td><td>Direction Notice</td><td class="mono">—</td></tr><tr><td class="mono">50029/2001</td><td>2001-09-11</td><td>BHP STEEL (AIS) PTY LTD</td><td>Pollute waters</td><td class="mono">60,000</td></tr><tr><td class="mono">50138/98</td><td>2000-02-08</td><td>BHP STEEL (AIS) PTY LTD</td><td>Pollute waters</td><td class="mono">12,000</td></tr><tr><td class="mono">50141/98</td><td>1999-09-03</td><td>BHP STEEL (AIS) PTY LTD</td><td>Pollute waters</td><td class="mono">30,000</td></tr></tbody></table>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page">
+  <div class="content-page">
+    <div class="sidebar-col">
+      <div class="sb-logo">
+        <svg width="14" height="14" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="2"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span style="font-size:7px;color:var(--txtL);font-weight:600">Governance 治理</span>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">Summary 本章摘要</div>
+        <div class="sb-highlight">外部约束以 JSON 中可核验字段为准。</div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">Flags</div>
+        <div class="sb-item"><strong>ICMM</strong> member</div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">Signals 信号</div>
+        <div class="sb-item" style="color:var(--hold)">● 需 ASX/年报交叉验证</div>
+      </div>
+      <div class="sb-pagenum">Page 6 / 9</div>
+    </div>
+    <div class="main-col">
+      <div class="page-bar">
+      <div class="left">
+        <svg width="16" height="16" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.5"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span class="wm" style="font-size:8.5px"><span style="color:#0f1115">Mining</span><span style="color:#0d9488">Clawd</span></span>
+        <span style="font-size:7px;color:#6b7280;margin-left:4px">Environmental Governance 环境治理</span>
+      </div>
+      <div class="right">April 15, 2026</div>
+    </div>
+      <h2><span class="num">IV.</span>治理与外部约束 Governance</h2>
+      <h3>(1) ICMM / 排除名单</h3><p>ICMM：<strong>member</strong></p><p>NBIM：<strong>{&quot;excluded&quot;:null,&quot;reason&quot;:null,&quot;exclusion_date&quot;:null}</strong></p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- PAGE 7: ESG SCORECARD -->
+<div class="page">
+  <div class="content-page">
+
+    <!-- ── 侧栏 ── -->
+    <div class="sidebar-col">
+      <div class="sb-logo">
+        <svg width="16" height="16" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.5"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span style="font-size:7px;color:var(--txtL);font-weight:600">ESG Scoring 评分</span>
+      </div>
+
+      <div class="sb-section">
+        <div class="sb-title">Summary 摘要</div>
+        <div class="sb-highlight">
+          综合得分 <strong style="color:#3b82f6">64/100</strong>，
+          等级 <strong style="color:#3b82f6">B</strong>（良好 Good）。
+          适用指标 9/9。
+        </div>
+      </div>
+
+      <div class="sb-section">
+        <div class="sb-title">层级 Tier</div>
+        <div class="sb-item">
+          <span style="display:inline-block;background:#14b8a6;color:#fff;font-size:7.5px;font-weight:700;padding:1px 6px;border-radius:4px;letter-spacing:.5px">LARGE</span>
+        </div>
+        <div class="sb-item" style="font-size:8.5px;color:#6b7280;margin-top:3px">大型生产商 Large Producer</div>
+      </div>
+
+      <div class="sb-section">
+        <div class="sb-title">置信度 Confidence</div>
+        <div class="sb-item" style="color:#22c55e;font-weight:600;font-size:9px">HIGH</div>
+        <div class="sb-item" style="font-size:8px;color:#6b7280">有效指标 9/9</div>
+      </div>
+
+      <div class="sb-section">
+        <div class="sb-title">支柱得分率 Pillars</div>
+        <div class="sb-item"><strong>E</strong> 58.5%</div>
+        <div class="sb-item"><strong>G</strong> 70%</div>
+        <div class="sb-item"><strong>D</strong> 73.3%</div>
+        <div class="sb-item" style="color:#9ca3af"><strong>S</strong> 待补充</div>
+      </div>
+
+      <div class="sb-section">
+        <div class="sb-title">说明</div>
+        <div class="sb-item" style="font-size:7.5px;color:#6b7280;line-height:1.5">
+          启发式模型，非 MSCI / CDP 官方评级。分数随数据完善自动更新。
+        </div>
+      </div>
+
+      <div class="sb-pagenum">Page 7 / 9</div>
+    </div>
+
+    <!-- ── 主栏 ── -->
+    <div class="main-col">
+      <div class="page-bar">
+        <div class="left">
+          <svg width="16" height="16" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.5"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          <span class="wm" style="font-size:8.5px"><span style="color:#0f1115">Mining</span><span style="color:#0d9488">Clawd</span></span>
+          <span style="font-size:7px;color:#6b7280;margin-left:4px">Environmental Governance 环境治理</span>
+        </div>
+        <div class="right">April 15, 2026</div>
+      </div>
+
+      <h2><span class="num">V.</span>ESG 综合评分卡 Scorecard</h2>
+
+      <!-- 仪表盘 + 支柱条形图 -->
+      <div style="display:flex;gap:20px;align-items:flex-start;margin-bottom:12px">
+
+        <!-- 环形图 -->
+        <div style="flex:0 0 auto;text-align:center">
+          <svg width="140" height="140" viewBox="0 0 140 140">
+    <circle cx="70" cy="70" r="56" fill="none" stroke="#e5e7eb" stroke-width="14"/>
+    <circle cx="70" cy="70" r="56" fill="none" stroke="#3b82f6" stroke-width="14"
+      stroke-dasharray="225.89 125.97"
+      stroke-linecap="round"
+      transform="rotate(-90 70 70)"/>
+    <text x="70" y="62" text-anchor="middle" fill="#0f1115" font-size="26" font-weight="700" font-family="Space Grotesk,Inter,sans-serif">64</text>
+    <text x="70" y="79" text-anchor="middle" fill="#6b7280" font-size="10" font-family="Inter,sans-serif">/ 100</text>
+    <text x="70" y="95" text-anchor="middle" fill="#3b82f6" font-size="14" font-weight="700" font-family="Space Grotesk,sans-serif">B</text>
+  </svg>
+          <div style="font-size:8px;color:#6b7280;margin-top:4px">原始分 64.2/100</div>
+        </div>
+
+        <!-- 支柱条形图 + 说明 -->
+        <div style="flex:1;min-width:0">
+          <div style="font-size:9.5px;font-weight:700;color:#1f2937;margin-bottom:8px">支柱得分 Pillar Scores</div>
+          <div style="display:flex;align-items:center;gap:8px;margin:5px 0">
+    <div style="width:80px;font-size:9px;color:#374151;font-weight:600;white-space:nowrap">E 环境</div>
+    <div style="flex:1;height:7px;background:#e5e7eb;border-radius:4px;overflow:hidden">
+      <div style="height:7px;width:59%;background:#14b8a6;border-radius:4px"></div>
+    </div>
+    <div style="width:36px;font-size:9px;text-align:right;color:#1f2937;font-weight:600">32.2/55</div>
+  </div><div style="display:flex;align-items:center;gap:8px;margin:5px 0">
+    <div style="width:80px;font-size:9px;color:#374151;font-weight:600;white-space:nowrap">G 治理</div>
+    <div style="flex:1;height:7px;background:#e5e7eb;border-radius:4px;overflow:hidden">
+      <div style="height:7px;width:70%;background:#3b82f6;border-radius:4px"></div>
+    </div>
+    <div style="width:36px;font-size:9px;text-align:right;color:#1f2937;font-weight:600">21/30</div>
+  </div><div style="display:flex;align-items:center;gap:8px;margin:5px 0">
+    <div style="width:80px;font-size:9px;color:#374151;font-weight:600;white-space:nowrap">D 数据覆盖</div>
+    <div style="flex:1;height:7px;background:#e5e7eb;border-radius:4px;overflow:hidden">
+      <div style="height:7px;width:73%;background:#8b5cf6;border-radius:4px"></div>
+    </div>
+    <div style="width:36px;font-size:9px;text-align:right;color:#1f2937;font-weight:600">11/15</div>
+  </div><div style="display:flex;align-items:center;gap:8px;margin:5px 0;opacity:0.45">
+      <div style="width:80px;font-size:9px;color:#9ca3af;white-space:nowrap">S 社会</div>
+      <div style="flex:1;height:7px;background:#e5e7eb;border-radius:4px;border:1px dashed #d1d5db"></div>
+      <div style="width:36px;font-size:9px;text-align:right;color:#9ca3af">待补充</div>
+    </div>
+          <div style="margin-top:10px;padding:8px 10px;background:var(--bgL);border-radius:6px;border:1px solid var(--bdr)">
+            <div style="font-size:8px;font-weight:600;color:var(--txtL);margin-bottom:4px">层级规则 Tier Rules</div>
+            <div style="font-size:7.5px;color:#6b7280;line-height:1.6">
+              <span style="display:inline-block;background:#14b8a6;color:#fff;font-size:7px;font-weight:700;padding:0 5px;border-radius:3px;margin-right:3px">LARGE</span>
+              综合分为适用指标得分之和 / 适用指标满分之和 × 100。
+              N/A 维度从分母排除，不视为扣分项。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 指标明细表 -->
+      <div style="font-size:9px;font-weight:700;color:#374151;margin-bottom:5px">指标明细 Indicator Breakdown</div>
+      <table class="data-table" style="font-size:8.5px">
+        <thead>
+          <tr>
+            <th style="width:28px">ID</th>
+            <th>指标 Indicator</th>
+            <th style="text-align:right;width:52px">得分/满分</th>
+            <th style="width:64px">进度</th>
+            <th>证据锚点 Evidence Anchor</th>
+          </tr>
+        </thead>
+        <tbody><tr>
+    <td><span style="font-size:8px;font-weight:700;color:#14b8a6">E1</span></td>
+    <td style="font-size:9px;white-space:nowrap">碳排放 NGER</td>
+    <td style="text-align:right;white-space:nowrap">
+      <span style="font-weight:700;font-size:10px;color:#0f1115">17</span><span style="font-size:8px;color:#6b7280">/20</span>
+    </td>
+    <td>
+      <div style="display:flex;align-items:center;gap:4px">
+        <div style="width:40px;height:5px;background:#e5e7eb;border-radius:3px;overflow:hidden">
+          <div style="height:5px;width:85%;background:#14b8a6;border-radius:3px"></div>
+        </div>
+        <span style="font-size:8px;color:#6b7280">85%</span>
+      </div>
+    </td>
+    <td style="font-size:7.5px;color:#6b7280;word-break:break-all">E_environmental.carbon_emissions.nger_history[2024,2023,2022]</td>
+  </tr><tr>
+    <td><span style="font-size:8px;font-weight:700;color:#14b8a6">E2</span></td>
+    <td style="font-size:9px;white-space:nowrap">Safeguard合规</td>
+    <td style="text-align:right;white-space:nowrap">
+      <span style="font-weight:700;font-size:10px;color:#0f1115">10</span><span style="font-size:8px;color:#6b7280">/20</span>
+    </td>
+    <td>
+      <div style="display:flex;align-items:center;gap:4px">
+        <div style="width:40px;height:5px;background:#e5e7eb;border-radius:3px;overflow:hidden">
+          <div style="height:5px;width:50%;background:#3b82f6;border-radius:3px"></div>
+        </div>
+        <span style="font-size:8px;color:#6b7280">50%</span>
+      </div>
+    </td>
+    <td style="font-size:7.5px;color:#6b7280;word-break:break-all">E_environmental.carbon_emissions.cer_safeguard_history[10 facilities]</td>
+  </tr><tr>
+    <td><span style="font-size:8px;font-weight:700;color:#14b8a6">E3</span></td>
+    <td style="font-size:9px;white-space:nowrap">执法与处罚</td>
+    <td style="text-align:right;white-space:nowrap">
+      <span style="font-weight:700;font-size:10px;color:#0f1115">3.2</span><span style="font-size:8px;color:#6b7280">/10</span>
+    </td>
+    <td>
+      <div style="display:flex;align-items:center;gap:4px">
+        <div style="width:40px;height:5px;background:#e5e7eb;border-radius:3px;overflow:hidden">
+          <div style="height:5px;width:32%;background:#f59e0b;border-radius:3px"></div>
+        </div>
+        <span style="font-size:8px;color:#6b7280">32%</span>
+      </div>
+    </td>
+    <td style="font-size:7.5px;color:#6b7280;word-break:break-all">E_environmental.environmental_violations (total=7, penalty=102000)</td>
+  </tr><tr>
+    <td><span style="font-size:8px;font-weight:700;color:#14b8a6">E4</span></td>
+    <td style="font-size:9px;white-space:nowrap">水/NPI披露</td>
+    <td style="text-align:right;white-space:nowrap">
+      <span style="font-weight:700;font-size:10px;color:#0f1115">2</span><span style="font-size:8px;color:#6b7280">/5</span>
+    </td>
+    <td>
+      <div style="display:flex;align-items:center;gap:4px">
+        <div style="width:40px;height:5px;background:#e5e7eb;border-radius:3px;overflow:hidden">
+          <div style="height:5px;width:40%;background:#f59e0b;border-radius:3px"></div>
+        </div>
+        <span style="font-size:8px;color:#6b7280">40%</span>
+      </div>
+    </td>
+    <td style="font-size:7.5px;color:#6b7280;word-break:break-all">E_environmental.water_resources.records (n=18), npi (n=0)</td>
+  </tr><tr>
+    <td><span style="font-size:8px;font-weight:700;color:#14b8a6">G1</span></td>
+    <td style="font-size:9px;white-space:nowrap">国际准则认证</td>
+    <td style="text-align:right;white-space:nowrap">
+      <span style="font-weight:700;font-size:10px;color:#0f1115">11</span><span style="font-size:8px;color:#6b7280">/15</span>
+    </td>
+    <td>
+      <div style="display:flex;align-items:center;gap:4px">
+        <div style="width:40px;height:5px;background:#e5e7eb;border-radius:3px;overflow:hidden">
+          <div style="height:5px;width:73%;background:#3b82f6;border-radius:3px"></div>
+        </div>
+        <span style="font-size:8px;color:#6b7280">73%</span>
+      </div>
+    </td>
+    <td style="font-size:7.5px;color:#6b7280;word-break:break-all">G_governance.international_ratings.icmm_membership.status=&quot;member&quot;, gi</td>
+  </tr><tr>
+    <td><span style="font-size:8px;font-weight:700;color:#14b8a6">G2</span></td>
+    <td style="font-size:9px;white-space:nowrap">投资者排除名单</td>
+    <td style="text-align:right;white-space:nowrap">
+      <span style="font-weight:700;font-size:10px;color:#0f1115">6</span><span style="font-size:8px;color:#6b7280">/10</span>
+    </td>
+    <td>
+      <div style="display:flex;align-items:center;gap:4px">
+        <div style="width:40px;height:5px;background:#e5e7eb;border-radius:3px;overflow:hidden">
+          <div style="height:5px;width:60%;background:#3b82f6;border-radius:3px"></div>
+        </div>
+        <span style="font-size:8px;color:#6b7280">60%</span>
+      </div>
+    </td>
+    <td style="font-size:7.5px;color:#6b7280;word-break:break-all">G_governance.investor_exclusions.nbim_norway.excluded=null, calpers.ex</td>
+  </tr><tr>
+    <td><span style="font-size:8px;font-weight:700;color:#14b8a6">G3</span></td>
+    <td style="font-size:9px;white-space:nowrap">披露透明度</td>
+    <td style="text-align:right;white-space:nowrap">
+      <span style="font-weight:700;font-size:10px;color:#0f1115">4</span><span style="font-size:8px;color:#6b7280">/5</span>
+    </td>
+    <td>
+      <div style="display:flex;align-items:center;gap:4px">
+        <div style="width:40px;height:5px;background:#e5e7eb;border-radius:3px;overflow:hidden">
+          <div style="height:5px;width:80%;background:#14b8a6;border-radius:3px"></div>
+        </div>
+        <span style="font-size:8px;color:#6b7280">80%</span>
+      </div>
+    </td>
+    <td style="font-size:7.5px;color:#6b7280;word-break:break-all">data_quality.verified_fields (n=8), pending_fields (n=2), removed_fiel</td>
+  </tr><tr>
+    <td><span style="font-size:8px;font-weight:700;color:#14b8a6">D1</span></td>
+    <td style="font-size:9px;white-space:nowrap">字段核验率</td>
+    <td style="text-align:right;white-space:nowrap">
+      <span style="font-weight:700;font-size:10px;color:#0f1115">8</span><span style="font-size:8px;color:#6b7280">/10</span>
+    </td>
+    <td>
+      <div style="display:flex;align-items:center;gap:4px">
+        <div style="width:40px;height:5px;background:#e5e7eb;border-radius:3px;overflow:hidden">
+          <div style="height:5px;width:80%;background:#14b8a6;border-radius:3px"></div>
+        </div>
+        <span style="font-size:8px;color:#6b7280">80%</span>
+      </div>
+    </td>
+    <td style="font-size:7.5px;color:#6b7280;word-break:break-all">data_quality.verified_fields (n=8), pending_fields (n=2)</td>
+  </tr><tr>
+    <td><span style="font-size:8px;font-weight:700;color:#14b8a6">D2</span></td>
+    <td style="font-size:9px;white-space:nowrap">时间覆盖深度</td>
+    <td style="text-align:right;white-space:nowrap">
+      <span style="font-weight:700;font-size:10px;color:#0f1115">3</span><span style="font-size:8px;color:#6b7280">/5</span>
+    </td>
+    <td>
+      <div style="display:flex;align-items:center;gap:4px">
+        <div style="width:40px;height:5px;background:#e5e7eb;border-radius:3px;overflow:hidden">
+          <div style="height:5px;width:60%;background:#3b82f6;border-radius:3px"></div>
+        </div>
+        <span style="font-size:8px;color:#6b7280">60%</span>
+      </div>
+    </td>
+    <td style="font-size:7.5px;color:#6b7280;word-break:break-all">E_environmental.carbon_emissions.nger_history[years: 2022,2023,2024]</td>
+  </tr></tbody>
+      </table>
+
+      <!-- S 维度说明 -->
+      <div style="margin-top:8px;padding:6px 10px;background:var(--bgL);border:1px dashed var(--bdr);border-radius:5px;font-size:8px;color:#6b7280">
+        <span style="color:var(--priD);font-weight:600">S（社会）维度</span>待补充 — 需 NNTT 原住民协议 / 安全事故记录激活；
+        <span style="color:var(--txtL)">native_title_agreement_status</span> 已记录于 geo_expert 字段，可作为首批 S 字段。
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- ======================== PAGE: LIMITATIONS ======================== -->
+<div class="page">
+  <div style="padding:18mm 24mm 20mm;position:relative">
+    <div class="page-bar">
+      <div class="left">
+        <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.5"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span class="wm" style="font-size:11px"><span style="color:#0f1115">Mining</span><span style="color:#0d9488">Clawd</span></span>
+        <span style="font-size:9px;color:#6b7280;margin-left:6px">Data Quality 数据质量</span>
+      </div>
+      <div class="right">April 15, 2026</div>
+    </div>
+    <h2><span class="num">VI.</span>数据完整性与局限 Data Completeness &amp; Limitations</h2>
+    <div class="risk-box">
+      <div class="rtitle">校验摘要 Validation summary</div>
+      <ul>
+        <li>未发现脚本层面的文件缺失。</li>
+      </ul>
+    </div>
+    <p>缺失与不一致项应以 <code>_completeness_checklist.json</code> 为准。当前校验：ok。</p>
+    <div class="disclaimer">本 HTML 由 build-report.cjs 根据输入 JSON 渲染；导出 PDF 时请使用 scripts/build-pdf.cjs（Playwright）。</div>
+    <div style="position:absolute;bottom:14mm;left:0;right:0;text-align:center;font-size:9px;color:var(--txtLL)">Page 8 / 9</div>
+  </div>
+</div>
+
+
+
+
+<!-- ======================== BACK COVER 封底 ======================== -->
+<div class="page back-cover">
+  <!-- 光效与光晕——与封面镜像对称，位置错开以示区别 -->
+  <div class="glow1" style="top:55%;opacity:0.6"></div>
+  <div class="glow2" style="bottom:auto;top:8%;opacity:0.6"></div>
+  <div class="glow3" style="right:auto;left:18%;top:42%;opacity:0.45"></div>
+  <div class="streak" style="top:36%"></div>
+  <div class="streak2" style="top:63%"></div>
+
+  <!-- 顶部标识行 -->
+  <div class="bc-top">
+    <div style="font-size:8px;color:#374151;letter-spacing:2px;text-transform:uppercase;font-weight:500">End of Report · 报告完结</div>
+    <div style="font-size:8px;color:#374151">MiningClawd Intelligence Systems</div>
+  </div>
+
+  <!-- 中央主体 -->
+  <div class="bc-center">
+    <!-- Logo -->
+    <svg width="60" height="60" viewBox="0 0 48 48" fill="none">
+      <rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2"/>
+      <path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <line x1="16" y1="28" x2="32" y2="28" stroke="#14b8a6" stroke-width="1" opacity="0.4"/>
+      <path d="M22 37 L24 40 L26 37 L24 34 Z" fill="#14b8a6" opacity="0.85"/>
+      <line x1="19" y1="10" x2="21" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+      <line x1="23" y1="10" x2="25" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+      <line x1="27" y1="10" x2="29" y2="12" stroke="#5eead4" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+    </svg>
+
+    <div style="margin-top:18px">
+      <span class="wm" style="font-size:30px"><span style="color:#fff">Mining</span><span style="color:#14b8a6">Clawd</span></span>
+    </div>
+    <div style="font-size:10px;color:var(--pri);letter-spacing:3.5px;text-transform:uppercase;font-weight:500;margin-top:7px">Mining Intelligence · AI-Powered</div>
+
+    <!-- 品牌分隔线 -->
+    <div class="bc-divider"></div>
+
+    <!-- 三栏信息 -->
+    <div class="bc-info">
+      <div>
+        <div class="bc-col-title">About</div>
+        <div class="bc-col-body">MiningClawd 面向机构投资者提供矿业与资源类公司的环境合规与证据链研究，强调可核验的政府与交易所披露来源。</div>
+      </div>
+      <div>
+        <div class="bc-col-title">Coverage</div>
+        <div class="bc-col-body">
+          <strong>碳与合规</strong> Carbon &amp; Safeguard<br>
+          <strong>水资源</strong> Water &amp; NPI<br>
+          <strong>执法处罚</strong> Enforcement<br>
+          <strong>治理</strong> Governance &amp; Engagement
+        </div>
+      </div>
+      <div>
+        <div class="bc-col-title">Contact</div>
+        <div class="bc-col-body">
+          <strong>Email</strong><br>info@lynaimining.com<br><br>
+          <strong>Platform</strong><br>MiningClawd AI
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 底部版权与免责 -->
+  <div class="bc-footer">
+    <div class="bc-disclaimer">本报告由 MiningClawd AI Intelligence Systems 自动生成，内容仅供机构投资者参考，不构成投资建议或要约。市场有风险，投资需谨慎。所有数据来源均已在报告各章节内标注。This report is generated by MiningClawd AI and is intended for institutional investors only. It does not constitute investment advice or an offer to buy or sell any securities.</div>
+    <div class="bc-copyright">
+      <span style="color:#374151">CONFIDENTIAL — For Institutional Investors Only</span>
+      <span style="color:var(--pri);font-weight:600">MiningClawd AI Intelligence Systems © 2026</span>
+      <span style="color:#374151">All Rights Reserved</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

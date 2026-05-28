@@ -1,0 +1,65 @@
+# Golden Dataset · 30 hand-picked ASX mining tickers
+# Owner: 陈夏童 (to be finalised in W1; this file is the placeholder)
+#
+# Selection logic: 5 categories × 6 standouts = 30 stocks that together
+# exercise every regime / liquidity / commodity / valuation extreme we care about.
+#
+# When adding/removing a ticker, also add a one-sentence "why" — that's what
+# makes this a golden dataset and not just a list.
+
+categories:
+  - name: large_cap_gold
+    rationale: Mature gold miners with high commodity beta — IC anchor for Bull regime.
+    tickers:
+      - {ticker: "ASX:NCM", why: "largest pure-gold by market cap; clearest beta to AUD gold"}
+      - {ticker: "ASX:NST", why: "operational leverage; reacts to AISC commentary"}
+      - {ticker: "ASX:EVN", why: "well-covered, mid-tier benchmark"}
+      - {ticker: "ASX:GMD", why: "newer entrant; tests momentum factor in early lifecycle"}
+      - {ticker: "ASX:RRL", why: "dividend payer; valuation factor visible"}
+
+  - name: large_cap_diversified
+    rationale: BHP / RIO / FMG dominate the index; their factor reactions calibrate large-cap behaviour.
+    tickers:
+      - {ticker: "ASX:BHP", why: "index heavyweight; iron ore + copper exposure"}
+      - {ticker: "ASX:RIO", why: "iron ore concentration; sensitive to China steel demand"}
+      - {ticker: "ASX:FMG", why: "iron ore pure-play; biggest commodity beta in the index"}
+      - {ticker: "ASX:S32", why: "diversified spin-off; tests valuation factor"}
+      - {ticker: "ASX:OZL", why: "(when present) copper-gold; pre-takeover behaviour benchmark"}
+
+  - name: lithium_full_cycle
+    rationale: Includes 2020 boom and 2022 crash — best regime-transition test set.
+    tickers:
+      - {ticker: "ASX:PLS", why: "main lithium pure-play; survived crash, key cycle witness"}
+      - {ticker: "ASX:MIN", why: "diversified Min Res; tests beta vs idiosyncratic split"}
+      - {ticker: "ASX:LTR", why: "DSO/spodumene transition; structural change inside cycle"}
+      - {ticker: "ASX:AKE", why: "ALB takeover; corporate-action calibration"}
+      - {ticker: "ASX:IGO", why: "nickel + lithium hybrid; cross-commodity attribution"}
+
+  - name: small_cap_explorer
+    rationale: High vol + thin liquidity — exercises liquidity gate + risk-alert.
+    tickers:
+      - {ticker: "ASX:WGX", why: "gold mid-tier; volatility regime tests"}
+      - {ticker: "ASX:RMS", why: "underground gold; cost-curve narrative"}
+      - {ticker: "ASX:RED", why: "junior gold; liquidity gate stress test"}
+      - {ticker: "ASX:BGL", why: "high-grade gold dev; valuation discovery"}
+      - {ticker: "ASX:DEG", why: "pre-production; momentum without earnings"}
+
+  - name: delisted_or_problem
+    rationale: Edge cases — system must NOT crash on these; SLA tests.
+    tickers:
+      - {ticker: "ASX:XXX", why: "[placeholder for delisted entity — replace with real recent delisting]"}
+      - {ticker: "ASX:YYY", why: "[placeholder for ASIC-action stock]"}
+      - {ticker: "ASX:ZZZ", why: "[placeholder for prolonged trading halt]"}
+      - {ticker: "ASX:WWW", why: "[placeholder for capital structure change]"}
+      - {ticker: "ASX:VVV", why: "[placeholder — 陈夏童 to nominate W1]"}
+
+  - name: emerging_themes
+    rationale: Vanadium, rare earths, uranium — tests regime sensitivity to new narratives.
+    tickers:
+      - {ticker: "ASX:VR1", why: "vanadium; new-theme attribution test"}
+      - {ticker: "ASX:ASM", why: "rare earth strategic metals"}
+      - {ticker: "ASX:LYC", why: "rare earth mature; benchmark for ASM"}
+      - {ticker: "ASX:ILU", why: "mineral sands; commodity-mix attribution"}
+      - {ticker: "ASX:MEI", why: "uranium; new-cycle entrant"}
+
+# Last reviewed: 2026-05-25 (placeholder; 陈夏童 to sign off in W1)

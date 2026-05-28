@@ -1,0 +1,48 @@
+groups:
+  - name: stockstudy.budget
+    rules:
+      - alert: DailyBudgetHigh
+        expr: sum(increase(stockstudy_llm_cost_usd_total[1d])) > 3
+        for: 5m
+        labels: {severity: warning}
+        annotations:
+          summary: "Daily LLM spend > $3"
+
+      - alert: DailyBudgetCritical
+        expr: sum(increase(stockstudy_llm_cost_usd_total[1d])) > 5
+        for: 1m
+        labels: {severity: critical}
+        annotations:
+          summary: "Daily LLM spend > $5 — auto-degrade should already be active"
+
+  - name: stockstudy.safety
+    rules:
+      - alert: AnyCriticalSafetyBlock
+        expr: increase(stockstudy_safety_blocks_total{severity="critical"}[5m]) > 0
+        for: 0s
+        labels: {severity: critical}
+        annotations:
+          summary: "Critical safety block fired — investigate IP-3 playbook immediately"
+
+      - alert: ComplianceBlockSpike
+        expr: increase(stockstudy_compliance_blocks_total[5m]) > 3
+        for: 5m
+        labels: {severity: warning}
+        annotations:
+          summary: "3+ compliance blocks in 5 min"
+
+  - name: stockstudy.quality
+    rules:
+      - alert: ICRollingLow
+        expr: stockstudy_ic_rolling_4w < 0.03
+        for: 1h
+        labels: {severity: warning}
+        annotations:
+          summary: "Rolling 4-week IC < 0.03 — quality regression"
+
+      - alert: BrierRollingHigh
+        expr: stockstudy_brier_rolling_4w > 0.24
+        for: 1h
+        labels: {severity: warning}
+        annotations:
+          summary: "Rolling 4-week Brier > 0.24 — calibrator drift"

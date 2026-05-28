@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MiningClawd — Partner Brief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:     #0b1520;
+  --bg2:    #111e2e;
+  --bg3:    #162030;
+  --border: #1e3048;
+  --teal:   #14b8a6;
+  --teal-f: rgba(20,184,166,.08);
+  --teal-b: rgba(20,184,166,.18);
+  --gold:   #f59e0b;
+  --white:  #eef5ff;
+  --muted:  #7a9ab5;
+  --soft:   #3d5a74;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(20,184,166,.5); }
+  50%       { box-shadow: 0 0 0 8px rgba(20,184,166,0); }
+}
+@keyframes shimmer {
+  from { background-position: -200% center; }
+  to   { background-position: 200% center; }
+}
+@keyframes grid-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.fade-up { animation: fadeUp .7s ease both; }
+.fade-up-1 { animation-delay: .1s; }
+.fade-up-2 { animation-delay: .2s; }
+.fade-up-3 { animation-delay: .3s; }
+.fade-up-4 { animation-delay: .45s; }
+.fade-up-5 { animation-delay: .6s; }
+
+/* ── GRID TEXTURE ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: .18;
+  pointer-events: none;
+  z-index: 0;
+  animation: grid-fade 1.2s ease both;
+}
+
+/* ── GLOW ORBS ── */
+.orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+.orb-1 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(20,184,166,.12), transparent 70%);
+  top: -100px; right: -100px;
+}
+.orb-2 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(245,158,11,.07), transparent 70%);
+  bottom: 100px; left: -100px;
+}
+
+/* ── WRAPPER ── */
+.page {
+  position: relative;
+  z-index: 1;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 32px 64px;
+}
+
+/* ══ TOPBAR ══ */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0 20px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 56px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: .07em;
+  color: var(--white);
+  text-decoration: none;
+}
+.brand-dot {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--teal);
+  animation: pulse-dot 2.5s ease infinite;
+}
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.tag-pill {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+.conf-pill {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--teal);
+  background: var(--teal-f);
+  border: 1px solid var(--teal-b);
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* ══ HERO ══ */
+.hero { margin-bottom: 48px; }
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--teal-f);
+  border: 1px solid var(--teal-b);
+  border-radius: 4px;
+  padding: 5px 14px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 20px;
+}
+.hero-badge::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+}
+
+.hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(36px, 5.5vw, 60px);
+  line-height: 1.05;
+  letter-spacing: -.02em;
+  color: var(--white);
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, var(--white) 40%, var(--teal) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+.hero-sub {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 560px;
+  line-height: 1.65;
+}
+.hero-sub strong { color: var(--white); font-weight: 500; }
+
+/* ══ STAT STRIP ══ */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 56px;
+  background: var(--bg2);
+}
+.stat-item {
+  padding: 20px 24px;
+  border-right: 1px solid var(--border);
+  transition: background .2s;
+}
+.stat-item:last-child { border-right: none; }
+.stat-item:hover { background: var(--bg3); }
+.stat-num {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  color: var(--teal);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.stat-label {
+  font-size: 11px;
+  color: var(--soft);
+  font-weight: 500;
+  letter-spacing: .03em;
+}
+
+/* ══ BODY GRID ══ */
+.body-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+.col {
+  background: var(--bg2);
+  padding: 36px 32px;
+}
+.col:first-child { border-radius: 10px 0 0 10px; }
+.col:last-child  { border-radius: 0 10px 10px 0; }
+
+.section-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.body-text {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 28px;
+}
+
+/* offer items */
+.offer-list { display: flex; flex-direction: column; gap: 18px; }
+.offer-item { display: flex; gap: 14px; align-items: flex-start; }
+.offer-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+.offer-title {
+  font-weight: 600;
+  font-size: 13.5px;
+  color: var(--white);
+  margin-bottom: 3px;
+}
+.offer-desc {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* why items */
+.why-list { display: flex; flex-direction: column; gap: 18px; margin-bottom: 28px; }
+.why-item { padding: 14px 16px; background: var(--bg3); border-radius: 6px; border-left: 2px solid var(--teal); }
+.why-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--white);
+  margin-bottom: 5px;
+}
+.why-desc { font-size: 12px; color: var(--muted); line-height: 1.65; }
+
+/* categories */
+.cat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+.cat-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  color: var(--muted);
+  padding: 6px 10px;
+  border-radius: 4px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  transition: all .18s;
+}
+.cat-item:hover { border-color: var(--teal); color: var(--white); }
+.cat-item::before {
+  content: '';
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0;
+}
+
+/* profile box */
+.profile-box {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px 18px;
+}
+.profile-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 12.5px;
+  color: var(--muted);
+  padding: 5px 0;
+}
+.profile-check {
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ══ TIERS ══ */
+.tiers-wrap {
+  margin-bottom: 48px;
+}
+.tiers-label {
+  text-align: center;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 16px;
+}
+.tiers {
+  display: grid;
+  grid-template-columns: 1fr 1.12fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.tier {
+  background: var(--bg2);
+  padding: 28px 24px;
+  transition: background .2s;
+}
+.tier:hover { background: var(--bg3); }
+.tier.featured {
+  background: linear-gradient(160deg, #0f2a3a 0%, #0d2233 100%);
+  border-left: 1px solid var(--teal);
+  border-right: 1px solid var(--teal);
+  position: relative;
+}
+.tier.featured::before {
+  content: 'MOST POPULAR';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  background: var(--teal);
+  color: #000;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  padding: 3px 12px;
+  border-radius: 0 0 6px 6px;
+}
+.tier-level {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.tier-name {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--white);
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.tier.featured .tier-name { color: var(--teal); }
+.tier-features { display: flex; flex-direction: column; gap: 9px; }
+.tier-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.tier-feature-dot {
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+.tier.featured .tier-feature { color: #9ecfca; }
+
+/* ══ CTA ══ */
+.cta-band {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 48px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-band::before {
+  content: '';
+  position: absolute;
+  top: -60px; left: 50%;
+  transform: translateX(-50%);
+  width: 400px; height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(20,184,166,.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.cta-band h2 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(20px, 3vw, 30px);
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.cta-band p {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 28px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact-pills {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.contact-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: all .2s;
+}
+.contact-pill:hover { border-color: var(--teal); color: var(--white); }
+.contact-pill-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+.cta-note {
+  font-size: 11.5px;
+  color: var(--soft);
+}
+
+/* ── FOOTER ── */
+.footer {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--soft);
+}
+.footer-brand { display: flex; align-items: center; gap: 8px; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 12px; color: var(--muted); letter-spacing: .07em; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 760px) {
+  .stats { grid-template-columns: 1fr 1fr; }
+  .stat-item:nth-child(2) { border-right: none; }
+  .body-grid { grid-template-columns: 1fr; }
+  .tiers { grid-template-columns: 1fr; }
+  .tier.featured::before { display: none; }
+  .footer { flex-direction: column; gap: 8px; text-align: center; }
+  .page { padding: 0 20px 48px; }
+}
+</style>
+</head>
+<body>
+
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<div class="page">
+
+  <!-- TOPBAR -->
+  <nav class="topbar fade-up">
+    <a href="#" class="brand">
+      <span class="brand-dot"></span>
+      MININGCLAWD
+    </a>
+    <div class="topbar-right">
+      <span class="tag-pill">Sydney &amp; Perth Brokers</span>
+      <span class="conf-pill">Confidential</span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge fade-up fade-up-1">Partnership Opportunity</div>
+    <h1 class="fade-up fade-up-2">Intelligence That<br>Moves Markets.</h1>
+    <p class="hero-sub fade-up fade-up-3">
+      We're inviting <strong>Sydney &amp; Perth's leading boutique brokers</strong> to co-publish
+      premium mining intelligence — and reach the investors who act on it.
+      Zero analyst overhead. Your brand. Our engine.
+    </p>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats fade-up fade-up-3">
+    <div class="stat-item">
+      <div class="stat-num">700+</div>
+      <div class="stat-label">ASX / NYSE / TSX / LSE Companies</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">14</div>
+      <div class="stat-label">Intelligence Report Categories</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">350TB+</div>
+      <div class="stat-label">Proprietary Geological Data</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">4</div>
+      <div class="stat-label">AI Agents — 24 / 7 Active</div>
+    </div>
+  </div>
+
+  <!-- BODY GRID -->
+  <div class="body-grid fade-up fade-up-4">
+
+    <!-- LEFT -->
+    <div class="col">
+      <div class="section-label">About the Platform</div>
+      <p class="body-text">
+        MiningClawd is Australia's first AI-native mining intelligence platform,
+        purpose-built for institutional-grade research on the global resources sector.
+        We combine 350TB of proprietary geological data, multi-modal AI models, and
+        real-time market feeds to deliver research that is deeper, faster, and more
+        actionable than anything a traditional analyst team can produce.
+      </p>
+
+      <div class="section-label">What We Are Offering</div>
+      <div class="offer-list">
+        <div class="offer-item">
+          <div class="offer-dot"></div>
+          <div>
+            <div class="offer-title">Co-Branded Research Distribution</div>
+            <div class="offer-desc">White-label our premium sector reports — ESG, commodity cycles, M&amp;A watch, drill result analysis — under your firm's brand, delivered to your client list.</div>
+          </div>
+        </div>
+        <div class="offer-item">
+          <div class="offer-dot"></div>
+          <div>
+            <div class="offer-title">Exclusive Deal Flow Intelligence</div>
+            <div class="offer-desc">Your clients get early access to AI-ranked project pipelines across ASX-listed juniors, before broader market coverage.</div>
+          </div>
+        </div>
+        <div class="offer-item">
+          <div class="offer-dot"></div>
+          <div>
+            <div class="offer-title">Branded AI Agent Access</div>
+            <div class="offer-desc">Offer your HNW clients a co-branded instance of our mining intelligence assistant — positioning your firm at the frontier of research technology.</div>
+          </div>
+        </div>
+        <div class="offer-item">
+          <div class="offer-dot"></div>
+          <div>
+            <div class="offer-title">Joint Event &amp; Webinar Series</div>
+            <div class="offer-desc">Quarterly co-hosted market briefings combining your broker relationships with our data depth — a new touchpoint with resources investors.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="col">
+      <div class="section-label">Why Partner With Us</div>
+      <div class="why-list">
+        <div class="why-item">
+          <div class="why-title">We see what's beneath.</div>
+          <div class="why-desc">Our AI predicts mineralisation targets before the drill bit confirms them. Malcolm Gold Mine: AI-predicted location → visible gold confirmed. Your clients get research backed by physical proof, not opinion.</div>
+        </div>
+        <div class="why-item">
+          <div class="why-title">Zero analyst overhead.</div>
+          <div class="why-desc">Our platform produces institutional-grade sector coverage automatically. No junior analyst cost, no turnaround time — reports ready when the market moves.</div>
+        </div>
+        <div class="why-item">
+          <div class="why-title">Your brand, our engine.</div>
+          <div class="why-desc">All co-published content carries your firm's branding. We operate as the invisible intelligence layer behind your client-facing research.</div>
+        </div>
+      </div>
+
+      <div class="section-label">Report Categories Available</div>
+      <div class="cat-grid">
+        <div class="cat-item">Macro &amp; Geopolitical Risk</div>
+        <div class="cat-item">Drill Result Analysis</div>
+        <div class="cat-item">ESG &amp; Sustainability Rating</div>
+        <div class="cat-item">Regulatory &amp; Compliance</div>
+        <div class="cat-item">Commodity Price Outlook</div>
+        <div class="cat-item">Junior Explorer Pipeline</div>
+        <div class="cat-item">M&amp;A &amp; Corporate Activity</div>
+        <div class="cat-item">Critical Minerals Strategy</div>
+      </div>
+
+      <div class="section-label">Ideal Partner Profile</div>
+      <div class="profile-box">
+        <div class="profile-item"><span class="profile-check">✓</span> Boutique broker or corporate advisory, Sydney or Perth</div>
+        <div class="profile-item"><span class="profile-check">✓</span> Active ASX resources client base (50+ HNW / wholesale)</div>
+        <div class="profile-item"><span class="profile-check">✓</span> Existing research publication or client newsletter</div>
+        <div class="profile-item"><span class="profile-check">✓</span> Interest in differentiated, tech-enabled market content</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- TIERS -->
+  <div class="tiers-wrap fade-up fade-up-5">
+    <div class="tiers-label">Partnership Tiers</div>
+    <div class="tiers">
+      <div class="tier">
+        <div class="tier-level" style="color:var(--soft)">Gold</div>
+        <div class="tier-name">Research Affiliate</div>
+        <div class="tier-features">
+          <div class="tier-feature"><div class="tier-feature-dot"></div>Co-brand up to 4 reports / month</div>
+          <div class="tier-feature"><div class="tier-feature-dot"></div>Your logo on all distributed content</div>
+          <div class="tier-feature"><div class="tier-feature-dot"></div>Client newsletter integration</div>
+          <div class="tier-feature"><div class="tier-feature-dot"></div>Monthly performance dashboard</div>
+        </div>
+      </div>
+      <div class="tier featured">
+        <div class="tier-level" style="color:var(--teal)">Platinum</div>
+        <div class="tier-name">Intelligence Partner</div>
+        <div class="tier-features">
+          <div class="tier-feature"><div class="tier-feature-dot"></div>Unlimited co-branded reports</div>
+          <div class="tier-feature"><div class="tier-feature-dot"></div>Branded AI agent for your clients</div>
+          <div class="tier-feature"><div class="tier-feature-dot"></div>Co-hosted quarterly webinar</div>
+          <div class="tier-feature"><div class="tier-feature-dot"></div>Priority deal flow alerts</div>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-level" style="color:var(--gold)">Diamond</div>
+        <div class="tier-name">Strategic Alliance</div>
+        <div class="tier-features">
+          <div class="tier-feature"><div class="tier-feature-dot"></div>Exclusive category rights (1 sector)</div>
+          <div class="tier-feature"><div class="tier-feature-dot"></div>Custom research briefs on demand</div>
+          <div class="tier-feature"><div class="tier-feature-dot"></div>Joint BD pipeline + deal flow access</div>
+          <div class="tier-feature"><div class="tier-feature-dot"></div>Dedicated relationship manager</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-band fade-up fade-up-5">
+    <h2>Ready to co-publish the region's most intelligent mining research?</h2>
+    <p>We work with a limited number of broker partners per market.<br>Sydney and Perth allocations are open now.</p>
+    <div class="contact-pills">
+      <a href="mailto:info@lynaimining.com" class="contact-pill">
+        <span class="contact-pill-label">Email</span>
+        info@lynaimining.com
+      </a>
+      <a href="https://lynaimining.com" class="contact-pill">
+        <span class="contact-pill-label">Web</span>
+        lynaimining.com
+      </a>
+      <div class="contact-pill">
+        <span class="contact-pill-label">Offices</span>
+        Melbourne · Sydney · Perth
+      </div>
+    </div>
+    <div class="cta-note">This document is confidential and intended solely for the named recipient.</div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-brand"><span class="brand-dot" style="animation:none"></span>MININGCLAWD</div>
+    <div>© 2026 Geovision AI Mining Pty Ltd. ABN 00 000 000 000</div>
+    <div>Partner Brief — March 2026</div>
+  </footer>
+
+</div>
+</body>
+</html>

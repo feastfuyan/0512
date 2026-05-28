@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>MiningClawd 澳洲矿业情绪面周报 · Week 14 / 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+@page{size:A4;margin:0}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans SC','Inter',sans-serif;color:#1f2937;font-size:12px;line-height:1.7;background:#fff}
+.page{width:210mm;min-height:297mm;padding:0;position:relative;page-break-after:always;overflow:hidden}
+
+:root{
+  --pri:#14b8a6;--priD:#0d9488;--priL:#5eead4;
+  --char:#0f1115;--card:#181a1f;
+  --txt:#1f2937;--txtL:#6b7280;--txtLL:#9ca3af;--bdr:#e5e7eb;--bgL:#f8fafb;
+  --sBuy:#22c55e;--buy:#86efac;--hold:#94a3b8;--sell:#f87171;--sSell:#ef4444;
+  --fear:#ef4444;--greed:#22c55e;--neutral:#f59e0b;
+  --fe:#dc2626;--cu:#e07b39;--li:#8b5cf6;--au:#f59e0b;--ree:#10b981;--ni:#64748b;
+  --fe-bg:rgba(220,38,38,0.08);--cu-bg:rgba(224,123,57,0.08);
+  --li-bg:rgba(139,92,246,0.08);--au-bg:rgba(245,158,11,0.08);
+  --ree-bg:rgba(16,185,129,0.08);
+}
+
+.wm{font-family:'Space Grotesk',sans-serif;font-weight:700;font-style:italic;letter-spacing:-0.03em}
+.mono{font-family:'Space Grotesk',monospace}
+
+/* ========== COVER ========== */
+.cover{background:var(--char);color:#fff;display:flex;flex-direction:column;min-height:297mm;position:relative;overflow:hidden}
+.glow1{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(20,184,166,0.12) 0%,rgba(20,184,166,0.03) 40%,transparent 70%);right:-120px;top:18%;pointer-events:none}
+.glow2{position:absolute;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(94,234,212,0.08) 0%,transparent 60%);left:-80px;bottom:15%;pointer-events:none}
+.glow3{position:absolute;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(20,184,166,0.15) 0%,transparent 70%);right:25%;top:35%;pointer-events:none;filter:blur(30px)}
+.streak{position:absolute;width:600px;height:1px;background:linear-gradient(90deg,transparent,rgba(20,184,166,0.25),rgba(94,234,212,0.1),transparent);top:42%;left:-50px;transform:rotate(-8deg);pointer-events:none}
+.streak2{position:absolute;width:400px;height:1px;background:linear-gradient(90deg,transparent,rgba(20,184,166,0.15),transparent);top:55%;right:-30px;transform:rotate(5deg);pointer-events:none}
+.cover-header{padding:22mm 28mm 0;display:flex;justify-content:space-between;align-items:flex-start;position:relative;z-index:1}
+.cover-logo{display:flex;align-items:center;gap:10px}
+.cover-logo .tag-sub{font-size:9px;color:var(--pri);letter-spacing:1.2px;text-transform:uppercase;font-weight:500;margin-top:1px}
+.cover-type{text-align:right}
+.cover-type .label{font-size:11px;color:var(--txtLL);letter-spacing:2px;text-transform:uppercase}
+.cover-type .cat{font-size:16px;font-weight:600;color:var(--pri);margin-top:2px}
+.cover-body{flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 28mm;position:relative;z-index:1}
+.cover-body .eyebrow{font-size:12px;color:var(--pri);letter-spacing:3px;text-transform:uppercase;font-weight:500;margin-bottom:14px}
+.cover-body h1{font-size:36px;font-weight:700;line-height:1.35;margin-bottom:18px}
+.cover-body .subtitle{font-size:13.5px;color:#9ca3af;line-height:1.7;max-width:72%}
+.cover-meta{padding:0 28mm 22mm;display:flex;justify-content:space-between;align-items:flex-end;position:relative;z-index:1}
+.cover-meta .date-block{border-left:3px solid var(--pri);padding-left:14px}
+.cover-meta .date-block .label{font-size:10px;color:#6b7280;letter-spacing:1.5px;text-transform:uppercase}
+.cover-meta .date-block .value{font-size:16px;color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:600;margin-top:2px}
+.cover-meta .analyst{text-align:right;font-size:11px;color:#9ca3af;line-height:1.7}
+.cover-meta .analyst strong{color:#fff;font-weight:600}
+.cover-footer{border-top:1px solid rgba(255,255,255,0.06);padding:12px 28mm;display:flex;justify-content:space-between;font-size:9px;color:#4b5563;position:relative;z-index:1}
+.cover-footer .conf{padding:2px 8px;border-radius:4px;background:rgba(20,184,166,0.1);border:1px solid rgba(20,184,166,0.2);color:var(--pri);font-weight:600;letter-spacing:0.5px}
+
+/* cover stat strip */
+.cover-stats{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid rgba(255,255,255,0.07);border-bottom:1px solid rgba(255,255,255,0.07);margin:0 0 0;position:relative;z-index:1}
+.cstat{padding:13px 0 13px 28mm;border-right:1px solid rgba(255,255,255,0.07)}
+.cstat:last-child{border-right:none}
+.cstat-n{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;line-height:1}
+.cstat-l{font-size:8.5px;color:#64748b;margin-top:3px;letter-spacing:0.5px}
+
+/* ========== INNER PAGES ========== */
+.inner{padding:18mm 24mm 16mm}
+.page-bar{display:flex;justify-content:space-between;align-items:center;padding-bottom:8px;border-bottom:2px solid var(--pri);margin-bottom:16px}
+.page-bar .left{display:flex;align-items:center;gap:6px}
+.page-bar .right{font-size:10px;color:var(--txtL)}
+h2{font-size:17px;font-weight:700;color:var(--char);margin:16px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--bdr)}
+h2 .num{color:var(--pri);margin-right:5px;font-family:'Space Grotesk',sans-serif}
+h3{font-size:13px;font-weight:600;color:var(--char);margin:12px 0 7px;padding-left:9px;border-left:3px solid var(--pri)}
+p{font-size:11.5px;line-height:1.8;margin-bottom:7px;text-align:justify}
+.highlight{background:rgba(20,184,166,0.05);border-left:3px solid var(--pri);padding:9px 12px;margin:10px 0;border-radius:0 6px 6px 0;font-size:11px;line-height:1.7}
+.key-points{background:var(--bgL);border:1px solid var(--bdr);border-radius:8px;padding:14px 16px;margin:12px 0}
+.key-points .title{font-size:12px;font-weight:700;color:var(--char);margin-bottom:7px;display:flex;align-items:center;gap:6px}
+.key-points .title::before{content:'';width:14px;height:14px;border-radius:3px;background:var(--pri);display:inline-block;flex-shrink:0}
+.key-points ul{list-style:none;padding:0}
+.key-points ul li{font-size:11px;line-height:1.7;padding:3px 0 3px 16px;position:relative}
+.key-points ul li::before{content:'▸';color:var(--pri);position:absolute;left:3px;font-size:11px}
+.data-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:10.5px}
+.data-table th{background:var(--char);color:#fff;padding:6px 8px;text-align:left;font-weight:600;font-size:9.5px;letter-spacing:0.5px;text-transform:uppercase}
+.data-table td{padding:5px 8px;border-bottom:1px solid var(--bdr)}
+.data-table tr:nth-child(even){background:var(--bgL)}
+.up{color:var(--sBuy);font-weight:600}
+.down{color:var(--sSell);font-weight:600}
+.neutral{color:var(--hold);font-weight:500}
+.ai-badge{display:inline-flex;align-items:center;gap:3px;padding:1px 7px;border-radius:8px;background:rgba(20,184,166,0.08);border:1px solid rgba(20,184,166,0.2);font-size:8px;color:var(--pri);font-weight:600;letter-spacing:0.3px}
+.risk-box{background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:12px 16px;margin:12px 0}
+.risk-box .rtitle{font-size:11.5px;font-weight:700;color:#ef4444;margin-bottom:5px}
+.risk-box ul{list-style:none;padding:0}
+.risk-box ul li{font-size:10.5px;line-height:1.7;padding:2px 0 2px 14px;position:relative;color:#374151}
+.risk-box ul li::before{content:'⚠';position:absolute;left:0;font-size:8.5px}
+.disclaimer{font-size:9px;color:var(--txtLL);line-height:1.6;border-top:1px solid var(--bdr);padding-top:10px;margin-top:16px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:10px 0;align-items:start}
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:10px 0}
+.ch-title{font-size:10.5px;font-weight:700;color:var(--char);margin:12px 0 7px;display:flex;align-items:center;gap:6px;padding-left:7px;border-left:2px solid var(--pri)}
+
+/* ========== SENTIMENT SPECIFIC ========== */
+
+/* Gauge meter */
+.gauge-wrap{text-align:center;padding:10px 0}
+.gauge-label{font-size:8.5px;color:var(--txtL);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.gauge-score{font-family:'Space Grotesk',sans-serif;font-size:42px;font-weight:700;line-height:1}
+.gauge-tag{display:inline-block;padding:3px 12px;border-radius:12px;font-size:11px;font-weight:700;letter-spacing:0.5px;margin-top:4px}
+.tag-ef{background:#fef2f2;color:#dc2626;border:1px solid #fecaca}
+.tag-f{background:#fff7ed;color:#ea580c;border:1px solid #fed7aa}
+.tag-n{background:#fffbeb;color:#d97706;border:1px solid #fde68a}
+.tag-g{background:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0}
+.tag-eg{background:#dcfce7;color:#15803d;border:1px solid #86efac}
+
+/* Heatmap grid */
+.heatmap{border-collapse:collapse;width:100%;font-size:9px;margin:8px 0}
+.heatmap th{background:var(--char);color:#e2e8f0;padding:5px 7px;font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px}
+.heatmap th:first-child{text-align:left}
+.heatmap td{padding:5px 8px;border:2px solid #fff;text-align:center;font-weight:700;font-size:9px}
+.hm-vb{background:#15803d;color:#fff}
+.hm-b {background:#22c55e;color:#fff}
+.hm-n {background:#fef3c7;color:#92400e}
+.hm-s {background:#f97316;color:#fff}
+.hm-vs{background:#dc2626;color:#fff}
+
+/* KOL cards */
+.kol-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0}
+.kol-card{border:1px solid var(--bdr);border-radius:7px;padding:9px 11px;background:#fff;font-size:10px}
+.kol-card.bull{border-left:3px solid var(--sBuy)}
+.kol-card.bear{border-left:3px solid var(--sSell)}
+.kol-card.neutral-c{border-left:3px solid var(--hold)}
+.kol-name{font-weight:700;color:var(--char);font-size:11px;margin-bottom:2px}
+.kol-meta{color:var(--txtL);font-size:8.5px;margin-bottom:5px}
+.kol-quote{color:#374151;font-size:10px;line-height:1.6;border-top:1px solid var(--bdr);padding-top:5px;margin-top:5px}
+.kol-stance{display:inline-block;padding:1px 7px;border-radius:8px;font-size:8px;font-weight:700;letter-spacing:0.3px}
+.stance-bull{background:#dcfce7;color:#16a34a}
+.stance-bear{background:#fef2f2;color:#dc2626}
+.stance-neutral{background:#f1f5f9;color:#475569}
+
+/* Sentiment bar (commodity) */
+.sent-bar-wrap{margin:6px 0}
+.sent-bar-row{display:flex;align-items:center;gap:8px;margin-bottom:7px}
+.sent-bar-label{font-size:10px;color:#374151;width:80px;flex-shrink:0;font-weight:500}
+.sent-track{flex:1;height:14px;border-radius:3px;background:#f1f5f9;overflow:hidden;position:relative}
+.sent-fill-bull{height:100%;border-radius:3px;background:linear-gradient(90deg,#16a34a,#22c55e)}
+.sent-fill-bear{height:100%;border-radius:3px;background:linear-gradient(90deg,#b91c1c,#ef4444)}
+.sent-fill-neutral{height:100%;border-radius:3px;background:linear-gradient(90deg,#78716c,#94a3b8)}
+.sent-pct{font-size:9px;font-weight:600;color:#374151;width:34px;flex-shrink:0;text-align:right}
+
+/* Sub-index weight row */
+.sub-row{display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--bdr);font-size:10.5px}
+.sub-name{flex:1;color:#374151}
+.sub-weight{color:var(--txtL);width:32px;text-align:right;font-size:9.5px}
+.sub-val{font-weight:700;width:42px;text-align:right}
+.sub-track{width:80px;height:8px;border-radius:2px;background:#f1f5f9;overflow:hidden}
+.sub-fill{height:100%;border-radius:2px}
+
+/* Weekly compare bars (4-week trend) */
+.week-bars{display:flex;align-items:flex-end;gap:6px;height:60px;border-bottom:1px solid var(--bdr);padding-bottom:4px;margin:8px 0}
+.wk-col{flex:1;display:flex;flex-direction:column;align-items:center}
+.wk-val{font-size:8px;font-weight:700;margin-bottom:2px}
+.wk-bar{width:100%;border-radius:2px 2px 0 0}
+.wk-lbl{font-size:7.5px;color:var(--txtL);margin-top:3px;text-align:center}
+
+/* Score badge */
+.score-circle{width:52px;height:52px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:700;flex-shrink:0}
+.sc-fear{background:#fef2f2;border:2px solid #fecaca;color:#dc2626}
+.sc-neutral{background:#fffbeb;border:2px solid #fde68a;color:#d97706}
+.sc-greed{background:#f0fdf4;border:2px solid #bbf7d0;color:#16a34a}
+
+/* Alert box */
+.alert-box{display:flex;gap:10px;align-items:flex-start;background:#fffbeb;border:1px solid #fde68a;border-radius:7px;padding:9px 12px;margin:8px 0;font-size:10.5px}
+.alert-icon{font-size:14px;flex-shrink:0;margin-top:1px}
+.alert-title{font-weight:700;color:#92400e;margin-bottom:2px;font-size:10.5px}
+.alert-body{color:#78350f}
+
+/* Mini stat cards */
+.mini-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}
+.mini-stat{background:var(--bgL);border:1px solid var(--bdr);border-radius:7px;padding:8px 10px;text-align:center}
+.ms-val{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;line-height:1}
+.ms-lbl{font-size:8px;color:var(--txtL);margin-top:3px;text-transform:uppercase;letter-spacing:0.5px}
+.ms-chg{font-size:9px;font-weight:600;margin-top:2px}
+
+/* Event calendar row */
+.event-row{display:flex;gap:10px;padding:6px 0;border-bottom:1px solid var(--bdr);align-items:flex-start;font-size:10.5px}
+.event-date{font-weight:700;color:var(--pri);width:52px;flex-shrink:0;font-family:'Space Grotesk',sans-serif;font-size:10px}
+.event-tag{display:inline-block;padding:1px 6px;border-radius:4px;font-size:8px;font-weight:700;flex-shrink:0;margin-right:4px}
+.ev-high{background:#fef2f2;color:#dc2626;border:1px solid #fecaca}
+.ev-med{background:#fffbeb;color:#d97706;border:1px solid #fde68a}
+.ev-low{background:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0}
+.event-body{flex:1;color:#374151;line-height:1.5}
+
+/* Word cloud pills */
+.word-cloud{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0}
+.wc-pill{padding:3px 10px;border-radius:12px;font-size:9.5px;font-weight:600;background:var(--bgL);border:1px solid var(--bdr);color:#374151}
+.wc-hot{background:rgba(20,184,166,0.08);border-color:rgba(20,184,166,0.3);color:var(--priD)}
+.wc-neg{background:rgba(239,68,68,0.07);border-color:rgba(239,68,68,0.25);color:#dc2626}
+
+/* ========== BACK COVER ========== */
+.back-cover{background:var(--char);color:#fff;display:flex;flex-direction:column;min-height:297mm;position:relative;overflow:hidden;page-break-after:auto}
+.bc-top{padding:20mm 28mm 0;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
+.bc-center{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;z-index:1;padding:0 28mm;text-align:center}
+.bc-divider{width:160px;height:1px;background:linear-gradient(90deg,transparent,var(--pri),var(--priL),var(--pri),transparent);margin:18px auto}
+.bc-info{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;margin-top:28px;width:100%;max-width:520px;text-align:left}
+.bc-col-title{font-size:8px;color:var(--pri);letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid rgba(20,184,166,0.18)}
+.bc-col-body{font-size:9.5px;color:#9ca3af;line-height:1.9}
+.bc-col-body strong{color:#d1d5db;font-weight:500}
+.bc-footer{border-top:1px solid rgba(255,255,255,0.06);padding:14px 28mm 18mm;position:relative;z-index:1}
+.bc-disclaimer{font-size:7.5px;color:#4b5563;line-height:1.7;text-align:center;max-width:75%;margin:0 auto 10px}
+.bc-copyright{display:flex;justify-content:space-between;align-items:center;font-size:8px}
+</style>
+</head>
+<body>
+
+<!-- ==================== COVER ==================== -->
+<div class="page cover">
+  <div class="glow1"></div><div class="glow2"></div><div class="glow3"></div>
+  <div class="streak"></div><div class="streak2"></div>
+
+  <div class="cover-header">
+    <div class="cover-logo">
+      <svg width="36" height="36" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="28" x2="32" y2="28" stroke="#14b8a6" stroke-width="1" opacity="0.4"/><path d="M22 37 L24 40 L26 37 L24 34 Z" fill="#14b8a6" opacity="0.85"/></svg>
+      <div>
+        <span class="wm" style="font-size:16px"><span style="color:#fff">Mining</span><span style="color:#14b8a6">Clawd</span></span>
+        <div class="tag-sub">Mining Intelligence</div>
+      </div>
+    </div>
+    <div class="cover-type">
+      <div class="label">Sentiment Report</div>
+      <div class="cat">情绪面分析 · Weekly</div>
+    </div>
+  </div>
+
+  <div class="cover-body">
+    <div class="eyebrow">— ASX Mining Sentiment Tracker —</div>
+    <h1>澳洲矿业情绪面周报<br><span style="font-size:24px;font-weight:500;color:#9ca3af">Australia Mining Sentiment Weekly</span></h1>
+    <div class="subtitle">
+      追踪ASX资源板块多空情绪、矿业大V舆论动向、恐慌贪婪指数及社交媒体热度，结合AI多因子模型输出周度情绪预判。<br>
+      <span style="font-size:12px;color:#6b7280">Tracking ASX resources sentiment, KOL signals, Fear &amp; Greed Index, and social media pulse — powered by AI multi-factor models.</span>
+    </div>
+  </div>
+
+  <!-- Stat strip -->
+  <div class="cover-stats">
+    <div class="cstat">
+      <div class="cstat-n" style="color:#f59e0b">38</div>
+      <div class="cstat-l">恐慌贪婪指数 Fear &amp; Greed</div>
+    </div>
+    <div class="cstat" style="padding-left:18px">
+      <div class="cstat-n" style="color:#ef4444">偏恐慌</div>
+      <div class="cstat-l">情绪状态 Sentiment State</div>
+    </div>
+    <div class="cstat" style="padding-left:18px">
+      <div class="cstat-n" style="color:#14b8a6">62%</div>
+      <div class="cstat-l">大V看多比例 KOL Bull Ratio</div>
+    </div>
+    <div class="cstat" style="padding-left:18px">
+      <div class="cstat-n" style="color:#22c55e">铜·金</div>
+      <div class="cstat-l">最强情绪矿种 Top Commodity</div>
+    </div>
+    <div class="cstat" style="padding-left:18px">
+      <div class="cstat-n" style="color:#8b5cf6">锂</div>
+      <div class="cstat-l">最弱情绪矿种 Weakest</div>
+    </div>
+  </div>
+
+  <div class="cover-meta">
+    <div class="date-block">
+      <div class="label">Report Date 报告日期</div>
+      <div class="value">2026.04.07</div>
+      <div style="font-size:10px;color:#6b7280;margin-top:4px">Coverage 报告期：2026.03.30 — 2026.04.04 · Week 14</div>
+    </div>
+    <div class="analyst">
+      <strong>MiningClawd AI Research</strong><br>
+      info@lynaimining.com<br>
+      www.lynaimining.com
+    </div>
+  </div>
+
+  <div class="cover-footer">
+    <span class="conf">CONFIDENTIAL — For Institutional Investors Only 仅供机构投资者使用</span>
+    <span>MiningClawd AI Intelligence Systems © 2026</span>
+  </div>
+</div>
+
+<!-- ==================== PAGE 2: SUMMARY + TOC ==================== -->
+<div class="page">
+<div class="inner">
+  <div class="page-bar">
+    <div class="left">
+      <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.5"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      <span class="wm" style="font-size:11px"><span style="color:#0f1115">Mining</span><span style="color:#0d9488">Clawd</span></span>
+      <span style="font-size:9px;color:#6b7280;margin-left:6px">情绪面周报 Sentiment Weekly</span>
+    </div>
+    <div class="right">Week 14 · 2026.04.07</div>
+  </div>
+
+  <div class="key-points">
+    <div class="title">本周情绪要点 Key Sentiment Takeaways <span class="ai-badge">AI GENERATED</span></div>
+    <ul>
+      <li><strong>恐慌贪婪指数 Fear &amp; Greed：</strong>本周综合得分 38（偏恐慌区间），较上周下滑 6 点，主因铁矿价格跌破 $100/t 关键支撑引发空头情绪升温。<br><span style="color:#9ca3af;font-size:10px">Composite score 38 (Fear zone), down 6pts WoW; iron ore breaking $100/t triggered bearish sentiment.</span></li>
+      <li><strong>矿业大V KOL Signals：</strong>本周监测大V 47 位，看多 62%、看空 24%、中性 14%。铜、金方向高度一致，锂方向分歧最大（多空比 51:49）。<br><span style="color:#9ca3af;font-size:10px">47 KOLs tracked: 62% bullish, 24% bearish. Cu/Au consensus high; Li most contested.</span></li>
+      <li><strong>矿种情绪 Commodity Sentiment：</strong>铜（+78分）和黄金（+74分）情绪领跑；铁矿（+34分）及锂（+29分）处于恐慌区间，稀土情绪持平（+52分）。<br><span style="color:#9ca3af;font-size:10px">Cu (+78) &amp; Au (+74) lead; Fe (+34) &amp; Li (+29) in fear zone; REE neutral at +52.</span></li>
+      <li><strong>社交媒体 Social Pulse：</strong>X平台"ASX copper"话题周热度 +34%，"lithium oversupply"搜索量创12周新高；Reddit r/ASX 矿业情绪净值 -8%（偏空）。<br><span style="color:#9ca3af;font-size:10px">X: "ASX copper" +34% WoW; "lithium oversupply" Google searches 12-week high; Reddit net sentiment -8%.</span></li>
+      <li><strong>风险预警 Risk Alert：</strong>机构 vs 散户背离指数达 +22（警戒线 ±20），机构净买铜而散户持续减仓，历史上该信号后4周铜价均值上行概率 73%。<br><span style="color:#9ca3af;font-size:10px">Inst. vs Retail divergence at +22 (alert threshold ±20); institutions net buying Cu while retail sells. 73% historical Cu upside probability in 4 weeks.</span></li>
+    </ul>
+  </div>
+
+  <h2><span class="num">Contents</span>目录 Table of Contents</h2>
+  <div style="font-size:10.5px;line-height:2.4;padding:4px 0">
+    <div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:2px 0"><span><strong style="color:var(--pri)">一、</strong>本周情绪概览 Sentiment Dashboard</span><span class="mono">03</span></div>
+    <div style="display:flex;justify-content:space-between;padding:2px 0 2px 16px;color:#6b7280"><span>周度情绪热力图 · 综合情绪指数 · 驱动因子</span><span class="mono">03</span></div>
+    <div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:2px 0"><span><strong style="color:var(--pri)">二、</strong>矿业恐慌贪婪指数 Fear &amp; Greed Index</span><span class="mono">04</span></div>
+    <div style="display:flex;justify-content:space-between;padding:2px 0 2px 16px;color:#6b7280"><span>仪表盘 · 子指标权重拆解 · 四周走势</span><span class="mono">04</span></div>
+    <div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:2px 0"><span><strong style="color:var(--pri)">三、</strong>矿业大V舆论监测 KOL Sentiment Tracker</span><span class="mono">05</span></div>
+    <div style="display:flex;justify-content:space-between;padding:2px 0 2px 16px;color:#6b7280"><span>Top 10 大V · 情绪分布 · 本周高热帖 · 分歧预警</span><span class="mono">05</span></div>
+    <div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:2px 0"><span><strong style="color:var(--pri)">四、</strong>矿种情绪分项 Commodity Sentiment Breakdown</span><span class="mono">06</span></div>
+    <div style="display:flex;justify-content:space-between;padding:2px 0 2px 16px;color:#6b7280"><span>铁矿 · 铜 · 锂 · 黄金 · 稀土</span><span class="mono">06</span></div>
+    <div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:2px 0"><span><strong style="color:var(--pri)">五、</strong>社交媒体与搜索热度 Social &amp; Search Pulse</span><span class="mono">07</span></div>
+    <div style="display:flex;justify-content:space-between;padding:2px 0 2px 16px;color:#6b7280"><span>X热词 · Reddit情绪 · Google Trends · ASX公告扫描</span><span class="mono">07</span></div>
+    <div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:2px 0"><span><strong style="color:var(--pri)">六、</strong>机构 vs 散户对比 Institutional vs Retail</span><span class="mono">08</span></div>
+    <div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:2px 0"><span><strong style="color:var(--pri)">七、</strong>下周情绪展望 Forward Sentiment Outlook</span><span class="mono">08</span></div>
+  </div>
+
+  <div style="background:var(--bgL);border:1px solid var(--bdr);border-radius:8px;padding:11px 14px;margin-top:12px">
+    <div style="font-size:8.5px;font-weight:700;color:var(--char);margin-bottom:6px;padding-bottom:4px;border-bottom:1px solid var(--bdr)">Related Research 相关研究</div>
+    <div style="font-size:8px;color:var(--priD);padding:2px 0;line-height:1.5">Iron Ore Sentiment Deep Dive 铁矿情绪专项报告 <span style="color:var(--txtLL);font-size:7px">(2026/03/17)</span></div>
+    <div style="font-size:8px;color:var(--priD);padding:2px 0;line-height:1.5">Copper KOL Consensus Tracker 铜矿大V共识追踪 <span style="color:var(--txtLL);font-size:7px">(2026/03/10)</span></div>
+    <div style="font-size:8px;color:var(--priD);padding:2px 0;line-height:1.5">Lithium Sentiment Bottom Signal 锂情绪底部信号 <span style="color:var(--txtLL);font-size:7px">(2026/02/24)</span></div>
+  </div>
+</div>
+</div>
+
+<!-- ==================== PAGE 3: SENTIMENT DASHBOARD ==================== -->
+<div class="page">
+<div class="inner">
+  <div class="page-bar">
+    <div class="left">
+      <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.5"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      <span class="wm" style="font-size:11px"><span style="color:#0f1115">Mining</span><span style="color:#0d9488">Clawd</span></span>
+      <span style="font-size:9px;color:#6b7280;margin-left:6px">情绪面周报 Sentiment Weekly</span>
+    </div>
+    <div class="right">Week 14 · 2026.04.07</div>
+  </div>
+
+  <h2><span class="num">一</span>本周情绪概览 Sentiment Dashboard</h2>
+
+  <!-- KPI strip -->
+  <div class="mini-stats">
+    <div class="mini-stat">
+      <div class="ms-val" style="color:#f59e0b">38</div>
+      <div class="ms-lbl">综合情绪指数</div>
+      <div class="ms-chg down">▼ -6 vs 上周</div>
+    </div>
+    <div class="mini-stat">
+      <div class="ms-val" style="color:#22c55e">62%</div>
+      <div class="ms-lbl">大V看多比例</div>
+      <div class="ms-chg down">▼ -4% WoW</div>
+    </div>
+    <div class="mini-stat">
+      <div class="ms-val" style="color:#e07b39">铜</div>
+      <div class="ms-lbl">最强情绪矿种</div>
+      <div class="ms-chg up">▲ +78分</div>
+    </div>
+    <div class="mini-stat">
+      <div class="ms-val" style="color:#8b5cf6">锂</div>
+      <div class="ms-lbl">最弱情绪矿种</div>
+      <div class="ms-chg down">▼ +29分</div>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <!-- Heatmap -->
+    <div>
+      <div class="ch-title">📊 矿种 × 情绪维度 热力矩阵 Sentiment Heatmap</div>
+      <table class="heatmap">
+        <thead>
+          <tr>
+            <th style="text-align:left">矿种</th>
+            <th>大V</th>
+            <th>社交</th>
+            <th>机构</th>
+            <th>技术</th>
+            <th>综合</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>铜 Cu</strong></td><td class="hm-b">多</td><td class="hm-b">热</td><td class="hm-vb">强买</td><td class="hm-b">多</td><td class="hm-b">78</td></tr>
+          <tr><td><strong>金 Au</strong></td><td class="hm-b">多</td><td class="hm-b">热</td><td class="hm-b">买</td><td class="hm-vb">强多</td><td class="hm-b">74</td></tr>
+          <tr><td><strong>稀土 REE</strong></td><td class="hm-n">中</td><td class="hm-n">平</td><td class="hm-b">买</td><td class="hm-n">中</td><td class="hm-n">52</td></tr>
+          <tr><td><strong>铁矿 Fe</strong></td><td class="hm-s">空</td><td class="hm-s">冷</td><td class="hm-n">中</td><td class="hm-s">空</td><td class="hm-s">34</td></tr>
+          <tr><td><strong>锂 Li</strong></td><td class="hm-s">分歧</td><td class="hm-vs">极冷</td><td class="hm-s">减持</td><td class="hm-s">空</td><td class="hm-vs">29</td></tr>
+          <tr><td><strong>镍 Ni</strong></td><td class="hm-s">空</td><td class="hm-n">平</td><td class="hm-n">中</td><td class="hm-n">中</td><td class="hm-n">41</td></tr>
+        </tbody>
+      </table>
+      <div style="font-size:8px;color:var(--txtLL);margin-top:3px">颜色：深绿=极度看多 绿=看多 黄=中性 橙=看空 红=极度看空</div>
+    </div>
+
+    <!-- Weekly trend -->
+    <div>
+      <div class="ch-title">📈 综合情绪指数 4周走势 4-Week Trend</div>
+      <div class="week-bars">
+        <div class="wk-col">
+          <div class="wk-val" style="color:#f59e0b">44</div>
+          <div class="wk-bar" style="height:44px;background:linear-gradient(180deg,#f59e0b,#fde68a)"></div>
+          <div class="wk-lbl">W11</div>
+        </div>
+        <div class="wk-col">
+          <div class="wk-val" style="color:#f59e0b">51</div>
+          <div class="wk-bar" style="height:51px;background:linear-gradient(180deg,#22c55e,#86efac)"></div>
+          <div class="wk-lbl">W12</div>
+        </div>
+        <div class="wk-col">
+          <div class="wk-val" style="color:#f97316">44</div>
+          <div class="wk-bar" style="height:44px;background:linear-gradient(180deg,#f59e0b,#fde68a)"></div>
+          <div class="wk-lbl">W13</div>
+        </div>
+        <div class="wk-col">
+          <div class="wk-val" style="color:#ef4444">38</div>
+          <div class="wk-bar" style="height:38px;background:linear-gradient(180deg,#f97316,#fecaca)"></div>
+          <div class="wk-lbl" style="font-weight:700;color:var(--pri)">W14 ←</div>
+        </div>
+      </div>
+      <div style="font-size:8.5px;color:#374151;margin-top:8px;line-height:1.6;background:var(--bgL);border-radius:5px;padding:7px 10px;border:1px solid var(--bdr)">
+        <strong>本周下行驱动因子：</strong><br>
+        · 铁矿跌破 $100/t，周跌 3.8%<br>
+        · 锂价再创 2024 年以来新低 $9,200/t<br>
+        · 美元指数反弹至 105.8，压制大宗<br>
+        · 澳洲大选不确定性升温，矿业税改预期发酵
+      </div>
+
+      <div class="ch-title" style="margin-top:14px">🎯 情绪区间分布 Zone Distribution</div>
+      <!-- SVG donut -->
+      <div style="display:flex;align-items:center;gap:14px">
+        <svg width="80" height="80" viewBox="0 0 80 80">
+          <!-- Extreme Fear 15% -->
+          <circle cx="40" cy="40" r="28" fill="none" stroke="#dc2626" stroke-width="14" stroke-dasharray="26.4 175.6" stroke-dashoffset="44" transform="rotate(-90 40 40)"/>
+          <!-- Fear 28% -->
+          <circle cx="40" cy="40" r="28" fill="none" stroke="#f97316" stroke-width="14" stroke-dasharray="49.2 175.6" stroke-dashoffset="18.4" transform="rotate(-90 40 40)"/>
+          <!-- Neutral 22% -->
+          <circle cx="40" cy="40" r="28" fill="none" stroke="#f59e0b" stroke-width="14" stroke-dasharray="38.6 175.6" stroke-dashoffset="-30.8" transform="rotate(-90 40 40)"/>
+          <!-- Greed 25% -->
+          <circle cx="40" cy="40" r="28" fill="none" stroke="#22c55e" stroke-width="14" stroke-dasharray="43.9 175.6" stroke-dashoffset="-69.4" transform="rotate(-90 40 40)"/>
+          <!-- Extreme Greed 10% -->
+          <circle cx="40" cy="40" r="28" fill="none" stroke="#16a34a" stroke-width="14" stroke-dasharray="17.6 175.6" stroke-dashoffset="-113.3" transform="rotate(-90 40 40)"/>
+          <circle cx="40" cy="40" r="21" fill="white"/>
+          <text x="40" y="37" text-anchor="middle" font-size="9" font-weight="700" fill="#0f1115">ASX</text>
+          <text x="40" y="47" text-anchor="middle" font-size="8" fill="#6b7280">W14</text>
+        </svg>
+        <div style="font-size:9px;line-height:1.9">
+          <div><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:#dc2626;margin-right:5px"></span>极度恐慌 15%</div>
+          <div><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:#f97316;margin-right:5px"></span>恐慌 28%</div>
+          <div><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:#f59e0b;margin-right:5px"></span>中性 22%</div>
+          <div><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:#22c55e;margin-right:5px"></span>贪婪 25%</div>
+          <div><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:#16a34a;margin-right:5px"></span>极度贪婪 10%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ==================== PAGE 4: FEAR & GREED INDEX ==================== -->
+<div class="page">
+<div class="inner">
+  <div class="page-bar">
+    <div class="left">
+      <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.5"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      <span class="wm" style="font-size:11px"><span style="color:#0f1115">Mining</span><span style="color:#0d9488">Clawd</span></span>
+      <span style="font-size:9px;color:#6b7280;margin-left:6px">情绪面周报 Sentiment Weekly</span>
+    </div>
+    <div class="right">Week 14 · 2026.04.07</div>
+  </div>
+
+  <h2><span class="num">二</span>矿业恐慌贪婪指数 Mining Fear &amp; Greed Index</h2>
+
+  <div class="two-col">
+    <!-- Left: Gauge -->
+    <div>
+      <div class="ch-title">🎛️ 本周指数仪表盘 Current Reading</div>
+      <!-- SVG Gauge -->
+      <div style="text-align:center;padding:10px 0 6px">
+        <svg width="200" height="110" viewBox="0 0 200 110">
+          <!-- Background arc segments -->
+          <path d="M 20 100 A 80 80 0 0 1 50 33" fill="none" stroke="#dc2626" stroke-width="14" stroke-linecap="round" opacity="0.3"/>
+          <path d="M 50 33 A 80 80 0 0 1 100 20" fill="none" stroke="#f97316" stroke-width="14" stroke-linecap="round" opacity="0.3"/>
+          <path d="M 100 20 A 80 80 0 0 1 150 33" fill="none" stroke="#f59e0b" stroke-width="14" stroke-linecap="round" opacity="0.3"/>
+          <path d="M 150 33 A 80 80 0 0 1 180 100" fill="none" stroke="#22c55e" stroke-width="14" stroke-linecap="round" opacity="0.3"/>
+          <!-- Active fill: score 38 = ~35° from left -->
+          <path d="M 20 100 A 80 80 0 0 1 52 35" fill="none" stroke="#f97316" stroke-width="14" stroke-linecap="round"/>
+          <!-- Needle -->
+          <line x1="100" y1="100" x2="44" y2="50" stroke="#0f1115" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="100" cy="100" r="7" fill="#0f1115"/>
+          <circle cx="100" cy="100" r="4" fill="#14b8a6"/>
+          <!-- Labels -->
+          <text x="14" y="110" font-size="8" fill="#dc2626" font-weight="600">极恐</text>
+          <text x="160" y="110" font-size="8" fill="#16a34a" font-weight="600">极贪</text>
+          <text x="86" y="14" font-size="8" fill="#d97706">中性</text>
+        </svg>
+        <div class="gauge-score" style="color:#f97316">38</div>
+        <div style="margin-top:4px"><span class="gauge-tag tag-f">FEAR · 恐慌</span></div>
+        <div style="font-size:9px;color:var(--txtL);margin-top:5px">上周：44 &nbsp;|&nbsp; 上月均值：47 &nbsp;|&nbsp; 年初至今均值：51</div>
+      </div>
+
+      <div class="alert-box">
+        <div class="alert-icon">⚡</div>
+        <div>
+          <div class="alert-title">恐慌触发事件 Trigger Event</div>
+          <div class="alert-body">铁矿现货价格跌破 $100/t 关键支撑位（-3.8% WoW），触发程序性空单，带动 ASX 矿业板块整体情绪下行。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Sub-index breakdown -->
+    <div>
+      <div class="ch-title">⚖️ 子指标权重拆解 Sub-Index Breakdown</div>
+      <div class="sub-row">
+        <div class="sub-name">📊 ASX资源股涨跌幅<br><span style="font-size:8.5px;color:var(--txtL)">Price Momentum · 25%</span></div>
+        <div class="sub-weight">25%</div>
+        <div class="sub-val down">32</div>
+        <div class="sub-track"><div class="sub-fill" style="width:32%;background:linear-gradient(90deg,#f97316,#fb923c)"></div></div>
+      </div>
+      <div class="sub-row">
+        <div class="sub-name">📈 成交量异动<br><span style="font-size:8.5px;color:var(--txtL)">Volume Anomaly · 20%</span></div>
+        <div class="sub-weight">20%</div>
+        <div class="sub-val neutral">48</div>
+        <div class="sub-track"><div class="sub-fill" style="width:48%;background:linear-gradient(90deg,#f59e0b,#fcd34d)"></div></div>
+      </div>
+      <div class="sub-row">
+        <div class="sub-name">⚙️ Put/Call 比率<br><span style="font-size:8.5px;color:var(--txtL)">Options Ratio · 20%</span></div>
+        <div class="sub-weight">20%</div>
+        <div class="sub-val down">31</div>
+        <div class="sub-track"><div class="sub-fill" style="width:31%;background:linear-gradient(90deg,#ef4444,#f87171)"></div></div>
+      </div>
+      <div class="sub-row">
+        <div class="sub-name">📉 52周新高/新低比<br><span style="font-size:8.5px;color:var(--txtL)">52W High/Low · 15%</span></div>
+        <div class="sub-weight">15%</div>
+        <div class="sub-val down">38</div>
+        <div class="sub-track"><div class="sub-fill" style="width:38%;background:linear-gradient(90deg,#f97316,#fb923c)"></div></div>
+      </div>
+      <div class="sub-row">
+        <div class="sub-name">🗣️ 散户情绪问卷<br><span style="font-size:8.5px;color:var(--txtL)">Retail Survey · 10%</span></div>
+        <div class="sub-weight">10%</div>
+        <div class="sub-val neutral">44</div>
+        <div class="sub-track"><div class="sub-fill" style="width:44%;background:linear-gradient(90deg,#f59e0b,#fcd34d)"></div></div>
+      </div>
+      <div class="sub-row" style="border-bottom:none">
+        <div class="sub-name">🔍 Google 搜索热度<br><span style="font-size:8.5px;color:var(--txtL)">Search Trend · 10%</span></div>
+        <div class="sub-weight">10%</div>
+        <div class="sub-val up">56</div>
+        <div class="sub-track"><div class="sub-fill" style="width:56%;background:linear-gradient(90deg,#22c55e,#86efac)"></div></div>
+      </div>
+
+      <div class="ch-title" style="margin-top:14px">📅 历史指数对比 Historical Comparison</div>
+      <table class="data-table">
+        <thead><tr><th>时间</th><th>得分</th><th>状态</th><th>ASX矿业周涨跌</th></tr></thead>
+        <tbody>
+          <tr><td style="font-weight:600;color:var(--pri)">本周 W14</td><td class="down">38</td><td><span class="gauge-tag tag-f" style="font-size:8px;padding:1px 6px">恐慌</span></td><td class="down">-2.1%</td></tr>
+          <tr><td>上周 W13</td><td>44</td><td><span style="font-size:8.5px;color:#d97706">中性偏空</span></td><td class="down">-0.8%</td></tr>
+          <tr><td>W12</td><td class="up">51</td><td><span style="font-size:8.5px;color:#16a34a">中性</span></td><td class="up">+1.4%</td></tr>
+          <tr><td>W11</td><td>44</td><td><span style="font-size:8.5px;color:#d97706">中性偏空</span></td><td class="down">-0.3%</td></tr>
+          <tr><td>4周均值</td><td>44</td><td>—</td><td class="down">-0.5%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <strong>历史规律：</strong>指数连续两周低于 40（当前：38，上周：44），在过去 36 个月数据中，此后 30 天 ASX 资源板块出现技术性反弹的概率为 <strong>67%</strong>，平均反弹幅度 +4.2%。当前铜与黄金分项仍强，结构优于 2025 年 9 月同级别恐慌（铁矿全板下行）。<br>
+    <span style="color:#9ca3af;font-size:10px">Historical pattern: Two consecutive weeks below 40 preceded a 30-day technical bounce in 67% of cases (avg +4.2%). Current Cu/Au sub-strength distinguishes this from Sep 2025's broad fear episode.</span>
+  </div>
+</div>
+</div>
+
+<!-- ==================== PAGE 5: KOL TRACKER ==================== -->
+<div class="page">
+<div class="inner">
+  <div class="page-bar">
+    <div class="left">
+      <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.5"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      <span class="wm" style="font-size:11px"><span style="color:#0f1115">Mining</span><span style="color:#0d9488">Clawd</span></span>
+      <span style="font-size:9px;color:#6b7280;margin-left:6px">情绪面周报 Sentiment Weekly</span>
+    </div>
+    <div class="right">Week 14 · 2026.04.07</div>
+  </div>
+
+  <h2><span class="num">三</span>矿业大V舆论监测 KOL Sentiment Tracker</h2>
+
+  <div class="two-col" style="margin-bottom:4px">
+    <div>
+      <div class="ch-title">👥 本周监测大V总览 KOL Overview</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:10px">
+        <div style="text-align:center;background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.2);border-radius:7px;padding:8px">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#16a34a">29</div>
+          <div style="font-size:8px;color:#6b7280;margin-top:2px">看多 Bullish</div>
+          <div style="font-size:8.5px;font-weight:600;color:#16a34a">62%</div>
+        </div>
+        <div style="text-align:center;background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.2);border-radius:7px;padding:8px">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#dc2626">11</div>
+          <div style="font-size:8px;color:#6b7280;margin-top:2px">看空 Bearish</div>
+          <div style="font-size:8.5px;font-weight:600;color:#dc2626">24%</div>
+        </div>
+        <div style="text-align:center;background:rgba(148,163,184,0.08);border:1px solid rgba(148,163,184,0.25);border-radius:7px;padding:8px">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#64748b">7</div>
+          <div style="font-size:8px;color:#6b7280;margin-top:2px">中性 Neutral</div>
+          <div style="font-size:8.5px;font-weight:600;color:#64748b">14%</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="ch-title">⚠️ 多空分歧预警 Divergence Alert</div>
+      <div class="alert-box" style="margin:0">
+        <div class="alert-icon">🔔</div>
+        <div>
+          <div class="alert-title">锂矿大V分歧触发预警（多空比 51:49）</div>
+          <div class="alert-body" style="font-size:9.5px">多空比低于 55:45 触发分歧预警。锂矿大V观点高度撕裂，多方认为 $9,000/t 为底部支撑，空方聚焦供应过剩持续至2027年。<br><span style="color:#9ca3af">Li KOL 51:49 bull/bear split triggers divergence alert. Bulls cite $9,000/t floor; bears expect supply glut through 2027.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top KOL table -->
+  <div class="ch-title">🏆 本周重点发声大V Top 10 · KOL Leaderboard</div>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>#</th><th>大V / Handle</th><th>平台</th><th>粉丝</th><th>矿种</th><th>立场</th><th>热度</th><th>核心观点</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td><td style="font-weight:600">@CopperBullASX</td><td>X</td><td>128k</td><td><span style="color:var(--cu)">●</span> Cu</td><td><span class="kol-stance stance-bull">看多</span></td><td class="up">🔥🔥🔥</td><td style="font-size:9.5px">OT地下矿产量爬升确认，铜供应拐点已至</td>
+      </tr>
+      <tr>
+        <td>2</td><td style="font-weight:600">@GoldDiggerMacro</td><td>X</td><td>94k</td><td><span style="color:var(--au)">●</span> Au</td><td><span class="kol-stance stance-bull">看多</span></td><td class="up">🔥🔥🔥</td><td style="font-size:9.5px">实际利率下行趋势未改，金价目标 $3,200</td>
+      </tr>
+      <tr>
+        <td>3</td><td style="font-weight:600">@IronBearPilbara</td><td>LinkedIn</td><td>67k</td><td><span style="color:var(--fe)">●</span> Fe</td><td><span class="kol-stance stance-bear">看空</span></td><td class="down">📉</td><td style="font-size:9.5px">中国钢厂去库进行中，铁矿Q2仍有下行空间</td>
+      </tr>
+      <tr>
+        <td>4</td><td style="font-weight:600">@ASXResourcesGuru</td><td>X</td><td>82k</td><td>综合</td><td><span class="kol-stance stance-bull">看多</span></td><td class="up">🔥🔥</td><td style="font-size:9.5px">铜金组合配置价值凸显，看好BHP/NCM</td>
+      </tr>
+      <tr>
+        <td>5</td><td style="font-weight:600">@LithiumDeepDive</td><td>Substack</td><td>41k</td><td><span style="color:var(--li)">●</span> Li</td><td><span class="kol-stance stance-bear">看空</span></td><td>—</td><td style="font-size:9.5px">DLE商业化仍早，锂价将维持低位至2027H1</td>
+      </tr>
+      <tr>
+        <td>6</td><td style="font-weight:600">@REECriticalMinerals</td><td>X</td><td>35k</td><td><span style="color:var(--ree)">●</span> REE</td><td><span class="kol-stance stance-bull">看多</span></td><td class="up">🔥🔥</td><td style="font-size:9.5px">中国出口限制消息催化，稀土中短期供应缺口</td>
+      </tr>
+      <tr>
+        <td>7</td><td style="font-weight:600">@MiningTaxWatcher</td><td>LinkedIn</td><td>29k</td><td>政策</td><td><span class="kol-stance stance-neutral">中性</span></td><td>—</td><td style="font-size:9.5px">澳洲大选矿业税改预期需等结果落地再判断</td>
+      </tr>
+      <tr>
+        <td>8</td><td style="font-weight:600">@CopperLondon</td><td>X</td><td>156k</td><td><span style="color:var(--cu)">●</span> Cu</td><td><span class="kol-stance stance-bull">看多</span></td><td class="up">🔥🔥🔥</td><td style="font-size:9.5px">LME库存持续去化，铜价短期支撑强</td>
+      </tr>
+      <tr>
+        <td>9</td><td style="font-weight:600">@QuantMiningFunds</td><td>X</td><td>51k</td><td>量化</td><td><span class="kol-stance stance-neutral">中性</span></td><td>—</td><td style="font-size:9.5px">综合动量模型转负，维持空仓等待反转信号</td>
+      </tr>
+      <tr>
+        <td>10</td><td style="font-weight:600">@LithiumBullAU</td><td>X</td><td>23k</td><td><span style="color:var(--li)">●</span> Li</td><td><span class="kol-stance stance-bull">看多</span></td><td>—</td><td style="font-size:9.5px">Arcadium整合完成后RIO将主导锂价定价权</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="ch-title" style="margin-top:10px">💬 本周最高热度帖子 Top 3 Viral Posts</div>
+  <div class="kol-row">
+    <div class="kol-card bull">
+      <div class="kol-name">@CopperBullASX <span class="kol-stance stance-bull" style="margin-left:4px">看多</span></div>
+      <div class="kol-meta">X · 128k粉丝 · 获 4,200 转发 · 周四</div>
+      <div class="kol-quote">"OT underground has now hit full design capacity 3 months ahead of schedule. Rio's Cu production guidance is conservative. The H2 beat is coming. $RIO $BHP #copper"</div>
+    </div>
+    <div class="kol-card bear">
+      <div class="kol-name">@IronBearPilbara <span class="kol-stance stance-bear" style="margin-left:4px">看空</span></div>
+      <div class="kol-meta">LinkedIn · 67k粉丝 · 2,800 互动 · 周二</div>
+      <div class="kol-quote">"Iron ore $98.40 today. The $100 floor everyone was so sure about just broke. Chinese mills are running at 60% utilisation. Q2 is going to be painful for Pilbara names."</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ==================== PAGE 6: COMMODITY SENTIMENT ==================== -->
+<div class="page">
+<div class="inner">
+  <div class="page-bar">
+    <div class="left">
+      <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.5"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      <span class="wm" style="font-size:11px"><span style="color:#0f1115">Mining</span><span style="color:#0d9488">Clawd</span></span>
+      <span style="font-size:9px;color:#6b7280;margin-left:6px">情绪面周报 Sentiment Weekly</span>
+    </div>
+    <div class="right">Week 14 · 2026.04.07</div>
+  </div>
+
+  <h2><span class="num">四</span>矿种情绪分项 Commodity Sentiment Breakdown</h2>
+
+  <table class="data-table" style="margin-bottom:12px">
+    <thead><tr><th>矿种</th><th>情绪分</th><th>较上周</th><th>大V多空</th><th>价格</th><th>周涨跌</th><th>核心驱动</th></tr></thead>
+    <tbody>
+      <tr><td><strong style="color:var(--cu)">铜 Copper</strong></td><td class="up">78 ▲</td><td class="up">+8</td><td>看多 82%</td><td>$9,920/t</td><td class="up">+2.1%</td><td style="font-size:9.5px">OT满产 · LME去库</td></tr>
+      <tr><td><strong style="color:var(--au)">黄金 Gold</strong></td><td class="up">74 ▲</td><td class="up">+5</td><td>看多 76%</td><td>$3,148/oz</td><td class="up">+1.4%</td><td style="font-size:9.5px">降息预期 · 避险</td></tr>
+      <tr><td><strong style="color:var(--ree)">稀土 REE</strong></td><td class="neutral">52 →</td><td>±0</td><td>中性 58%</td><td>NdPr $68k/t</td><td class="down">-0.5%</td><td style="font-size:9.5px">中国出口限制预期</td></tr>
+      <tr><td><strong style="color:var(--ni)">镍 Nickel</strong></td><td>41</td><td class="down">-3</td><td>看空 55%</td><td>$15,240/t</td><td class="down">-1.8%</td><td style="font-size:9.5px">印尼供应持续增加</td></tr>
+      <tr><td><strong style="color:var(--fe)">铁矿 Iron Ore</strong></td><td class="down">34 ▼</td><td class="down">-9</td><td>看空 68%</td><td>$98.4/t</td><td class="down">-3.8%</td><td style="font-size:9.5px">中国钢厂去库 · 跌破$100</td></tr>
+      <tr><td><strong style="color:var(--li)">锂 Lithium</strong></td><td class="down">29 ▼</td><td class="down">-4</td><td>分歧 51%多</td><td>$9,200/t LCE</td><td class="down">-2.3%</td><td style="font-size:9.5px">供应过剩 · DLE不及预期</td></tr>
+    </tbody>
+  </table>
+
+  <!-- 5 commodity deep dives -->
+  <div class="two-col">
+    <div>
+      <h3>🟠 铜 Copper — 情绪得分 78（看多）</h3>
+      <div class="sent-bar-wrap">
+        <div class="sent-bar-row"><span class="sent-bar-label" style="color:var(--cu)">看多 Bull</span><div class="sent-track"><div class="sent-fill-bull" style="width:82%"></div></div><span class="sent-pct up">82%</span></div>
+        <div class="sent-bar-row"><span class="sent-bar-label">中性 Neutral</span><div class="sent-track"><div class="sent-fill-neutral" style="width:10%"></div></div><span class="sent-pct neutral">10%</span></div>
+        <div class="sent-bar-row"><span class="sent-bar-label">看空 Bear</span><div class="sent-track"><div class="sent-fill-bear" style="width:8%"></div></div><span class="sent-pct down">8%</span></div>
+      </div>
+      <p style="font-size:10.5px">OT地下矿提前3个月达产，H1铜产量数据超预期；LME库存连续4周去化至16.2万吨，低于历史均值。绿能转型需求预期持续提振。机构净买入创12周新高。</p>
+
+      <h3>🟡 黄金 Gold — 情绪得分 74（看多）</h3>
+      <div class="sent-bar-wrap">
+        <div class="sent-bar-row"><span class="sent-bar-label" style="color:var(--au)">看多 Bull</span><div class="sent-track"><div class="sent-fill-bull" style="width:76%"></div></div><span class="sent-pct up">76%</span></div>
+        <div class="sent-bar-row"><span class="sent-bar-label">中性 Neutral</span><div class="sent-track"><div class="sent-fill-neutral" style="width:14%"></div></div><span class="sent-pct neutral">14%</span></div>
+        <div class="sent-bar-row"><span class="sent-bar-label">看空 Bear</span><div class="sent-track"><div class="sent-fill-bear" style="width:10%"></div></div><span class="sent-pct down">10%</span></div>
+      </div>
+      <p style="font-size:10.5px">实际利率下行趋势叠加地缘避险，黄金情绪持续强势。$3,200目标被多位大V引用，ASX上市金矿股NCM/EVN本周技术面走强。</p>
+
+      <h3>🟢 稀土 REE — 情绪得分 52（中性）</h3>
+      <div class="sent-bar-wrap">
+        <div class="sent-bar-row"><span class="sent-bar-label" style="color:var(--ree)">看多 Bull</span><div class="sent-track"><div class="sent-fill-bull" style="width:44%"></div></div><span class="sent-pct up">44%</span></div>
+        <div class="sent-bar-row"><span class="sent-bar-label">中性 Neutral</span><div class="sent-track"><div class="sent-fill-neutral" style="width:28%"></div></div><span class="sent-pct neutral">28%</span></div>
+        <div class="sent-bar-row"><span class="sent-bar-label">看空 Bear</span><div class="sent-track"><div class="sent-fill-bear" style="width:28%"></div></div><span class="sent-pct down">28%</span></div>
+      </div>
+      <p style="font-size:10.5px">中国稀土出口管制消息引发短期情绪波动，但实际政策落地不确定性维持中性观望。LYC / MP Materials 获机构关注。</p>
+    </div>
+
+    <div>
+      <h3>🔴 铁矿 Iron Ore — 情绪得分 34（恐慌）</h3>
+      <div class="sent-bar-wrap">
+        <div class="sent-bar-row"><span class="sent-bar-label">看多 Bull</span><div class="sent-track"><div class="sent-fill-bull" style="width:22%"></div></div><span class="sent-pct up">22%</span></div>
+        <div class="sent-bar-row"><span class="sent-bar-label">中性 Neutral</span><div class="sent-track"><div class="sent-fill-neutral" style="width:10%"></div></div><span class="sent-pct neutral">10%</span></div>
+        <div class="sent-bar-row"><span class="sent-bar-label" style="color:var(--fe)">看空 Bear</span><div class="sent-track"><div class="sent-fill-bear" style="width:68%"></div></div><span class="sent-pct down">68%</span></div>
+      </div>
+      <p style="font-size:10.5px">铁矿现货跌破 $100/t，中国螺纹钢库存周增 12 万吨至 780 万吨，钢厂利润持续收窄，采购意愿明显下降。Q2 需求窗口尚未打开。Pilbara 相关股票空头头寸升至 52 周高位。</p>
+
+      <div class="risk-box">
+        <div class="rtitle">⚠️ 铁矿情绪风险</div>
+        <ul>
+          <li>中国钢厂产能利用率降至 60%，为近2年最低</li>
+          <li>$95/t 为下一关键支撑，跌破将触发程序性卖盘</li>
+          <li>澳洲出口数据本周环比 +3%，供应端无减量信号</li>
+        </ul>
+      </div>
+
+      <h3>🟣 锂 Lithium — 情绪得分 29（极度恐慌）</h3>
+      <div class="sent-bar-wrap">
+        <div class="sent-bar-row"><span class="sent-bar-label">看多 Bull</span><div class="sent-track"><div class="sent-fill-bull" style="width:51%"></div></div><span class="sent-pct up">51%</span></div>
+        <div class="sent-bar-row"><span class="sent-bar-label">中性 Neutral</span><div class="sent-track"><div class="sent-fill-neutral" style="width:2%"></div></div><span class="sent-pct neutral">2%</span></div>
+        <div class="sent-bar-row"><span class="sent-bar-label" style="color:var(--li)">看空 Bear</span><div class="sent-track"><div class="sent-fill-bear" style="width:47%"></div></div><span class="sent-pct down">47%</span></div>
+      </div>
+      <p style="font-size:10.5px">大V多空极度分裂（51:49），价格创 $9,200/t LCE 新低。DLE 技术商业化进展不及预期引发悲观情绪，多方押注 Arcadium 整合完成后 RIO 主导定价。分歧预警触发。</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ==================== PAGE 7: SOCIAL PULSE ==================== -->
+<div class="page">
+<div class="inner">
+  <div class="page-bar">
+    <div class="left">
+      <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.5"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      <span class="wm" style="font-size:11px"><span style="color:#0f1115">Mining</span><span style="color:#0d9488">Clawd</span></span>
+      <span style="font-size:9px;color:#6b7280;margin-left:6px">情绪面周报 Sentiment Weekly</span>
+    </div>
+    <div class="right">Week 14 · 2026.04.07</div>
+  </div>
+
+  <h2><span class="num">五</span>社交媒体与搜索热度 Social &amp; Search Pulse</h2>
+
+  <div class="two-col">
+    <!-- Left -->
+    <div>
+      <div class="ch-title">𝕏 X/Twitter 本周矿业热词云</div>
+      <div class="word-cloud">
+        <span class="wc-pill wc-hot" style="font-size:13px">ASX copper</span>
+        <span class="wc-pill wc-hot" style="font-size:11px">Rio Tinto OT</span>
+        <span class="wc-pill wc-hot">gold $3200</span>
+        <span class="wc-pill wc-neg" style="font-size:12px">lithium oversupply</span>
+        <span class="wc-pill wc-neg">iron ore $100</span>
+        <span class="wc-pill wc-hot">BHP copper guidance</span>
+        <span class="wc-pill">ASX mining election</span>
+        <span class="wc-pill wc-neg">pilbara weather</span>
+        <span class="wc-pill wc-hot">rare earth China export</span>
+        <span class="wc-pill">Arcadium lithium</span>
+        <span class="wc-pill wc-neg">nickel Indonesia</span>
+        <span class="wc-pill wc-hot">NCM Newmont</span>
+        <span class="wc-pill">Simandou first ore</span>
+        <span class="wc-pill wc-hot">copper deficit 2027</span>
+        <span class="wc-pill">EVN Evolution Mining</span>
+        <span class="wc-pill wc-neg">DLE commercial fail</span>
+      </div>
+      <div style="font-size:8.5px;color:var(--txtL);margin-top:4px">🟢 = 热度上升 &nbsp; 🔴 = 情绪偏空</div>
+
+      <div class="ch-title" style="margin-top:12px">📊 Google Trends 周度搜索量变化</div>
+      <table class="data-table">
+        <thead><tr><th>搜索词</th><th>本周指数</th><th>WoW变化</th><th>4周高点</th></tr></thead>
+        <tbody>
+          <tr><td>ASX copper stocks</td><td class="up">84</td><td class="up">+34%</td><td>84 ← 本周</td></tr>
+          <tr><td>gold price ASX</td><td class="up">78</td><td class="up">+18%</td><td>78 ← 本周</td></tr>
+          <tr><td>lithium oversupply</td><td class="down">91</td><td class="down">+41%</td><td>91 ← 本周</td></tr>
+          <tr><td>iron ore price forecast</td><td class="down">72</td><td class="down">+29%</td><td>72 ← 本周</td></tr>
+          <tr><td>rare earth China ban</td><td class="up">68</td><td class="up">+52%</td><td>68 ← 本周</td></tr>
+          <tr><td>Rio Tinto share price</td><td>55</td><td class="down">-6%</td><td>71 (W12)</td></tr>
+          <tr><td>BHP dividend 2026</td><td>48</td><td>+3%</td><td>62 (W11)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Right -->
+    <div>
+      <div class="ch-title">💬 Reddit r/ASX 矿业情绪分析</div>
+      <div style="background:var(--bgL);border:1px solid var(--bdr);border-radius:7px;padding:10px 12px;margin-bottom:10px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+          <div style="font-size:10px;font-weight:700;color:#0f1115">本周净情绪指数 Net Sentiment</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:#ef4444">-8%</div>
+        </div>
+        <div style="font-size:9px;color:var(--txtL);margin-bottom:8px">帖子数：284 · 正面：128（45%）· 负面：156（55%）</div>
+        <div class="sent-bar-row" style="margin-bottom:5px"><span class="sent-bar-label" style="font-size:9px;width:60px">正面</span><div class="sent-track"><div class="sent-fill-bull" style="width:45%"></div></div><span class="sent-pct up" style="font-size:9px">45%</span></div>
+        <div class="sent-bar-row"><span class="sent-bar-label" style="font-size:9px;width:60px">负面</span><div class="sent-track"><div class="sent-fill-bear" style="width:55%"></div></div><span class="sent-pct down" style="font-size:9px">55%</span></div>
+        <div style="font-size:9px;color:#374151;margin-top:7px;padding-top:7px;border-top:1px solid var(--bdr)">
+          <strong>高热帖摘要：</strong>"铁矿直接跌穿了，FMG今天挂单被秒" (+1.2k upvotes)；"有人在抄底PLS吗，感觉快见底了" (+890)；"黄金ETF申购量创新高，散户开始躲避了" (+760)
+        </div>
+      </div>
+
+      <div class="ch-title">📢 ASX公告评论区情绪扫描</div>
+      <table class="data-table">
+        <thead><tr><th>公司</th><th>公告类型</th><th>评论情绪</th><th>热度</th></tr></thead>
+        <tbody>
+          <tr><td><strong>RIO</strong></td><td style="font-size:9.5px">铜产量指引上调</td><td><span class="kol-stance stance-bull">正面</span></td><td class="up">🔥🔥🔥</td></tr>
+          <tr><td><strong>FMG</strong></td><td style="font-size:9.5px">铁矿发货量季报</td><td><span class="kol-stance stance-bear">负面</span></td><td class="down">📉📉</td></tr>
+          <tr><td><strong>PLS</strong></td><td style="font-size:9.5px">锂矿季报+成本指引</td><td><span class="kol-stance stance-bear">负面</span></td><td class="down">📉</td></tr>
+          <tr><td><strong>NCM</strong></td><td style="font-size:9.5px">黄金产量超预期</td><td><span class="kol-stance stance-bull">正面</span></td><td class="up">🔥🔥</td></tr>
+          <tr><td><strong>LYC</strong></td><td style="font-size:9.5px">稀土加工线扩产</td><td><span class="kol-stance stance-bull">正面</span></td><td class="up">🔥</td></tr>
+          <tr><td><strong>BHP</strong></td><td style="font-size:9.5px">铜分拆估值分析</td><td><span class="kol-stance stance-neutral">中性</span></td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ==================== PAGE 8: INST VS RETAIL + OUTLOOK ==================== -->
+<div class="page">
+<div class="inner">
+  <div class="page-bar">
+    <div class="left">
+      <svg width="18" height="18" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.5"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      <span class="wm" style="font-size:11px"><span style="color:#0f1115">Mining</span><span style="color:#0d9488">Clawd</span></span>
+      <span style="font-size:9px;color:#6b7280;margin-left:6px">情绪面周报 Sentiment Weekly</span>
+    </div>
+    <div class="right">Week 14 · 2026.04.07</div>
+  </div>
+
+  <h2><span class="num">六</span>机构 vs 散户情绪对比 Institutional vs Retail</h2>
+
+  <div class="two-col">
+    <div>
+      <div class="ch-title">🏦 机构净买卖方向（大宗交易）</div>
+      <table class="data-table">
+        <thead><tr><th>标的</th><th>机构净方向</th><th>大宗成交额</th><th>vs上周</th></tr></thead>
+        <tbody>
+          <tr><td><strong style="color:var(--cu)">铜概念股</strong></td><td><span class="kol-stance stance-bull">净买入</span></td><td>A$2.4亿</td><td class="up">+68%</td></tr>
+          <tr><td><strong style="color:var(--au)">黄金矿股</strong></td><td><span class="kol-stance stance-bull">净买入</span></td><td>A$1.8亿</td><td class="up">+32%</td></tr>
+          <tr><td><strong style="color:var(--ree)">稀土股</strong></td><td><span class="kol-stance stance-neutral">中性</span></td><td>A$0.6亿</td><td>+4%</td></tr>
+          <tr><td><strong style="color:var(--fe)">铁矿股 FMG/RIO</strong></td><td><span class="kol-stance stance-neutral">轻仓</span></td><td>A$3.1亿</td><td class="down">-18%</td></tr>
+          <tr><td><strong style="color:var(--li)">锂矿股 PLS/MIN</strong></td><td><span class="kol-stance stance-bear">净卖出</span></td><td>A$1.2亿</td><td class="down">-28%</td></tr>
+        </tbody>
+      </table>
+
+      <div class="ch-title" style="margin-top:10px">👤 散户持仓情绪（CommSec / nabtrade）</div>
+      <table class="data-table">
+        <thead><tr><th>标的</th><th>散户方向</th><th>净仓位变化</th></tr></thead>
+        <tbody>
+          <tr><td>铜概念（OZL/SFR）</td><td><span class="kol-stance stance-neutral">小幅减仓</span></td><td class="down">-4%</td></tr>
+          <tr><td>黄金 NCM/EVN</td><td><span class="kol-stance stance-bull">持续加仓</span></td><td class="up">+12%</td></tr>
+          <tr><td>铁矿 FMG</td><td><span class="kol-stance stance-bear">持续减仓</span></td><td class="down">-15%</td></tr>
+          <tr><td>锂矿 PLS/MIN</td><td><span class="kol-stance stance-bear">加速减仓</span></td><td class="down">-22%</td></tr>
+        </tbody>
+      </table>
+
+      <div class="alert-box" style="margin-top:10px">
+        <div class="alert-icon">📡</div>
+        <div>
+          <div class="alert-title">背离信号预警 Divergence Signal: 铜 +22（警戒线 ±20）</div>
+          <div class="alert-body" style="font-size:9.5px">机构净买入铜概念 +68%，而散户小幅减仓 -4%。历史上当此背离指数 &gt;+20，后4周铜矿股上涨概率 <strong>73%</strong>，平均涨幅 +6.8%。值得关注。</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2 style="margin-top:0"><span class="num">七</span>下周情绪展望 Forward Outlook</h2>
+
+      <div class="ch-title">📅 下周高影响事件日历 W15 Event Calendar</div>
+      <div class="event-row">
+        <div class="event-date">04/08<br>周二</div>
+        <div><span class="event-tag ev-high">高</span><span class="event-body">中国3月CPI/PPI数据发布 — 直接影响铁矿需求预期</span></div>
+      </div>
+      <div class="event-row">
+        <div class="event-date">04/09<br>周三</div>
+        <div><span class="event-tag ev-high">高</span><span class="event-body">美国CPI数据 — 影响降息预期，联动黄金/铜情绪</span></div>
+      </div>
+      <div class="event-row">
+        <div class="event-date">04/10<br>周四</div>
+        <div><span class="event-tag ev-med">中</span><span class="event-body">RIO Q1生产报告发布 — 铜铁矿实际产量验证</span></div>
+      </div>
+      <div class="event-row">
+        <div class="event-date">04/11<br>周五</div>
+        <div><span class="event-tag ev-med">中</span><span class="event-body">澳洲大选正式公告 — 矿业税改预期落地时间表</span></div>
+      </div>
+      <div class="event-row" style="border-bottom:none">
+        <div class="event-date">持续</div>
+        <div><span class="event-tag ev-low">低</span><span class="event-body">中国稀土出口限制政策细节跟踪</span></div>
+      </div>
+
+      <div class="ch-title" style="margin-top:12px">🤖 AI 情绪预测得分 W15 Forecast</div>
+      <div style="background:rgba(20,184,166,0.05);border:1px solid rgba(20,184,166,0.2);border-radius:7px;padding:10px 12px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+          <div style="font-size:10px;font-weight:700;color:#0f1115">预测综合情绪指数</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#f59e0b">42–46</div>
+        </div>
+        <div style="font-size:9.5px;color:#374151;line-height:1.7">
+          · <strong>铜/金</strong>：情绪有望维持强势（RIO季报预期超预期）<br>
+          · <strong>铁矿</strong>：CPI数据疲软将进一步压制情绪，维持恐慌区间<br>
+          · <strong>锂</strong>：分歧持续，触发事件缺失，方向不明<br>
+          · <strong>整体</strong>：若美国CPI弱于预期，降息预期升温将整体提振指数至46+
+        </div>
+      </div>
+
+      <div class="ch-title" style="margin-top:10px">👀 值得关注大V动向 KOLs to Watch</div>
+      <div style="font-size:10px;line-height:1.8;color:#374151;background:var(--bgL);border-radius:6px;padding:9px 12px;border:1px solid var(--bdr)">
+        · <strong>@CopperBullASX</strong> — RIO季报前后将密集发声，关注其铜产量解读<br>
+        · <strong>@LithiumDeepDive</strong> — 已预告发布年度锂供需平衡表更新，将是锂矿情绪关键参考<br>
+        · <strong>@MiningTaxWatcher</strong> — 大选公告后立场或由中性转为明确
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    本报告由 MiningClawd AI Intelligence Systems 自动生成，数据来源包含 X / LinkedIn / Reddit / Google Trends / ASX 公告及大宗交易数据，情绪指标为统计模型估算，不构成投资建议。请参阅封底完整免责声明。<br>
+    This report is AI-generated by MiningClawd. Sentiment scores are model estimates and do not constitute investment advice. See back cover for full disclaimer.
+  </div>
+</div>
+</div>
+
+<!-- ==================== BACK COVER ==================== -->
+<div class="page back-cover">
+  <div class="glow1"></div><div class="glow2"></div>
+  <div class="streak"></div>
+
+  <div class="bc-top">
+    <div style="display:flex;align-items:center;gap:10px">
+      <svg width="32" height="32" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="12" fill="#0f1115" stroke="#14b8a6" stroke-width="1.2"/><path d="M12 34 L12 20 L18 14" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 14 L24 26 L30 14" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M30 14 L36 20 L36 34" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="28" x2="32" y2="28" stroke="#14b8a6" stroke-width="1" opacity="0.4"/><path d="M22 37 L24 40 L26 37 L24 34 Z" fill="#14b8a6" opacity="0.85"/></svg>
+      <span class="wm" style="font-size:15px"><span style="color:#fff">Mining</span><span style="color:#14b8a6">Clawd</span></span>
+    </div>
+    <div style="font-size:10px;color:#4b5563;letter-spacing:1px">情绪面周报 · Week 14 · 2026</div>
+  </div>
+
+  <div class="bc-center">
+    <div style="font-size:11px;color:#14b8a6;letter-spacing:3px;text-transform:uppercase;font-weight:500">Mining Intelligence</div>
+    <div style="font-size:28px;font-weight:700;color:#fff;margin:10px 0;line-height:1.3">We see what's beneath.<br><span style="font-size:16px;font-weight:400;color:#9ca3af">最懂地球的AI</span></div>
+    <div class="bc-divider"></div>
+    <div style="font-size:11px;color:#6b7280;max-width:420px;line-height:1.7">
+      MiningClawd 整合 350TB 自有地质数据、实时市场行情与社交媒体情绪信号，为机构投资者提供矿业全谱系智能研究服务。
+    </div>
+    <div class="bc-info">
+      <div>
+        <div class="bc-col-title">联系我们</div>
+        <div class="bc-col-body">
+          <strong>info@lynaimining.com</strong><br>
+          www.lynaimining.com<br>
+          +61 420 921 816<br>
+          +86 135 5823 4202
+        </div>
+      </div>
+      <div>
+        <div class="bc-col-title">办公室</div>
+        <div class="bc-col-body">
+          <strong>Australia</strong><br>
+          Unit 5, 110 Hay Street<br>
+          Subiaco WA 6008<br><br>
+          <strong>China</strong><br>
+          朝阳区霄云路40号<br>
+          航空世纪大厦3层
+        </div>
+      </div>
+      <div>
+        <div class="bc-col-title">报告系列</div>
+        <div class="bc-col-body">
+          情绪面周报<br>
+          宏观经济周报<br>
+          资产数据全景报告<br>
+          矿种专项深度研究<br>
+          ESG可持续评级报告
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bc-footer">
+    <div class="bc-disclaimer">
+      本报告由 MiningClawd AI Intelligence Systems 生成，仅供机构投资者参考，不构成任何投资建议或要约。报告中的情绪指数、大V观点追踪及预测数据均为统计模型估算，存在固有局限性，不保证准确性或完整性。过去表现不代表未来结果。投资者应结合自身风险承受能力及专业顾问意见作出独立判断。本报告版权归 Geovision AI Mining Pty Ltd 所有，未经授权不得转载或分发。<br>
+      This report is generated by MiningClawd AI for institutional use only and does not constitute investment advice. Sentiment scores are statistical estimates. Past sentiment patterns are not indicative of future market performance.
+    </div>
+    <div class="bc-copyright">
+      <span style="color:#374151">© 2026 Geovision AI Mining Pty Ltd · ABN 00 000 000 000</span>
+      <span style="color:#14b8a6">CONFIDENTIAL · For Institutional Investors Only</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
