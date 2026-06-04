@@ -1,0 +1,15 @@
+qc:
+  blank_max_multiple_dl: 2        # blank must be < 2x detection limit
+  crm_recovery: [0.85, 1.15]      # acceptable CRM recovery fraction
+  duplicate_rpd_max: 20           # field/pulp duplicate RPD percent
+  batch_drift_max_sigma: 2        # batch drift in sigma units
+censored:
+  univariate_method: ros          # ros | half_dl | sqrt_dl  (default ROS, Helsel)
+  coda_method: multiplicative     # multiplicative (Martin-Fernandez)
+  delta_factor: 0.65              # multiplicative replacement delta = 0.65 * column DL/min
+units:
+  harmonize_to: ppm
+  on_parse_fail: error            # error | assume_ppm  (default: do not guess)
+isotopes:
+  # columns whose names contain these tokens are isotope columns: legitimate negatives, never ND
+  tokens: ["d13c", "d18o", "d34s", "d2h", "dd", "epsilon", "eps", "delta", "permil", "‰"]
