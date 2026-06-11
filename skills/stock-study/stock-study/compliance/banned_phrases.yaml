@@ -1,0 +1,36 @@
+# Banned Phrases for outbound text
+# OutputGate hard-blocks any artifact whose `text` contains one of these.
+# Owner: 杜慧仪
+
+phrases:
+  # English performance-promise language
+  - phrase: "guaranteed return"
+    reason: "Performance promise, prohibited by ASIC RG 264"
+  - phrase: "guaranteed buy"
+    reason: "Performance promise"
+  - phrase: "risk-free"
+    reason: "Performance promise"
+  - phrase: "no risk"
+    reason: "Performance promise"
+  - phrase: "can't lose"
+    reason: "Performance promise"
+
+  # Chinese performance-promise language
+  - phrase: "保证收益"
+    reason: "业绩承诺，违反 ASIC RG 264 / 中国资管新规披露要求"
+  - phrase: "稳赚"
+    reason: "业绩承诺"
+  - phrase: "包赚"
+    reason: "业绩承诺"
+  - phrase: "必涨"
+    reason: "业绩承诺"
+  - phrase: "必跌"
+    reason: "业绩承诺"
+  - phrase: "零风险"
+    reason: "业绩承诺"
+
+  # Suggestive language often used to skirt direct promises
+  - phrase: "definitely will"
+    reason: "Definitive future claim"
+  - phrase: "一定会上涨"
+    reason: "确定性未来声明"
