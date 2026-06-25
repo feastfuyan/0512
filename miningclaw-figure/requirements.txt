@@ -1,0 +1,12 @@
+# miningclaw-figure — Python dependencies
+#
+# Core (required for all figure types):
+pydantic>=2.0
+#
+# Full render (SVG / PDF / PNG via Vega-Lite):
+# Install only if you need render_figure() in a build/CI environment.
+# Not required for render_product_svg() or lint_figure().
+# vl-convert-python>=1.5
+#
+# Tests only:
+# pytest>=7.0

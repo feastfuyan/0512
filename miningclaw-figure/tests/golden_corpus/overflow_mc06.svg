@@ -1,0 +1,13 @@
+<div class="chart-block" id="fig-overflow-1" style="margin: 1rem 0;">
+  <div style="margin-bottom: 0.5rem; font-weight: bold;">Overflow Test</div>
+  <svg viewBox="0 0 1040 300" xmlns="http://www.w3.org/2000/svg">
+  <text x="20" y="20" font-size="16" font-weight="bold" fill="#1F3864">Overflow Test</text>
+  <g transform="translate(40, 10)">
+    <text x="0" y="22" font-size="12" fill="#1F3864">Very Long Label</text>
+    <rect x="180" y="6" width="720" height="22" fill="#f1f5f9" rx="4"/>
+    <rect x="180" y="6" width="720" height="22" fill="#14b8a6" rx="4"/>
+    <text x="1008" y="22" font-size="12" fill="#1F3864">99999 tenements</text>
+  </g>
+  <text x="20" y="270" font-size="10" fill="#666666">WA registry</text>
+</svg>
+</div>

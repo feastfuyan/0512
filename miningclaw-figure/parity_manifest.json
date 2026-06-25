@@ -1,0 +1,72 @@
+{
+  "runtime/quality/figure_checks.py": {
+    "constants": {
+      "_VIEWBOX_RE": "<expr>",
+      "_TEXT_X_RE": "<expr>",
+      "_G_TRANSLATE_RE": "<expr>",
+      "_RECT_W_RE": "<expr>",
+      "_TITLE_RE": "<expr>",
+      "_VALUE_LABEL_FULL_RE": "<expr>",
+      "_VALUE_CONTENT_RE": "<expr>",
+      "_RECT_FILL_RE": "<expr>",
+      "_FILL_ATTR_RE": "<expr>",
+      "_WIDTH_ATTR_RE": "<expr>",
+      "_BG_FILL": "#f1f5f9",
+      "_DECIMAL_UNIT_RE": "<expr>",
+      "_DIV_TAG_RE": "<expr>"
+    },
+    "public_funcs": [
+      "detect_duplicate_geometry",
+      "extract_figures",
+      "score_figure_deterministic"
+    ]
+  },
+  "runtime/quality/chart_registry.py": {
+    "constants": {
+      "CHART_WRAPPER_CLASSES": [
+        "bar-track",
+        "chart-block",
+        "chart-img",
+        "mc-bar-chart",
+        "two-chart"
+      ],
+      "CHART_KIND_BY_CLASS": {
+        "chart-block": "horizontal-bar",
+        "mc-bar-chart": "horizontal-bar",
+        "bar-track": "diverging-html-bar",
+        "two-chart": "line-combo",
+        "chart-img": "line-combo"
+      }
+    },
+    "public_funcs": [
+      "chart_kind_for_classes"
+    ]
+  },
+  "runtime/quality/rubric.py": {
+    "constants": {
+      "QUALITY_FLOOR": 9.0,
+      "TEXT_DIMENSIONS": [
+        "thesis_clarity",
+        "evidence_grounding",
+        "analytical_depth",
+        "risk_balance",
+        "compliance",
+        "data_freshness",
+        "structure_flow",
+        "language_precision",
+        "actionability"
+      ],
+      "FIGURE_DIMENSIONS": [
+        "readability",
+        "labeling",
+        "data_viz_integrity",
+        "layout_integrity",
+        "aesthetic_consistency"
+      ]
+    },
+    "public_funcs": [
+      "all_meet_floor",
+      "lowest_dims"
+    ]
+  }
+}
