@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "registry": "https://clawhub.ai",
+  "slug": "exa-web-search-free",
+  "ownerHandle": "whiteknight07",
+  "installedVersion": "1.0.1",
+  "installedAt": 1783916549091,
+  "artifact": {
+    "kind": "archive",
+    "sha256": "fe6f4c5e8e85b3c528fc1ea49f8782928a577582ab5898264ee34285854da267",
+    "integrity": "sha256-/m9MXo6Fs8Uo/B6kn4eCkopXdYKrWJgmTuNChYVNomc="
+  },
+  "skillFile": {
+    "path": "SKILL.md",
+    "sha256": "878e35f9c0a0d50c314fab9f44d1c9371d840a05047b8b2d9557adbd3721b8c6"
+  }
+}
