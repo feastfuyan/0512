@@ -1,0 +1,282 @@
+# expert-panel-report / institutional-rubric.yaml
+# v3.0 — 对齐 02 架构, 维度 id 与 body 内容一致
+
+meta:
+  version: v3.0.0
+  effective_from: '2026-07-09'
+  gate_threshold: 9.5
+  total_gate_threshold: 9.0
+  max_rounds: 3
+  on_max_rounds_fail: watermark_and_publish
+  compliance_floor_enabled: true
+  scoring_method: hybrid
+  llm_weight: 0.6
+  mechanical_weight: 0.4
+dimensions:
+- id: professional_depth
+  name_zh: 专业深度
+  name_en: Professional Depth
+  weight: 0.2
+  description: 每章节 thesis-first; 论点清晰可证伪; 与数据方向一致; 每章 ≥1 专家引用; 情景分析 (bull/bear/base).
+  anchors:
+    '10.0': 每章加粗 thesis + ≥1 专家引用 + 情景分析, 论证链条完整.
+    '9.5': ≥90% 章节有 thesis + 专家引用, 偶有断点.
+    '9.0': ≥80% 有 thesis, 1 处矛盾.
+    '7.0': 信息罗列为主, 缺论点.
+    '5.0': 无 thesis.
+  mechanical_checks:
+  - id: thesis_block_count
+    method: regex_count
+    pattern: (?:<div class="thesis">|<strong>Thesis</strong>)
+    rule: 每章必须有 thesis 块
+    weight_in_dim: 0.4
+  - id: expert_quote_per_chapter
+    method: regex_count
+    pattern: <div class="expert-quote">
+    rule: 每章 ≥1 个 expert-quote 块
+    weight_in_dim: 0.4
+  - id: scenario_grid_present
+    method: regex_count
+    pattern: class="scenario-card
+    rule: 商品分析章必须有情景分析
+    weight_in_dim: 0.2
+  llm_checks:
+  - id: thesis_expert_consistency
+    weight_in_dim: 1.0
+    prompt_fragment: 检查每章 thesis 是否与专家引用方向一致; 情景概率是否合理.
+- id: logical_consistency
+  name_zh: 逻辑一致性
+  name_en: Logical Consistency
+  weight: 0.2
+  description: 所有数字可追溯到 [src:行号]; 精度统一; thesis 与数据方向一致; 专家观点不矛盾.
+  anchors:
+    '10.0': 所有数字有 [src:N], 精度统一, 论点与数据完全一致.
+    '9.5': ≥98% citation coverage, 1-2 处精度偏差.
+    '9.0': ≥90% coverage, 1 处论点与数据矛盾.
+    '7.0': 大量数字无来源.
+    '5.0': 数据与论点脱节.
+  mechanical_checks:
+  - id: citation_coverage
+    method: regex_ratio
+    numerator: \[src:\d+\]
+    denominator: '[\d.,]+\s*(?:%|USD|bn|m|oz|lb|t)'
+    rule: ≥98% 数字带 [src:N]
+    weight_in_dim: 0.5
+  - id: src_line_validity
+    method: cross_check
+    rule: 每个 [src:N] 在 data.json numeric_facts 中有对应 src_line ±3
+    weight_in_dim: 0.3
+  - id: precision_consistency
+    method: format_check
+    rule: 同类指标精度统一 (如金价统一 2dp)
+    weight_in_dim: 0.2
+  llm_checks:
+  - id: logical_flow
+    weight_in_dim: 1.0
+    prompt_fragment: '检查推理链条: 前提→推理→结论是否成立; 专家观点是否有矛盾.'
+- id: expert_citation_quality
+  name_zh: 专家引用与图表质量
+  name_en: Expert Citation & Chart Quality
+  weight: 0.15
+  description: 图表配色命中规范 + 分辨率 2080×1280 + 每图有 Source 标注; 专家引用有出处.
+  anchors:
+    '10.0': 所有图表达标 + 专家引用全部标注出处.
+    '9.5': ≥90% 图表达标.
+    '5.0': 使用 Chart.js/ECharts 等禁用库.
+  mechanical_checks:
+  - id: chart_image_present
+    method: regex_count
+    pattern: (?:<img[^>]+class="chart"|<div[^>]+class="[^"]*chart-block[^"]*")
+    rule: 每章 ≥1 图表
+    weight_in_dim: 0.15
+  - id: chart_resolution
+    method: image_metadata
+    rule: 所有图表 PNG ≥2080×1280
+    weight_in_dim: 0.15
+  - id: color_palette_whitelist
+    method: hex_whitelist
+    allowed_hexes:
+    - '#14b8a6'
+    - '#3b82f6'
+    - '#f59e0b'
+    - '#06b6d4'
+    - '#f43f5e'
+    - '#ef4444'
+    - '#f87171'
+    - '#6b7280'
+    - '#374151'
+    - '#22c55e'
+    rule: ≥95% hex 在白名单
+    weight_in_dim: 0.15
+  - id: data_source_caption
+    method: regex_count
+    pattern: 数据来源[:：]|Source[:\s]
+    rule: 每图有 Source 标注
+    weight_in_dim: 0.15
+  - id: no_chart_library
+    method: negative_regex
+    forbidden_patterns:
+    - Chart\.js|chart\.min\.js|echarts|d3\.min\.js|plotly|quickchart\.io
+    rule: 禁止使用图表库
+    weight_in_dim: 0.1
+  - id: figure_quality_score
+    method: score_figure_svg
+    rule: SVG 安全 + 数据标记 + 标注
+    weight_in_dim: 0.15
+  - id: chart_data_match_mech
+    method: chart_data_match
+    tolerance: 0.02
+    rule: 图表数据与 data.json 一致 (2% tolerance)
+    weight_in_dim: 0.15
+  llm_checks:
+  - id: chart_data_match
+    weight_in_dim: 0.2
+    prompt_fragment: 抽样 3 图, 判断数据点是否与 data.json 一致.
+- id: data_integrity
+  name_zh: 数据完整性
+  name_en: Data Integrity
+  weight: 0.15
+  description: 商品数据完整无空缺; COI 披露 (如涉及); 无臆造数据; data.json 与报告一致.
+  anchors:
+    '10.0': 所有商品有价格/rating/drivers; 无空缺; COI 已披露.
+    '9.5': 1-2 个非核心字段缺失 (已在 missing[] 声明).
+    '9.0': 3-5 个字段缺失.
+    '7.0': 核心商品缺数据.
+    '5.0': 大量数据缺失或臆造.
+  mechanical_checks:
+  - id: coi_disclosure
+    method: regex_count
+    pattern: 利益冲突|COI\s*disclosure|Conflict.of.Interest|No COI
+    rule: 如涉及凌云股东/客户矿权, 必须有 COI 章节
+    weight_in_dim: 0.4
+  - id: ai_generated_badge
+    method: regex_count
+    pattern: AI GENERATED|ai-badge
+    rule: 必须有 AI 生成声明
+    weight_in_dim: 0.3
+  - id: no_marketing_violation
+    method: negative_regex_strict
+    forbidden_patterns:
+    - MNPI|material.non.public.information
+    - guaranteed.return|risk.free.investment|sure.fire.profit
+    - inside.information|confidential.tip
+    rule: 无 MNPI / 营销违规
+    weight_in_dim: 0.3
+  llm_checks:
+  - id: data_completeness
+    weight_in_dim: 1.0
+    prompt_fragment: 检查 missing[] 是否透明声明; 是否有臆造数据.
+- id: structure_compliance
+  name_zh: 版式合规
+  name_en: Structure Compliance
+  weight: 0.15
+  description: 封面光效 + 目录 + 封底 + 无溢出 + 字号投行标准.
+  anchors:
+    '10.0': 所有页符合投行版式规范, 无溢出, 封面 + 封底完整, 侧栏数据齐备.
+    '9.5': 整体优秀, 仅 1-2 页有微小溢出或侧栏字数超限.
+    '9.0': 3-5 页有小问题.
+    '7.0': 缺封底 OR 大段内容溢出.
+    '5.0': 无法识别版式风格.
+  mechanical_checks:
+  - id: back_cover_present
+    method: regex_count
+    pattern: <div class="page back-cover">
+    rule: 必须存在 .back-cover
+    if_zero: score -= 3.0
+    weight_in_dim: 0.2
+  - id: table_of_contents_present
+    method: regex_count
+    pattern: Contents|Table of Contents
+    rule: 必须有目录页 (Contents / Table of Contents)
+    if_zero: score -= 2.0
+    weight_in_dim: 0.15
+  - id: cover_glow_layers
+    method: regex_count
+    pattern: <div class="glow[123]">
+    rule: 封面光效 .glow1/2/3 至少 1 个
+    weight_in_dim: 0.1
+  - id: font_size_compliance
+    method: css_check
+    rules:
+    - '正文 font-size: 11.5px ± 0.5px'
+    - 'h2 font-size: 17px ± 1px'
+    - 'h3 font-size: 13.5px ± 1px'
+    weight_in_dim: 0.15
+  - id: page_break_consistency
+    method: css_check
+    rule: '所有 .page 有 page-break-after; .back-cover 有 page-break-after: auto'
+    weight_in_dim: 0.2
+  - id: no_overflow_after_fixOverflow
+    method: playwright_check
+    rule: 调用 fixOverflow 后, 再次扫描溢出元素数 = 0
+    weight_in_dim: 0.2
+  llm_checks: []
+- id: language_quality
+  name_zh: 语言质量与合规
+  name_en: Language Quality & Compliance
+  weight: 0.15
+  hard_floor: true
+  description: 双语格式; 无营销违规; 制裁检查 fail-closed; 风险对称; 免责声明完整.
+  anchors:
+    '10.0': 双语格式完美, 无敏感词, 风险对称, 免责完整.
+    '9.5': 1-2 处边缘措辞.
+    '7.0': 明显违规 (内幕暗示).
+    '3.0': 涉及制裁实体未披露.
+  mechanical_checks:
+  - id: sanctions_entity_check
+    method: entity_list_check
+    list_path: shared/sanctions-list.json
+    rule: 无未标注 [SANCTIONED] 的制裁实体
+    weight_in_dim: 0.3
+  - id: disclaimer_present
+    method: regex_count
+    pattern: Disclaimer|免责声明
+    rule: 必须有免责声明
+    weight_in_dim: 0.15
+  - id: ai_generated_disclosure
+    method: regex_count
+    pattern: AI Disclosure|AI声明|AI GENERATED
+    rule: 必须有 AI 声明
+    weight_in_dim: 0.15
+  - id: risk_box_per_chapter
+    method: regex_count
+    pattern: class="risk-box"
+    rule: 每章 ≥1 个 risk-box
+    weight_in_dim: 0.2
+  - id: risk_keyword_coverage
+    method: regex_count
+    keywords:
+    - 地缘|geopolitic
+    - Native\s+Title|原住民
+    - 制裁|sanction|OFAC
+    - 尾矿|tailing
+    - 环评|EPBC
+    - 价格.{0,10}下行|price.{0,10}downside
+    rule: matches ≥ 3 类
+    weight_in_dim: 0.2
+  llm_checks:
+  - id: risk_symmetry
+    weight_in_dim: 0.0
+    prompt_fragment: 检查每章是否双向论述.
+degraded_output:
+  enabled: true
+  watermark_format: '[未达 9.5: {failed_list_with_scores}] · LynAI · {report_id}'
+  watermark_color: '#9ca3af'
+  watermark_size_px: 9
+  watermark_position: bottom-right-each-page
+  also_inject_into_disclaimer: true
+  audit_status: DEGRADED
+failure_dispatch:
+  professional_depth:
+  - content-writer
+  logical_consistency:
+  - content-writer
+  expert_citation_quality:
+  - visual-designer
+  - content-writer
+  data_integrity:
+  - data-collector
+  structure_compliance:
+  - content-writer
+  language_quality:
+  - content-writer

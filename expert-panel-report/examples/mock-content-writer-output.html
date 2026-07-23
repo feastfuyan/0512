@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>MiningClaw 宏观经济报告 — TEST-001 (mock)</title>
+<style>
+  @page { size: A4; margin: 0 }
+  body { font-family: 'Noto Sans SC','Inter',sans-serif; font-size: 11.5px; color: #1f2937; margin: 0 }
+  .page { width: 210mm; min-height: 297mm; page-break-after: always; overflow: hidden; padding: 18mm; box-sizing: border-box; position: relative }
+  .page.cover { background: linear-gradient(135deg,#0f172a 0%,#1e293b 100%); color: #fff; padding: 30mm }
+  .glow1 { position: absolute; width: 200px; height: 200px; background: radial-gradient(circle,#14b8a6 0%,transparent 70%); top: 40mm; right: 30mm; opacity: 0.4 }
+  .glow2 { position: absolute; width: 300px; height: 300px; background: radial-gradient(circle,#3b82f6 0%,transparent 70%); bottom: 30mm; left: 20mm; opacity: 0.3 }
+  h1 { font-size: 28px; margin: 0 0 12px 0; font-weight: 700; letter-spacing: 0.5px }
+  h2 { font-size: 17px; margin: 20px 0 10px 0; color: #0f172a; border-bottom: 2px solid #14b8a6; padding-bottom: 4px }
+  h3 { font-size: 13.5px; margin: 14px 0 6px 0; color: #1e293b }
+  .ai-badge { display: inline-block; background: #14b8a6; color: #fff; padding: 2px 8px; border-radius: 3px; font-size: 9px; letter-spacing: 1px; font-weight: 600 }
+  .thesis { background: #f0fdfa; border-left: 3px solid #14b8a6; padding: 10px 14px; margin: 12px 0; font-size: 12px; line-height: 1.6; break-inside: avoid }
+  .data-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 10.5px; break-inside: avoid }
+  .data-table th { background: #f1f5f9; padding: 6px 10px; text-align: left; border-bottom: 2px solid #14b8a6; font-weight: 600 }
+  .data-table td { padding: 5px 10px; border-bottom: 1px solid #e2e8f0 }
+  .key-points { margin: 12px 0; break-inside: avoid }
+  .key-points li { margin: 4px 0; font-size: 11px }
+  .risk-box { background: #fef2f2; border-left: 3px solid #ef4444; padding: 10px 14px; margin: 14px 0; font-size: 11px; break-inside: avoid }
+  img.chart { width: 100%; max-width: 170mm; margin: 12px auto; display: block }
+  .disclaimer { background: #f8fafc; padding: 14px 18px; margin: 20px 0; font-size: 9px; color: #64748b; border-radius: 4px; line-height: 1.5; break-inside: avoid }
+  .back-cover { background: linear-gradient(135deg,#0f172a 0%,#1e293b 100%); color: #cbd5e1; page-break-after: auto }
+  .back-cover h2 { color: #fff; border: none }
+</style>
+</head>
+<body>
+
+<!-- 封面 -->
+<div class="page cover">
+  <div class="glow1"></div>
+  <div class="glow2"></div>
+  <span class="ai-badge">AI GENERATED</span>
+  <h1 style="margin-top:60mm">全球矿业宏观经济周度观察报告</h1>
+  <div style="font-size:14px;opacity:0.8;margin-bottom:6px">宏观研究 · 周度</div>
+  <div style="font-size:12px;opacity:0.6">报告日期: 2026.05.28</div>
+  <div style="font-size:12px;opacity:0.6">报告期: 2026.05.21 — 2026.05.27</div>
+  <div style="position:absolute;bottom:25mm;left:30mm;font-size:10px;opacity:0.5">LynAI Mines · Geovision · MCW-MACRO-20260528-001</div>
+</div>
+
+<!-- 章节 1 -->
+<div class="page">
+  <section class="chapter">
+    <h2>一、全球宏观经济概览</h2>
+
+    <div class="thesis">
+      <strong>Thesis</strong>: 美联储维持 5.25-5.50% [src:87] 强化美元中性偏强 (DXY 105.2 [src:101]),
+      对铜价构成短期压制, 但 ECB 与美联储节奏分化 [src:95] 形成对冲, 我们维持 Q2 铜 9,000-9,500/t 区间判断.
+    </div>
+
+    <table class="data-table">
+      <thead><tr><th>央行</th><th>当前利率</th><th>上次变动</th><th>市场预期</th></tr></thead>
+      <tbody>
+        <tr><td>美联储</td><td>5.25-5.50% [src:87]</td><td>2026-03 暂停</td><td>2026-09 降息 25bp [src:92]</td></tr>
+        <tr><td>ECB</td><td>4.00% [src:89]</td><td>2026-01 降息</td><td>2026-07 再降 25bp</td></tr>
+        <tr><td>日银</td><td>0.10% [src:110]</td><td>2026-04 加息</td><td>维持</td></tr>
+      </tbody>
+    </table>
+
+    <ul class="key-points">
+      <li>美联储维持高利率压制商品价格 [src:88]</li>
+      <li>美元指数突破 105 关口 [src:101]</li>
+      <li>ECB 与美联储节奏分化 [src:95]</li>
+      <li>日银开启加息周期影响 carry trade [src:110]</li>
+    </ul>
+
+    <img class="chart" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" alt="DXY vs 铜价走势">
+
+    <div class="risk-box">
+      <strong>下行风险</strong>: 美联储若 9 月推迟降息至 12 月, 铜价支撑下移至 8,800 [src:101].
+      地缘风险包括红海航运中断对铜供应链的传导, 影响南美铜精矿运抵中国的窗口期.
+    </div>
+  </section>
+</div>
+
+<!-- 章节 2 -->
+<div class="page">
+  <section class="chapter">
+    <h2>二、大宗商品市场追踪</h2>
+
+    <div class="thesis">
+      <strong>Thesis</strong>: LME 铜 +2.3% w/w 至 9,180 USD/t [src:142], 金价站稳 2,350 USD/oz [src:158],
+      工业金属强势 + 贵金属避险共振, 反映市场对 Fed 降息时点的再定价.
+    </div>
+
+    <table class="data-table">
+      <thead><tr><th>金属</th><th>周收盘 (USD/t)</th><th>w/w 涨跌</th><th>ytd 涨跌</th></tr></thead>
+      <tbody>
+        <tr><td>铜</td><td>9,180 [src:142]</td><td>+2.3%</td><td>+8.4%</td></tr>
+        <tr><td>铝</td><td>2,450 [src:145]</td><td>+0.8%</td><td>+3.2%</td></tr>
+        <tr><td>锌</td><td>2,890 [src:148]</td><td>-1.1%</td><td>-2.4%</td></tr>
+        <tr><td>铅</td><td>2,140 [src:151]</td><td>+0.3%</td><td>-1.8%</td></tr>
+      </tbody>
+    </table>
+
+    <ul class="key-points">
+      <li>铜价站稳 9,000 关口 [src:143]</li>
+      <li>金价创年内新高 [src:159]</li>
+      <li>锌库存连续 4 周累库 [src:165]</li>
+      <li>锂价底部企稳 [src:172]</li>
+    </ul>
+
+    <img class="chart" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" alt="LME 金属价格变化">
+
+    <div class="risk-box">
+      <strong>下行风险</strong>: 中国 5 月制造业 PMI < 49 (上次 50.4) 则铜价支撑下移至 8,800.
+      锌库存累库可能预示需求疲软, 关注 LME 注销仓单变化.
+    </div>
+  </section>
+</div>
+
+<!-- 免责声明 -->
+<div class="page">
+  <div class="disclaimer">
+    <strong>免责声明</strong>: 本报告由 AI 辅助生成 (AI GENERATED), 仅供 LynAI Mines 内部 IC 讨论使用, 不构成投资建议.
+    所有数据来源于公开渠道, 凌云智矿对数据准确性不作担保. 投资有风险, 决策需谨慎.
+    报告版权归 LynAI Mines 所有. 未经书面授权, 不得复制 / 转发 / 公开传播.
+  </div>
+</div>
+
+<!-- 封底 -->
+<div class="page back-cover">
+  <div style="display:flex;justify-content:space-between;padding:40mm 20mm">
+    <div>
+      <h2>LynAI Mines</h2>
+      <div style="font-size:11px;opacity:0.7;margin-top:8px">Perth · Hangzhou · Harare</div>
+    </div>
+    <div>
+      <h2>联系</h2>
+      <div style="font-size:11px;opacity:0.7;margin-top:8px">research@lynai.mining</div>
+      <div style="font-size:11px;opacity:0.7">www.lynai.mining</div>
+    </div>
+    <div>
+      <h2>合规</h2>
+      <div style="font-size:11px;opacity:0.7;margin-top:8px">© 2026 LynAI Mines</div>
+      <div style="font-size:11px;opacity:0.7">All rights reserved</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

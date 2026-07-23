@@ -1,0 +1,120 @@
+{
+  "_meta": {
+    "status": "AUTHORITATIVE-SAMPLE",
+    "description": "10 real OFAC-SDN sourced entities — offline fallback + test fixture",
+    "source": "OFAC-SDN",
+    "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML",
+    "generated_at": "2026-07-13T15:05:21.285Z"
+  },
+  "entities": [
+    {
+      "name": "AEROCARIBBEAN AIRLINES",
+      "aliases": [
+        "AERO-CARIBBEAN"
+      ],
+      "program": "CUBA",
+      "source": "OFAC-SDN",
+      "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML",
+      "source_publish_date": "2026-07-13",
+      "source_record_uid": "OFAC-SDN-36",
+      "retrieved_at": "2026-07-13T15:05:12.519Z"
+    },
+    {
+      "name": "ANGLO-CARIBBEAN CO., LTD.",
+      "aliases": [
+        "AVIA IMPORT"
+      ],
+      "program": "CUBA",
+      "source": "OFAC-SDN",
+      "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML",
+      "source_publish_date": "2026-07-13",
+      "source_record_uid": "OFAC-SDN-173",
+      "retrieved_at": "2026-07-13T15:05:12.519Z"
+    },
+    {
+      "name": "BANCO NACIONAL DE CUBA",
+      "aliases": [
+        "BNC",
+        "NATIONAL BANK OF CUBA"
+      ],
+      "program": "CUBA",
+      "source": "OFAC-SDN",
+      "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML",
+      "source_publish_date": "2026-07-13",
+      "source_record_uid": "OFAC-SDN-306",
+      "retrieved_at": "2026-07-13T15:05:12.520Z"
+    },
+    {
+      "name": "BOUTIQUE LA MAISON",
+      "aliases": [],
+      "program": "CUBA",
+      "source": "OFAC-SDN",
+      "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML",
+      "source_publish_date": "2026-07-13",
+      "source_record_uid": "OFAC-SDN-424",
+      "retrieved_at": "2026-07-13T15:05:12.520Z"
+    },
+    {
+      "name": "CASA DE CUBA",
+      "aliases": [],
+      "program": "CUBA",
+      "source": "OFAC-SDN",
+      "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML",
+      "source_publish_date": "2026-07-13",
+      "source_record_uid": "OFAC-SDN-475",
+      "retrieved_at": "2026-07-13T15:05:12.520Z"
+    },
+    {
+      "name": "CECOEX, S.A.",
+      "aliases": [],
+      "program": "CUBA",
+      "source": "OFAC-SDN",
+      "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML",
+      "source_publish_date": "2026-07-13",
+      "source_record_uid": "OFAC-SDN-480",
+      "retrieved_at": "2026-07-13T15:05:12.520Z"
+    },
+    {
+      "name": "CIMEX",
+      "aliases": [],
+      "program": "CUBA",
+      "source": "OFAC-SDN",
+      "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML",
+      "source_publish_date": "2026-07-13",
+      "source_record_uid": "OFAC-SDN-535",
+      "retrieved_at": "2026-07-13T15:05:12.520Z"
+    },
+    {
+      "name": "CIMEX IBERICA",
+      "aliases": [],
+      "program": "CUBA",
+      "source": "OFAC-SDN",
+      "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML",
+      "source_publish_date": "2026-07-13",
+      "source_record_uid": "OFAC-SDN-536",
+      "retrieved_at": "2026-07-13T15:05:12.520Z"
+    },
+    {
+      "name": "CIMEX, S.A.",
+      "aliases": [],
+      "program": "CUBA",
+      "source": "OFAC-SDN",
+      "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML",
+      "source_publish_date": "2026-07-13",
+      "source_record_uid": "OFAC-SDN-537",
+      "retrieved_at": "2026-07-13T15:05:12.520Z"
+    },
+    {
+      "name": "COMERCIAL IBEROAMERICANA, S.A.",
+      "aliases": [
+        "COIBA"
+      ],
+      "program": "CUBA",
+      "source": "OFAC-SDN",
+      "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML",
+      "source_publish_date": "2026-07-13",
+      "source_record_uid": "OFAC-SDN-540",
+      "retrieved_at": "2026-07-13T15:05:12.520Z"
+    }
+  ]
+}

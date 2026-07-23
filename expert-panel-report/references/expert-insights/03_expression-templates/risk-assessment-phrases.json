@@ -1,0 +1,41 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-03-19",
+  "source": "Rick Rule style + Money of Mine expert panel",
+  "categories": {
+    "opening_risk_flags": {
+      "templates": [
+        "Investors should be particularly cautious of {risk_factor} in the current environment.",
+        "The primary risk factors we are monitoring include {risk_list}.",
+        "Duration risk remains elevated, particularly for {asset_class} investors.",
+        "However, I believe the probabilities favor {outcome}, subject to {condition}.",
+        "The downside scenario — while not our base case — would be triggered by {catalyst}."
+      ],
+      "usage": "风险提示章节开头"
+    },
+    "quantified_risk": {
+      "templates": [
+        "A {X}% correction in {asset} would imply {consequence} — a scenario we assign {probability}% probability.",
+        "Supply disruption of {X}% would translate to a {Y}% price impact based on historical elasticity.",
+        "Position sizing should reflect a maximum {X}% portfolio exposure given current uncertainty."
+      ],
+      "usage": "量化风险表达"
+    },
+    "macro_risk": {
+      "templates": [
+        "Federal Reserve policy errors represent the most significant tail risk in our assessment.",
+        "Geopolitical supply disruptions — particularly in {region} — could accelerate the {commodity} cycle.",
+        "The potential for commodity cycle reversal remains, though fundamentals suggest {timeframe} of continued strength."
+      ],
+      "usage": "宏观风险因子"
+    },
+    "rick_rule_style": {
+      "templates": [
+        "The problem with this thesis is that it requires {condition} — which history suggests occurs only {frequency}.",
+        "I stress-test this view by asking: what would have to be true for me to be wrong? The answer is {bear_case}.",
+        "Lending money to speculate in {asset} at current valuations is not a risk we would recommend taking."
+      ],
+      "usage": "Rick Rule风格风险表达"
+    }
+  }
+}

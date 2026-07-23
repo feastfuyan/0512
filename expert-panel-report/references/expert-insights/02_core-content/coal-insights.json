@@ -1,0 +1,569 @@
+{
+  "commodity": "coal",
+  "description": "Expert insights on coal from Money of Mine podcast",
+  "total_references": 59,
+  "sources": [
+    "Money of Mine Hosts"
+  ],
+  "last_updated": "2026-03-19",
+  "quality_grade": "RAW_TRANSCRIPT",
+  "requires_editorial_review": true,
+  "signoff_status": "NEEDS-SIGNOFF (re-graded 2026-06-29: source is podcast transcript, not vetted institutional data)",
+  "channel": "Money of Mine",
+  "references_by_category": {
+    "authority_statement": [
+      {
+        "text": "I think and it and it's and it's the the the reality is that technological advancements now require more fossil fuel as opposed to becoming energy independent or relying on on new energy.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think you know we can we can look back through the last year and say pretty firmly that you know the coal industry really is on on pretty good footing compared to the before times.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think Japan will probably increase their PCI rates like that's that's where I see the pressure valve to the extent that there is one uh being released in the market now.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think a good thing that benefits us because then cycles do become a little bit more predictable as opposed to operating on the whim of the next five-year plan.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think over overnight for us here in in Australia but in a nutshell Trump wanting to to put together a12 billion US group of any which metals.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think everywhere else it's just keep them on for as long as you can until uh small modular reactors get here sometime in the next decade.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think we we will see somebody come in and eventually restart a lot of these mines that have that have been shut down here recently.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think that's going to be you by and large more profitable for uh for the investing side of things as we go forward.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think is pretty clear uh is that if you're operating in Australia uh an economy of scale will do you really well.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think that's, you know, it's maybe not exactly uniform from country to country, but that has been a theme.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think that probably changes to some degree going forward as we increase automation within the industry.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think you'd probably put a cap at like 350 400 bucks and that would be the end of it.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think they're they're helping the cause and um buying White Haven stock again.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think at the at the crux of the question is everybody needs more Lovall.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think we've kind of hit the the wall of where volumes are going to be.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think I think New Hope is probably pretty fairly valued here.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think I think Stanmore is criminally undervalued down here.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think is eventually would impact the hyperscalers as well.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think would be and and core natural resources and Peabody.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "experience_wisdom": [
+      {
+        "text": "over the last 20 20 odd years, it has grown quite phenomenally to to the point you made before where it's kind of plateaued recently.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "data_citation": [
+      {
+        "text": "But what China's done on the metco side uh is they've they've done uh they've increased domestic production,  right?\n\nUh they were they were down in last year uh I want to say maybe 15% on the med side for for key components uh which uh kept their reliance on the seaborn market but as soon as that began to go in the other direction uh that's what really coincided with the bottom falling out of net prices and those sorts of things",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And and aluminium is an interesting one because where where there is a lot of like capacity build out in the aluminium sector it is in Indonesia right now and in Indonesia incredibly topical for the seaborn thermal market this week as like there's there's news out that they're reducing supply quotas by like 40 to 70% on 2025 levels",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "I mean, I think if you go back and look at we're we're moving from a completely flat environment as far as power demand growth in the United States to, you know, maybe 1 2% per year, which is still pretty flat, mind you",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "I mean, uh, you know, I don't think it's out of the question to be able to go get an 8 and a half% coupon, 10% coupon somewhere around in there",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Um, it's, you know, you could maybe use it to justify, you know, an additional five 10% upside or something like that",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "You'll start to see some supply rationale, but it's not going to get to 40%",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And the the net result is these are headline numbers, the 40 to 70%",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Um like that should be a $4 stock, an Aussie $4 stock at least",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Um like that should be a $4 stock, an Aussie $4 stock at least",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      }
+    ],
+    "certainty_judgment": [
+      {
+        "text": "I mean these these hyperscalers they they need almost infinite compute and you know you've got this collision of of exponential compute growth with with what is clearly the ability to provide a linear energy capacity at best and and an old system",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I'm not sure what the what the current status is of those operations, but the uh the the message I think is pretty clear uh is that if you're operating in Australia uh an economy of scale will do you really well",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "So,  quietly quietly finding popularity  and that's like that you I mentioned Aussie super buying White Haven again, but there's there's absolutely this kind of evolution in global capital allocation",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "It's so wonderful to get to talk to you every time and absolutely we'll bring a guest here next time uh so that I can wax so we can wax more poetic about the thermal coal side",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Uh, certainly in where I come from in West Virginia, um, you know, there's there's no love lost between uh, you know, the people in the industry over the years",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "China's obviously better positioned than most to be able to uh to to weather that storm, but even they have fuel constraints as well",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think we we will see somebody come in and eventually restart a lot of these mines that have that have been shut down here recently",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "But uh yeah, like that also that comes on the heel of that Reuters article uh last week which absolutely rugpulled the whole sector",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Well, if that's only 300 or 400 Aussie dollars at the same time, that's not quite as big of a hit uh that the government will get",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "So as soon as you see those capital uh allocations get uh get completed then then there will be an incremental uptick",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "So it's you know shudder to think what energy costs will be like at the at the peak of this next cycle",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Um  I imagine a bunch will pop out of Glen Tinto if if that deal eventually",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Do you think that will come back to market in some way, shape, or form",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "professional_advice": [
+      {
+        "text": "So, uh, yeah, there's there's no, you know, it's hard for me to not to look at the next decade and not think that, you know, all the companies that that we love and have been close to for the last, uh, uh, you know, decade or so are going to fare really well",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "0 0 era which um is is the the the realization that that these businesses are incredibly important to our prosperity and that they shouldn't have been so punitive in um in their their ways of restricting capital flows into these businesses previously",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "But if you take, you know, a a moving average, uh, and you look at it over time, well, since 2021, since this buildout really began, power prices had just moved steadily up and to the right at like a 10 or a 15 degree angle",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I mean, I think if you go back and look at we're we're moving from a completely flat environment as far as power demand growth in the United States to, you know, maybe 1 2% per year, which is still pretty flat, mind you",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Um, but when you when you take a look at the for me, the the where the place where you could actually see it play out is in power prices",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "But you should at least do the podicum of work to understand that even if this happens, are there other avenues to get there",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Um, so it it's the way that I look at this is there's it's the West versus China and the West is in the process of aligning",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Maybe we should introduce him to Derek Herd because Derek Herd is at the forefront of mining equipment advancements",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Uh and if you look at their steel prices their steel prices have come up commensurately with coke and coal prices",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Um like that should be a $4 stock, an Aussie $4 stock at least",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "logical_connection": [
+      {
+        "text": "And and aluminium is an interesting one because where where there is a lot of like capacity build out in the aluminium sector it is in Indonesia right now and in Indonesia incredibly topical for the seaborn thermal market this week as like there's there's news out that they're reducing supply quotas by like 40 to 70% on 2025 levels.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Um, I haven't followed Blue Scope particularly closely, just because, you know, for me down under, I tend to be a consumer of data rather than a generator of it.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Um yeah, let's let's talk about Latimore briefly because A recent a recent deal that um that they did do was acquire Ilawa out of South 32.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Uh I mean BHP's been able to weather those those production storms because they have a pretty big portfolio of assets.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Maybe we should introduce him to Derek Herd because Derek Herd is at the forefront of mining equipment advancements.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "We actually need more fossil fuels as a result of the the latest technological advancement.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Uh Peabody's interesting because we're we're increasing lowvall production.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "Coal Inflection Point AI Collides With Energy",
+        "video_id": "mQQvxaCup6k",
+        "url": "https://www.youtube.com/watch?v=mQQvxaCup6k",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ]
+  },
+  "price_reference_standard": "焦煤 HCC FOB / 动力煤 thermal FOB Newcastle 分列",
+  "price_note": "transcript 数字仅作背景, 正文价格须从 canonical source 拉取 (NEEDS-SIGNOFF)"
+}

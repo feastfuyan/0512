@@ -1,0 +1,782 @@
+{
+  "commodity": "uranium",
+  "description": "Expert insights on uranium from Money of Mine podcast",
+  "total_references": 80,
+  "sources": [
+    "Brandon Munro"
+  ],
+  "last_updated": "2026-03-19",
+  "quality_grade": "RAW_TRANSCRIPT",
+  "requires_editorial_review": true,
+  "signoff_status": "NEEDS-SIGNOFF (re-graded 2026-06-29: source is podcast transcript, not vetted institutional data)",
+  "channel": "Money of Mine",
+  "references_by_category": {
+    "authority_statement": [
+      {
+        "text": "I think the AIdriven data center demand is on balance as significant as the more optimistic numbers that are thrown out there and it puts an enormous amount of pressure on every base load electrical solution.",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think some of the grid level regulations that have been a hassle for incorporating behind the meter power solutions for data centers in one way or another will just get swept out of the way.",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think in a a genuine demonstration of the trust and rapport that's built up between us and and the executives at CN uh they agreed to it.",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it's in terms of just for particularly shareholders who are listening or people who are considering Banaman as an investment.",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it was uh I think it was Bill Beaman that said a while ago that JVS always start fantastic and they always end like shit.",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think that reaction that we saw on that day is indicative of a broader evolution of understanding understanding of this deal.",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think the luxury of liquidity where if something goes horribly wrong, you can pull your money out and lick your wounds.",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think we're just a totally different company to what we were a couple of weeks ago before this this deal was unveiled.",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think, the respect that we've developed for each other that we could strike a deal like this.",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think been rewarded and has certainly produced appropriate shareholder returns.",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think we're going to see the billion dollar man in a couple weeks time.",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think the market's come to understand that when it works, it's magic.",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think accurate finger on the pulse at the live firing end of things.",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think there was  Yeah, there was an a reaction  knee-jerk reaction.",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "experience_wisdom": [
+      {
+        "text": "over the last 5 years that would have averaged at more like 32 33.",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "data_citation": [
+      {
+        "text": "So uh there was a there was a lot of attention during the negotiations paid to ensuring the integrity of those confidentiality arrangements and those ring fencing arrangements and it was a bit counterintuitive to our partners right because they're saying well hang on a sec we've got a 45% economic interest in what you're selling and you won't even tell us the terms on which you're selling it and we said that's how it has to be and I think in a a genuine demonstration of the trust and rapport that's built up between us and and the executives at CN uh they agreed to it",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Now, we had a really cleareyed view of that because we just figured that the Chinese state apparatus is not going to put themselves at risk of investing hundreds of billions of dollars in going from 2% of their grid being nuclear as it was back then to something more like 15 or 20% of their grid being nuclear if they don't have 100red years of uranium to make sure that they're not going to get screwed by the rest of the world",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Now, we had a really cleareyed view of that because we just figured that the Chinese state apparatus is not going to put themselves at risk of investing hundreds of billions of dollars in going from 2% of their grid being nuclear as it was back then to something more like 15 or 20% of their grid being nuclear if they don't have 100red years of uranium to make sure that they're not going to get screwed by the rest of the world",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "uh we've we've in as part of our corporate strategy really we've been considering amongst all of the various constraints how to develop this asset as a single asset developer for most of that journey the capex well exceeded our own market capitalization and if I put that in context the original development capex with the larger project was 873 million US now when I came in as CEO we were a $20 million company",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "uh we've we've in as part of our corporate strategy really we've been considering amongst all of the various constraints how to develop this asset as a single asset developer for most of that journey the capex well exceeded our own market capitalization and if I put that in context the original development capex with the larger project was 873 million US now when I came in as CEO we were a $20 million company",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Kind: captions Language: en The Chinese state apparatus is not going to put themselves at risk of investing hundreds of billions of dollars going from 2% of their grid being nuclear to something more like 15 or 20% of their grid if they don't have 100 years of uranium to make sure that they're not going to get screwed by the rest of the world",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Kind: captions Language: en The Chinese state apparatus is not going to put themselves at risk of investing hundreds of billions of dollars going from 2% of their grid being nuclear to something more like 15 or 20% of their grid if they don't have 100 years of uranium to make sure that they're not going to get screwed by the rest of the world",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "The other thing is if we were in a a more stable macro environment, you know, I might be more inclined to think about what would an interim raising raise another 100 million bucks and keep moving the project forward and see what's available for us in 12 months time",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "How does that fit in?\n\nAre they are they I mean they they of course were conditional on a few things themselves, but u is it your anticipation that they'll still like they they'll feed your overall marketing mix?\n\nThey'll be part of your 40%",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "There was some pressure from some of its biggest shareholders and they thought that maybe by introducing a 5% redemption mechanism um under limited circumstances that would be able to cap the discount that they could trade to",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "All of the debt burden, the restrictive covenants, the reduction in margin that you get from servicing that debt um to still having an attributable seethrough of 2 million pounds perom without any debt construction funded",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Uh, but it's this total control and um some really strong ring fencing confidentiality and so on um inside Banaman that enables us to effectively have that 40% attributable portfolio that we can market",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So anything that's not sold they would put in at best $45 and that's assuming they haven't got a look back over the last 5 years that would have averaged at more like 32 33",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So whilst 6570 million pounds does sound like an awful lot, not in the context of the functioning levels of inventory that this sector has existed on for decades",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And we've just raised or put into the joint venture the equivalent of 450 million bucks and that's on as we stand today a 950 million market cap",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And we've just raised or put into the joint venture the equivalent of 450 million bucks and that's on as we stand today a 950 million market cap",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And the Tango 8 is because we decreased the initial development pathway from 20 million tons per atom to 8 million tons per atom",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And the Tango 8 is because we decreased the initial development pathway from 20 million tons per atom to 8 million tons per atom",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So, because they're a 45% holder, um they've been willing to grant the JV an extraordinary level of flexibility in this offtake",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So we're up about 15% from when we announced the deal uh or when we went into a trading halt before the deal was announced",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Like they're limited to 9 million pounds perom in terms of what they can hoover up now under their at the market facility",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And that's where the 40% that's not uh sold to CNNC group, that's where that becomes really important for us",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "It was an enormous development, 20 million tons perom uh throughput, moving 85 million tons perom of dirt",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "It was an enormous development, 20 million tons perom uh throughput, moving 85 million tons perom of dirt",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So you mentioned uh $45 uh which is what found its way into many of the long-term average price targets",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And therefore, they weren't going to start dumping $45 into their model for anything that was unsold",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And as a result of that, we were happy to make it 60% disproportionate to their 40% 45% ownership",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And as a result of that, we were happy to make it 60% disproportionate to their 40% 45% ownership",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And as a result of that, we were happy to make it 60% disproportionate to their 40% 45% ownership",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "We were going to produce 7.2 million pounds perom that was going to easily find a home",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Back in those days, 2019, uranium spot price would have been below $30.\n\nYeah",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "It's because our partner CNNC is a 45% joint venture holder in the JV Co",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And to that point, many had factored in perhaps a 30% sell down",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So in the industry they say well that's like $200 $250 uranium",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So in the industry they say well that's like $200 $250 uranium",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      }
+    ],
+    "certainty_judgment": [
+      {
+        "text": "it starts to be big leaks of capital and if you pause a project at that point history tells us that they the capex becomes more difficult to control uh your legally binding responses to contract tenders and so on they lose their validity so there's the opportunity to recut and and if there is inflation in the local environment it can find its way in uh but fundamentally we think that we by being a producer and selling pounds into 2029, 2030, 2031 that will overwhelmingly produce a better outcome for shareholders than being than basically riding the spreadsheet",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "There was that moment when uh one of the US states uh refused permission for a behind the meter power solution to a data center and that that uh that was several months after the deepseek event that really became an issue for the AI thesis and what we've just seen from the Trump administration in his state of the in the last couple of days anyway was he's now saying data centers I will make sure that they can have their own behind the meter access to power",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "We would go through the process of explaining and they had um they had Canacord advising them in Beijing and that was a huge advantage because they trusted their Canacort adviser and if he said to them, \"Yeah, what they're saying about the way the market will interpret that is correct",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "We've seen Middle Eastern investment into Namibia which uh as you can imagine the way uh nuclear progressing in ENC and what uh in Emirates and the way that the Saudis are talking about nuclear that's also an area that they will be investing in going forward",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think almost everyone on the back of this deal which we're obviously going to discuss in in a big way talking about hey the capital's going to be there to look at the bigger you know you have two studies that you've done",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I know this is a a kind of bigger philosophical kind of question about it, but if if the thesis plays out like everyone investing in spot thinks it will play out, then it's going to cause a serious problem, is it not",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Uh there's a standstill in the agreement which is as strong as you will ever see in these types of documents and there's no other mechanism where we can be diluted that's specified in the agreement",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "And so again, the in the foreseeable future and certainly for this cycle playing out and we've tested it, I can't see a pathway where it would do anything else other than continuing to accumulate",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "And I think some of the grid level regulations that have been a hassle for incorporating behind the meter power solutions for data centers in one way or another will just get swept out of the way",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Over time, there will be more of a shift towards nuclear because it has the attributes of being clean and these data centers do have a lowest common denominator um approach to their customers",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "we could see, you know, discussions that have been away on underway for for quite some time given the the cash that they will send your way to make up for their part of the the early works",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "So what happens to sport is it just accumulates in the foreseeable future and certainly in the foreseeable cycle over that period of time it will just continue to accumulate pounds",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "So broadly speaking it's overrated because hunters are looking at the problems that Kazadam proms had in Kazakhstan and assuming that sulfuric acid must be a problem anywhere",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "So when I was just starting out, Trev and I just started working together and you were giving a presentation, you running Bannerman obviously and John Borchoff there as well",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "And in particular, given our market cap sits below a few of our peers, we believe that it will start to put us more in the crosshairs of generalist investors going forward",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "We have executed a corporate strategy where patience has uh I think been rewarded and has certainly produced appropriate shareholder returns",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "There's a bunch of structural reasons why it will uh to support that assertion, not only because most commodity markets do overshoot anyway",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Look, we're absolutely delighted with the deal, and it won't surprise you to know that we've had a bit of time to think about these things",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Now, he's had to do that because otherwise data centers will squeeze out both the power and the water from the local communities",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "So, because they're a 45% holder, um they've been willing to grant the JV an extraordinary level of flexibility in this offtake",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "And so our reading immediately after seeing that news was that they will have to double down and triple down and quadruple down",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "So, that was their approach and the the approach that China is taking and will take is not dissimilar",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "But what it does do is it opens up the number of investors who will be comfortable with us",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "that will take time for those perceptions and those concerns to clear",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "risk_assessment": [
+      {
+        "text": "So the financing advantages are obvious because typically you've got a a good capital investment that you can leverage off and you can add to and operationally typically it's a lot harder to get a restarted mine back to steady state than it is when you are starting with a new mine does it varies a lot based on their complexity and we've we've seen examples of complexity uh present challenges in our sector and because It's just such a small sector",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Now, we had a really cleareyed view of that because we just figured that the Chinese state apparatus is not going to put themselves at risk of investing hundreds of billions of dollars in going from 2% of their grid being nuclear as it was back then to something more like 15 or 20% of their grid being nuclear if they don't have 100red years of uranium to make sure that they're not going to get screwed by the rest of the world",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Kind: captions Language: en The Chinese state apparatus is not going to put themselves at risk of investing hundreds of billions of dollars going from 2% of their grid being nuclear to something more like 15 or 20% of their grid if they don't have 100 years of uranium to make sure that they're not going to get screwed by the rest of the world",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "And the underlying principle here is that uh apart from ensuring that no one can be concerned about a predatory risk here from a much bigger much stronger partner the underlying principle is they want the pounds out of the ground at least as much as we do",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "The the first one was there was a huge amount of concern coming out of some of the consultants but also some of investors about oh China's got so much inventory half a million half a billion pounds in inventory that's going to come back into the market",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Um if you've got seaborn access to sulfuric acid, it's a very different risk profile to if you're dealing with a landlock country that's um reliant on localized domestic sources of acid, particularly when they're industrial sources",
+        "expert": "Brandon Munro",
+        "source_title": "The Uranium Deal 10 Years in the Making (Brandon Munro)",
+        "video_id": "y5HqKkReeks",
+        "url": "https://www.youtube.com/watch?v=y5HqKkReeks",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ]
+  },
+  "price_reference_standard": "现货 U3O8 (UxC/TradeTech)",
+  "price_note": "transcript 数字仅作背景, 正文价格须从 canonical source 拉取 (NEEDS-SIGNOFF)"
+}

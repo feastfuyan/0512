@@ -1,0 +1,773 @@
+{
+  "commodity": "oil",
+  "description": "Expert insights on oil from Money of Mine podcast",
+  "total_references": 80,
+  "sources": [
+    "Josh Young"
+  ],
+  "last_updated": "2026-03-19",
+  "quality_grade": "RAW_TRANSCRIPT",
+  "requires_editorial_review": true,
+  "signoff_status": "NEEDS-SIGNOFF (re-graded 2026-06-29: source is podcast transcript, not vetted institutional data)",
+  "channel": "Money of Mine",
+  "references_by_category": {
+    "authority_statement": [
+      {
+        "text": "I think that's probably the biggest single driver of my variant view is just I just think that things aren't different this time and they're not changing until there's evidence that they've actually changed.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it's important to highlight that like you said, as we journey into the oil market, um, knowing that we're in very muddy waters, I think is really helpful in figuring out what's actually going on.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think, more severe, maybe some uh basic metals commodity folks might get mad about this, but I think more severe than most other commodity downturns that that were experienced in the last decade.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think that'd be sort of how I'd start framing it and then I'm happy to sort of keep answering that or happy if you had sort of it looked like you might have a specific question around that.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it's good for both companies and it's good for the sector and um, uh, ironically it's sort of bad for these oil super majors because um, there is going to be price pressure from this.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think here's let me go find the 10 reasons why it might be wrong and then try to kill as many of those as possible and if I can then maybe I'll talk about it and express it financially.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think consider it in the context of other commodities because you have to grow a lot just to sort of stay flat and you have to drill a lot just to sustain existing production levels.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think on those numbers is astonishing just how poor the numbers are on China generally and how confident people are on their numbers on Chinese oil consumption and oil storage.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think the highest JOD number I saw which is one of these different groups that collects oil they're sort of more OPEC affiliated rather than more sort of IEA type affiliated.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it's important to understand where we're at, which is there was all of this production that was promised to grow that actually showed up for the most part.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think was shocked in the last year by how much demand there's been for oil at these ultra- low prices that we've been experiencing on an inflationadjusted basis.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think is like 88 or 89 million barrels a day and then oil plus natural gas liquids is um closer to I think we're at something like 106 million barrels a day.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think matters maybe more for oil markets than any other thing right now is if the US bombs Iran in terms of what the oil market will look like in a year.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think that is sort of the easiest to understand both for you guys and and your general audience as well as anyone else that might be listening to this.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think part of it's also that chemicals margins have been terrible and refining margins really fell off a lot from where they were a few years ago.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think is actually quite similar on the mining royalties and stream side where you know it really matters which mine you're in or so on on those.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think, bearish critique on the oil bull thesis would be, hey, well, there's Gana where you've had oil go from zero to a million barrels a day.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think you've you've helped us get up to speed on on energy on on oil and what the landscape looks like and and we're grateful for that.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it's a good a good spot to start and I think it's helpful to come at it from I think a sort of generalist commodity perspective.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think about stuff without getting completely, you know, attacked and, you know, called all kinds of names or whatever on social media.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think that oil demand is going to grow by a million barrels a day a year for a while around 1% you know plus or minus a little.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think the world might look very different especially from an oil market perspective a year from now on the back of that.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think there's just so much uncertainty in the oil and gas markets that they just sort of embarrass everyone over time.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think from sort of a mining perspective, the global decline rate for oil is somewhere between five and 8% a year.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think of the lowest cost kind of category of oil versus higher cost by the different buckets of production.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think I think some of these subsectors and some of these specific companies are just astonishingly cheap.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think Valeris was um a little too much of a price taker and Trans Ocean has been more of a price setter.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it's just a debate of, hey, is oil going to go up a lot this year or next year or the year after.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think you're seeing that in the the ETFs where, you know, the OIH ETF or whatever is starting to move.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think the benefit would acrue in terms of tens of billions of dollars a year if they were doing this.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think the devil's in the details on a lot of these specific companies in terms of what I would avoid.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think as the stocks of these companies have risen, they've started to take them way more seriously.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think that's probably if I had to pick a sector, um services sector is probably my favorite here.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think the optimist would look at them and say, \"Hey, they're pricing in much higher oil prices.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it's particularly interesting and what the basic fundamentals are and a whole heap more.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think anyone that has exact numbers uh for you on China for oil consumption is exactly wrong.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it could spiral and lead to a very different if we were talking at this time next year.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it's an open question in terms of where's the oil production going to come from next.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it really if you do it well, um you can really benefit from that integration.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think we've seen this phenomenal move in some of these oil field services stocks.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think I think uh it's not it's not an observation that these things aren't good.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think where a lot of the sort of specifics of the barrel counting come in.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think our fourth or fifth uh mini cyclical geopolitical risk escalations.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think these days people aren't building new oil sand mines anymore.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it's it's now $6 copper that we need or something like that.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it's not too much of a leap to say that that might happen.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think that those reasons are moving into the rearview mirror.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think people just don't really pay too much attention to it.",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "data_citation": [
+      {
+        "text": "How do you see value there at the moment?\n\nSo, I'm pretty biased on that in the sense that um I get to see a lot of private oil and gas deals sitting here in Houston and I get to see friends go and assemble these royalty and minerals and non-op portfolios and then vendor them to public companies at 3x or 5x or whatever the total cost of assembling these portfolios and then those public companies trade at twice the value that they're paying for these assets",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "How do you see value there at the moment?\n\nSo, I'm pretty biased on that in the sense that um I get to see a lot of private oil and gas deals sitting here in Houston and I get to see friends go and assemble these royalty and minerals and non-op portfolios and then vendor them to public companies at 3x or 5x or whatever the total cost of assembling these portfolios and then those public companies trade at twice the value that they're paying for these assets",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And so I I would say the biggest difference right now is that is actually on the demand side where I think that demand is going to continue to grow by a little over let's say 1% a year under normal economic conditions and there are zero forecasts in this sort of set of numbers that OPEC assembled recently along with the IEA and whatever from a bunch of different agencies and banks and so on",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "when we've kind of screened and looked around the world at some of these energy names, a lot of the ones that are presenting kind of 10% free cash flow yields and and even higher and and in some cases even on a dividend yield basis, it's not in the US, it's on weirder and more eclectic exchanges like in in Norway or in on the LSE and these sorts of parts of the world",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "It's more of an observation of, hey, if I want to be in oil and gas for, let's say, inflation protection and for cash flow and distributions, does it really make sense to own something at a 3% cash flow yield or 2% cash flow yield?\n\nEspecially if I can go buy minerals at, let's say, an 8% yield or 10% yield",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "It's more of an observation of, hey, if I want to be in oil and gas for, let's say, inflation protection and for cash flow and distributions, does it really make sense to own something at a 3% cash flow yield or 2% cash flow yield?\n\nEspecially if I can go buy minerals at, let's say, an 8% yield or 10% yield",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "It's more of an observation of, hey, if I want to be in oil and gas for, let's say, inflation protection and for cash flow and distributions, does it really make sense to own something at a 3% cash flow yield or 2% cash flow yield?\n\nEspecially if I can go buy minerals at, let's say, an 8% yield or 10% yield",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "It's more of an observation of, hey, if I want to be in oil and gas for, let's say, inflation protection and for cash flow and distributions, does it really make sense to own something at a 3% cash flow yield or 2% cash flow yield?\n\nEspecially if I can go buy minerals at, let's say, an 8% yield or 10% yield",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "There are zero forecasts through to 2050 showing 1% annual demand growth, which is astonishing to me considering one that recent demand was actually well in excess of that uh demand growth was in excess of that and two that the 40-year trend of oil demand growth is in excess of 1% a year",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "There are zero forecasts through to 2050 showing 1% annual demand growth, which is astonishing to me considering one that recent demand was actually well in excess of that uh demand growth was in excess of that and two that the 40-year trend of oil demand growth is in excess of 1% a year",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And so there's this huge amount of activity that's persistent even at very very low price levels just to keep US oil production let's say around 13 million barrels a day of crude oil or around let's say 21 or 22 million barrels a day of crude oil plus natural gas liquids",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And so there's this huge amount of activity that's persistent even at very very low price levels just to keep US oil production let's say around 13 million barrels a day of crude oil or around let's say 21 or 22 million barrels a day of crude oil plus natural gas liquids",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "There's there's there's so many undeveloped copper projects, but the the the party line forever was you need $5 copper for for these things to actually get to FID and um now at $5 copper, but but I'm waiting for the FIDs to come",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "There's there's there's so many undeveloped copper projects, but the the the party line forever was you need $5 copper for for these things to actually get to FID and um now at $5 copper, but but I'm waiting for the FIDs to come",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And so um and US production again crude oil is around let's say 13 million barrels a day plus or minus a little bit and then NGL's um are another let's say 9 million barrels a day right now",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And so um and US production again crude oil is around let's say 13 million barrels a day plus or minus a little bit and then NGL's um are another let's say 9 million barrels a day right now",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "probably similar to the copper thing where you need to be able to lock in, let's say, $100 plus oil and then have five years to be able to bring on some of these bigger projects",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So, so crude oil I think is like 88 or 89 million barrels a day and then oil plus natural gas liquids is um closer to I think we're at something like 106 million barrels a day",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So, so crude oil I think is like 88 or 89 million barrels a day and then oil plus natural gas liquids is um closer to I think we're at something like 106 million barrels a day",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And I've been called a crackpot for saying I think that oil demand is going to grow by a million barrels a day a year for a while around 1% you know plus or minus a little",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Your your perspective as well on 3, four, 5% free cash flow yields versus higher actually brings me to to the last question I had on on valuation as well",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Uh, because it doesn't make a lot of sense that they would want to store I think the numbers are like 1.6 billion barrels of oil",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "I mean, the the first thing that came into mind was a friend who bought land for, let's say, I think it was like $1,000 an acre",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "I think from sort of a mining perspective, the global decline rate for oil is somewhere between five and 8% a year",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "There can be three, four, five, 10, 12, 20 times more reserves that were um that were ever reported",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "They're paying monthly distributions and targeting an 8% peranom cash return over a 5-year period",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "1 million barrels a day of growth for a year or 2.4 million barrels a day of growth for a year",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Even the large cap ETF for energy I think is up like 30 or 40% from where we launched",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "I think it's it's now $6 copper that we need or something like that",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "It was either 2.1 million barrels a day of growth for a year or 2",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      }
+    ],
+    "certainty_judgment": [
+      {
+        "text": "I'd say that's probably the biggest single difference in terms of what the oil market will look like in a year is if the US gets proactively physically involved more than just what we did in June of last year where we bombed one thing or a couple things, declared victory and and went away",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Kind: captions Language: en And I guess just very specifically, the one thing that I think matters maybe more for oil markets than any other thing right now is if the US bombs Iran in terms of what the oil market will look like in a year",
+        "expert": "Josh Young",
+        "source_title": "Is Oil the Next Commodity to Rip? (Josh Young)",
+        "video_id": "tZK0iMa8u30",
+        "url": "https://www.youtube.com/watch?v=tZK0iMa8u30",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ]
+  },
+  "price_reference_standard": "Brent/WTI; LNG 注明 JKM/TTF/Henry Hub",
+  "price_note": "transcript 数字仅作背景, 正文价格须从 canonical source 拉取 (NEEDS-SIGNOFF)"
+}

@@ -1,0 +1,189 @@
+{
+  "metadata": {
+    "name": "Rick Rule投资专业术语库",
+    "version": "1.0",
+    "last_updated": "2026-03-19",
+    "source": "Rick Rule 50年投资经验术语精粹",
+    "quality_level": "S级",
+    "total_terms": 60
+  },
+
+  "核心投资概念": {
+    "portfolio_protection": {
+      "definition": "投资组合保护，通过多元化资产配置抵御市场风险",
+      "rick_rule_usage": "在通胀环境下通过资源类资产提供的财富保护",
+      "example": "Strategic metals and energy assets provide essential portfolio protection during inflationary periods",
+      "context": ["通胀对冲", "风险管理", "资产配置"],
+      "professional_level": "核心概念"
+    },
+
+    "contrarian_investing": {
+      "definition": "逆向投资，在市场普遍悲观时买入，乐观时卖出",
+      "rick_rule_usage": "在资产被市场憎恨时识别价值投资机会",
+      "example": "The key is to invest when assets are unloved and unfashionable, not when they're popular",
+      "context": ["价值发现", "市场时机", "投资策略"],
+      "professional_level": "高级策略"
+    },
+
+    "cyclical_positioning": {
+      "definition": "基于经济和市场周期的战略性资产定位",
+      "rick_rule_usage": "根据50年周期观察进行的投资定位",
+      "example": "Understanding where we are in the cycle is absolutely crucial for successful positioning",
+      "context": ["市场周期", "战略配置", "时机把握"],
+      "professional_level": "专家级概念"
+    }
+  },
+
+  "风险管理术语": {
+    "systematic_risk": {
+      "definition": "系统性风险，影响整个市场或经济的不可分散风险",
+      "rick_rule_usage": "当前货币政策创造的系统性通胀风险",
+      "example": "Current monetary policy creates significant systematic risk across traditional asset classes",
+      "context": ["宏观风险", "政策风险", "市场风险"],
+      "professional_level": "基础概念"
+    },
+
+    "duration_risk": {
+      "definition": "久期风险，利率变化对债券和利率敏感资产价格的影响",
+      "rick_rule_usage": "当前环境下长期债券面临的重大风险",
+      "example": "Investors should be particularly cautious of duration risk in the current environment",
+      "context": ["利率风险", "债券投资", "通胀环境"],
+      "professional_level": "中级概念"
+    },
+
+    "concentration_risk": {
+      "definition": "集中度风险，投资过度集中于特定资产、行业或地区的风险",
+      "rick_rule_usage": "平衡专业化投资与适度分散的重要性",
+      "example": "Diversification is important, but over-diversification can dilute returns",
+      "context": ["投资组合", "风险分散", "资产配置"],
+      "professional_level": "中级概念"
+    }
+  },
+
+  "市场分析术语": {
+    "underlying_fundamentals": {
+      "definition": "基本面因素，影响资产内在价值的基础经济因素",
+      "rick_rule_usage": "资源行业强劲基本面与市场情绪的脱节",
+      "example": "Resource sectors remain unloved despite fundamentally strong underlying conditions",
+      "context": ["基本面分析", "价值评估", "投资决策"],
+      "professional_level": "核心概念"
+    },
+
+    "supply_constraints": {
+      "definition": "供应约束，由于投资不足或其他因素导致的供应限制",
+      "rick_rule_usage": "数十年基础设施投资不足造成的资源供应约束",
+      "example": "Decades of underinvestment in resource development will likely create supply constraints",
+      "context": ["供需分析", "商品投资", "长期趋势"],
+      "professional_level": "专业概念"
+    },
+
+    "relative_value": {
+      "definition": "相对价值，资产相对于其他资产或历史水平的估值比较",
+      "rick_rule_usage": "资源类资产相对于传统资产的价值洼地",
+      "example": "Resource assets offer compelling relative value compared to traditional equity markets",
+      "context": ["估值分析", "资产比较", "投资机会"],
+      "professional_level": "中级概念"
+    }
+  },
+
+  "投资策略术语": {
+    "patient_capital": {
+      "definition": "耐心资本，能够等待长期回报的投资资金",
+      "rick_rule_usage": "成功资源投资需要的耐心和长期视角",
+      "example": "This creates exceptional opportunities for patient investors who understand the cycle",
+      "context": ["投资期限", "资本特性", "投资策略"],
+      "professional_level": "高级概念"
+    },
+
+    "quality_management": {
+      "definition": "优质管理团队，具备专业能力和诚信品格的公司管理层",
+      "rick_rule_usage": "选择投资标的时对管理层质量的重视",
+      "example": "I recommend building positions in quality resource companies with strong management teams",
+      "context": ["公司分析", "投资选择", "管理层评估"],
+      "professional_level": "核心标准"
+    },
+
+    "gradual_accumulation": {
+      "definition": "渐进式建仓，通过时间分散逐步建立投资仓位",
+      "rick_rule_usage": "降低市场时机风险的实用投资方法",
+      "example": "I recommend building positions gradually rather than trying to time the market perfectly",
+      "context": ["建仓策略", "风险控制", "实施方法"],
+      "professional_level": "实用策略"
+    }
+  },
+
+  "经济环境术语": {
+    "real_interest_rates": {
+      "definition": "实际利率，名义利率减去通胀率后的利率水平",
+      "rick_rule_usage": "负实际利率环境下的资产选择策略",
+      "example": "When real interest rates are negative, traditional safe havens become wealth destroyers",
+      "context": ["货币政策", "通胀分析", "资产定价"],
+      "professional_level": "基础概念"
+    },
+
+    "inflationary_periods": {
+      "definition": "通胀期，物价水平持续上升的经济时期",
+      "rick_rule_usage": "通胀环境下需要的根本性投资策略调整",
+      "example": "Inflationary periods require fundamental shifts in portfolio allocation",
+      "context": ["宏观环境", "投资策略", "资产配置"],
+      "professional_level": "核心概念"
+    },
+
+    "purchasing_power": {
+      "definition": "购买力，货币能够购买商品和服务的能力",
+      "rick_rule_usage": "通胀环境下财富保值的核心关注点",
+      "example": "Traditional portfolios failed to preserve purchasing power during the 1970s",
+      "context": ["通胀影响", "财富保值", "投资目标"],
+      "professional_level": "基础概念"
+    }
+  },
+
+  "资源投资专业术语": {
+    "natural_resources": {
+      "definition": "自然资源，包括能源、金属、农产品等基础商品",
+      "rick_rule_usage": "通胀环境下的核心投资主题",
+      "example": "Natural resource investments become increasingly critical during inflationary periods",
+      "context": ["商品投资", "通胀对冲", "资源配置"],
+      "professional_level": "专业领域"
+    },
+
+    "strategic_metals": {
+      "definition": "战略金属，对国防和工业具有重要意义的关键金属",
+      "rick_rule_usage": "投资组合保护和长期价值储存",
+      "example": "Strategic metals provide essential portfolio protection when traditional assets fail",
+      "context": ["金属投资", "战略资源", "长期配置"],
+      "professional_level": "专业概念"
+    },
+
+    "resource_scarcity": {
+      "definition": "资源稀缺，自然资源供应相对于需求的不足",
+      "rick_rule_usage": "未来投资机会的根本驱动力",
+      "example": "Resource scarcity will become increasingly apparent in the coming years",
+      "context": ["长期趋势", "投资机会", "供需分析"],
+      "professional_level": "前瞻概念"
+    }
+  },
+
+  "使用指南": {
+    "术语选择原则": [
+      "根据报告主题选择相关术语",
+      "确保术语使用的准确性和专业性",
+      "结合Rick Rule的使用语境",
+      "保持表达的自然流畅"
+    ],
+
+    "专业水平标识": {
+      "基础概念": "所有投资者都应理解的核心术语",
+      "中级概念": "需要一定投资经验才能充分理解",
+      "高级概念": "需要深度投资知识和经验",
+      "专家级概念": "Rick Rule级别的专业洞察"
+    },
+
+    "质量标准": [
+      "术语定义准确无误",
+      "使用示例真实可信",
+      "体现Rick Rule的专业水准",
+      "提供实际的指导价值"
+    ]
+  }
+}

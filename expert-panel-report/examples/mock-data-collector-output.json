@@ -1,0 +1,273 @@
+{
+  "report_id": "TEST-001",
+  "source_doc": "examples/dummy-source.docx",
+  "source_total_lines": 320,
+  "coi_relevant_entities": ["LynAI Mines copper fund position"],
+  "chapters": [
+    {
+      "id": "macro_overview",
+      "title": "一、全球宏观经济概览",
+      "numeric_facts": [
+        {
+          "fact": "美联储 2026 年 5 月议息维持联邦基金利率 5.25-5.50%",
+          "value": "5.25-5.50%",
+          "src_line": 87,
+          "src_quote": "FOMC 在 2026 年 5 月 1 日宣布维持联邦基金利率目标区间 5.25-5.50%"
+        },
+        {
+          "fact": "美联储维持高利率压制商品价格",
+          "value": "high",
+          "src_line": 88,
+          "src_quote": "美联储维持高利率持续压制大宗商品价格走势"
+        },
+        {
+          "fact": "ECB 利率 4.00%",
+          "value": "4.00%",
+          "src_line": 89,
+          "src_quote": "ECB 将关键利率维持在 4.00%"
+        },
+        {
+          "fact": "核心 PCE 维持 2.70%",
+          "value": "2.70%",
+          "src_line": 90,
+          "src_quote": "美联储核心 PCE 通胀同比 2.70%，高于 2% 目标"
+        },
+        {
+          "fact": "2026-09 降息 25bp 市场预期",
+          "value": "25bp",
+          "src_line": 92,
+          "src_quote": "CME FedWatch 显示 2026-09 降息 25bp 概率 62%"
+        },
+        {
+          "fact": "ECB 与美联储节奏分化，欧元区通胀 2.40%",
+          "value": "2.40%",
+          "src_line": 95,
+          "src_quote": "欧元区 5 月 CPI 同比 2.40%，ECB 与 Fed 货币周期明显分化"
+        },
+        {
+          "fact": "维持 Q2 铜区间 9,000-9,500/t",
+          "value": "9000-9500",
+          "src_line": 96,
+          "src_quote": "LynAI 宏观模型维持 Q2 铜价区间判断 9,000-9,500 USD/t"
+        },
+        {
+          "fact": "美元指数 DXY 突破 105 关口",
+          "value": "105.2",
+          "src_line": 101,
+          "src_quote": "DXY 周中突破 105 关口, 周末收报 105.2"
+        },
+        {
+          "fact": "地缘政治风险升级",
+          "value": "elevated",
+          "src_line": 103,
+          "src_quote": "红海航运中断持续，地缘政治风险维持高位"
+        },
+        {
+          "fact": "OFAC 制裁 3 家俄罗斯金属交易商",
+          "value": "3",
+          "src_line": 104,
+          "src_quote": "OFAC 新增制裁 3 家俄罗斯金属交易商，影响铝出口流向"
+        },
+        {
+          "fact": "Native Title 诉讼待决",
+          "value": "2 cases",
+          "src_line": 105,
+          "src_quote": "Pilbara 矿区 2 处 Native Title 传统土地主张待澳大利亚联邦法院裁决"
+        },
+        {
+          "fact": "Fortescue 铁矿石扩产计划 12 Mt/a",
+          "value": "12",
+          "src_line": 106,
+          "src_quote": "Fortescue 铁矿石 12 Mt/a 扩产计划因 Native Title 审查暂缓"
+        },
+        {
+          "fact": "铝价上行至 2,600-2,700 USD/t",
+          "value": "2600-2700",
+          "src_line": 107,
+          "src_quote": "OFAC 制裁扩大影响俄铝出口流向，铝价上行至 2,600-2,700 USD/t"
+        },
+        {
+          "fact": "日银加息周期影响 carry trade，日元贬值 0.80% w/w",
+          "value": "0.80%",
+          "src_line": 111,
+          "src_quote": "日元本周贬值 0.80% w/w，日银 YCC 政策调整引发 carry trade 平仓"
+        }
+      ],
+      "tables": [
+        {
+          "caption": "2026 Q2 主要央行政策利率",
+          "headers": ["央行", "当前利率", "上次变动", "市场预期"],
+          "rows": [
+            ["美联储", "5.25-5.50%", "2026-03 暂停", "2026-09 降息 25bp"],
+            ["ECB",    "4.00%",      "2026-01 降息",   "2026-07 再降 25bp"],
+            ["日银",   "0.10%",      "2026-04 加息",   "维持"]
+          ],
+          "src_lines": [87, 89, 92, 95, 110]
+        }
+      ],
+      "key_points": [
+        {"text": "美联储维持高利率压制商品价格", "src_line": 88},
+        {"text": "美元指数突破 105", "src_line": 101},
+        {"text": "ECB 与美联储节奏分化", "src_line": 95},
+        {"text": "日银开启加息周期影响 carry trade", "src_line": 110},
+        {"text": "OFAC 制裁范围扩展", "src_line": 104}
+      ],
+      "missing": []
+    },
+    {
+      "id": "commodities",
+      "title": "二、大宗商品市场追踪",
+      "numeric_facts": [
+        {
+          "fact": "LME 铜价周涨 2.3% 至 9,180 USD/t",
+          "value": "9180",
+          "src_line": 142,
+          "src_quote": "LME 铜 +2.3% w/w 至 9,180 USD/t"
+        },
+        {
+          "fact": "铜价上方阻力 9,500 USD/t",
+          "value": "9500",
+          "src_line": 143,
+          "src_quote": "铜价站稳 9,000 关口, 技术面上方阻力位 9,500 USD/t"
+        },
+        {
+          "fact": "铝价 2,450 USD/t",
+          "value": "2450",
+          "src_line": 145,
+          "src_quote": "LME 铝周收 2,450 USD/t"
+        },
+        {
+          "fact": "锌价 2,890 USD/t",
+          "value": "2890",
+          "src_line": 148,
+          "src_quote": "LME 锌 2,890 USD/t"
+        },
+        {
+          "fact": "铅价 2,140 USD/t",
+          "value": "2140",
+          "src_line": 151,
+          "src_quote": "LME 铅 2,140 USD/t"
+        },
+        {
+          "fact": "黄金 COMEX 主力合约站稳 2,350 USD/oz",
+          "value": "2350",
+          "src_line": 158,
+          "src_quote": "COMEX 黄金主力合约本周站稳 2,350 USD/oz"
+        },
+        {
+          "fact": "金价创年内新高",
+          "value": "2350",
+          "src_line": 159,
+          "src_quote": "金价本周收盘创 2026 年内新高"
+        },
+        {
+          "fact": "工业金属强势+贵金属避险共振",
+          "value": "confluence",
+          "src_line": 160,
+          "src_quote": "工业金属与贵金属同步走强，双重支撑来自降息预期与避险需求"
+        },
+        {
+          "fact": "COMEX 黄金持仓增加 3.2% w/w",
+          "value": "3.2%",
+          "src_line": 161,
+          "src_quote": "COMEX 黄金非商业净多头持仓增加 3.2% w/w"
+        },
+        {
+          "fact": "锌库存连续 4 周累库",
+          "value": "4",
+          "src_line": 165,
+          "src_quote": "LME 锌注册仓单连续 4 周增加，累库信号明显"
+        },
+        {
+          "fact": "LME 锌注销仓单下降 1.40% w/w",
+          "value": "1.40%",
+          "src_line": 166,
+          "src_quote": "LME 锌注销仓单本周下降 1.40% w/w"
+        },
+        {
+          "fact": "价格下行压力来自需求疲软",
+          "value": "downside",
+          "src_line": 170,
+          "src_quote": "铜价价格下行风险主要来自中国 5 月需求数据疲软"
+        },
+        {
+          "fact": "锂价底部企稳 14,500 CNY/t",
+          "value": "14500",
+          "src_line": 172,
+          "src_quote": "碳酸锂现货价格底部企稳于 14,500 CNY/t"
+        },
+        {
+          "fact": "尾矿库存累升信号",
+          "value": "rising",
+          "src_line": 173,
+          "src_quote": "智利铜矿 tailings 处理量上升，预示供应端压力改善"
+        },
+        {
+          "fact": "碳酸锂现货较期货升水 200 CNY/t",
+          "value": "200",
+          "src_line": 174,
+          "src_quote": "碳酸锂现货较期货升水约 200 CNY/t"
+        },
+        {
+          "fact": "上次 PMI 50.4",
+          "value": "50.4",
+          "src_line": 177,
+          "src_quote": "中国 4 月制造业 PMI 50.4"
+        },
+        {
+          "fact": "5 月制造业 PMI 49.0",
+          "value": "49.0",
+          "src_line": 178,
+          "src_quote": "中国 5 月制造业 PMI 初值 49.0，低于荣枯线"
+        },
+        {
+          "fact": "铜价价格下行至 8,800 USD/t (PMI scenario)",
+          "value": "8800",
+          "src_line": 179,
+          "src_quote": "若 PMI 持续低于荣枯线，铜价价格下行至 8,800 USD/t 有合理概率"
+        },
+        {
+          "fact": "环评 EPBC 审批延迟 2 个铜矿项目",
+          "value": "2",
+          "src_line": 180,
+          "src_quote": "EPBC Act 环境评估延迟昆士兰 2 个铜矿项目审批"
+        }
+      ],
+      "tables": [
+        {
+          "caption": "本周主要金属价格变化",
+          "headers": ["金属", "周收盘 (USD/t)", "w/w 涨跌", "ytd 涨跌"],
+          "rows": [
+            ["铜",  "9,180", "+2.3%", "+8.4%"],
+            ["铝",  "2,450", "+0.8%", "+3.2%"],
+            ["锌",  "2,890", "-1.1%", "-2.4%"],
+            ["铅",  "2,140", "+0.3%", "-1.8%"]
+          ],
+          "src_lines": [142, 145, 148, 151]
+        }
+      ],
+      "key_points": [
+        {"text": "铜价站稳 9,000 关口", "src_line": 143},
+        {"text": "金价创年内新高", "src_line": 159},
+        {"text": "锌库存连续 4 周累库", "src_line": 165},
+        {"text": "锂价底部企稳", "src_line": 172}
+      ],
+      "missing": []
+    },
+    {
+      "id": "coi_disclosure",
+      "title": "利益冲突披露",
+      "numeric_facts": [
+        {
+          "fact": "LynAI Mines 铜多头持仓低于 NAV 0.5%",
+          "value": "0.5%",
+          "src_line": 300,
+          "src_quote": "LynAI Mines 旗下基金对铜相关权益多头持仓估计低于 NAV 的 0.5%，已按 G31 规程备案"
+        }
+      ],
+      "key_points": [],
+      "tables": [],
+      "missing": []
+    }
+  ]
+}

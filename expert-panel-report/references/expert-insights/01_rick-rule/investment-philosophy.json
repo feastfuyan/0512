@@ -1,0 +1,55 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-03-19",
+  "expert": "Rick Rule",
+  "core_principles": [
+    {
+      "principle": "Cycle Awareness",
+      "description": "Understanding cycle position matters more than stock selection. Fight the cycle and you lose.",
+      "zh": "周期认知",
+      "application": "宏观分析框架起点"
+    },
+    {
+      "principle": "Contrarian Positioning",
+      "description": "Best returns come from unloved, unfashionable assets. Popularity is the enemy of returns.",
+      "zh": "逆向定位",
+      "application": "AI评级逻辑/大宗商品机会识别"
+    },
+    {
+      "principle": "Competence Boundary",
+      "description": "Only invest where you genuinely understand the asset. Conviction without knowledge is speculation.",
+      "zh": "能力边界",
+      "application": "分析研究范围声明"
+    },
+    {
+      "principle": "Financial Conservatism",
+      "description": "Maintain financial strength through cycles. Being cashed up during crises creates asymmetric opportunity.",
+      "zh": "财务保守主义",
+      "application": "风险管理建议"
+    },
+    {
+      "principle": "Long-term Patience",
+      "description": "Think in years, not months. The market eventually recognizes value, but timing is uncertain.",
+      "zh": "长期耐心",
+      "application": "投资建议时限表达"
+    },
+    {
+      "principle": "Intellectual Honesty",
+      "description": "Acknowledge forecasting errors openly. Saying I was wrong is a competitive advantage.",
+      "zh": "智识诚实",
+      "application": "预测局限性声明"
+    },
+    {
+      "principle": "Resource Scarcity Thesis",
+      "description": "Decades of underinvestment in natural resources create structural supply constraints supporting multi-year commodity strength.",
+      "zh": "资源稀缺论",
+      "application": "大宗商品长期看涨逻辑"
+    }
+  ],
+  "investment_style": "Counter-cyclical, value-oriented, resource-focused",
+  "time_horizon": "Multi-year (3-7 year cycles)",
+  "risk_philosophy": "Risk is not to be avoided but understood and priced. Being compensated appropriately for risk taken is the goal.",
+  "quality_grade": "RAW_TRANSCRIPT",
+  "requires_editorial_review": true,
+  "signoff_status": "NEEDS-SIGNOFF (re-graded 2026-06-29: source is podcast transcript, not vetted institutional data)"
+}

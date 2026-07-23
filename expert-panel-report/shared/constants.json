@@ -1,0 +1,173 @@
+{
+  "report": {
+    "total_pages": 14,
+    "default_version": "V1.0",
+    "output_dir": "output",
+    "audit_dir": "output"
+  },
+  "commodities": {
+    "cu": {
+      "name_en": "Copper",
+      "name_zh": "铜",
+      "code": "cu",
+      "unit": "USD/ton"
+    },
+    "fe": {
+      "name_en": "Iron Ore",
+      "name_zh": "铁矿石",
+      "code": "fe",
+      "unit": "USD/ton"
+    },
+    "au": {
+      "name_en": "Gold",
+      "name_zh": "黄金",
+      "code": "au",
+      "unit": "USD/oz"
+    },
+    "li": {
+      "name_en": "Lithium",
+      "name_zh": "锂",
+      "code": "li",
+      "unit": "USD/ton"
+    },
+    "ni": {
+      "name_en": "Nickel",
+      "name_zh": "镍",
+      "code": "ni",
+      "unit": "USD/ton"
+    },
+    "ree": {
+      "name_en": "Rare Earth",
+      "name_zh": "稀土",
+      "code": "ree",
+      "unit": "USD/kg"
+    }
+  },
+  "rubric_weights": {
+    "data_integrity": 0.20,
+    "logical_consistency": 0.20,
+    "language_quality": 0.15,
+    "structure_compliance": 0.15,
+    "expert_citation_quality": 0.15,
+    "professional_depth": 0.15
+  },
+  "gate_threshold": 9.5,
+  "max_rounds": 3,
+  "default_experts": [
+    {
+      "name": "王选策",
+      "title_en": "Chief Analyst",
+      "title_zh": "首席分析师",
+      "org": "凌云智矿 / LynAI Mines"
+    },
+    {
+      "name": "陈毅",
+      "title_en": "Macro Researcher",
+      "title_zh": "宏观经济研究员",
+      "org": "凌云智矿 / LynAI Mines"
+    },
+    {
+      "name": "李明",
+      "title_en": "Commodity Analyst",
+      "title_zh": "商品分析师",
+      "org": "凌云智矿 / LynAI Mines"
+    },
+    {
+      "name": "张伟",
+      "title_en": "ESG Specialist",
+      "title_zh": "ESG 专家",
+      "org": "凌云智矿 / LynAI Mines"
+    },
+    {
+      "name": "刘芳",
+      "title_en": "Risk Analyst",
+      "title_zh": "风险分析师",
+      "org": "凌云智矿 / LynAI Mines"
+    },
+    {
+      "name": "赵强",
+      "title_en": "Technical Analyst",
+      "title_zh": "技术分析师",
+      "org": "凌云智矿 / LynAI Mines"
+    }
+  ],
+  "mci_dimensions": {
+    "price_momentum": {
+      "weight": 0.30,
+      "name_zh": "价格动量",
+      "name_en": "Price Momentum"
+    },
+    "inventory_cycle": {
+      "weight": 0.20,
+      "name_zh": "库存周期",
+      "name_en": "Inventory Cycle"
+    },
+    "capital_flow": {
+      "weight": 0.20,
+      "name_zh": "资金流向",
+      "name_en": "Capital Flow"
+    },
+    "geopolitical_risk": {
+      "weight": 0.15,
+      "name_zh": "地缘风险",
+      "name_en": "Geopolitical Risk"
+    },
+    "esg_events": {
+      "weight": 0.15,
+      "name_zh": "ESG事件",
+      "name_en": "ESG Events"
+    }
+  },
+  "ratings": {
+    "bull": {
+      "name_zh": "看多",
+      "name_en": "Bull",
+      "color": "#22c55e"
+    },
+    "neutral": {
+      "name_zh": "中性",
+      "name_en": "Neutral",
+      "color": "#f59e0b"
+    },
+    "bear": {
+      "name_zh": "看空",
+      "name_en": "Bear",
+      "color": "#ef4444"
+    }
+  },
+  "supply_demand_trends": {
+    "supply": {
+      "tight": { "name_zh": "紧张", "name_en": "Tight" },
+      "balanced": { "name_zh": "平衡", "name_en": "Balanced" },
+      "excess": { "name_zh": "过剩", "name_en": "Excess" },
+      "stable": { "name_zh": "稳定", "name_en": "Stable" }
+    },
+    "demand": {
+      "strong": { "name_zh": "强劲", "name_en": "Strong" },
+      "weak": { "name_zh": "疲软", "name_en": "Weak" },
+      "moderate": { "name_zh": "温和", "name_en": "Moderate" }
+    },
+    "inventory": {
+      "low": { "name_zh": "低", "name_en": "Low" },
+      "high": { "name_zh": "高", "name_en": "High" },
+      "balanced": { "name_zh": "平衡", "name_en": "Balanced" }
+    }
+  },
+  "risk_levels": {
+    "low": {
+      "name_zh": "低",
+      "name_en": "Low",
+      "color": "#22c55e"
+    },
+    "medium": {
+      "name_zh": "中",
+      "name_en": "Medium",
+      "color": "#f59e0b"
+    },
+    "high": {
+      "name_zh": "高",
+      "name_en": "High",
+      "color": "#ef4444"
+    }
+  }
+}

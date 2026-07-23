@@ -1,0 +1,772 @@
+{
+  "commodity": "mining-equities",
+  "description": "Expert insights on mining-equities from Money of Mine podcast",
+  "total_references": 80,
+  "sources": [
+    "Mark Connelly",
+    "Will Thomson"
+  ],
+  "last_updated": "2026-03-19",
+  "quality_grade": "RAW_TRANSCRIPT",
+  "requires_editorial_review": true,
+  "signoff_status": "NEEDS-SIGNOFF (re-graded 2026-06-29: source is podcast transcript, not vetted institutional data)",
+  "channel": "Money of Mine",
+  "references_by_category": {
+    "authority_statement": [
+      {
+        "text": "I think you're right We're now at the point where everyone seems to be capable of financing to the degree that we can replace and stand still in the volume of production across a whole series of commodities.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think that one's hard to argue with it seems like um whether people are rotating into the types of things I own energy material ustrials, industrials and infrastructure I think is still an open question.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think that that that piece is important because otherwise management will never make decisions, never own decisions if they're being told by their board, you can do this or you can't do that.",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think I saw I think I saw uh the volume of tin traded on the Shanghai exchange recently was like a what do we we do 400,000 tons a year of tin and I think they traded a million tons a day.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think is really interesting right now with with critical metals in particular, and I don't know if the story is the same in someplace like Australia as it is in the United States.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think you take that into the role and I you know I think the outcome is always going to be a little bit better than you know than than what it should be or it can be.",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think we'd see that more in the the stock movement just because the flows would be so big relative to the size of the the resource sectors, if you will.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think they've accomplished a lot more than I thought they would initially accomplish when they first, you know, that management team first went in.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think we need more consolidation or more M&A in this industry and clear all the softer issues, clear all the sort of the noise in the background.",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think we got through about a quarter of the questions we had jotted down, so we'll have an abundance of stuff to chat through next time.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think if you go back I mean papion we upgraded the register significantly and we took it from sort of more retail to institution.",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think about public companies as you need to be thinking about a transaction all the time, whether buying or going or growing.",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it's really hard to argue that it isn't the company to own in the copper space for the next, you know, 5 to 10 years.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think is uh is all quite integrated in a way that maybe the previous generation of Londines didn't think about it.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think if you if you put the message to the counterparty that you're engaged, that that's the first starting point.",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think the story with silver the story with silver is probably different because of its industrial uses, though.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think the process is is if you continue to derisk, do the work to a very high standard, which is bulletproof.",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think I should move it's outside my experience or outside my skill set and never be afraid to do that.",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think, informs some of your your outlook today because you talk about setting the strategy go or grow.",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think there is there's a there is an offshore oil an old offshore oil rig in the North Sea somewhere.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it's important and again go back to my commentary about evolution of the cycle of the company.",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think the problem also is some of the regulations or requirements as a South African company.",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think that the management team is the most important variable followed by the project.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think trying to forecast where gold prices is going from here is quite challenging.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "in my view is is missing within the the cohort of people coming through the industry.",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think they're all adverse to doing anything, lose their job if something screws up.",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think that the So, I've been in Equinox since 2018 or 19, I don't remember which.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think they first started drilling the thing in the like the late 80s early 90s.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think we have a lot of copper projects, not a lot that are as good as Vakuna.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think they bought a a proper processing facility for six cents on the dollar.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think you see a lot of profits made on gold, a lot of profits made on copper.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think simple is is better with these uh but I I think that across the board.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think the part of the problem is that um the pool of talent is also small.",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it goes back to some earlier comments where you know it's not a job.",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "in my view and to have more consolidation people have to get out of the way.",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "in my view because the gold price is so volatile in today's you know cycle.",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think  you also did an interview if we move commodities um to to copper.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "In my opinion, um, you know, it's not about getting out of mining firms.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think I think was dated the 16th of January when when you wrote it.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think is picking up and politics globally are driving some of that.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think TIN has run pretty hot and hard and is is due for a pullback.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it's it's an important part of the industry and it's helpful.",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it's it's an education tool for and it helps with companies.",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "in my opinion based on on my inference conversations with them etc.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think we made in our first year for less than 500 bucks an ounce.",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it's pretty immature at this point, though, but we'll see.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think they can figure this out  without um without any of that.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think the key is and I go back to the composition of the board.",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it hit it as high as 58,000 a ton maybe or 56,000 a ton.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think the backdrop remains favorable from a macro perspective.",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "experience_wisdom": [
+      {
+        "text": "over the last 10 years who consistently delivered and made returns to their investors dividends not just the equity growth because the equity growth is a function of the gold price.",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "over the last 10 years, well, you know, educate people and tell me who they are because I can probably name five or six.",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "data_citation": [
+      {
+        "text": "They've done an outstanding job and you know the endeavor guys as well and you know others B2 these guys have gone into frontier countries built projects found discovered them first built them operating them and making money I mean that there's such a challenge so when we were running atomus or when I was running atomus we was you know that scale was just not we weren't a $6 billion company we were a 300 million making110 10,000 ounces at less than 500 bucks an ounce, you know, and today that would be a two and a half billion dollar company, maybe more",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "They've done an outstanding job and you know the endeavor guys as well and you know others B2 these guys have gone into frontier countries built projects found discovered them first built them operating them and making money I mean that there's such a challenge so when we were running atomus or when I was running atomus we was you know that scale was just not we weren't a $6 billion company we were a 300 million making110 10,000 ounces at less than 500 bucks an ounce, you know, and today that would be a two and a half billion dollar company, maybe more",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So it's it's it's challenging and the time of day it's put out cycle good price whatever it it's necessary you got to do it but I just think it needs to be within a certain band limit and and guidance for an example you know when someone comes out and says our capital cost is going to be between 300 and 500 million is it 301 or is it 499 because that's a big spread between the two I go back to my inmet days when I worked with Richard Ross who was our CF If I if I said to him, Richard, the cost is going to be 300 to 500, I would have been fired",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "the offer was rescaled and then subsequently went to the the process court days votes and you know was 88% voted in favor and you know 10% or 12% voted against so say 9010 so overwhelmingly acceptance of the transaction which was a great outcome both parties you walk away from them I don't think I've ever walked away from a transaction where you've had sellers remorse or buyers remorse everyone has being comfortable that both parties have you come out with the right deal for their sharehold",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "the offer was rescaled and then subsequently went to the the process court days votes and you know was 88% voted in favor and you know 10% or 12% voted against so say 9010 so overwhelmingly acceptance of the transaction which was a great outcome both parties you walk away from them I don't think I've ever walked away from a transaction where you've had sellers remorse or buyers remorse everyone has being comfortable that both parties have you come out with the right deal for their sharehold",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "the offer was rescaled and then subsequently went to the the process court days votes and you know was 88% voted in favor and you know 10% or 12% voted against so say 9010 so overwhelmingly acceptance of the transaction which was a great outcome both parties you walk away from them I don't think I've ever walked away from a transaction where you've had sellers remorse or buyers remorse everyone has being comfortable that both parties have you come out with the right deal for their sharehold",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "It had three two assets assets were batted at 100 million bucks and one was an operating mine Yuga in southern Bikina and they had development asset Abau in the Ivory Coast and lots of exploration stuff but in these days that would be a $6 billion transaction not a 600 million trans and you know we making 100,000 ounces 110,000 I think we made in our first year for less than 500 bucks an ounce",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "It had three two assets assets were batted at 100 million bucks and one was an operating mine Yuga in southern Bikina and they had development asset Abau in the Ivory Coast and lots of exploration stuff but in these days that would be a $6 billion transaction not a 600 million trans and you know we making 100,000 ounces 110,000 I think we made in our first year for less than 500 bucks an ounce",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "It had three two assets assets were batted at 100 million bucks and one was an operating mine Yuga in southern Bikina and they had development asset Abau in the Ivory Coast and lots of exploration stuff but in these days that would be a $6 billion transaction not a 600 million trans and you know we making 100,000 ounces 110,000 I think we made in our first year for less than 500 bucks an ounce",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Why why is the market, you know, potentially not not not recognizing the achievement or or pricing in the potential return of a 1.1 million house producer at this point in the cycle?\n\nI think that the So, I've been in Equinox since 2018 or 19, I don't remember which",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Uh, and so, um, you know, a lot of things that I would have looked at a couple years ago and would have been 150, $250 million companies are now, you know, pre-production gold miners who don't have a definitive feasibility study and are billiondoll companies",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "and and you know we had a study around it at 5.5 million ounces we had and we said we could build it for 350 or 300 million US they built it for double that because they're Canadians and they do things differently and they make it bigger and which they did",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Uh copper, I still think copper here at 580 uh I don't even think this is truly the incentive price to build new copper mines that we need to see, right?\n\nI I I think it's more like 650 or $7.\n\nThat is the price that'll really get people building copper",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Um, no one is coming around pitching me gold projects that require $2,000 gold, let alone, you know, $5,000 gold, right?\n\nUh, the challenge is from my perspective that everything in the gold space has baked in a pretty healthy gold price at this point",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Um, no one is coming around pitching me gold projects that require $2,000 gold, let alone, you know, $5,000 gold, right?\n\nUh, the challenge is from my perspective that everything in the gold space has baked in a pretty healthy gold price at this point",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "What's not to love about that?\n\nWell, when I when I read the targeted returns 8% cash, but then also capital uplift, I was interested and um yeah, these these these these are private trusts, right?\n\nLike  private trusts defined timelines",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And the people who talk about say eight $10,000 per ounce gold, you know, they're talking big global macro stories about, you know, central banks and interest rates and, you know, ddollarization and things like that",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "5 million ounces we had and we said we could build it for 350 or 300 million US they built it for double that because they're Canadians and they do things differently and they make it bigger and which they did",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Their predecessor company Beamer was sold to Kin Ross for, you know, billions, three and a half billion, you know,  back in the day,  5 years before, you know, when gold was 500 bucks an ounce",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Um, so everything was geared towards putting them in the best position possible 5 years, six years down the road to be able to execute on an $18 billion multi-year build process",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "someone came along and said, I'll take I'll buy those 5 million ounces at a 150 bucks an ounce and paid us 650 million or 700 million what transaction ended up being",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "someone came along and said, I'll take I'll buy those 5 million ounces at a 150 bucks an ounce and paid us 650 million or 700 million what transaction ended up being",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "someone came along and said, I'll take I'll buy those 5 million ounces at a 150 bucks an ounce and paid us 650 million or 700 million what transaction ended up being",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So if you're going to find 7 million ounces a year at a 100 bucks an ounce on a discovery cost, that's 700 million bucks a year you got to spend on expiration",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So if you're going to find 7 million ounces a year at a 100 bucks an ounce on a discovery cost, that's 700 million bucks a year you got to spend on expiration",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "uh and you have like three to 4% annualized growth on tin demand uh as everyone needs to solder literally everything because everything has a chip in it now",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And so I just find right now uh to be a tough environment to buy a gold miner in unless you think gold price is going to $8,000 an ounce or something",
+        "expert": "Will Thomson",
+        "source_title": "Why Management Matters more than Project (Will Thomson)",
+        "video_id": "cvhckNaRlos",
+        "url": "https://www.youtube.com/watch?v=cvhckNaRlos",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "I always look at today and say if my goal price was $1,000 what would I do differently to run that business?\n\nIt's not 7,000, it's a thousand",
+        "expert": "Mark Connelly",
+        "source_title": "Mark Connelly on Why Every Miner is for Sale",
+        "video_id": "n8dlKD9Tb68",
+        "url": "https://www.youtube.com/watch?v=n8dlKD9Tb68",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      }
+    ]
+  },
+  "price_reference_standard": "N/A — 股票标的; 引用价格须按各标的标的金属 canonical source (NEEDS-SIGNOFF: confirm)",
+  "price_note": "transcript 数字仅作背景, 正文价格须从 canonical source 拉取 (NEEDS-SIGNOFF)"
+}

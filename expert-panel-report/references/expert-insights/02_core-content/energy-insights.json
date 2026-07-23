@@ -1,0 +1,772 @@
+{
+  "commodity": "energy",
+  "description": "Expert insights on energy from Money of Mine podcast",
+  "total_references": 80,
+  "sources": [
+    "Saul Kavonic"
+  ],
+  "last_updated": "2026-03-19",
+  "quality_grade": "RAW_TRANSCRIPT",
+  "requires_editorial_review": true,
+  "signoff_status": "NEEDS-SIGNOFF (re-graded 2026-06-29: source is podcast transcript, not vetted institutional data)",
+  "channel": "Money of Mine",
+  "references_by_category": {
+    "authority_statement": [
+      {
+        "text": "I think that's one part of the dynamic which can be tougher and the other part is the macro like you've seen gold prices, you know, double, triple, silver prices up five times.",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think people forget is first of all execution risk is real and Santos doesn't actually have a lot of experience building big projects which they in the middle of execution.",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think we're we're loosely familiar given we come from a very low base here here soul But are there other parts like there's other basins that we haven't touched upon?",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think Woodside will increasingly be of interest to some of the funds internationally as they see it as a different exposure to oil that they need to take part of.",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think you have a whole bunch of Kico expats probably in Brisbane trying to justify staying here and looking to do other good things which is great for Australia.",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think the actual fundamental yield and value of this business is and once everything's up and running that's going to become really clear uh to the market.",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think culture doesn't matter until it does and then all of a sudden you start to see uh impacts and I I think you have seen that at Santos.",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think that you know the best example of that is how very few companies have managed to do oil and gas well while also do mining well.",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think they've got a foothold there that could build on which could potentially lead to M&A and consolidation in that base as well.",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think we need to start with the macro kind of oil and LG outlook because then it all comes flowing back to Australia from there.",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think to the extent beach does acquisition is going to be very good for the Australian market because they're very focused.",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it does for Woodside is it makes Woodside one of the purest large scale LG exposures in the world.",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think there's a lot of water to go under the bridge in terms of getting clarity about the path forward.",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think that first discovery at least from what I hear in industry sounds like it's got some potential.",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think we can uh at this point have conviction that our policy makers don't know what they're doing.",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think a good starting point is that there's a lot of similarities between mining and oil and gas.",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think there's a there's an article Joe Aston wrote um about this a few months ago.",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think for example if beach bought um to beach would be a hungry developer.",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "experience_wisdom": [
+      {
+        "text": "over the last 5 years but this is the you know now they're looking at it more seriously.",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "over the last 5 years have you know had some really big highs and some really big lows.",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "data_citation": [
+      {
+        "text": "Um, and most recently is obviously the big buildup of US and allied military assets in the Middle East with potential strike on Iran where you're seeing geopolitical risk groups like Eurasia Group talking about a 65% or higher chance of a direct strike on Iran, which accounts for up to about 2 million barrels a day of oil supply",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Um, and most recently is obviously the big buildup of US and allied military assets in the Middle East with potential strike on Iran where you're seeing geopolitical risk groups like Eurasia Group talking about a 65% or higher chance of a direct strike on Iran, which accounts for up to about 2 million barrels a day of oil supply",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "is would it not make sense to like if a pathway to acquiring Strike is actually buying Canavan because you you know you're it trades for like less than cash and the the strike shares so you can get a 20% interest in Strike and this this you know free carry and option on on Dorado in the future when Santos gets their together",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Um I think what you've seen to date is what Delorean has given them is it's given them a head start in the next wave of US LNG projects where they've locked in a cost structure which is probably at least now 10% below what doing that project again or competing projects are going to cost going forward",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "How how do you interpret uh Canavan's acquisition of 20% stake in Strike?\n\nI mean, now that that 20% you talked about before the dynamics in the the Perth basin with Hancock surely strike at some point in time is a is an acquisition target given given that interest",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "How how do you interpret uh Canavan's acquisition of 20% stake in Strike?\n\nI mean, now that that 20% you talked about before the dynamics in the the Perth basin with Hancock surely strike at some point in time is a is an acquisition target given given that interest",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So it was the end of 2025 and they're awarding uh the CEO 90% of that mix million despite the fact that the Rosser is over 6 months late and ended up actually costing more if you factor in the twidding of the pipeline",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Right?\n\nSo you know Woodside's economics for it 12% is about is based on a $10 LG price for a $350 handh if you say that's going to be $11.50 instead of 10 roughly that can double the value of the project",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So, if I just rewind 5 years, 5 years ago, the long-term forecast for LG was $7 to $9.\n\nNow, we're saying the worst over supply scenario in the in the industry's history is going to be $7",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "But if you look at what that actually means for the pricing, those really bearish forecasts are still saying you'll get a $7 LG price for example as a low in on average in 2028 and 2029",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Woodside had a look to buy them two years ago suddenly walked away after doing looking under the hood.\n\nXRG had a look last year suddenly walked away after looking under the hood",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "These are yeah really interesting vehicles and you can get an an 8% cash return plus capital uplift because the Australian property market doesn't seem to slow down",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Right?\n\nSo you know Woodside's economics for it 12% is about is based on a $10 LG price for a $350 handh if you say that's going to be $11",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Right?\n\nSo you know Woodside's economics for it 12% is about is based on a $10 LG price for a $350 handh if you say that's going to be $11",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Right?\n\nSo you know Woodside's economics for it 12% is about is based on a $10 LG price for a $350 handh if you say that's going to be $11",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And if you look at equities today on our models the equities are pricing in a long-term $60 to $62 a barrel of oil",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And if you look at equities today on our models the equities are pricing in a long-term $60 to $62 a barrel of oil",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And at a 7 $70 oil price, you'll get between seven and 10% all in free cash flow yield",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And at a 7 $70 oil price, you'll get between seven and 10% all in free cash flow yield",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So, if I just rewind 5 years, 5 years ago, the long-term forecast for LG was $7 to $9",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Prices have come back down to the kind of $10 to12 mark at the moment",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      }
+    ],
+    "certainty_judgment": [
+      {
+        "text": "I think the numbers are probably objectively both higher on both but it's there's where there's a big difference um particularly with smaller scale oil and gas which is not targeting elephants right um so for example inter room and below let's like hypothetically imagine the next three wells are absolutely gang busters then a big major comes in everyone cleans up everyone's very very Right",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Um, and most recently is obviously the big buildup of US and allied military assets in the Middle East with potential strike on Iran where you're seeing geopolitical risk groups like Eurasia Group talking about a 65% or higher chance of a direct strike on Iran, which accounts for up to about 2 million barrels a day of oil supply",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "You know, I think since the election last year, they've certainly moved much more to this pragmatic center on a lot of things regarding gas, but that hasn't necessarily trickled down, you know, into the environmental departments in terms of the inertia and austerity that's embedded there",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "That's good if LG goes up, it's bad if LG goes down, but it is differentiating and it's I think Woodside will increasingly be of interest to some of the funds internationally as they see it as a different exposure to oil that they need to take part of",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Coming back to you know we talked about again it's  when will Dorado start to make progress and part of it's about Santos needs to decide what's its priorities in terms of where it's going to grow next and is it be willing to do deals",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "So they must see something in those wells which is exciting them enough that even Shell which is like this you know you know this quite a massive slowmoving beast is willing to do something there",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "But we do will we see a big oil and gas company coming in this in this year and it and you know from what I hear in industry for the first time it is being looked at seriously",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Why would I clearly the the the value inhibitor in in Dorado is is the fact that Santos has operatorship and Santos has literally no motivation to develop this anytime soon",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "It's a question of is Santos willing to sell at that price to transact and move it forward or would rather just have it sit there for its option value for a time being",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Because it's certainly a very different landscape to what it was 5 years ago, 3 years ago in the sense that the companies can get funding the these sorts of things",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "So, it's, you know, I can make a really strong case why the domestic gas price will be $15 rather than 10, but it's not going to 40 and staying there, right",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Think if Santos is willing to sell a big chunk of that, you would find some buyers who willing to take it off their hands for a price and and develop it",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Um, and unfortunately we do not have uh government at a federal level which is willing to put political capital behind this",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "That hasn't trickled down to individual MPs willing to put their neck on the block to support a gas project",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "It's like if you have a price incentive buyers willing to pay over and even they're walking away, right",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "risk_assessment": [
+      {
+        "text": "Um, and most recently is obviously the big buildup of US and allied military assets in the Middle East with potential strike on Iran where you're seeing geopolitical risk groups like Eurasia Group talking about a 65% or higher chance of a direct strike on Iran, which accounts for up to about 2 million barrels a day of oil supply",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "So my concern is that the market's overestimating what I think the actual fundamental yield and value of this business is and once everything's up and running that's going to become really clear uh to the market",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I mean, what's the implication of the underlying business and this was a buyer who had the balance sheet to do and derisk and accelerate a lot of projects which Santos as a standalone doesn't, right",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "And what I think people forget is first of all execution risk is real and Santos doesn't actually have a lot of experience building big projects which they in the middle of execution",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Now to date that pessimism has at least proven overblown and what we've seen over the last few months is geopolitical risks first in Venezuela",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "And so you got to be really acutely aware of the above ground risk in Australia down to quite a significant local level",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Now it doesn't want to do that by leveraging itself up to the hilts again and taking on a lot of risk",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "And my concern is, and you can actually I'll give you the numbers because we've just run them",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "But this is just another red flag and do we need to take those risks on the risk flag",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "So oil price needs to be above the mid60s to do better than a risk-free term deposit",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Uh so there's going to be a lot of execution risk before you get there",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "You don't have to be um in Santos and take on some of the risk there",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "professional_advice": [
+      {
+        "text": "The way I would look at it is like if you really believe that LG is going to be lower for longer and Henry Hub is going to stay where it is or potentially go up, then if that plays out, it's going to be a bad deal",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "So if you look at those policy pressures which are overlaid with real new demand growth areas like in data centers, it's all these things are pushing up the demand outlook versus what was otherwise expected",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Perth basin is is you know an area to have a look at and lot you know people have followed that saga over the last 5 years have you know had some really big highs and some really big lows",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "But if you look at what that actually means for the pricing, those really bearish forecasts are still saying you'll get a $7 LG price for example as a low in on average in 2028 and 2029",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Uh the second element then is if you look at critical mineral supply chains and you guys are much bigger experts on that than I am",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "And if you look at equities today on our models the equities are pricing in a long-term $60 to $62 a barrel of oil",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Um, so what's really interesting about it is if you look at the basin, um, look who's there, right",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "logical_connection": [
+      {
+        "text": "Um and that's where beach is because just letting everything decline first of all narrative wise is terrible and particularly as you pay it out then your market cap drops which means you become less relevant to institutions and then you're bringing forward your decommissioning spend which is like a ticking time bomb across the whole industry.",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "is would it not make sense to like if a pathway to acquiring Strike is actually buying Canavan because you you know you're it trades for like less than cash and the the strike shares so you can get a 20% interest in Strike and this this you know free carry and option on on Dorado in the future when Santos gets their together.",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "And you get the sense that Konico is basically just refusing to do anything um with Santos under its current management team because of the way the management team treated Konico with regard to um the Northern Territory acquisition which Santos bought from Konico a number of years ago.",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "And in order for us to win in the areas we play in the AI race, that is all ultimately driven by energy because we need the sovereign data centers which are ultimately energy and water businesses in order to deliver on our AI and technology goals.",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Are you unable to sell down a bit of project A to pay for a project B because the market has been led to believe project A is worth more than you can actually sell it for.",
+        "expert": "Saul Kavonic",
+        "source_title": "Why Smart Money Is Buying Energy Chaos (Saul Kavonic)",
+        "video_id": "1E3UPN_T-Y4",
+        "url": "https://www.youtube.com/watch?v=1E3UPN_T-Y4",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ]
+  },
+  "price_reference_standard": "Brent/WTI; LNG 注明 JKM/TTF/Henry Hub",
+  "price_note": "transcript 数字仅作背景, 正文价格须从 canonical source 拉取 (NEEDS-SIGNOFF)"
+}

@@ -1,0 +1,38 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-03-19",
+  "categories": {
+    "bullish": {
+      "templates": [
+        "Drawing from historical analysis of similar cycles, the fundamental case for {asset} remains intact. Patient investors who understand the cycle are likely to be rewarded over a {timeframe} horizon.",
+        "The confluence of {factor1}, {factor2}, and {factor3} creates what we assess as a compelling entry point.",
+        "Based on the evidence reviewed, we maintain a constructive outlook on {sector}. The supply-demand imbalance shows no signs of structural resolution in the near term."
+      ],
+      "usage": "看涨结论"
+    },
+    "cautious": {
+      "templates": [
+        "While the long-term thesis remains intact, near-term allocators should be aware that {risk_factor} may create volatility before the trend reasserts itself.",
+        "We would not chase this rally. Patience here is likely to be rewarded with a better entry at {condition}.",
+        "The fundamentals are constructive but positioning is crowded. A period of consolidation before the next leg higher would not surprise us."
+      ],
+      "usage": "谨慎结论"
+    },
+    "neutral": {
+      "templates": [
+        "The evidence at this stage is mixed. We are monitoring {indicator} closely before adding conviction.",
+        "Given the uncertainty around {variable}, we advise a measured allocation, scaling in over time.",
+        "This is a situation where intellectual humility is warranted. The cycle is real, but precise timing is beyond reliable capability."
+      ],
+      "usage": "中性结论"
+    },
+    "rick_rule_closing": {
+      "templates": [
+        "As the historical record demonstrates, the market is a brutal teacher but an honest one. Those who respect the cycle, maintain financial discipline, and position counter-cyclically will, in our assessment, be rewarded.",
+        "I have been wrong before and will be wrong again. What I am confident in is the analytical framework: supply, demand, price, and cycle position. Apply it consistently and the probabilities favor you over time.",
+        "The opportunity set in {sector} today reminds me strongly of {historical_analog}. The patient investor who understood that cycle was well rewarded. We believe the same outcome is likely here."
+      ],
+      "usage": "Rick Rule风格收尾"
+    }
+  }
+}

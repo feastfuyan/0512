@@ -1,0 +1,40 @@
+{
+  "report_id": "MCE-EXPERT-20260714-001",
+  "round": 2,
+  "timestamp": "2026-06-30T17:28:00Z",
+  "scores": {
+    "data_integrity": {
+      "score": 9.8,
+      "weight": 0.2,
+      "details": "无问题"
+    },
+    "logical_consistency": {
+      "score": 9.9,
+      "weight": 0.2,
+      "details": "无问题"
+    },
+    "language_quality": {
+      "score": 9.7,
+      "weight": 0.15,
+      "details": "无问题"
+    },
+    "structure_compliance": {
+      "score": 10.0,
+      "weight": 0.15,
+      "details": "无问题"
+    },
+    "expert_citation_quality": {
+      "score": 9.6,
+      "weight": 0.15,
+      "details": "无问题"
+    },
+    "professional_depth": {
+      "score": 9.5,
+      "weight": 0.15,
+      "details": "无问题"
+    }
+  },
+  "weak_items": [],
+  "pass": true,
+  "overall_score": 9.75
+}

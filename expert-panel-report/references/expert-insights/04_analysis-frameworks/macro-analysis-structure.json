@@ -1,0 +1,105 @@
+{
+  "version": "1.1",
+  "last_updated": "2026-03-19",
+  "document_title": "MiningClaw_ 宏观分析框架",
+  "macro_analysis_structure": {
+    "1_executive_summary": {
+      "purpose": "核心观点和主要结论",
+      "key_elements": [
+        "主要趋势",
+        "关键风险",
+        "投资建议"
+      ],
+      "word_count": "150-200字",
+      "rick_rule_approach": "开门见山，基于周期经验的确定性判断"
+    },
+    "2_macro_overview": {
+      "purpose": "全球宏观环境扫描",
+      "key_elements": [
+        "利率与通胀",
+        "美元指数",
+        "地缘政治",
+        "中国需求"
+      ],
+      "word_count": "300-400字",
+      "rick_rule_approach": "历史类比 — 当前环境最像哪个历史周期？"
+    },
+    "3_commodity_tracking": {
+      "purpose": "大宗商品市场追踪",
+      "key_elements": [
+        "价格走势",
+        "供需结构",
+        "库存水平",
+        "生产商成本曲线"
+      ],
+      "word_count": "400-600字",
+      "rick_rule_approach": "供需基本面优先，价格是结果不是原因"
+    },
+    "4_risk_assessment": {
+      "purpose": "风险识别与量化",
+      "key_elements": [
+        "尾部风险",
+        "政策风险",
+        "地缘风险",
+        "流动性风险"
+      ],
+      "word_count": "200-300字",
+      "rick_rule_approach": "主动问：什么情况下我的判断是错的？"
+    },
+    "5_investment_recommendations": {
+      "purpose": "投资建议与配置",
+      "key_elements": [
+        "评级",
+        "目标价位",
+        "仓位建议",
+        "时间窗口"
+      ],
+      "word_count": "200-300字",
+      "rick_rule_approach": "给具体建议，不说废话。有据可查的确定性表达。",
+      "compliance_note": "NEEDS-SIGNOFF: 宏观守 lane — 仓位建议/目标价应转 valuation-analyst/compliance; 本章仅出价格区间+触发条件+监测指标"
+    },
+    "6_conclusion": {
+      "purpose": "总结展望",
+      "key_elements": [
+        "核心论点重申",
+        "关键变量监控",
+        "下周关注点"
+      ],
+      "word_count": "100-150字",
+      "rick_rule_approach": "结尾要有力，不要虎头蛇尾"
+    }
+  },
+  "rick_rule_methodology": {
+    "core_sequence": [
+      "1. 周期定位 — Where are we in the cycle? (最重要的问题)",
+      "2. 供需结构 — What does the fundamental supply/demand picture look like?",
+      "3. 情绪面 — What is loved/hated? Where is the contrarian opportunity?",
+      "4. 风险自检 — What would have to be true for me to be wrong?",
+      "5. 仓位建议 — Given the above, what is the appropriate sizing and timing?"
+    ],
+    "cycle_framework": {
+      "early_cycle": "Assets hated, fundamentals improving — best entry point",
+      "mid_cycle": "Narrative shifting, institutional interest rising — still attractive",
+      "late_cycle": "Assets loved, crowded positioning — risk/reward deteriorating",
+      "bust": "Maximum pessimism — best long-term opportunity for contrarians"
+    },
+    "source": "Rick Rule - Money of Mine Interview (AOkw12Xq5Tw)"
+  },
+  "expression_standards": {
+    "authority_opening": [
+      "Based on historical analysis of similar inflationary periods...",
+      "Drawing from comparable commodity cycles, the evidence suggests...",
+      "The structural parallels to {historical_period} are notable..."
+    ],
+    "certainty_judgment": [
+      "The data clearly shows {conclusion}.",
+      "In our assessment, {outcome} is the most probable path.",
+      "Historical precedent strongly suggests {thesis}."
+    ],
+    "risk_framing": [
+      "Investors should be particularly cautious of {risk_factor}.",
+      "The bear case requires {condition} — which we assign {X}% probability.",
+      "We stress-test this view: what would have to be true for us to be wrong? {bear_case}."
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "generated_by": "step-08a hardening loop",
+  "date": "2026-06-23",
+  "verdict": "PASS_WITH_NOTES",
+  "weighted_total": 9.634,
+  "gate_threshold": 9.5,
+  "per_dim": {
+    "professional_depth": {
+      "fused": 9.8,
+      "mechanical": 10,
+      "llm": 9.7,
+      "passes_9_5": true
+    },
+    "logical_consistency": {
+      "fused": 9.7,
+      "mechanical": 9.774,
+      "llm": 9.6,
+      "passes_9_5": true
+    },
+    "expert_citation_quality": {
+      "fused": 9.7,
+      "mechanical": 10,
+      "llm": 9.5,
+      "passes_9_5": true
+    },
+    "data_integrity": {
+      "fused": 9.9,
+      "mechanical": 10,
+      "llm": 9.8,
+      "passes_9_5": true
+    },
+    "structure_compliance": {
+      "fused": 9.8,
+      "mechanical": 10,
+      "llm": 9.6,
+      "passes_9_5": true
+    },
+    "language_quality": {
+      "fused": 8.9,
+      "mechanical": 8,
+      "llm": 9.5,
+      "passes_9_5": false,
+      "fail_reason": "risk_keyword_coverage=0.0: rubric defines keywords[] array but regex_count handler only reads check.pattern; makeRegex(undefined) returns never-matches. Unfixable via fixture — grader code gap. CAGE held."
+    }
+  },
+  "notes": "language_quality cannot reach 9.5 without modifying enforce-gate.mjs (keywords[] array not wired to regex_count). Gate correctly withholds PASS verdict.",
+  "report_id": "MCE-EXPERT-20260714-001"
+}

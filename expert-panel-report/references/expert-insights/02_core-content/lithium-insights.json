@@ -1,0 +1,678 @@
+{
+  "commodity": "lithium",
+  "description": "Expert insights on lithium from Money of Mine podcast",
+  "total_references": 69,
+  "sources": [
+    "YJ Lee"
+  ],
+  "last_updated": "2026-03-19",
+  "quality_grade": "RAW_TRANSCRIPT",
+  "requires_editorial_review": true,
+  "signoff_status": "NEEDS-SIGNOFF (re-graded 2026-06-29: source is podcast transcript, not vetted institutional data)",
+  "channel": "Money of Mine",
+  "references_by_category": {
+    "authority_statement": [
+      {
+        "text": "I think Matt Matt Fley he did he did he did this analysis copper inventories have been going up at the same time that copper prices have and that that that just doesn't make sense to me.",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think we're quite we're quite there and the way it grows the way I see commercial home grid storage all growing it's going to it's exploding right it's going to 1.",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think somebody came up with the actual installation numbers um just last week or was it just a couple of days ago and it turned out I think to be 315.",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think um a few hundred of these automated trucks each one of these trucks has 500 plus kilowatt hour battery.",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think went up uh my entry point in my entry price is was about my lap I should say uh was about 600 p.",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think the government is stepping in to restrict the amount of nickel that is being produced.",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think that is part partially why the CL mines uh mine remains uh in limbo right now.",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it was just under a dollar Canadian and now it's about 10 or 11 I think.",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think one uh 10 bagger and we have a couple of uh five six baggers in it.",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it was in in February their their confidence in in that technology.",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think the other brokerages eventually come up to this four plus number.",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think I've put out um for a year now and that has not changed.",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think they did really well in the longterm uh growth picture.",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it was a Friday and  silver price was like 90 bucks.",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "data_citation": [
+      {
+        "text": "And but the big picture for me was lithium in 2026 grows about 1/3 about 33% from 1.5 million tons to 2 million tons and and later on the both chairman of Ganfung and TNT came out to essentially say the same thing in different ways and next year again in 2027 I see this market growing from 2 million to 2 and a half million tons",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So you you put a um a very bullish prediction out there when we spoke last maybe even the time before when you think about the lithium market out to 2030 and your number was 4.6 million ton market size by 2030 if I'm getting that right and that  materially exceeds most other forecasts you you'll see out there",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "5 million tons to 2 million tons and and later on the both chairman of Ganfung and TNT came out to essentially say the same thing in different ways and next year again in 2027 I see this market growing from 2 million to 2 and a half million tons",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "5 million tons to 2 million tons and and later on the both chairman of Ganfung and TNT came out to essentially say the same thing in different ways and next year again in 2027 I see this market growing from 2 million to 2 and a half million tons",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Add to that a lot of the Western makers have seen like enormous write downs, albeit these are balance sheet accounting type actions, but to the tune of like 55 billion US",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Now what happens in the US the other large automobile market now they are in the low teens you know fine by 2030 I think they get to at least 25%",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "There's a specific commercial property in mind in the Gold Coast, and it's targeting an 8% cash return with distributions paid monthly",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So by pushing this restart out for the next 5 months and um step back again lithium market is growing 33% this year",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Now I actually in in my mind I actually do think that EVs at 60% global penetration in 2030 is very very realistic",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Stocks on the S&P 500 or NASDAQ they trade at uh one to 3% free cash flows right uh yields free cash flow yields",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So if you take 40% times 80% penetration rate we have a global penetration contribution from China alone of 32%",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So if you take 40% times 80% penetration rate we have a global penetration contribution from China alone of 32%",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So if you take 40% times 80% penetration rate we have a global penetration contribution from China alone of 32%",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "6 6 million ton figure is something that I think I've put out um for a year now and that has not changed",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "CL has come up to say we are going to drive uh EV penetration of heavy trucks in China to 50% by 2028",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So what Dale and team are doing is they are giving the market time to grow by about 12%",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Uh it moved it it dropped from essentially a peak of $120 to uh to 70 plus overnight",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And but the big picture for me was lithium in 2026 grows about 1/3 about 33% from 1",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "If gold silver prices go up 15 20% it would suddenly be free cash flow positive",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And then I realized now the lithium price was $8,000 about $8,000 per ton",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And then I realized now the lithium price was $8,000 about $8,000 per ton",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So in my base case I have EVs at a global penetration of about 45%",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Then our thesis was that if silver and gold prices just go up 10%",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And China accounts for about 40% of automobile sales in the world",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Can E trucks go to 50% penetration rates in 2030?\n\nNot impossible",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "5% grade when you when when naturally you are endowed with.3.4%",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Few more 165% years and um I think fun will take care of itself",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      }
+    ],
+    "certainty_judgment": [
+      {
+        "text": "This tool will happen for trucks and then that drives u global penetration of the high usage heavy err from from and and buses as well and that's how you get from the base to the bull case battery energy storage systems best I have 1",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "uh one by one they are striking trade deals, they are lowering tariffs and eventually they will realize that I have no skin in the game in the automobile business",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Incredibly intelligent move by Dale and team, I must say, because what they're now saying is the market is structurally um essentially structurally in a deficit",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "So, silver definitely outperformed throughout 12 months, but in a single month this year, it went up from 71 to 120",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "And um I took a photo of you saying YJ says silver will be 100 bucks by the end of the weekend",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "So what I see um happening here is too much protectionism, not enough um willingness to change",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Um I will let all the other banks and brokerages catch up with this number eventually",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Um, this was I I will credit this to my co- U manager of the fund, Christopher Rafka",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Few more 165% years and um I think fun will take care of itself",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "risk_assessment": [
+      {
+        "text": "Are there are there any signs of caution from the supply side or or or is the arithmetic of just the demand growth too overwhelming for for you to temper your bullishness",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Whether the the protectionists and the people particularly concerned about about China have their way in defending their their EV market on those sorts of grounds",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "But in the short term um I do see a big risk of um US recession or at least the US market um crash and that then takes and then Dr",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "If we were concerned about national security, we would um the world would not be producing most of its mobile phones in China",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "And um the other one venadium um technological challenges I might say um competitiveness with the other battery solutions",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I uh I love talking to you every time we do YJ and you you you challenge my cynicism and I get bullish on on everything",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "professional_advice": [
+      {
+        "text": "And when we look at the EU, specifically YJ, they were perhaps leading the world in the amount of governmentmandated um targets that had to be hit",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "And when I came back to Singapore I I I took one big step back again to look at this market from broad perspective",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Um yeah, so here at our Kane Green metal fund, we look at many many energy transition metals",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "You should you should totally put uh, you know, superimpos and Einstein together",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Look at what's happening with on the Japanese side Toyota right now",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "logical_connection": [
+      {
+        "text": "So what I did in my spreadsheet I actually put uh a new column called lowest cost lowest entry cost something like that right no actually I called it lowest average price yes so and then the initials are lap right lap so whenever it's a it's a then when it becomes a 10 beggger it's done 10 laps right so yeah so and then and then I have another column called current average price and that is a cap so yeah so now to me the cap does matter anymore because now I'm thinking in terms of laps, right?",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "And if you you cast your mind out five or 10 years like you like to do when you think about what the world looks like then is China just going to be so far ahead on some of these perhaps these lithium operations they drop down the the cost curve because of automation.",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Incredibly intelligent move by Dale and team, I must say, because what they're now saying is the market is structurally um essentially structurally in a deficit.",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Therefore would not affect the supply demand balance but would add uh tonnage into a market that is growing into deficit.",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Therefore, we are going to do this and that is why um I think western manufacturers are in deep deep trouble.",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "And this lithium winter was also shorter um than what could have been because lithium is going that quickly.",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Now this is u something I don't think anybody's anybody does because it's kind of stupid.",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "But now I feel more comfortable getting in because of this little switch in in the head.",
+        "expert": "YJ Lee",
+        "source_title": "The Ultra Bull Case for Lithium (YJ Lee)",
+        "video_id": "YkTATnUhSck",
+        "url": "https://www.youtube.com/watch?v=YkTATnUhSck",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ]
+  },
+  "view_bias": "ULTRA_BULL_SINGLE_SOURCE",
+  "price_reference_standard": "SMM/Fastmarkets 碳酸锂/氢氧化锂 分列",
+  "price_note": "transcript 数字仅作背景, 正文价格须从 canonical source 拉取 (NEEDS-SIGNOFF)"
+}

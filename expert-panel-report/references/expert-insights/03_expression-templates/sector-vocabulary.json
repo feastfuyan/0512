@@ -1,0 +1,131 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-03-19",
+  "sectors": {
+    "gold": {
+      "zh": "黄金",
+      "descriptors": [
+        "monetary metal",
+        "safe haven asset",
+        "inflation hedge",
+        "sovereign risk barometer"
+      ],
+      "bull_phrases": [
+        "real rate suppression",
+        "central bank accumulation",
+        "de-dollarization trend",
+        "safe haven bid"
+      ],
+      "bear_phrases": [
+        "rising real yields",
+        "USD strength",
+        "risk-on rotation",
+        "ETF outflows"
+      ],
+      "key_metrics": [
+        "AISC",
+        "gold-to-silver ratio",
+        "real interest rates",
+        "central bank net purchases"
+      ]
+    },
+    "silver": {
+      "zh": "白银",
+      "descriptors": [
+        "monetary and industrial metal",
+        "gold leveraged play",
+        "energy transition input"
+      ],
+      "bull_phrases": [
+        "solar demand acceleration",
+        "gold-silver ratio mean reversion",
+        "industrial restocking"
+      ],
+      "bear_phrases": [
+        "industrial slowdown",
+        "gold underperformance",
+        "speculative long unwind"
+      ],
+      "key_metrics": [
+        "gold-silver ratio",
+        "solar panel demand",
+        "LBMA lease rates"
+      ]
+    },
+    "uranium": {
+      "zh": "铀",
+      "descriptors": [
+        "nuclear fuel",
+        "energy security asset",
+        "long-cycle commodity"
+      ],
+      "bull_phrases": [
+        "utility contracting cycle",
+        "reactor restarts",
+        "supply deficit",
+        "Kazatomprom curtailments"
+      ],
+      "bear_phrases": [
+        "reactor shutdown risk",
+        "policy reversal",
+        "Kazatomprom supply surprise"
+      ],
+      "key_metrics": [
+        "spot price vs term price",
+        "uncovered utility requirements",
+        "lb U3O8 cost curve"
+      ]
+    },
+    "copper": {
+      "zh": "铜",
+      "descriptors": [
+        "electrification metal",
+        "economic bellwether",
+        "energy transition critical mineral"
+      ],
+      "bull_phrases": [
+        "grid buildout",
+        "EV penetration",
+        "mine supply gap",
+        "decades of underinvestment"
+      ],
+      "bear_phrases": [
+        "Chinese demand slowdown",
+        "scrap supply response",
+        "project pipeline surprise"
+      ],
+      "key_metrics": [
+        "LME inventory",
+        "TC/RC margins",
+        "mine supply pipeline",
+        "Chinese smelter capacity"
+      ]
+    },
+    "oil_gas": {
+      "zh": "油气",
+      "descriptors": [
+        "energy commodity",
+        "geopolitical asset",
+        "cash flow generator"
+      ],
+      "bull_phrases": [
+        "OPEC+ discipline",
+        "underinvestment in upstream",
+        "demand resilience",
+        "energy security premium"
+      ],
+      "bear_phrases": [
+        "demand destruction",
+        "US shale response",
+        "OPEC quota breach",
+        "energy transition displacement"
+      ],
+      "key_metrics": [
+        "EIA inventory",
+        "rig count",
+        "breakeven price",
+        "free cash flow yield"
+      ]
+    }
+  }
+}

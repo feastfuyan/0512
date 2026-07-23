@@ -1,0 +1,407 @@
+{
+  "commodity": "metals",
+  "description": "Expert insights on metals from Money of Mine podcast",
+  "total_references": 41,
+  "sources": [
+    "Money of Mine Hosts"
+  ],
+  "last_updated": "2026-03-19",
+  "quality_grade": "RAW_TRANSCRIPT",
+  "requires_editorial_review": true,
+  "signoff_status": "NEEDS-SIGNOFF (re-graded 2026-06-29: source is podcast transcript, not vetted institutional data)",
+  "channel": "Money of Mine",
+  "references_by_category": {
+    "authority_statement": [
+      {
+        "text": "I think it's prudent you know to to look at these sectors which haven't haven't run yet and perhaps deploy some capital into the un unloved sectors rather than jumping on too many bandwagons.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think, as your your highest conviction call when we when we briefly um spoke with you would have been early or mid December there and Astral hasn't moved too much since then.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think you use the words exponential, which I think you you very rightly use given the the appreciation we've seen in such a short period of time.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think you and I need some property in our portfolio because our  agrade commercial office buildings, good tenants in there.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think Unico is about a $600 million company, ruling out a bunch of kind of prospects there in in South America.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it probably makes up about 5% of the portfolio and we do, you know, you mentioned those two stocks.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "in my view, it doesn't have to be something it doesn't have to be a a player in that same geography.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think across the board you're seeing more money in metals markets.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it's something like 40 million ounces of um PGMs plus gold.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think partly, you know, you can't be you can't be in everything.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think from our portfolio the surprises were the best performers.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think for a little company you've got to do one or the other.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think there's some pretty interesting opportunities there.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "data_citation": [
+      {
+        "text": "So, um, yeah, Andrew Reed, the MD of, um, BCM, he says he gets, uh, he gets goosebumps thinking about the potential of this this project because it is ideally suited to this looks to be ideally suited to this institute leech capex at, you know, well less than 50 million US",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "I get I get goosebumps from um having you on the on the potty John because last time we had you on you talked about Elvo and I think the next day the stock was up like 40%",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So, um, yeah, Free Gold Ventures, TSXV listed, market cap creeping up, you know, but, you know, at about 7 or 800 million Canadian, you know, pick pick your number",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And I'm I'm curious now that they're at a level I think Unico is about a $600 million company, ruling out a bunch of kind of prospects there in in South America",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Uh congrats on a was it a 125% return in CY25 and and January is already gang busters when I looked at the LRT NAV per share",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "And I have to confess, I haven't, you know, plugged $7,700 Aussie into my model for Astral",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "8% cash returns plus capital uplift is um what's being targeted here",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "I think it's something like 40 million ounces of um PGMs plus gold",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      }
+    ],
+    "certainty_judgment": [
+      {
+        "text": "But I'm I'm curious to hear because that's obviously had a a fantastic run on the back of of platinum and palladium as well to a to a lesser extent just performing really really strongly",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Not that we necessarily might have invested in that, but yeah, that's definitely one that we could have got into that that we didn't",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "What an absolutely enormous month January is turning out to be",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "So obviously, you know, precious metals have run pretty hard",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "risk_assessment": [
+      {
+        "text": "Yeah,  it's deeply concerning when we look around the world and we we we talk about these things despite it being good for  for our speculative portfolios",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "So yeah, look, you could see the supply of manganesees um be really challenged um while the while the demand side might not be um quite so strong",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I don't think you're in any danger of going broke with your portfolio returns, John",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "professional_advice": [
+      {
+        "text": "If we look at some of the other goldies that you hold, Free Gold Ventures, not a company I'm I'm intimately familiar with, but just doing a bit of reading earlier, a big big number of ounces",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "It has been an astounding run on that one but there are plenty other stocks in your portfolio that you can um commiserate over and and just look at John",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "You should also check out intra links and the beautiful charts that we showed during this episode by focus the platform brought to you by market techoo",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "is_sponsored_content": true
+      },
+      {
+        "text": "The um I look at your yeah the the advanced set of gold developers that you you have in the portfolio",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "But you should think about commercial property, Exceed Capital, a group out of Brizzy",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "And in terms of expiration companies so much better to have a a big budget",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "logical_connection": [
+      {
+        "text": "So, um, yeah, Andrew Reed, the MD of, um, BCM, he says he gets, uh, he gets goosebumps thinking about the potential of this this project because it is ideally suited to this looks to be ideally suited to this institute leech capex at, you know, well less than 50 million US.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "So, quickly on the the rare earth kind of pocket, Brazilian critical minerals is one you've held and I'm really curious about this one because I had someone come up to me in December and say this was their highest conviction call.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "But I'm I'm curious to hear because that's obviously had a a fantastic run on the back of of platinum and palladium as well to a to a lesser extent just performing really really strongly.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I get I get goosebumps from um having you on the on the potty John because last time we had you on you talked about Elvo and I think the next day the stock was up like 40%.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Like because of the my um my my my thoughts at the time, thinking you got to be in the higher quality stuff that's near attempt to development to make the most money.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "And um I think you and I need some property in our portfolio because our  agrade commercial office buildings, good tenants in there.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "John, none of this really worries you too much because you find Alpha at the very small end of town.",
+        "expert": "Money of Mine Hosts",
+        "source_title": "The Spine Tingling Metals Bull Market",
+        "video_id": "QV4iAdRq1Q8",
+        "url": "https://www.youtube.com/watch?v=QV4iAdRq1Q8",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ]
+  },
+  "price_reference_standard": "LME Cash + 区域升贴水 (NEEDS-SIGNOFF: confirm)",
+  "price_note": "transcript 数字仅作背景, 正文价格须从 canonical source 拉取 (NEEDS-SIGNOFF)"
+}

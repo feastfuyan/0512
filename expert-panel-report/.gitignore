@@ -1,0 +1,16 @@
+# Authoritative sanctions list — gitignored (17MB+, refreshed on cadence)
+# Run: node scripts/ingest-sanctions.mjs  to regenerate
+shared/sanctions-list.json
+
+# Build artifacts
+draft/
+scores/
+audit-*.json
+dispatch-queue.json
+test/baseline-output.pdf
+test/_tmp_*
+*.pdf
+
+# Per-run output (P2-4): runs/{report-id}/ holds source excerpts + LLM output +
+# audit JSON — PII in plaintext. Never commit; deploy must add retention/rotation.
+runs/

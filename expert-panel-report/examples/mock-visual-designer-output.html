@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>MiningClaw 宏观经济报告 — TEST-001 (mock)</title>
+<style>
+  @page { size: A4; margin: 0 }
+  body { font-family: 'Noto Sans SC','Inter',sans-serif; font-size: 11.5px; color: #1f2937; margin: 0 }
+  .page { width: 210mm; min-height: 297mm; page-break-after: always; overflow: hidden; padding: 18mm; box-sizing: border-box; position: relative }
+  .page.cover { background: linear-gradient(135deg,#0f172a 0%,#1e293b 100%); color: #fff; padding: 30mm }
+  .glow1 { position: absolute; width: 200px; height: 200px; background: radial-gradient(circle,#14b8a6 0%,transparent 70%); top: 40mm; right: 30mm; opacity: 0.4 }
+  .glow2 { position: absolute; width: 300px; height: 300px; background: radial-gradient(circle,#3b82f6 0%,transparent 70%); bottom: 30mm; left: 20mm; opacity: 0.3 }
+  h1 { font-size: 28px; margin: 0 0 12px 0; font-weight: 700; letter-spacing: 0.5px }
+  h2 { font-size: 17px; margin: 20px 0 10px 0; color: #0f172a; border-bottom: 2px solid #14b8a6; padding-bottom: 4px }
+  h3 { font-size: 13.5px; margin: 14px 0 6px 0; color: #1e293b }
+  .ai-badge { display: inline-block; background: #14b8a6; color: #fff; padding: 2px 8px; border-radius: 3px; font-size: 9px; letter-spacing: 1px; font-weight: 600 }
+  .thesis { background: #f0fdfa; border-left: 3px solid #14b8a6; padding: 10px 14px; margin: 12px 0; font-size: 12px; line-height: 1.6; break-inside: avoid }
+  .data-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 10.5px; break-inside: avoid }
+  .data-table th { background: #f1f5f9; padding: 6px 10px; text-align: left; border-bottom: 2px solid #14b8a6; font-weight: 600 }
+  .data-table td { padding: 5px 10px; border-bottom: 1px solid #e2e8f0 }
+  .key-points { margin: 12px 0; break-inside: avoid }
+  .key-points li { margin: 4px 0; font-size: 11px }
+  .risk-box { background: #fef2f2; border-left: 3px solid #ef4444; padding: 10px 14px; margin: 14px 0; font-size: 11px; break-inside: avoid }
+  img.chart { width: 100%; max-width: 170mm; margin: 12px auto; display: block }
+  .coi-box { background: #fffbeb; border-left: 3px solid #f59e0b; padding: 10px 14px; margin: 14px 0; font-size: 10px; break-inside: avoid }
+  .disclaimer { background: #f8fafc; padding: 14px 18px; margin: 20px 0; font-size: 9px; color: #64748b; border-radius: 4px; line-height: 1.5; break-inside: avoid }
+  .back-cover { background: linear-gradient(135deg,#0f172a 0%,#1e293b 100%); color: #cbd5e1; page-break-after: auto }
+  .back-cover h2 { color: #fff; border: none }
+</style>
+</head>
+<body>
+
+<!-- 封面 -->
+<div class="page cover">
+  <div class="glow1"></div>
+  <div class="glow2"></div>
+  <span class="ai-badge">AI GENERATED</span>
+  <h1 style="margin-top:60mm">全球矿业宏观经济周度观察报告</h1>
+  <div style="font-size:14px;opacity:0.8;margin-bottom:6px">宏观研究 · 周度</div>
+  <div style="font-size:12px;opacity:0.6">报告日期: 2026-05-28</div>
+  <div style="font-size:12px;opacity:0.6">报告期: 2026-05-21 至 2026-05-27</div>
+  <div style="position:absolute;bottom:25mm;left:30mm;font-size:10px;opacity:0.5">LynAI Mines · Geovision · MCW-MACRO-TEST-001</div>
+</div>
+
+<!-- 章节 1 -->
+<div class="page">
+  <section class="chapter">
+    <div class="thesis">
+      <strong>Thesis</strong>: 美联储维持高利率 [src:87] 强化美元中性偏强, 对铜价构成短期压制 [src:88],
+      但 ECB 与美联储节奏分化 [src:95] 形成对冲,
+      我们维持 Q2 铜价区间判断 [src:96];
+      价格下行风险主要来自地缘政治冲突升级 [src:103] 与 OFAC 制裁扩大 [src:104].
+    </div>
+
+    <h2>一、全球宏观经济概览</h2>
+
+    <table class="data-table">
+      <thead><tr><th>央行</th><th>当前利率</th><th>上次变动</th><th>市场预期</th></tr></thead>
+      <tbody>
+        <tr><td>美联储</td><td>5.25-5.50% [src:87]</td><td>2026-03 暂停</td><td>降息 25bp [src:92]</td></tr>
+        <tr><td>ECB</td><td>4.00% [src:89]</td><td>2026-01 降息</td><td>再降 25bp</td></tr>
+        <tr><td>日银</td><td>0.10% [src:110]</td><td>2026-04 加息</td><td>维持</td></tr>
+      </tbody>
+    </table>
+
+    <ul class="key-points">
+      <li>美联储维持高利率压制商品价格 [src:88]; 核心 PCE 同比 2.70% [src:90]</li>
+      <li>美元指数偏强 [src:101], 压制商品</li>
+      <li>ECB 与美联储节奏分化, 欧元区通胀回落至 2.40% [src:95]</li>
+      <li>日元贬值 0.8% w/w [src:111], carry trade 平仓压力</li>
+      <li>OFAC 制裁新增俄罗斯金属交易商 [src:104]</li>
+    </ul>
+
+    <div class="chart-block" data-slug="dxy-trend" data-raster="skipped" style="margin:12px 0">
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="640" viewBox="0 0 1040 640" style="background:#fff;font-family:system-ui,sans-serif"><text x="520" y="34" text-anchor="middle" font-size="26" font-weight="600" fill="#374151">DXY 与主要货币 WoW 变化 %</text><line x1="110" y1="560" x2="1000" y2="560" stroke="rgba(0,0,0,0.05)" stroke-width="0.5"/><text x="102" y="565" text-anchor="end" font-size="17" fill="#6b7280">-0.6</text><line x1="110" y1="480" x2="1000" y2="480" stroke="rgba(0,0,0,0.05)" stroke-width="0.5"/><text x="102" y="485" text-anchor="end" font-size="17" fill="#6b7280">-0.3</text><line x1="110" y1="400" x2="1000" y2="400" stroke="rgba(0,0,0,0.05)" stroke-width="0.5"/><text x="102" y="405" text-anchor="end" font-size="17" fill="#6b7280">-0.1</text><line x1="110" y1="320" x2="1000" y2="320" stroke="rgba(0,0,0,0.05)" stroke-width="0.5"/><text x="102" y="325" text-anchor="end" font-size="17" fill="#6b7280">0.2</text><line x1="110" y1="240" x2="1000" y2="240" stroke="rgba(0,0,0,0.05)" stroke-width="0.5"/><text x="102" y="245" text-anchor="end" font-size="17" fill="#6b7280">0.5</text><line x1="110" y1="160" x2="1000" y2="160" stroke="rgba(0,0,0,0.05)" stroke-width="0.5"/><text x="102" y="165" text-anchor="end" font-size="17" fill="#6b7280">0.7</text><line x1="110" y1="80" x2="1000" y2="80" stroke="rgba(0,0,0,0.05)" stroke-width="0.5"/><text x="102" y="85" text-anchor="end" font-size="17" fill="#6b7280">1.0</text><line x1="110" y1="378.54" x2="1000" y2="378.54" stroke="#6b7280" stroke-width="1.5"/><rect x="163.4" y="202.93" width="115.7" height="175.61" fill="#22c55e" rx="3" opacity="0.85" data-value="0.6"/><text x="221.25" y="190.93" text-anchor="middle" font-size="22" font-weight="700" fill="#22c55e">+0.6%</text><text x="221.25" y="590" text-anchor="middle" font-size="19" font-weight="600" fill="#22c55e">DXY</text><rect x="385.9" y="378.54" width="115.7" height="117.07" fill="#ef4444" rx="3" opacity="0.85" data-value="-0.4"/><text x="443.75" y="521.61" text-anchor="middle" font-size="22" font-weight="700" fill="#ef4444">-0.4%</text><text x="443.75" y="590" text-anchor="middle" font-size="19" font-weight="600" fill="#ef4444">EUR/USD</text><rect x="608.4" y="144.39" width="115.7" height="234.15" fill="#22c55e" rx="3" opacity="0.85" data-value="0.8"/><text x="666.25" y="132.39" text-anchor="middle" font-size="22" font-weight="700" fill="#22c55e">+0.8%</text><text x="666.25" y="590" text-anchor="middle" font-size="19" font-weight="600" fill="#22c55e">USD/JPY</text><rect x="830.9" y="378.54" width="115.7" height="87.8" fill="#ef4444" rx="3" opacity="0.85" data-value="-0.3"/><text x="888.75" y="492.34" text-anchor="middle" font-size="22" font-weight="700" fill="#ef4444">-0.3%</text><text x="888.75" y="590" text-anchor="middle" font-size="19" font-weight="600" fill="#ef4444">AUD/USD</text><text x="520" y="630" text-anchor="middle" font-size="14" fill="#6b7280">数据来源：Bloomberg, 2026-05-27</text></svg>
+</div>
+
+    <div class="risk-box">
+      <strong>下行风险</strong>: 美联储若推迟降息至年末 [src:92], 铜价存在价格下行风险 [src:101].
+      地缘政治冲突升级 [src:103] 或加剧供应链紧张.
+      OFAC 制裁 [src:104] 范围扩大影响俄铝出口流向 [src:107].
+      Native Title 诉讼 [src:105] 风险: Pilbara 矿区原住民传统土地主张待决,
+      可能延迟铁矿石扩产计划 [src:106].
+    </div>
+  </section>
+</div>
+
+<!-- 章节 2 -->
+<div class="page">
+  <section class="chapter">
+    <div class="thesis">
+      <strong>Thesis</strong>: LME 铜领涨工业金属 [src:142],
+      贵金属与工业金属共振走强 [src:160],
+      反映市场对 Fed 降息时点的再定价;
+      核心下行风险为价格下行压力 [src:170] 来自中国需求疲软
+      与尾矿 (tailings) 库存上升信号.
+    </div>
+
+    <h2>二、大宗商品市场追踪</h2>
+
+    <table class="data-table">
+      <thead><tr><th>金属</th><th>周收盘 (USD/t)</th><th>w/w 涨跌</th><th>ytd 涨跌</th></tr></thead>
+      <tbody>
+        <tr><td>铜</td><td>9,180 [src:142]</td><td>+2.3%</td><td>+8.4%</td></tr>
+        <tr><td>铝</td><td>2,450 [src:145]</td><td>+0.8%</td><td>+3.2%</td></tr>
+        <tr><td>锌</td><td>2,890 [src:148]</td><td>-1.1%</td><td>-2.4%</td></tr>
+        <tr><td>铅</td><td>2,140 [src:151]</td><td>+0.3%</td><td>-1.8%</td></tr>
+      </tbody>
+    </table>
+
+    <ul class="key-points">
+      <li>铜价站稳 9,000 USD/t [src:142], 上方存在技术阻力 [src:143]</li>
+      <li>金价创年内新高 [src:159]; COMEX 持仓增加 3.2% w/w [src:161]</li>
+      <li>锌库存连续四周累库 [src:165]; LME 注销仓单下降 1.4% w/w [src:166]</li>
+      <li>锂价底部企稳 14,500 CNY/t [src:172]; 现货较期货升水 200 CNY/t [src:174]</li>
+      <li>环评 (EPBC Act) 审批延迟: 昆士兰铜矿项目待定 [src:180]</li>
+    </ul>
+
+    <div class="chart-block" data-slug="lme-metals-wow" data-raster="skipped" style="margin:12px 0">
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="640" viewBox="0 0 1040 640" style="background:#fff;font-family:system-ui,sans-serif"><text x="520" y="34" text-anchor="middle" font-size="26" font-weight="600" fill="#374151">LME 金属价格 WoW 变化 % (2026-05-27)</text><line x1="110" y1="560" x2="1000" y2="560" stroke="rgba(0,0,0,0.05)" stroke-width="0.5"/><text x="102" y="565" text-anchor="end" font-size="17" fill="#6b7280">-1.7</text><line x1="110" y1="480" x2="1000" y2="480" stroke="rgba(0,0,0,0.05)" stroke-width="0.5"/><text x="102" y="485" text-anchor="end" font-size="17" fill="#6b7280">-0.9</text><line x1="110" y1="400" x2="1000" y2="400" stroke="rgba(0,0,0,0.05)" stroke-width="0.5"/><text x="102" y="405" text-anchor="end" font-size="17" fill="#6b7280">-0.2</text><line x1="110" y1="320" x2="1000" y2="320" stroke="rgba(0,0,0,0.05)" stroke-width="0.5"/><text x="102" y="325" text-anchor="end" font-size="17" fill="#6b7280">0.6</text><line x1="110" y1="240" x2="1000" y2="240" stroke="rgba(0,0,0,0.05)" stroke-width="0.5"/><text x="102" y="245" text-anchor="end" font-size="17" fill="#6b7280">1.4</text><line x1="110" y1="160" x2="1000" y2="160" stroke="rgba(0,0,0,0.05)" stroke-width="0.5"/><text x="102" y="165" text-anchor="end" font-size="17" fill="#6b7280">2.1</text><line x1="110" y1="80" x2="1000" y2="80" stroke="rgba(0,0,0,0.05)" stroke-width="0.5"/><text x="102" y="85" text-anchor="end" font-size="17" fill="#6b7280">2.9</text><line x1="110" y1="382.34" x2="1000" y2="382.34" stroke="#6b7280" stroke-width="1.5"/><rect x="163.4" y="143.38" width="115.7" height="238.96" fill="#22c55e" rx="3" opacity="0.85" data-value="2.3"/><text x="221.25" y="131.38" text-anchor="middle" font-size="22" font-weight="700" fill="#22c55e">+2.3%</text><text x="221.25" y="590" text-anchor="middle" font-size="19" font-weight="600" fill="#22c55e">Cu 铜</text><rect x="385.9" y="299.22" width="115.7" height="83.12" fill="#22c55e" rx="3" opacity="0.85" data-value="0.8"/><text x="443.75" y="287.22" text-anchor="middle" font-size="22" font-weight="700" fill="#22c55e">+0.8%</text><text x="443.75" y="590" text-anchor="middle" font-size="19" font-weight="600" fill="#22c55e">Al 铝</text><rect x="608.4" y="382.34" width="115.7" height="114.28" fill="#ef4444" rx="3" opacity="0.85" data-value="-1.1"/><text x="666.25" y="522.62" text-anchor="middle" font-size="22" font-weight="700" fill="#ef4444">-1.1%</text><text x="666.25" y="590" text-anchor="middle" font-size="19" font-weight="600" fill="#ef4444">Zn 锌</text><rect x="830.9" y="351.17" width="115.7" height="31.17" fill="#22c55e" rx="3" opacity="0.85" data-value="0.3"/><text x="888.75" y="339.17" text-anchor="middle" font-size="22" font-weight="700" fill="#22c55e">+0.3%</text><text x="888.75" y="590" text-anchor="middle" font-size="19" font-weight="600" fill="#22c55e">Pb 铅</text><text x="520" y="630" text-anchor="middle" font-size="14" fill="#6b7280">数据来源：LME, MiningClaw AI</text></svg>
+</div>
+
+    <div class="risk-box">
+      <strong>下行风险</strong>: 中国制造业 PMI 49.0 [src:178] (前值 50.4 [src:177])
+      则铜价价格下行至 8,800 USD/t [src:179].
+      锌尾矿 (tailings) 库存累升 [src:173], 关注 LME 注销仓单变化.
+      环评 (EPBC) 审批不确定性 [src:180] 推高项目 capex 风险溢价.
+    </div>
+  </section>
+</div>
+
+<!-- COI 利益冲突与合规披露页 -->
+<div class="page">
+  <h2>利益冲突披露 (Conflict of Interest)</h2>
+
+  <div class="coi-box">
+    <strong>COI disclosure — 利益冲突声明</strong>:
+    本报告撰写时, LynAI Mines 旗下基金对铜相关权益持有多头仓位 (估计低于 NAV 的 0.5% [src:300]);
+    凌云智矿已按 G31 规程向合规委员会备案, 档案编号已归档. 本报告结论不受上述持仓影响,
+    分析师独立出具意见. Conflict of Interest 核查状态: 已通过.
+  </div>
+
+  <div class="coi-box">
+    <strong>利益冲突补充披露</strong>:
+    本报告中涉及的 Pilbara 铁矿石项目评估系受委托独立研究,
+    委托方与 LynAI Mines 不存在股权关联.
+    COI disclosure 核查通过, 利益冲突审查已完成.
+  </div>
+
+  <p>本报告由 AI 辅助生成, 所有数字均已标注来源行号 [src:N] 以供核验.
+  数据截止日期见封面.</p>
+
+  <h3>数据来源与引用说明</h3>
+  <p>全部数值引自 data-collector 子智能体整理的结构化数据集,
+  所有 [src:N] 注释均可追溯至原始报告对应行. 本报告由 AI 辅助生成 (AI GENERATED),
+  仅供 LynAI Mines 内部 IC 讨论使用, 不构成投资建议.</p>
+
+  <div class="disclaimer">
+    <strong>免责声明 Disclaimer</strong>: 本报告由 AI 辅助生成 (AI GENERATED),
+    仅供 LynAI Mines 内部 IC 讨论使用, 不构成投资建议.
+    所有数据来源于公开渠道, 凌云智矿对数据准确性不作担保.
+    投资有风险, 决策需谨慎.
+    报告版权归 LynAI Mines 所有. 未经书面授权, 不得复制 / 转发 / 公开传播.
+  </div>
+</div>
+
+<!-- 封底 -->
+<div class="page back-cover">
+  <div style="display:flex;justify-content:space-between;padding:40mm 20mm">
+    <div>
+      <h2>LynAI Mines</h2>
+      <div style="font-size:11px;opacity:0.7;margin-top:8px">Perth · Hangzhou · Harare</div>
+    </div>
+    <div>
+      <h2>联系</h2>
+      <div style="font-size:11px;opacity:0.7;margin-top:8px">research@lynai.mining</div>
+      <div style="font-size:11px;opacity:0.7">www.lynai.mining</div>
+    </div>
+    <div>
+      <h2>合规</h2>
+      <div style="font-size:11px;opacity:0.7;margin-top:8px">© 2026 LynAI Mines</div>
+      <div style="font-size:11px;opacity:0.7">All rights reserved</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

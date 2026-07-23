@@ -1,0 +1,759 @@
+{
+  "commodity": "macro",
+  "description": "Expert insights on macro from Money of Mine podcast",
+  "total_references": 80,
+  "sources": [
+    "Huw McKay"
+  ],
+  "last_updated": "2026-03-19",
+  "quality_grade": "RAW_TRANSCRIPT",
+  "requires_editorial_review": true,
+  "signoff_status": "NEEDS-SIGNOFF (re-graded 2026-06-29: source is podcast transcript, not vetted institutional data)",
+  "channel": "Money of Mine",
+  "references_by_category": {
+    "authority_statement": [
+      {
+        "text": "I think it opens up an interesting question about in this tie up competition authorities around the world would be looking at this thinking well what's my pound of flesh for putting this one through?",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think people don't realize how toxic for the global capitalist system which is built on the creation of credit and people taking risk and acrewing debt liabilities uh to back those risks.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think the that the basement trade is a um is really the result of the financial world, investors being realistic about government's lack of propensity to control their spending.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think symbolically, uh, Valle and Rio have sort of been the two largest producers over time, but BHP is the company that changed the pricing mechanism uh, back in the day.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think it's worth kind of sharing a couple of details because some of the the speakers you've got coming are pretty important to this conversation.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think President Xi is getting well ahead of himself if he thinks the R&B is ready to step directly into that uh into that position.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think the main game for Beijing initially is to how much how much of the commodity uh trade can we denominate in our home currency.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think uh ultimately the alliance with the United States is the pillar of Australia's national security.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think Australia's fiscal position is still very strong relative to most other advanced countries.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "The reality is that at the Chinese port a huge amount of iron ore changes hands in R&B already.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think the trading business would be far less valuable without the industrial back end.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think there would be a probably a desire to um to have the downstream processing.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think a spin-off of the coal business, possibly US doicile makes a lot of sense.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think bigger levels of debt are sustainable than uh what a hawk might suggest.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think um I think the money miners are going to get a lot out of this.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think people just commenting, \"You're delusional, Travis, yada yada.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think they've already got as much revenue as they can possibly get.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think we could speak for many more hours about all of these topics.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I think we can hope for is a very protracted adjustment process.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "data_citation": [
+      {
+        "text": "But if your problem is a hundred billion dollars or $200 billion, there's nothing which is going to get you through that without fierce and vicious political opposition from the groups which are having something taken away from them",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Their asset has great tenants like BER, the Queensland government, targeting 8% cash returns, monthly distributions paid out, 5-year time horizon is is the goal for this one",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "I can't confirm or deny, but someone might have said that, \"You realize this is 1% of copper demand, don't you?\" And they said, \"Oh, okay",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Let's say 35 to 55% in a wealthy country in terms of how much income is filtered through their balance sheets uh on a regular basis",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "you could be a bit more close to retirement and you're thinking, \"Hey, my portfolio peeling off 10% in a day is is not so healthy",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "uh financial markets of course they want to try and price in 20 years of good news immediately and here we are $13,000 copper",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "Um, if I've actually got it sitting in London, I can just move it to the US and it's going to be 50% more valuable",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So, let's take that 7% multiple there and say there's $700 trillion of financial wealth looking for a home",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      },
+      {
+        "text": "So, let's take that 7% multiple there and say there's $700 trillion of financial wealth looking for a home",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "citation_grade": "OPINION"
+      }
+    ],
+    "certainty_judgment": [
+      {
+        "text": "But if you've got the infrastructure in place and the companies were able to explain the differential economics and actually say, well, the pie, the profitable pie that we can all share, uh, will be much larger if we don't spend a few billion dollars paying a Chinese engineering company to build a smelter",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "So under those circumstances you can see very clearly how having that physical commodity trading business storage optionality uh becomes potentially very valuable particularly if your if your own storage as a diversified resources company now is very modest",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "And if people are willing to openly talk about a debasement trade of the US dollar, that would imply in the fullness of time that the current vehicle currency on which the international system runs uh may be vacating the throne",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I'd certainly put myself more in the the dovish camp in terms of what level of government debt is sustainable uh in the global system and why I think bigger levels of debt are sustainable than uh what a hawk might suggest",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "when short-term capital for working purposes is more expensive, that puts a greater onus on the trading business to make more money to justify the which tends to give them more risk appetite, but will their limits go up",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "yeah, in in terms of the things I worry about in warfare, some of the things are they're not about kinetic conflict, hot conflict if you will",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "And any future take you have on the steel value chain must take into account those two large and immovable objects",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Now, commodity trading companies, I'm sorry to tell you, and this will shock your listeners, um, bust sanctions",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Um the vast majority of analysis you will see is related to those flows",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Um, why is it playing out more obviously with BHP than the other majors",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Uh but when the cycle turns it will it will look quite quite stuck",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Well, the US public debt trajectory certainly looks vulnerable",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "risk_assessment": [
+      {
+        "text": "Um and more recently because Zimbabwe has become so dangerous and the security cost for escorting those convoys of copper has become so ownorous, they've actually had to go all the way around to Botswana to get some safer roads and then make their way east",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "when short-term capital for working purposes is more expensive, that puts a greater onus on the trading business to make more money to justify the which tends to give them more risk appetite, but will their limits go up",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "It's traditionally, they've needed to actually turn it into refined copper to move it, and it moves on trucks through some pretty dangerous territory all the way down to the east coast of South Africa",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "So, does that mean that they have to be pushed into higher risk, higher returning uh activity",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "professional_advice": [
+      {
+        "text": "uh then I'm going to kill the niche market and so the economics of the byproduct don't add up and that is why I think strategic reserve and stockpiling models should be focused very narrowly not on big exchange traded markets with huge civilian divers diversified end uses in civilian activities like battery raw materials it's those niche metals with defense applications high technology applications you don't need much at any given in time",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "So if you have a board and have three months on your hands, take a look at all of the major commodity markets, assign the obvious countries in sort of to a US side versus an eastern block side and then look at the swing states in the middle and say, hm, okay, what is the balance going to be in the two blocks if that swing state does swings to one side or other or manages to keep trading with both sides because it's unaligned",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "particularly if you get a good price because one of the things which uh uh companies should like about sovereign participation like this is how well advised is the sovereign going to be once they've announced they're going to do something and do you get some free money by the sovereign actually paying too much uh for for an asset like this one",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "if you have Democrats uh running the White House and uh a stronger position in Congress and you end up with a more like a a Biden type administration, well, you start to think about things very differently and you have to consider the opposite of what feels most concrete today to do a good job at long-term forecasting",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "What we're trying to do is get all the different uh professions that touch on this industry together in one room, the different policy makers from different backgrounds in one room, different countries to really look at the thing from all angles",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "I'd certainly put myself more in the the dovish camp in terms of what level of government debt is sustainable uh in the global system and why I think bigger levels of debt are sustainable than uh what a hawk might suggest",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "When I started my career, couple of things which were held as completely true and you just should not argue about them is that the US would be alone at the top of the superpower tree for the 21st century",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "how much of my income is going to servicing my debt uh out of my current income or you can focus on the level uh and say okay well that level just looks crazy let's let's do something about this",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Xi Jinping made some some fascinating comments earlier this week about the R&B, their currency, and its uh its rising preminence and the fact that it should be the global reserve currency",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Hugh Mai, former chief economist at BHP, senior international economist at Westpack for many years before that, an adviser inside government, now at the Crawford School at ANU",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "So I would say if you want to get your smelter your refinery actually I should say mostly refineries because you actually separate the byproducts at the refining stage",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "And if you look at the strategic reserve that the Australians have recently announced, you've got antimony, uh you've got gallium, and you've got rare earths",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "The other one is that the Australian dollar jumps up to the level that the commodity prices say it should be and commodity prices stay where they are",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Exceeded Capital is a proudly Australian business out of Queensland, and they've got a brand new property trust that you should check out",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03",
+        "is_sponsored_content": true
+      },
+      {
+        "text": "\" So, you should think about diversifying that portfolio and you think should think about the great Australian investment, property",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Well, but if you just look at if you look at the history um their performance to guidance is very different to the other companies",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Well, yeah, the this is one of those areas where um you can focus on the flows which come with servicing a stock of debt, i",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Let's say the currency stays where it is and commodity prices fall to where the currency sort of says they should be",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "So uh the authorities should just start looking the other way on that particular act in terms of emerging markets",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Now the way tariffs work in a commodity market is that it should show up immediately in regional premium",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Like first of all um I should state here that any comment I make is very much an outsider comment",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Should governments run their uh balance sheets more in a more disciplined fashion",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "So I don't even have a constituent constituency to say yes, we should do that",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "And if you're missing property, you should think about Exceed Capital",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "not saying we should never do this or we should always do this",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ],
+    "logical_connection": [
+      {
+        "text": "So if you have a board and have three months on your hands, take a look at all of the major commodity markets, assign the obvious countries in sort of to a US side versus an eastern block side and then look at the swing states in the middle and say, hm, okay, what is the balance going to be in the two blocks if that swing state does swings to one side or other or manages to keep trading with both sides because it's unaligned.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "And someone summarized this very neatly the other day and I I apologize to the author of the blog because I forget their name, but they open by saying George Orwell was afraid of society moving in the direction of burning books and all this Huxley was afraid of a society moving into a point where they just didn't care about books anymore and stopped reading them.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "particularly if you get a good price because one of the things which uh uh companies should like about sovereign participation like this is how well advised is the sovereign going to be once they've announced they're going to do something and do you get some free money by the sovereign actually paying too much uh for for an asset like this one.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "If you bring on bring on a new resource body of some scale in a in zinc for example and you've got um and that's got a lot of germanmanium in it, you might say, well, if I actually build the um the processing circuit to get the geranium out of my zinc concentrate, I'm going to kill the geranium market in one go because my zinc deposit's so big.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "\" Then I actually then I realized that the owner of this copper mine was actually an engineering infrastructure company and they were they wanted into the DRC for the infrastructure contracts anyway and they just own this copper mine because that was kind of their point of entry.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Um and more recently because Zimbabwe has become so dangerous and the security cost for escorting those convoys of copper has become so ownorous, they've actually had to go all the way around to Botswana to get some safer roads and then make their way east.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Well, that's bad news on the cost side of the balance sheet because your US dollar costs are going to go through the roof because your Australian dollar wage bill is going through the roof, but you haven't got any offset on the revenue side.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Am I going to the half of the world which is suddenly short of this commodity and therefore I get scarcity pricing or am I going to the half of the world where I have abundance of this commodity and I'm out of business.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "Uh well the answer to that can be yes and no because the nothing has occurred since we last spoke let's say roughly 12 months ago which has made the the structure structural bullcase for copper any less strong.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "the reason why I can't sort of be sort of adamant on the answer to this question is one of the reasons we got here is because some correlations that were historically reliable broke down.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      },
+      {
+        "text": "And one of the reasons why interest rates are going up is because there is more inflation premium which is built into the price of those bonds than there was in the past.",
+        "expert": "Huw McKay",
+        "source_title": "Huw McKay Makes Sense of the Chaos",
+        "video_id": "WPj57TWZW7A",
+        "url": "https://www.youtube.com/watch?v=WPj57TWZW7A",
+        "channel": "Money of Mine",
+        "date": "2026-03"
+      }
+    ]
+  },
+  "price_reference_standard": "N/A — 跨品种宏观; 各品种价格须从对应 canonical source 拉取 (NEEDS-SIGNOFF: confirm)",
+  "price_note": "transcript 数字仅作背景, 正文价格须从 canonical source 拉取 (NEEDS-SIGNOFF)"
+}

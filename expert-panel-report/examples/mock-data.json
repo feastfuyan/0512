@@ -1,0 +1,292 @@
+{
+  "report_id": "MCE-EXPERT-20260714-001",
+  "report_meta": {
+    "title": "2026年Q2矿业市场专家团分析报告",
+    "period": "2026年Q2",
+    "date": "2026-07-01",
+    "version": "V1.0",
+    "core_topic": "地缘政治震荡下的矿业供应链重塑"
+  },
+  "experts": [
+    {
+      "name": "王选策",
+      "title_en": "Chief Analyst",
+      "title_zh": "首席分析师",
+      "org": "凌云智矿 / LynAI Mines"
+    },
+    {
+      "name": "陈毅",
+      "title_en": "Macro Researcher",
+      "title_zh": "宏观经济研究员",
+      "org": "凌云智矿 / LynAI Mines"
+    },
+    {
+      "name": "李明",
+      "title_en": "Commodity Analyst",
+      "title_zh": "商品分析师",
+      "org": "凌云智矿 / LynAI Mines"
+    },
+    {
+      "name": "张伟",
+      "title_en": "ESG Specialist",
+      "title_zh": "ESG 专家",
+      "org": "凌云智矿 / LynAI Mines"
+    },
+    {
+      "name": "刘芳",
+      "title_en": "Risk Analyst",
+      "title_zh": "风险分析师",
+      "org": "凌云智矿 / LynAI Mines"
+    },
+    {
+      "name": "赵强",
+      "title_en": "Technical Analyst",
+      "title_zh": "技术分析师",
+      "org": "凌云智矿 / LynAI Mines"
+    }
+  ],
+  "commodities": {
+    "cu": {
+      "name_en": "Copper",
+      "name_zh": "铜",
+      "current_price": 9800,
+      "price_unit": "USD/ton",
+      "rating": "bull",
+      "drivers": [
+        "全球制造业PMI回升",
+        "中国基建投资加速",
+        "ESG供应收缩预期"
+      ],
+      "supply_demand": {
+        "supply_trend": "tight",
+        "demand_trend": "strong",
+        "inventory_level": "low"
+      },
+      "risks": [
+        "海外铜矿罢工风险",
+        "替代材料技术突破"
+      ],
+      "forecast": {
+        "Q+1": 10200,
+        "Q+2": 10500,
+        "Q+3": 10800,
+        "Q+4": 11200
+      }
+    },
+    "fe": {
+      "name_en": "Iron Ore",
+      "name_zh": "铁矿石",
+      "current_price": 115,
+      "price_unit": "USD/ton",
+      "rating": "neutral",
+      "drivers": [
+        "中国房地产低迷",
+        "钢厂利润压缩",
+        "巴西出口稳定"
+      ],
+      "supply_demand": {
+        "supply_trend": "balanced",
+        "demand_trend": "weak",
+        "inventory_level": "high"
+      },
+      "risks": [
+        "钢厂限产政策",
+        "海外矿山扩产"
+      ],
+      "forecast": {
+        "Q+1": 110,
+        "Q+2": 108,
+        "Q+3": 105,
+        "Q+4": 100
+      }
+    },
+    "au": {
+      "name_en": "Gold",
+      "name_zh": "黄金",
+      "current_price": 2350,
+      "price_unit": "USD/oz",
+      "rating": "bull",
+      "drivers": [
+        "地缘政治风险上升",
+        "央行持续购金",
+        "美联储降息预期"
+      ],
+      "supply_demand": {
+        "supply_trend": "stable",
+        "demand_trend": "strong",
+        "inventory_level": "low"
+      },
+      "risks": [
+        "美元走强",
+        "避险情绪降温"
+      ],
+      "forecast": {
+        "Q+1": 2400,
+        "Q+2": 2450,
+        "Q+3": 2500,
+        "Q+4": 2550
+      }
+    },
+    "li": {
+      "name_en": "Lithium",
+      "name_zh": "锂",
+      "current_price": 12000,
+      "price_unit": "USD/ton",
+      "rating": "bear",
+      "drivers": [
+        "新能源车增速放缓",
+        "供应过剩持续",
+        "澳洲扩产"
+      ],
+      "supply_demand": {
+        "supply_trend": "excess",
+        "demand_trend": "moderate",
+        "inventory_level": "high"
+      },
+      "risks": [
+        "新技术替代",
+        "价格战持续"
+      ],
+      "forecast": {
+        "Q+1": 11500,
+        "Q+2": 11000,
+        "Q+3": 10500,
+        "Q+4": 10000
+      }
+    },
+    "ni": {
+      "name_en": "Nickel",
+      "name_zh": "镍",
+      "current_price": 18500,
+      "price_unit": "USD/ton",
+      "rating": "neutral",
+      "drivers": [
+        "印尼镍铁出口稳定",
+        "不锈钢需求平稳",
+        "电池用镍增长"
+      ],
+      "supply_demand": {
+        "supply_trend": "stable",
+        "demand_trend": "moderate",
+        "inventory_level": "balanced"
+      },
+      "risks": [
+        "印尼政策变动",
+        "高冰镍技术冲击"
+      ],
+      "forecast": {
+        "Q+1": 18000,
+        "Q+2": 17500,
+        "Q+3": 17000,
+        "Q+4": 16800
+      }
+    },
+    "ree": {
+      "name_en": "Rare Earth",
+      "name_zh": "稀土",
+      "current_price": 65,
+      "price_unit": "USD/kg",
+      "rating": "bull",
+      "drivers": [
+        "中国出口管制",
+        "电动车需求增长",
+        "风电需求增长"
+      ],
+      "supply_demand": {
+        "supply_trend": "tight",
+        "demand_trend": "strong",
+        "inventory_level": "low"
+      },
+      "risks": [
+        "中国政策放宽",
+        "海外矿山投产"
+      ],
+      "forecast": {
+        "Q+1": 70,
+        "Q+2": 75,
+        "Q+3": 80,
+        "Q+4": 85
+      }
+    }
+  },
+  "mci_index": {
+    "total_score": 72,
+    "sentiment": "温和看多 Moderately Bullish",
+    "dimensions": {
+      "price_momentum": {
+        "score": 75,
+        "weight": 0.3,
+        "description": "价格动量"
+      },
+      "inventory_cycle": {
+        "score": 65,
+        "weight": 0.2,
+        "description": "库存周期"
+      },
+      "capital_flow": {
+        "score": 70,
+        "weight": 0.2,
+        "description": "资金流向"
+      },
+      "geopolitical_risk": {
+        "score": 80,
+        "weight": 0.15,
+        "description": "地缘风险"
+      },
+      "esg_events": {
+        "score": 70,
+        "weight": 0.15,
+        "description": "ESG事件"
+      }
+    }
+  },
+  "policy_events": [
+    {
+      "flag": "🇺🇸",
+      "title": "美国《通胀削减法案》补充条款",
+      "date": "2026-05-15",
+      "impact": "pos",
+      "description": "对关键矿物供应链提供更多税收优惠"
+    },
+    {
+      "flag": "🇨🇳",
+      "title": "中国稀土出口配额调整",
+      "date": "2026-04-20",
+      "impact": "pos",
+      "description": "收紧稀土出口配额，推高全球价格"
+    }
+  ],
+  "regional_markets": {
+    "china": {
+      "name_en": "China",
+      "name_zh": "中国",
+      "risk_level": "low",
+      "key_trends": [
+        "稳增长政策持续",
+        "新能源车渗透率提升",
+        "基建投资保持韧性"
+      ]
+    },
+    "australia": {
+      "name_en": "Australia",
+      "name_zh": "澳大利亚",
+      "risk_level": "medium",
+      "key_trends": [
+        "矿业税收政策调整",
+        "ESG法规趋严",
+        "与中国贸易关系复杂"
+      ]
+    },
+    "africa": {
+      "name_en": "Africa",
+      "name_zh": "非洲",
+      "risk_level": "high",
+      "key_trends": [
+        "政局不稳风险",
+        "基础设施瓶颈",
+        "但资源禀赋丰富"
+      ]
+    }
+  },
+  "missing": []
+}

@@ -1,0 +1,22 @@
+{
+  "skill_name": "geopolitics-report",
+  "skill_version": "3.0.0",
+  "report_prefix": "MCG-GEO",
+  "page_count": 14,
+  "page_format": "A4",
+  "dimensions": [
+    { "id": "event_coverage", "weight": 0.2 },
+    { "id": "analytical_depth", "weight": 0.2 },
+    { "id": "geopolitical_rigor", "weight": 0.15 },
+    { "id": "data_integrity", "weight": 0.15 },
+    { "id": "structure_compliance", "weight": 0.15 },
+    { "id": "language_quality", "weight": 0.15, "hard_floor": true }
+  ],
+  "db_tables": [
+    "geopolitical_events",
+    "ingest_news_articles",
+    "ingest_commodity_prices",
+    "ingest_fx_rates",
+    "ingest_sanctions_sdn"
+  ]
+}

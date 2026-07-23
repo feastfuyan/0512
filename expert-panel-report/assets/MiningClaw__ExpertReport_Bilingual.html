@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+
+<html lang="zh">
+<head>
+<meta charset="utf-8"/>
+<title>MiningClaw Expert Panel Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=Noto+Sans+SC:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+@page{size:A4;margin:0}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans SC','Inter',sans-serif;color:var(--txt);font-size:11.5px;line-height:1.7;background:var(--white)}
+.page{width:210mm;min-height:297mm;padding:0;position:relative;page-break-after:always;overflow:hidden}
+
+:root{
+  --pri:#14b8a6;--priD:#0d9488;--priL:#5eead4;
+  --char:#0f1115;--card:#181a1f;
+  --txt:#1f2937;--txtL:#6b7280;--txtLL:#9ca3af;--bdr:#e5e7eb;--bgL:#f8fafb;
+  --sBuy:#22c55e;--buy:#86efac;--hold:#94a3b8;--sell:#f87171;--sSell:#ef4444;
+  /* ── semantic text colours (语义文本色) ─────────────────────────────── */
+  --white:#fff;--muted:#9ca3af;--mutedD:#6b7280;--faint:#4b5563;--light:#d1d5db;
+  /* risk-box palette (风险框红系) */
+  --riskBg:#fef2f2;--riskBdr:#fecaca;--riskTxt:#374151;--riskAccent:#ef4444;
+
+  /* ── COMMODITY COLOR SYSTEM Commodities颜色规范 ──────────────────────────── */
+  /* Base Metals 基本金属 */
+  --cu:#e07b39;    --cu-bg:rgba(224,123,57,0.08);   /* Copper 铜        warm copper-orange  */
+  --al:#94a3b8;    --al-bg:rgba(148,163,184,0.08);  /* Aluminum 铝      silver-grey         */
+  --fe:#dc2626;    --fe-bg:rgba(220,38,38,0.08);    /* Iron Ore 铁矿石  rust red            */
+  --zn:#0891b2;    --zn-bg:rgba(8,145,178,0.08);    /* Zinc 锌          steel cyan-blue     */
+  --ni:#64748b;    --ni-bg:rgba(100,116,139,0.08);  /* Nickel 镍        pewter              */
+  --pb:#52525b;    --pb-bg:rgba(82,82,91,0.08);     /* Lead 铅          lead grey           */
+  /* Precious Metals 贵金属 */
+  --au:#f59e0b;    --au-bg:rgba(245,158,11,0.08);   /* Gold 黄金        bright gold         */
+  --ag:#cbd5e1;    --ag-bg:rgba(203,213,225,0.08);  /* Silver 白银      silver              */
+  --pt:#67e8f9;    --pt-bg:rgba(103,232,249,0.08);  /* Platinum 铂金    ice blue            */
+  --pd:#a78bfa;    --pd-bg:rgba(167,139,250,0.08);  /* Palladium 钯金   lavender            */
+  /* New Energy Minerals 新能源矿产 */
+  --li:#8b5cf6;    --li-bg:rgba(139,92,246,0.08);   /* Lithium 锂       violet              */
+  --co:#2563eb;    --co-bg:rgba(37,99,235,0.08);    /* Cobalt 钴        cobalt blue         */
+  --mn:#c026d3;    --mn-bg:rgba(192,38,211,0.08);   /* Manganese 锰     magenta             */
+  --ree:#10b981;   --ree-bg:rgba(16,185,129,0.08);  /* Rare Earth 稀土  emerald             */
+  /* Energy Commodities 能源 */
+  --oil:#92400e;   --oil-bg:rgba(146,64,14,0.08);   /* Crude Oil 原油   dark amber          */
+  --gas:#38bdf8;   --gas-bg:rgba(56,189,248,0.08);  /* Natural Gas 天然气sky blue           */
+  --coal:#6b7280;  --coal-bg:rgba(107,114,128,0.08);/* Coal 煤炭        slate grey          */
+  /* Agricultural 农产品 */
+  --wht:#d97706;   --wht-bg:rgba(217,119,6,0.08);   /* Wheat 小麦       amber               */
+  --corn:#84cc16;  --corn-bg:rgba(132,204,22,0.08); /* Corn 玉米        lime yellow         */
+  --soy:#22c55e;   --soy-bg:rgba(34,197,94,0.08);   /* Soybean 大豆     green               */
+}
+
+.mono{font-family:'Space Grotesk',monospace}
+
+/* ── Commodity dot / badge utilities 商品色点与标签 ─────────────────────── */
+.comm{display:inline-flex;align-items:center;gap:4px;font-weight:600}
+.comm::before{content:'';width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.comm-cu{color:var(--cu)}.comm-cu::before{background:var(--cu)}
+.comm-al{color:var(--al)}.comm-al::before{background:var(--al)}
+.comm-fe{color:var(--fe)}.comm-fe::before{background:var(--fe)}
+.comm-zn{color:var(--zn)}.comm-zn::before{background:var(--zn)}
+.comm-ni{color:var(--ni)}.comm-ni::before{background:var(--ni)}
+.comm-pb{color:var(--pb)}.comm-pb::before{background:var(--pb)}
+.comm-au{color:var(--au)}.comm-au::before{background:var(--au)}
+.comm-ag{color:var(--ag)}.comm-ag::before{background:var(--ag)}
+.comm-pt{color:var(--pt)}.comm-pt::before{background:var(--pt)}
+.comm-pd{color:var(--pd)}.comm-pd::before{background:var(--pd)}
+.comm-li{color:var(--li)}.comm-li::before{background:var(--li)}
+.comm-co{color:var(--co)}.comm-co::before{background:var(--co)}
+.comm-mn{color:var(--mn)}.comm-mn::before{background:var(--mn)}
+.comm-ree{color:var(--ree)}.comm-ree::before{background:var(--ree)}
+.comm-oil{color:var(--oil)}.comm-oil::before{background:var(--oil)}
+.comm-gas{color:var(--gas)}.comm-gas::before{background:var(--gas)}
+.comm-coal{color:var(--coal)}.comm-coal::before{background:var(--coal)}
+.comm-wht{color:var(--wht)}.comm-wht::before{background:var(--wht)}
+.comm-corn{color:var(--corn)}.comm-corn::before{background:var(--corn)}
+.comm-soy{color:var(--soy)}.comm-soy::before{background:var(--soy)}
+/* pill badge variant */
+.comm-pill{padding:1px 6px;border-radius:10px;font-size:9px;font-weight:700;letter-spacing:0.3px;display:inline-block}
+.pill-cu{background:var(--cu-bg);color:var(--cu);border:1px solid rgba(224,123,57,0.25)}
+.pill-al{background:var(--al-bg);color:var(--al);border:1px solid rgba(148,163,184,0.25)}
+.pill-fe{background:var(--fe-bg);color:var(--fe);border:1px solid rgba(220,38,38,0.25)}
+.pill-zn{background:var(--zn-bg);color:var(--zn);border:1px solid rgba(8,145,178,0.25)}
+.pill-ni{background:var(--ni-bg);color:var(--ni);border:1px solid rgba(100,116,139,0.25)}
+.pill-pb{background:var(--pb-bg);color:var(--pb);border:1px solid rgba(82,82,91,0.25)}
+.pill-au{background:var(--au-bg);color:var(--au);border:1px solid rgba(245,158,11,0.25)}
+.pill-ag{background:var(--ag-bg);color:var(--ag);border:1px solid rgba(203,213,225,0.25)}
+.pill-pt{background:var(--pt-bg);color:var(--pt);border:1px solid rgba(103,232,249,0.25)}
+.pill-pd{background:var(--pd-bg);color:var(--pd);border:1px solid rgba(167,139,250,0.25)}
+.pill-li{background:var(--li-bg);color:var(--li);border:1px solid rgba(139,92,246,0.25)}
+.pill-co{background:var(--co-bg);color:var(--co);border:1px solid rgba(37,99,235,0.25)}
+.pill-mn{background:var(--mn-bg);color:var(--mn);border:1px solid rgba(192,38,211,0.25)}
+.pill-ree{background:var(--ree-bg);color:var(--ree);border:1px solid rgba(16,185,129,0.25)}
+.pill-oil{background:var(--oil-bg);color:var(--oil);border:1px solid rgba(146,64,14,0.25)}
+.pill-gas{background:var(--gas-bg);color:var(--gas);border:1px solid rgba(56,189,248,0.25)}
+.pill-coal{background:var(--coal-bg);color:var(--coal);border:1px solid rgba(107,114,128,0.25)}
+.pill-wht{background:var(--wht-bg);color:var(--wht);border:1px solid rgba(217,119,6,0.25)}
+.pill-corn{background:var(--corn-bg);color:var(--corn);border:1px solid rgba(132,204,22,0.25)}
+.pill-soy{background:var(--soy-bg);color:var(--soy);border:1px solid rgba(34,197,94,0.25)}
+
+/* ========== COVER ========== */
+.cover{background:var(--char);color:var(--white);display:flex;flex-direction:column;min-height:297mm;position:relative;overflow:hidden}
+/* Glow orbs */
+.glow1{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(20,184,166,0.12) 0%,rgba(20,184,166,0.03) 40%,transparent 70%);right:-120px;top:18%;pointer-events:none}
+.glow2{position:absolute;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(94,234,212,0.08) 0%,transparent 60%);left:-80px;bottom:15%;pointer-events:none}
+.glow3{position:absolute;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(20,184,166,0.15) 0%,transparent 70%);right:25%;top:35%;pointer-events:none;filter:blur(30px)}
+/* Light streak */
+.streak{position:absolute;width:600px;height:1px;background:linear-gradient(90deg,transparent,rgba(20,184,166,0.25),rgba(94,234,212,0.1),transparent);top:42%;left:-50px;transform:rotate(-8deg);pointer-events:none}
+.streak2{position:absolute;width:400px;height:1px;background:linear-gradient(90deg,transparent,rgba(20,184,166,0.15),transparent);top:55%;right:-30px;transform:rotate(5deg);pointer-events:none}
+
+.cover-header{padding:22mm 28mm 0;display:flex;justify-content:space-between;align-items:flex-start;position:relative;z-index:1}
+.cover-logo{display:flex;align-items:center;gap:10px}
+.cover-logo .tag-sub{font-size:9px;color:var(--pri);letter-spacing:1.2px;text-transform:uppercase;font-weight:500;margin-top:1px}
+.cover-type{text-align:right}
+.cover-type .label{font-size:11px;color:var(--txtLL);letter-spacing:2px;text-transform:uppercase}
+.cover-type .cat{font-size:16px;font-weight:600;color:var(--pri);margin-top:2px}
+
+.cover-body{flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 28mm;position:relative;z-index:1}
+.cover-body .eyebrow{font-size:12px;color:var(--pri);letter-spacing:3px;text-transform:uppercase;font-weight:500;margin-bottom:14px}
+.cover-body h1{font-size:38px;font-weight:700;line-height:1.35;margin-bottom:18px}
+.cover-body .subtitle{font-size:14px;color:var(--muted);line-height:1.7;max-width:68%}
+
+.cover-meta{padding:0 28mm 22mm;display:flex;justify-content:space-between;align-items:flex-end;position:relative;z-index:1}
+.cover-meta .date-block{border-left:3px solid var(--pri);padding-left:14px}
+.cover-meta .date-block .label{font-size:10px;color:var(--mutedD);letter-spacing:1.5px;text-transform:uppercase}
+.cover-meta .date-block .value{font-size:16px;color:var(--white);font-family:'Space Grotesk',sans-serif;font-weight:600;margin-top:2px}
+.cover-meta .analyst{text-align:right;font-size:11px;color:var(--muted);line-height:1.7}
+.cover-meta .analyst strong{color:var(--white);font-weight:600}
+
+.cover-footer{border-top:1px solid rgba(255,255,255,0.06);padding:3mm 28mm;display:flex;justify-content:space-between;font-size:9px;color:var(--faint);position:relative;z-index:1}
+.cover-footer .conf{padding:2px 8px;border-radius:4px;background:rgba(20,184,166,0.1);border:1px solid rgba(20,184,166,0.2);color:var(--pri);font-weight:600;letter-spacing:0.5px}
+
+/* ========== CONTENT PAGES (20/80 layout) ========== */
+.content-page{display:flex;min-height:297mm}
+.sidebar-col{width:25%;background:var(--bgL);border-right:1px solid var(--bdr);padding:14mm 4mm 14mm 5mm;position:relative;overflow:hidden}
+.main-col{width:75%;padding:14mm 6mm 14mm 6mm}
+
+/* Sidebar content */
+.sb-section{margin-bottom:18px}
+.sb-title{font-size:9px;font-weight:700;color:var(--priD);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--bdr)}
+.sb-item{font-size:10px;color:var(--txtL);line-height:1.6;padding:3px 0}
+.sb-item strong{color:var(--txt);font-weight:600}
+.sb-highlight{font-size:10.5px;color:var(--priD);font-weight:600;line-height:1.6;padding:8px 10px;background:rgba(20,184,166,0.06);border-radius:6px;border-left:2px solid var(--pri);margin:8px 0}
+.sb-pagenum{position:absolute;bottom:14mm;left:5mm;font-size:9px;color:var(--txtLL);font-family:'Space Grotesk',monospace}
+
+/* Main col styling */
+.page-bar{display:flex;justify-content:space-between;align-items:center;padding-bottom:8px;border-bottom:2px solid var(--pri);margin-bottom:14px}
+.page-bar .left{display:flex;align-items:center;gap:6px}
+.page-bar .right{font-size:10px;color:var(--txtL)}
+
+h2{font-size:17px;font-weight:700;color:var(--char);margin:16px 0 10px;padding-bottom:5px;border-bottom:1px solid var(--bdr)}
+h2 .num{color:var(--pri);margin-right:5px;font-family:'Space Grotesk',sans-serif}
+h3{font-size:13.5px;font-weight:600;color:var(--char);margin:12px 0 7px;padding-left:9px;border-left:3px solid var(--pri)}
+p{font-size:11.5px;line-height:1.8;margin-bottom:7px;text-align:justify}
+.highlight{background:rgba(20,184,166,0.05);border-left:3px solid var(--pri);padding:9px 12px;margin:10px 0;border-radius:0 6px 6px 0;font-size:11px;line-height:1.7}
+
+/* Key points */
+.key-points{background:var(--bgL);border:1px solid var(--bdr);border-radius:8px;padding:14px 16px;margin:12px 0}
+.key-points .title{font-size:12px;font-weight:700;color:var(--char);margin-bottom:7px;display:flex;align-items:center;gap:5px}
+.key-points .title::before{content:'';width:14px;height:14px;border-radius:3px;background:var(--pri);display:inline-block}
+.key-points ul{list-style:none;padding:0}
+.key-points ul li{font-size:11px;line-height:1.7;padding:3px 0 3px 16px;position:relative}
+.key-points ul li::before{content:'▸';color:var(--pri);position:absolute;left:3px;font-size:11px}
+
+/* Data table */
+.data-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:10.5px}
+.data-table th{background:var(--char);color:var(--white);padding:6px 8px;text-align:left;font-weight:600;font-size:9.5px;letter-spacing:0.5px;text-transform:uppercase}
+.data-table td{padding:5px 8px;border-bottom:1px solid var(--bdr)}
+.data-table tr:nth-child(even){background:var(--bgL)}
+.up{color:var(--sBuy);font-weight:600}
+.down{color:var(--sSell);font-weight:600}
+
+.ai-badge{display:inline-flex;align-items:center;gap:3px;padding:1px 7px;border-radius:8px;background:rgba(20,184,166,0.08);border:1px solid rgba(20,184,166,0.2);font-size:8px;color:var(--pri);font-weight:600;letter-spacing:0.3px}
+
+/* Risk box */
+.risk-box{background:var(--riskBg);border:1px solid var(--riskBdr);border-radius:8px;padding:12px 16px;margin:12px 0}
+.risk-box .rtitle{font-size:11.5px;font-weight:700;color:var(--riskAccent);margin-bottom:5px}
+.risk-box ul{list-style:none;padding:0}
+.risk-box ul li{font-size:10.5px;line-height:1.7;padding:2px 0 2px 14px;position:relative;color:var(--riskTxt)}
+.risk-box ul li::before{content:'⚠';position:absolute;left:0;font-size:8.5px}
+
+.disclaimer{font-size:9px;color:var(--txtLL);line-height:1.6;border-top:1px solid var(--bdr);padding-top:10px;margin-top:16px}
+
+.chart-img{width:100%;max-height:200px;object-fit:contain;border-radius:4px;margin:8px 0}
+.two-chart{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0;align-items:start}
+
+/* ========== BACK COVER 封底 ========== */
+.back-cover{background:var(--char);color:var(--white);display:flex;flex-direction:column;min-height:297mm;position:relative;overflow:hidden;page-break-after:auto}
+.bc-top{padding:20mm 28mm 0;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
+.bc-center{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;z-index:1;padding:0 28mm;text-align:center}
+.bc-divider{width:160px;height:1px;background:linear-gradient(90deg,transparent,var(--pri),var(--priL),var(--pri),transparent);margin:18px auto}
+.bc-info{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;margin-top:28px;width:100%;max-width:500px;text-align:left}
+.bc-col-title{font-size:8px;color:var(--pri);letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid rgba(20,184,166,0.18)}
+.bc-col-body{font-size:9.5px;color:var(--muted);line-height:1.9}
+.bc-col-body strong{color:var(--light);font-weight:500}
+.bc-footer{border-top:1px solid rgba(255,255,255,0.06);padding:4mm 28mm 18mm;position:relative;z-index:1}
+.bc-disclaimer{font-size:7.5px;color:var(--faint);line-height:1.7;text-align:center;max-width:75%;margin:0 auto 10px}
+.bc-copyright{display:flex;justify-content:space-between;align-items:center;font-size:8px}
+
+/* === Expert Report Components === */
+
+/* Forecast table */
+.forecast-box{background:var(--char);color:#fff;border-radius:8px;padding:12px 14px;margin:10px 0}
+.forecast-title{font-size:9px;color:var(--pri);text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:8px}
+.forecast-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.forecast-cell{text-align:center;padding:6px 4px;background:rgba(255,255,255,0.04);border-radius:6px}
+.forecast-period{font-size:8px;color:#9ca3af;margin-bottom:3px}
+.forecast-price{font-size:13px;font-weight:700;font-family:'Space Grotesk',sans-serif;color:#fff}
+.forecast-change{font-size:8.5px;margin-top:2px}
+
+/* Policy impact */
+.policy-item{display:flex;gap:10px;padding:8px 10px;border:1px solid var(--bdr);border-radius:6px;margin-bottom:6px}
+.policy-flag{width:28px;height:28px;border-radius:50%;background:var(--bgL);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.policy-body{flex:1}
+.policy-title{font-size:10.5px;font-weight:600;color:var(--char);margin-bottom:2px}
+.policy-desc{font-size:9.5px;color:var(--txtL);line-height:1.5}
+.policy-impact{font-size:9px;font-weight:600;padding:1px 6px;border-radius:4px;display:inline-block;margin-top:3px}
+.impact-neg{background:rgba(239,68,68,0.1);color:#dc2626}
+.impact-pos{background:rgba(34,197,94,0.1);color:#16a34a}
+.impact-neu{background:rgba(148,163,184,0.1);color:#475569}
+
+/* Allocation table */
+.alloc-row{display:flex;align-items:center;gap:10px;padding:7px 10px;border-bottom:1px solid var(--bdr)}
+.alloc-row:last-child{border-bottom:none}
+.alloc-comm{flex:1;font-size:11px;font-weight:600;color:var(--char)}
+.alloc-bar-wrap{flex:2;height:8px;background:var(--bgL);border-radius:4px;overflow:hidden;position:relative}
+.alloc-bar{height:100%;border-radius:4px;background:var(--pri)}
+.alloc-label{font-size:9px;font-weight:600;min-width:50px;text-align:right}
+.overweight{color:#16a34a}
+.underweight{color:#dc2626}
+.marketweight{color:#475569}
+
+/* Inline chart bars (CSS-only) */
+.mini-chart{display:flex;align-items:flex-end;gap:3px;height:40px;margin:8px 0}
+.bar-item{display:flex;flex-direction:column;align-items:center;gap:2px;flex:1}
+.bar-fill{width:100%;border-radius:2px 2px 0 0;background:var(--pri);opacity:0.8}
+.bar-label{font-size:7.5px;color:var(--txtL);text-align:center}
+.bar-val{font-size:7.5px;color:var(--txt);font-weight:600;text-align:center}
+
+/* Full-width page */
+.full-page{padding:18mm 24mm 20mm;min-height:297mm;position:relative}
+
+/* AISC / Cost impact box */
+.aisc-box{background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.25);border-left:3px solid #f59e0b;border-radius:8px;padding:10px 12px;margin:10px 0}
+.aisc-title{font-size:10px;font-weight:700;color:#f59e0b;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.5px}
+.aisc-box p{font-size:10px;color:var(--txt);margin:4px 0;line-height:1.6}
+
+/* Price path table */
+.path-table{width:100%;border-collapse:collapse;font-size:10px;margin:8px 0}
+.path-table th{background:rgba(245,158,11,0.1);color:#f59e0b;padding:5px 8px;text-align:left;font-weight:700;font-size:9px;text-transform:uppercase;letter-spacing:0.5px}
+.path-table td{padding:5px 8px;border-bottom:1px solid rgba(229,231,235,0.5);color:var(--txt)}
+
+</style>
+</head>
+<body>
+<!-- ======================== PAGE 1: COVER ======================== -->
+<div class="page cover">
+<div class="glow1"></div>
+<div class="glow2"></div>
+<div class="glow3"></div>
+<div class="streak"></div>
+<div class="streak2"></div>
+<div class="cover-header">
+<div class="cover-logo">
+<img src="assets/logos/logo-light-bg.png" style="height:16px;width:auto" alt="MiningClaw"/>
+</div>
+<div class="cover-type">
+<div class="label">Expert Analysis</div>
+<div class="cat">Expert Panel Expert Panel</div>
+</div>
+</div>
+<div class="cover-body">
+<div class="eyebrow">— Expert Panel Analysis —</div>
+<h1>Expert Panel Report<br/><span style="font-size:26px;font-weight:500;color:#9ca3af"></span></h1>
+<div class="subtitle">Comprehensive expert panel analysis — macro, commodities, mining equities, and expert views.<br/><span style="font-size:12.5px;color:#6b7280">Commodities </span></div>
+</div>
+<div class="cover-meta">
+<div class="date-block">
+<div class="label">Report Date</div>
+<div class="value">2025.07.14</div>
+<div style="font-size:10px;color:#6b7280;margin-top:4px">Coverage </div>
+</div>
+<div class="analyst">
+<strong>MiningClaw</strong><br/>
+      info@lynaimining.com
+    </div>
+</div>
+<div class="cover-footer">
+<span class="conf">CONFIDENTIAL — For Institutional Investors Only</span>
+<span>MiningClaw AI Intelligence Systems © 2026</span>
+</div>
+</div>
+
+<!-- ======================== PAGE 2: Key Points + TOC ======================== -->
+<div class="page">
+<div class="content-page">
+<div class="sidebar-col">
+<div class="sb-section"><div class="sb-title">In This Report</div>
+<div class="sb-item"><strong>Report Type</strong><br/>Expert Panel Analysis</div>
+<div class="sb-item"><strong>Experts</strong><br/>6 panel members</div>
+</div>
+<div class="sb-pagenum">— 02 —</div>
+</div>
+<div class="main-col">
+<div class="page-bar"><div class="left"><strong>Key Points &amp; Contents</strong></div><div class="right">Expert Panel Report</div></div>
+<h2><span class="num">&#9670;</span>Key Points &amp; Contents</h2>
+<div class="key-points"><div class="kp-title">Executive Summary</div><ul>
+<li>MCI Composite Score and trend direction</li>
+<li>Top conviction calls across commodities</li>
+</ul></div>
+<h3>Contents</h3>
+<div style="font-size:10.5px;line-height:2.4;padding:6px 0">
+<div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:3px 0"><span><strong style="color:#14b8a6">I.</strong> Macro Overview</span><span style="font-family:monospace;color:#6b7280">03</span></div>
+<div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:3px 0"><span><strong style="color:#14b8a6">II.</strong> Commodity Analysis</span><span style="font-family:monospace;color:#6b7280">05</span></div>
+<div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:3px 0"><span><strong style="color:#14b8a6">III.</strong> Regional Markets</span><span style="font-family:monospace;color:#6b7280">08</span></div>
+<div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:3px 0"><span><strong style="color:#14b8a6">IV.</strong> Listed Companies</span><span style="font-family:monospace;color:#6b7280">09</span></div>
+<div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:3px 0"><span><strong style="color:#14b8a6">V.</strong> Policy &amp; ESG</span><span style="font-family:monospace;color:#6b7280">10</span></div>
+<div style="display:flex;justify-content:space-between;border-bottom:1px dotted #e5e7eb;padding:3px 0"><span><strong style="color:#14b8a6">VI.</strong> Outlook &amp; Risk Calendar</span><span style="font-family:monospace;color:#6b7280">11</span></div>
+</div>
+<!-- CHART:mci-index -->
+<div style="font-size:9px;color:#6b7280;text-align:center;margin-top:2px">Source: MiningClaw MCI Index</div>
+</div>
+</div>
+</div>
+
+<!-- ======================== PAGE 3-4: Macro Overview ======================== -->
+<div class="page">
+<div class="content-page">
+<div class="sidebar-col">
+<div class="sb-section"><div class="sb-title">Macro Data</div>
+<div class="sb-item"><strong>RBA Rate</strong> 4.35%</div>
+</div>
+<div class="sb-pagenum">— 03 —</div>
+</div>
+<div class="main-col">
+<div class="page-bar"><div class="left"><strong>Macro Overview</strong></div><div class="right">I.</div></div>
+<h2><span class="num">I.</span>Macro Overview</h2>
+<div class="thesis"><strong>Thesis:</strong> [macro thesis]</div>
+<!-- CHART:macro-trend -->
+<div class="expert-quote"><strong>Expert View:</strong> [expert quote]</div>
+<div class="risk-box"><div class="rtitle">&#9888; Macro Risks</div><ul><li>[risk]</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ======================== PAGE 5-7: Commodity Analysis ======================== -->
+<div class="page">
+<div class="content-page">
+<div class="sidebar-col">
+<div class="sb-section"><div class="sb-title">AI Ratings</div>
+<div class="scorecard-grid">
+<div class="scorecard"><div class="scorecard-header"><span>Cu</span><span class="rating-badge" style="background:#22c55e">Strong Buy</span></div></div>
+<div class="scorecard"><div class="scorecard-header"><span>Fe</span><span class="rating-badge" style="background:#94a3b8">Hold</span></div></div>
+<div class="scorecard"><div class="scorecard-header"><span>Au</span><span class="rating-badge" style="background:#22c55e">Buy</span></div></div>
+<div class="scorecard"><div class="scorecard-header"><span>Li</span><span class="rating-badge" style="background:#ef4444">Sell</span></div></div>
+</div></div>
+<div class="sb-pagenum">— 05 —</div>
+</div>
+<div class="main-col">
+<div class="page-bar"><div class="left"><strong>Commodity Analysis</strong></div><div class="right">II.</div></div>
+<h2><span class="num">II.</span>Commodity Analysis</h2>
+<h3>2.1 Copper &amp; Iron Ore</h3>
+<div class="thesis"><strong>Cu Thesis:</strong> [copper thesis]</div>
+<!-- CHART:copper-price -->
+<table class="data-table"><thead><tr><th>Metal</th><th>Price</th><th>WoW %</th><th>Rating</th></tr></thead><tbody>
+<tr><td>Cu</td><td>[data:xxx]</td><td class="up">+x%</td><td>Strong Buy</td></tr>
+<tr><td>Fe</td><td>[data:xxx]</td><td class="down">-x%</td><td>Hold</td></tr>
+</tbody></table>
+<div class="scenario-grid">
+<div class="scenario-card scenario-bull"><div class="scenario-label">Bull</div><div class="scenario-prob">60%</div></div>
+<div class="scenario-card scenario-bear"><div class="scenario-label">Bear</div><div class="scenario-prob">25%</div></div>
+<div class="scenario-card scenario-base"><div class="scenario-label">Base</div><div class="scenario-prob">15%</div></div>
+</div>
+<div class="forecast-box"><div class="forecast-title">4Q Forecast</div><div class="forecast-grid"><div class="forecast-cell"><div class="forecast-period">Q1</div><div class="forecast-price">$x</div><div class="forecast-change">+x%</div></div></div></div>
+<div class="expert-quote"><strong>Expert View:</strong> [quote]</div>
+<div class="risk-box"><div class="rtitle">&#9888; Commodity Risks</div><ul><li>[risk]</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ======================== PAGE 8: Regional ======================== -->
+<div class="page">
+<div class="content-page">
+<div class="sidebar-col">
+<div class="sb-section"><div class="sb-title">Regions</div>
+<div class="region-card"><div class="region-header"><span class="region-name">Australia</span></div></div>
+</div>
+<div class="sb-pagenum">— 08 —</div>
+</div>
+<div class="main-col">
+<div class="page-bar"><div class="left"><strong>Regional Markets</strong></div><div class="right">III.</div></div>
+<h2><span class="num">III.</span>Regional Markets</h2>
+<div class="thesis"><strong>Thesis:</strong> [regional thesis]</div>
+<!-- CHART:regional-comparison -->
+<div class="expert-quote"><strong>Expert View:</strong> [quote]</div>
+</div>
+</div>
+</div>
+
+<!-- ======================== PAGE 9: Companies ======================== -->
+<div class="page">
+<div class="content-page">
+<div class="sidebar-col">
+<div class="sb-section"><div class="sb-title">Top Picks</div>
+<div class="sb-item" style="color:#22c55e">&#9650; BHP — Strong Buy</div>
+</div>
+<div class="sb-pagenum">— 09 —</div>
+</div>
+<div class="main-col">
+<div class="page-bar"><div class="left"><strong>Listed Companies</strong></div><div class="right">IV.</div></div>
+<h2><span class="num">IV.</span>Listed Companies &amp; AI Ratings</h2>
+<div class="thesis"><strong>Thesis:</strong> [picks thesis]</div>
+<table class="data-table"><thead><tr><th>Ticker</th><th>Price</th><th>Rating</th><th>Upside</th></tr></thead><tbody>
+<tr><td>BHP.AX</td><td>[data]</td><td>Strong Buy</td><td class="up">+x%</td></tr>
+</tbody></table>
+<div class="expert-quote"><strong>Expert View:</strong> [quote]</div>
+</div>
+</div>
+</div>
+
+<!-- ======================== PAGE 10-11: Policy + Outlook + Disclaimer ======================== -->
+<div class="page">
+<div class="content-page">
+<div class="sidebar-col">
+<div class="sb-section"><div class="sb-title">Policy Watch</div>
+<div class="policy-item"><div class="policy-flag">AU</div><div class="policy-title">[policy]</div></div>
+</div>
+<div class="sb-pagenum">— 10 —</div>
+</div>
+<div class="main-col">
+<div class="page-bar"><div class="left"><strong>Policy &amp; Outlook</strong></div><div class="right">V-VI.</div></div>
+<h2><span class="num">V.</span>Policy &amp; ESG</h2>
+<div class="thesis"><strong>Thesis:</strong> [policy thesis]</div>
+<h2><span class="num">VI.</span>Outlook &amp; Risk Calendar</h2>
+<table class="data-table"><thead><tr><th>Date</th><th>Event</th><th>Impact</th></tr></thead><tbody>
+<tr><td>[date]</td><td>[event]</td><td>High</td></tr>
+</tbody></table>
+<div class="risk-box"><div class="rtitle">&#9888; Conflict-of-Interest Disclosure</div><ul>
+<li>No LingYun shareholder/client mining-rights interests; no COI required.</li>
+</ul></div>
+<div class="disclaimer">
+<p><strong style="color:#1f2937">Disclaimer</strong></p>
+<p>This report is prepared by MiningClaw AI Intelligence Systems for institutional investors only. It does not constitute investment advice. Information is from public sources and proprietary AI systems; no guarantee of completeness or accuracy is provided.<br/><span style="color:#b0b0b0"></span></p>
+<p>Investors should independently evaluate content and bear all risks. MiningClaw accepts no liability for direct or indirect losses.<br/><span style="color:#b0b0b0"></span></p>
+<p>AI Disclosure: Certain conclusions are auto-generated by AI multi-factor models (marked "AI GENERATED").<br/><span style="color:#b0b0b0">AI</span></p>
+<p style="margin-top:6px;color:#14b8a6;font-weight:600">MiningClaw AI Intelligence Systems &#169; 2026 | info@lynaimining.com</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="page back-cover">
+<!-- Glow effects mirrored from cover -->
+<div class="glow1" style="top:55%;opacity:0.6"></div>
+<div class="glow2" style="bottom:auto;top:8%;opacity:0.6"></div>
+<div class="glow3" style="right:auto;left:18%;top:42%;opacity:0.45"></div>
+<div class="streak" style="top:36%"></div>
+<div class="streak2" style="top:63%"></div>
+<!-- Top identifier row -->
+<div class="bc-top">
+<div style="font-size:8px;color:#374151;letter-spacing:2px;text-transform:uppercase;font-weight:500">End of Report</div>
+<div style="font-size:8px;color:#374151">MiningClaw Intelligence Systems</div>
+</div>
+<!-- Center body -->
+<div class="bc-center">
+<!-- Logo -->
+<img src="assets/logos/logo-dark-bg.png" style="height:24px;width:auto" alt="MiningClaw"/>
+<div style="margin-top:18px">
+</div><!-- Brand divider -->
+<div class="bc-divider"></div>
+<!-- Three-column info -->
+<div class="bc-info">
+<div>
+<div class="bc-col-title">About</div>
+<div class="bc-col-body">MiningClaw is an AI multi-factor mining-economy research platform for institutional investors.</div>
+</div>
+<div>
+<div class="bc-col-title">Coverage</div>
+<div class="bc-col-body">
+<strong>Expert Panel</strong> Global Macro<br/>
+<strong>Commodities</strong> Commodities<br/>
+<strong>Mining Equities</strong> Mining Equities<br/>
+<strong>Policy Monitor</strong> Policy Monitor
+        </div>
+</div>
+<div>
+<div class="bc-col-title">Contact</div>
+<div class="bc-col-body">
+<strong>Email</strong><br/>info@lynaimining.com<br/><br/>
+<strong>Platform</strong><br/>MiningClaw AI
+        </div>
+</div>
+</div>
+</div>
+<!-- Footer copyright and disclaimer -->
+<div class="bc-footer">
+<div class="bc-disclaimer">This report is generated by MiningClaw AI Intelligence Systems for institutional investors only. It does not constitute investment advice. All data sources are cited within each section.</div>
+<div class="bc-copyright">
+<span style="color:#374151">CONFIDENTIAL — For Institutional Investors Only</span>
+<span style="color:var(--pri);font-weight:600">MiningClaw AI Intelligence Systems © 2026</span>
+<span style="color:#374151">All Rights Reserved</span>
+</div>
+</div>
+</div>
+
+</body>
+</html>

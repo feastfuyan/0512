@@ -1,0 +1,46 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-03-19",
+  "examples": [
+    {
+      "section": "宏观概览 — 周期定位",
+      "before": "当前市场处于不确定阶段，建议关注资源类资产。",
+      "after": "Drawing from analysis of comparable inflationary cycles, the current opportunity set is notably different from prior periods of resource market extremity. As experienced commodity investors have observed, there is currently nothing that is truly \"hated\" in markets — a condition that historically precedes compression in cross-asset return dispersion. Patient, cycle-aware positioning in resource sectors remains our preferred stance.",
+      "references_used": [
+        "01_rick-rule/key-insights.json → Market Cycles",
+        "01_rick-rule/investment-philosophy.json → Contrarian Positioning"
+      ],
+      "quality_uplift": "从模糊表达升级为有历史依据的周期定位分析"
+    },
+    {
+      "section": "风险提示",
+      "before": "投资有风险，请谨慎决策。",
+      "after": "Investors should be particularly cautious of duration risk in the current environment. The primary risk factors we are monitoring include Federal Reserve policy pivots, geopolitical supply disruptions, and commodity cycle positioning. We stress-test this constructive view by asking: what would have to be true for us to be wrong? The bear case requires either a sharp demand destruction event or an unexpected supply response — both of which we assign low probability but non-zero weight.",
+      "references_used": [
+        "03_expression-templates/risk-assessment-phrases.json → macro_risk",
+        "03_expression-templates/risk-assessment-phrases.json → rick_rule_style"
+      ],
+      "quality_uplift": "从套话升级为结构化、可验伪的风险分析框架"
+    },
+    {
+      "section": "投资建议结论",
+      "before": "综合以上分析，建议适当配置矿业资产。",
+      "after": "The opportunity set in base metals today bears structural similarities to early-cycle conditions last observed in 2003-2004. The patient investor who understood that cycle and positioned in quality resource companies was well rewarded over the subsequent five years. We believe the same analytical framework applies here: supply constraints are structural, demand drivers are secular, and current valuations have not yet reflected the full cycle upside. Our conviction is high, subject to the risk factors outlined above.",
+      "references_used": [
+        "01_rick-rule/investment-philosophy.json → Resource Scarcity Thesis",
+        "03_expression-templates/conclusion-templates.json → rick_rule_closing"
+      ],
+      "quality_uplift": "从笼统建议升级为有历史类比支撑的投资论点"
+    },
+    {
+      "section": "铀市场专题",
+      "before": "铀价近期上涨，核电需求增加。",
+      "after": "The uranium market is experiencing what Brandon Munro has described as a decade-in-the-making structural realignment. Utility procurement cycles, which typically operate on 5-10 year forward contracting horizons, are now encountering a supply landscape fundamentally altered by years of underinvestment and Kazatomprom production curtailments. The spot-to-term price convergence we are observing is consistent with early-stage utility re-contracting — a dynamic that historically precedes multi-year price appreciation.",
+      "references_used": [
+        "02_core-content/uranium-insights.json → authority_statement",
+        "02_core-content/uranium-insights.json → data_citation"
+      ],
+      "quality_uplift": "从价格描述升级为供需结构深度分析"
+    }
+  ]
+}
