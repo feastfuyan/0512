@@ -1,0 +1,202 @@
+{
+  "entries": [
+    {
+      "timestamp": "2026-07-30T04:11:32.191Z",
+      "operation": "search",
+      "endpoint": "/2/tweets/search/recent",
+      "tweets_read": 10,
+      "cost_usd": 0.05
+    },
+    {
+      "timestamp": "2026-07-30T04:11:32.202Z",
+      "operation": "profile",
+      "endpoint": "/2/users/by/username/test",
+      "tweets_read": 5,
+      "cost_usd": 0.025
+    },
+    {
+      "timestamp": "2026-07-30T04:11:32.203Z",
+      "operation": "like",
+      "endpoint": "/2/users/me/likes",
+      "tweets_read": 0,
+      "cost_usd": 0.01
+    },
+    {
+      "timestamp": "2026-07-30T04:11:32.204Z",
+      "operation": "trends",
+      "endpoint": "/2/trends/by/woeid/1",
+      "tweets_read": 0,
+      "cost_usd": 0.1
+    },
+    {
+      "timestamp": "2026-07-30T04:11:32.204Z",
+      "operation": "unknown_op",
+      "endpoint": "/unknown",
+      "tweets_read": 20,
+      "cost_usd": 0.1
+    },
+    {
+      "timestamp": "2026-07-30T04:11:32.207Z",
+      "operation": "grok_chat",
+      "endpoint": "https://api.x.ai/v1/chat/completions",
+      "tweets_read": 0,
+      "cost_usd": 0.0042
+    },
+    {
+      "timestamp": "2026-07-30T04:11:32.207Z",
+      "operation": "xai_article",
+      "endpoint": "https://api.x.ai/v1/responses",
+      "tweets_read": 0,
+      "cost_usd": 0.000001
+    },
+    {
+      "timestamp": "2026-07-30T04:14:29.189Z",
+      "operation": "search",
+      "endpoint": "/2/tweets/search/recent",
+      "tweets_read": 10,
+      "cost_usd": 0.05
+    },
+    {
+      "timestamp": "2026-07-30T04:14:29.189Z",
+      "operation": "profile",
+      "endpoint": "/2/users/by/username/test",
+      "tweets_read": 5,
+      "cost_usd": 0.025
+    },
+    {
+      "timestamp": "2026-07-30T04:14:29.189Z",
+      "operation": "like",
+      "endpoint": "/2/users/me/likes",
+      "tweets_read": 0,
+      "cost_usd": 0.01
+    },
+    {
+      "timestamp": "2026-07-30T04:14:29.189Z",
+      "operation": "trends",
+      "endpoint": "/2/trends/by/woeid/1",
+      "tweets_read": 0,
+      "cost_usd": 0.1
+    },
+    {
+      "timestamp": "2026-07-30T04:14:29.190Z",
+      "operation": "unknown_op",
+      "endpoint": "/unknown",
+      "tweets_read": 20,
+      "cost_usd": 0.1
+    },
+    {
+      "timestamp": "2026-07-30T04:14:29.192Z",
+      "operation": "grok_chat",
+      "endpoint": "https://api.x.ai/v1/chat/completions",
+      "tweets_read": 0,
+      "cost_usd": 0.0042
+    },
+    {
+      "timestamp": "2026-07-30T04:14:29.192Z",
+      "operation": "xai_article",
+      "endpoint": "https://api.x.ai/v1/responses",
+      "tweets_read": 0,
+      "cost_usd": 0.000001
+    },
+    {
+      "timestamp": "2026-07-30T04:14:31.032Z",
+      "operation": "search",
+      "endpoint": "/2/tweets/search/recent",
+      "tweets_read": 10,
+      "cost_usd": 0.05
+    },
+    {
+      "timestamp": "2026-07-30T04:14:31.032Z",
+      "operation": "profile",
+      "endpoint": "/2/users/by/username/test",
+      "tweets_read": 5,
+      "cost_usd": 0.025
+    },
+    {
+      "timestamp": "2026-07-30T04:14:31.032Z",
+      "operation": "like",
+      "endpoint": "/2/users/me/likes",
+      "tweets_read": 0,
+      "cost_usd": 0.01
+    },
+    {
+      "timestamp": "2026-07-30T04:14:31.033Z",
+      "operation": "trends",
+      "endpoint": "/2/trends/by/woeid/1",
+      "tweets_read": 0,
+      "cost_usd": 0.1
+    },
+    {
+      "timestamp": "2026-07-30T04:14:31.033Z",
+      "operation": "unknown_op",
+      "endpoint": "/unknown",
+      "tweets_read": 20,
+      "cost_usd": 0.1
+    },
+    {
+      "timestamp": "2026-07-30T04:14:31.035Z",
+      "operation": "grok_chat",
+      "endpoint": "https://api.x.ai/v1/chat/completions",
+      "tweets_read": 0,
+      "cost_usd": 0.0042
+    },
+    {
+      "timestamp": "2026-07-30T04:14:31.035Z",
+      "operation": "xai_article",
+      "endpoint": "https://api.x.ai/v1/responses",
+      "tweets_read": 0,
+      "cost_usd": 0.000001
+    }
+  ],
+  "daily": [
+    {
+      "date": "2026-07-30",
+      "total_cost": 0.867603,
+      "calls": 21,
+      "tweets_read": 105,
+      "by_operation": {
+        "search": {
+          "calls": 3,
+          "cost": 0.15000000000000002,
+          "tweets": 30
+        },
+        "profile": {
+          "calls": 3,
+          "cost": 0.07500000000000001,
+          "tweets": 15
+        },
+        "like": {
+          "calls": 3,
+          "cost": 0.03,
+          "tweets": 0
+        },
+        "trends": {
+          "calls": 3,
+          "cost": 0.30000000000000004,
+          "tweets": 0
+        },
+        "unknown_op": {
+          "calls": 3,
+          "cost": 0.30000000000000004,
+          "tweets": 60
+        },
+        "grok_chat": {
+          "calls": 3,
+          "cost": 0.0126,
+          "tweets": 0
+        },
+        "xai_article": {
+          "calls": 3,
+          "cost": 0.000003,
+          "tweets": 0
+        }
+      }
+    }
+  ],
+  "budget": {
+    "daily_limit_usd": 1,
+    "warn_threshold": 0.8,
+    "enabled": true
+  },
+  "total_lifetime_usd": 0.867603
+}

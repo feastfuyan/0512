@@ -1,0 +1,52 @@
+# Knowledge Encoding · 陈夏童 heuristics — example file
+# This is the example template. 陈夏童 fills the real one with ≥200 rules during W1-W4.
+#
+# Each rule: id + if (condition) + then (action) + rationale (why).
+# Reviewer: 陈夏童 must sign off every rule.
+
+heuristics:
+  - id: RF-001
+    name: cash_runway_crisis
+    if:
+      pb_ratio: "< 0.5"
+      cash_runway_months: "< 6"
+    then:
+      label_override: "↓空头"
+      override_other_factors: true
+    rationale: |
+      PB extreme low + cash about to run out = high probability of dilution or
+      delisting. 2014 RUM, 2019 BNO precedents. This rule overrides commodity-beta
+      bullish signals — if cash is gone, beta doesn't save you.
+    confidence: high
+    last_validated: "2026-05-25"
+
+  - id: RF-002
+    name: ceo_honeymoon_guidance
+    if:
+      ceo_tenure_months: "< 12"
+      production_guidance_revision_pct: "> +25%"
+    then:
+      warning: "new CEO honeymoon guidance — historically ~70% of these revise down"
+      reduce_confidence: 1
+    rationale: |
+      New CEOs tend to over-promise in their first 12 months. Sample of 30 such
+      cases on ASX 2015-2024: 21 had downward revisions within 6 months.
+    confidence: medium
+    last_validated: "2026-05-25"
+
+  - id: RF-003
+    name: commodity_vs_stock_divergence
+    if:
+      commodity_4w_return_pct: "> +20%"
+      stock_4w_return_pct: "> +60%"
+    then:
+      warning: "stock has run ahead of commodity; valuation expansion not earnings driven"
+      reduce_confidence: 1
+    rationale: |
+      When stock outperforms commodity 3:1, multiple expansion is doing the
+      lifting. Mean reversion risk is high on commodity pullback.
+    confidence: high
+    last_validated: "2026-05-25"
+
+# Add more rules below. Schema is loose by design — 陈夏童 can extend as needed,
+# but `id` (RF-NNN), `name`, `if`, `then`, `rationale` are required.

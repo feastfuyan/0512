@@ -1,0 +1,84 @@
+{
+  "entries": [
+    {
+      "timestamp": "2026-07-30T04:14:29.134Z",
+      "command": "mcp:xint_package_create",
+      "mode": "mcp",
+      "success": true,
+      "latency_ms": 28,
+      "fallback": false
+    },
+    {
+      "timestamp": "2026-07-30T04:14:29.144Z",
+      "command": "mcp:xint_package_query",
+      "mode": "mcp",
+      "success": false,
+      "latency_ms": 6,
+      "fallback": false
+    },
+    {
+      "timestamp": "2026-07-30T04:14:29.150Z",
+      "command": "mcp:xint_package_query",
+      "mode": "mcp",
+      "success": false,
+      "latency_ms": 1,
+      "fallback": false
+    },
+    {
+      "timestamp": "2026-07-30T04:14:29.166Z",
+      "command": "mcp:xint_costs",
+      "mode": "mcp",
+      "success": true,
+      "latency_ms": 0,
+      "fallback": false
+    },
+    {
+      "timestamp": "2026-07-30T04:14:29.169Z",
+      "command": "mcp:xint_cache_clear",
+      "mode": "mcp",
+      "success": true,
+      "latency_ms": 1,
+      "fallback": false
+    },
+    {
+      "timestamp": "2026-07-30T04:14:30.987Z",
+      "command": "mcp:xint_package_create",
+      "mode": "mcp",
+      "success": true,
+      "latency_ms": 14,
+      "fallback": false
+    },
+    {
+      "timestamp": "2026-07-30T04:14:30.994Z",
+      "command": "mcp:xint_package_query",
+      "mode": "mcp",
+      "success": false,
+      "latency_ms": 2,
+      "fallback": false
+    },
+    {
+      "timestamp": "2026-07-30T04:14:30.998Z",
+      "command": "mcp:xint_package_query",
+      "mode": "mcp",
+      "success": false,
+      "latency_ms": 1,
+      "fallback": false
+    },
+    {
+      "timestamp": "2026-07-30T04:14:31.012Z",
+      "command": "mcp:xint_costs",
+      "mode": "mcp",
+      "success": true,
+      "latency_ms": 0,
+      "fallback": false
+    },
+    {
+      "timestamp": "2026-07-30T04:14:31.016Z",
+      "command": "mcp:xint_cache_clear",
+      "mode": "mcp",
+      "success": true,
+      "latency_ms": 1,
+      "fallback": false
+    }
+  ]
+}

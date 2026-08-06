@@ -1,0 +1,30 @@
+# Prompt Registry — production pin
+# CHANGES TO production REQUIRE: PR + Champion-Challenger evidence + CEO sign-off (D10).
+# CHANGES TO shadow ALSO require PR, but no sign-off needed.
+
+production:
+  agent_xt_reasoner:    v1.0.0
+  compliance_sentinel:  v1.0.0
+  agent_zt_evolver:     v1.0.0
+
+shadow:
+  # Format: agent_id: version (10% traffic by default)
+  # Example: agent_xt_reasoner: v1.1.0-rc1
+  agent_xt_reasoner:    null
+  compliance_sentinel:  null
+  agent_zt_evolver:     null
+
+# Pin format: <agent_id>@<semver>
+# Versioning rules:
+#   major (vN.0.0): SCOPE / persona change
+#   minor (v1.N.0): new tool / hard constraint added
+#   patch (v1.0.N): typo / wording polish only
+
+# Active rollouts (each entry = an A/B test in progress)
+rollouts: []
+
+# Locked-in champion history (for audit)
+history:
+  - {agent_id: agent_xt_reasoner,   pinned_version: v1.0.0, pinned_at: 2026-05-25, pinned_by: xuance_wang}
+  - {agent_id: compliance_sentinel, pinned_version: v1.0.0, pinned_at: 2026-05-25, pinned_by: xuance_wang}
+  - {agent_id: agent_zt_evolver,    pinned_version: v1.0.0, pinned_at: 2026-05-25, pinned_by: xuance_wang}
