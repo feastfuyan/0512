@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "registry": "https://clawhub.ai",
+  "slug": "hermes-agent",
+  "ownerHandle": "haidiantoutou",
+  "installedVersion": "1.0.0",
+  "installedAt": 1788968147986,
+  "artifact": {
+    "kind": "archive",
+    "sha256": "d58d47174d10a072d613ceec475a7f9507167a9f9cba3e14e11e3568c6a0e0d6",
+    "integrity": "sha256-1Y1HF00QoHLWE87sR1p/lQcWep+cuj4U4R41aMag4NY="
+  },
+  "skillFile": {
+    "path": "SKILL.md",
+    "sha256": "ba0d013b3331d5e708e56ad0fead5207a2dd425b97cb38f7f52625dee95f5053"
+  }
+}
