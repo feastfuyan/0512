@@ -1,0 +1,26 @@
+{
+  "protocol": "A2M / Alipay AI Pay (HTTP 402)",
+  "price_fen": 20,
+  "price_yuan": "0.20",
+  "currency": "CNY",
+  "billing": "per_call",
+  "channel": "alipay",
+  "gateway_base": "https://<your-service-endpoint>",
+  "endpoints": {
+    "health": "GET /healthz",
+    "resource": "GET /demo/a2m/resource",
+    "portal": "GET /portal"
+  },
+  "flow": [
+    "GET /demo/a2m/resource -> 402 + Payment-Needed（Base64URL 账单，含 RSA2 签名）",
+    "用户在支付宝 AI 付确认支付",
+    "携带 Payment-Proof 重放同一请求 -> 验付通过 + 履约确认 -> 200 交付"
+  ],
+  "verify_api": "alipay.aipay.agent.payment.verify",
+  "fulfill_api": "alipay.aipay.agent.fulfillment.confirm",
+  "service_id": "API_FF24178DCF914408",
+  "app_id": "2021007112605353",
+  "idempotent": true,
+  "order_ttl_minutes": 30,
+  "skill_slug": "contract-ledger-stats"
+}
