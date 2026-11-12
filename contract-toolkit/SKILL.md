@@ -597,7 +597,7 @@ python <reconcile-toolkit 目录>/scripts/reconcile_toolkit.py recon \
 已完成：
 
 - [x] `assets/icon.png`（512×512 PNG）已生成，发布托管页拿到公开直链
-- [x] `SKILL.md` 的 `homepage` 与 `manifest.yaml` 的 `icon_url` 已回填且一致（`8fe405e3…`，远端 md5 与本技能 `assets/icon.png` 逐字节核对一致）
+- [x] `SKILL.md` 的 `homepage` 与 `manifest.yaml` 的 `icon_url` 已回填且一致（`example.com`，远端 md5 与本技能 `assets/icon.png` 逐字节核对一致）
 - [x] `skill-preflight-check` 全流程通过：版本 4 落点对齐 / 图标直链双写 / 包内与源**双向**逐字节 / `audit_icons` 跨技能查重 / `check_examples` 文档命令 / `check_tests` 重名检测 / 缓存垃圾 0
 - [x] 普通包 + `--text` 派生包（ClawHub 只收纯文本）已出，`release/` 下附 `SHA256SUMS.txt`
 - [x] 解包端到端复验：解包后跑包内单测 + 四步全流程（info / parse / check / expire / compare）
